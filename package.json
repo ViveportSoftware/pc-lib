@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run clean && tsc",
+    "build": "gts clean && vite build",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
