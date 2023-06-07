@@ -15,8 +15,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "publish": "rm -rf dist && pnpm publish"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "typescript": "^4.9.4",
