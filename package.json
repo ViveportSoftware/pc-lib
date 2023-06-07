@@ -1,7 +1,6 @@
 {
   "name": "@viveportsoftware/pc-lib",
   "version": "0.0.2",
-  "type": "module",
   "files": [
     "dist"
   ],
@@ -20,6 +19,9 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "gts": "^3.1.1",
