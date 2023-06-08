@@ -1,4 +1,4 @@
-export default {
+export const Configs = {
   type: 'json',
   schema: [
     {
