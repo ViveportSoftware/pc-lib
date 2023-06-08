@@ -7,6 +7,9 @@ devDependencies:
   gts:
     specifier: ^3.1.1
     version: 3.1.1(typescript@4.9.4)
+  playcanvas:
+    specifier: ^1.63.6
+    version: 1.63.6
   typescript:
     specifier: ^4.9.4
     version: 4.9.4
@@ -1967,6 +1970,10 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: true
+
+  /playcanvas@1.63.6:
+    resolution: {integrity: sha512-ELU/Rz6RcYDYNzFhmOK9RKvVajFY5BEuSpmOIxO7V7aBE6JxrNde7EkNO1O0znqhKPAUt6qcFsWj2Oz0FC8t4w==}
     dev: true
 
   /postcss@8.4.24:
