@@ -3,7 +3,8 @@ export enum Type {
 
   NotificationCenterPublish,
 
-  AddForceInPhysics,
-
-  PlayAnimation,
-};
+  EntityRigidbodyAddForceInPhysics,
+  EntityPlayAnimation,
+  EntityEnable,
+  EntityDisable,
+}
