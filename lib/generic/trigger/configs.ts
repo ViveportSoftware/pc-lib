@@ -8,6 +8,11 @@ export const Configs = {
       description: 'trigger type',
     },
     {
+      name: 'sync',
+      type: 'boolean',
+      default: false,
+    },
+    {
       name: 'booleanParams',
       type: 'boolean',
       array: true,
