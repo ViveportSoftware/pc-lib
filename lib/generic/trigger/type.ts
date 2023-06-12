@@ -6,4 +6,5 @@ export enum Type {
 
   EntityAnimationStart,
   EntityAnimationEnd,
+  EntitySubscribeAnimationEvent,
 }
