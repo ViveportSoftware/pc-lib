@@ -4,7 +4,7 @@ export enum Type {
   NotificationCenterSubscribe,
   NotificationCenterSubscribeEntityPicking,
 
-  EntityAnimationStart,
-  EntityAnimationEnd,
   EntitySubscribeAnimationEvent,
+  EntitySubscribeAnimationStart,
+  EntitySubscribeAnimationEnd,
 }
