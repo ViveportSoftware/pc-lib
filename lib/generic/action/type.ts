@@ -7,4 +7,5 @@ export enum Type {
   EntityPlayAnimation,
   EntityEnable,
   EntityDisable,
+  EntityToggleEnabled,
 }
