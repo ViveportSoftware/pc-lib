@@ -1,1 +1,1 @@
-export  * as Generic from './generic/';
+export * as TriggerAndAction from './plugin/trigger-and-action';
