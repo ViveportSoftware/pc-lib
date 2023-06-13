@@ -7,4 +7,8 @@ export enum Type {
   EntitySubscribeAnimationEvent,
   EntitySubscribeAnimationStart,
   EntitySubscribeAnimationEnd,
+  EntitySubscribeCollisionStart,
+  EntitySubscribeCollisionEnd,
+  EntitySubscribeTriggerEnter,
+  EntitySubscribeTriggerLeave,
 }
