@@ -32,6 +32,11 @@ export const Configs = {
           array: true,
         },
         {
+          name: 'tagsFilter',
+          type: 'string',
+          array: true,
+        },
+        {
           name: 'triggerParams',
           type: 'json',
           schema: [
