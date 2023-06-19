@@ -1,2 +1,3 @@
 export {Configs} from './configs';
-export * from './type';
+export {Desc} from './desc';
+export {Type} from './type';
