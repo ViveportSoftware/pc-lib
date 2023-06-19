@@ -1,5 +1,14 @@
 export enum Type {
   Echo,
+  /********************************
+   * PlayCanvas
+   ********************************/
+  /**
+   * PCAppEventPublish
+   *
+   * stringParams[0]: notification name to publish
+   */
+  PCAppEventPublish,
 
   /********************************
    * NotificationCenter

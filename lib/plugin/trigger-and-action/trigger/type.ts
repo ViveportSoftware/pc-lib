@@ -2,6 +2,16 @@ export enum Type {
   Echo,
 
   /********************************
+   * PlayCanvas
+   ********************************/
+  /**
+   * PCAppEventSubscribe
+   *
+   * stringParams[0]: notification name to subscribe
+   */
+  PCAppEventSubscribe,
+
+  /********************************
    * NotificationCenter
    ********************************/
   /**
@@ -12,7 +22,7 @@ export enum Type {
   NotificationCenterSubscribe,
 
   /**
-   * NotificationCenterSubscribe
+   * NotificationCenterSubscribeEntityPicking
    */
   NotificationCenterSubscribeEntityPicking,
 
