@@ -19,4 +19,6 @@ export enum Type {
   EntityEnable,
   EntityDisable,
   EntityToggleEnabled,
+  EntityFadeIn,
+  EntityFadeOut,
 }

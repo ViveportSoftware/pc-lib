@@ -40,4 +40,18 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntityFadeIn]: {
+    numberParams: [
+      {
+        desc: 'duration in ms',
+      },
+    ],
+  },
+  [Type.EntityFadeOut]: {
+    numberParams: [
+      {
+        desc: 'duration in ms',
+      },
+    ],
+  },
 };
