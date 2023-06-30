@@ -1,4 +1,5 @@
 export enum Type {
+  Base,
   Echo,
 
   /********************************

@@ -1,6 +1,7 @@
 import {Type} from './type';
 
 export const Desc = {
+  [Type.Base]: {},
   [Type.PCAppEventPublish]: {
     stringParams: [
       {

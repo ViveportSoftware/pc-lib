@@ -1,10 +1,17 @@
 import {Type} from './type';
 
 export const Desc = {
-  [Type.PCAppEventSubscribe]: {
+  [Type.Base]: {
     sync: {
+      default: true,
       desc: 'sync the trigger',
     },
+    actions: {
+      default: [],
+      array: true,
+    },
+  },
+  [Type.PCAppEventSubscribe]: {
     stringParams: [
       {
         desc: 'notification name to subscribe',
@@ -12,24 +19,13 @@ export const Desc = {
     ],
   },
   [Type.NotificationCenterSubscribe]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
     stringParams: [
       {
         desc: 'notification name to subscribe',
       },
     ],
   },
-  [Type.NotificationCenterSubscribeEntityPicking]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
-  },
   [Type.EntitySubscribeTriggerEnter]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
     tagsFilter: [
       {
         desc: 'tags to filter',
@@ -37,9 +33,6 @@ export const Desc = {
     ],
   },
   [Type.EntitySubscribeTriggerLeave]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
     tagsFilter: [
       {
         desc: 'tags to filter',
@@ -47,9 +40,6 @@ export const Desc = {
     ],
   },
   [Type.EntitySubscribeCollisionStart]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
     tagsFilter: [
       {
         desc: 'tags to filter',
@@ -57,9 +47,6 @@ export const Desc = {
     ],
   },
   [Type.EntitySubscribeCollisionEnd]: {
-    sync: {
-      desc: 'sync the trigger',
-    },
     tagsFilter: [
       {
         desc: 'tags to filter',
