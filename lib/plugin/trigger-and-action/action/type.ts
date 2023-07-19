@@ -1,25 +1,25 @@
 export enum Type {
-  Base,
-  Echo,
+  Base = 0,
+  Echo = 1,
 
   /********************************
    * PlayCanvas
    ********************************/
-  PCAppEventPublish,
+  PCAppEventPublish = 100001,
 
   /********************************
    * NotificationCenter
    ********************************/
-  NotificationCenterPublish,
+  NotificationCenterPublish = 200001,
 
   /********************************
    * Entity
    ********************************/
-  EntityRigidbodyAddForceInPhysics,
-  EntityPlayAnimation,
-  EntityEnable,
-  EntityDisable,
-  EntityToggleEnabled,
-  EntityFadeIn,
-  EntityFadeOut,
+  EntityRigidbodyAddForceInPhysics = 300001,
+  EntityPlayAnimation = 300002,
+  EntityEnable = 300003,
+  EntityDisable = 300004,
+  EntityToggleEnabled = 300005,
+  EntityFadeIn = 300006,
+  EntityFadeOut = 300007,
 }
