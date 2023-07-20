@@ -17,6 +17,11 @@ export const Configs = {
           default: false,
         },
         {
+          name: 'throttle',
+          type: 'number',
+          default: 0,
+        },
+        {
           name: 'booleanParams',
           type: 'boolean',
           array: true,

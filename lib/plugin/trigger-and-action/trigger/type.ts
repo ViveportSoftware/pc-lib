@@ -2,8 +2,6 @@ export enum Type {
   Base = 0,
   Echo = 1,
 
-  SetTimeout = 101,
-
   /********************************
    * PlayCanvas
    ********************************/
