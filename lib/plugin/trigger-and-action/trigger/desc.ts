@@ -6,6 +6,10 @@ export const Desc = {
       default: true,
       desc: 'sync the trigger',
     },
+    throttle: {
+      default: 0,
+      desc: 'throttle in ms',
+    },
     actions: {
       default: [],
       array: true,

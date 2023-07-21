@@ -1,7 +1,12 @@
 import {Type} from './type';
 
 export const Desc = {
-  [Type.Base]: {},
+  [Type.Base]: {
+    delay: {
+      default: 0,
+      desc: 'delay in ms',
+    },
+  },
   [Type.PCAppEventPublish]: {
     stringParams: [
       {
