@@ -108,6 +108,11 @@ export const Configs = {
               description: 'action type',
             },
             {
+              name: 'delay',
+              type: 'number',
+              default: 0,
+            },
+            {
               name: 'booleanParams',
               type: 'boolean',
               array: true,
