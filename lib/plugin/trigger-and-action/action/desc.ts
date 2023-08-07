@@ -60,4 +60,11 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntityPlaySound]: {
+    stringParams: [
+      {
+        desc: 'sound name to play',
+      },
+    ],
+  },
 };
