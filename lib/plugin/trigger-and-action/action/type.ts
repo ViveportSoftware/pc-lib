@@ -22,4 +22,8 @@ export enum Type {
   EntityToggleEnabled = 300005,
   EntityFadeIn = 300006,
   EntityFadeOut = 300007,
+  EntityPlaySound = 300008,
+  EntityEnableCollision = 300009,
+  EntityDisableCollision = 300010,
+  EntityToggleCollision = 300011,
 }
