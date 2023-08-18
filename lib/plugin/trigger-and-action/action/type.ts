@@ -13,6 +13,12 @@ export enum Type {
   NotificationCenterPublish = 200001,
 
   /********************************
+   * TheatreJS
+   ********************************/
+  TheatreJSPublish = 21001,
+  TheatreJSPlaySheet = 21002,
+
+  /********************************
    * Entity
    ********************************/
   EntityRigidbodyAddForceInPhysics = 300001,

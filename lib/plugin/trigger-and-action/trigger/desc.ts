@@ -29,6 +29,13 @@ export const Desc = {
       },
     ],
   },
+  [Type.TheatreJSSubscribeSheetEnd]: {
+    stringParams: [
+      {
+        desc: 'sheet name to subscribe',
+      },
+    ],
+  },
   [Type.EntitySubscribeTriggerEnter]: {
     tagsFilter: [
       {

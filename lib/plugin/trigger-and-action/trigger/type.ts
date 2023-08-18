@@ -14,6 +14,12 @@ export enum Type {
   NotificationCenterSubscribeEntityPicking = 200002,
 
   /********************************
+   * TheatreJS
+   ********************************/
+  TheatreJSSubscribe = 21001,
+  TheatreJSSubscribeSheetEnd = 21002,
+
+  /********************************
    * Entity
    ********************************/
   EntitySubscribeAnimationEvent = 300001,

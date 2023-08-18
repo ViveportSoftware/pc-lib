@@ -21,6 +21,13 @@ export const Desc = {
       },
     ],
   },
+  [Type.TheatreJSPlaySheet]: {
+    stringParams: [
+      {
+        desc: 'sheet name to play',
+      },
+    ],
+  },
   [Type.EntityRigidbodyAddForceInPhysics]: {
     numberParams: [
       {
