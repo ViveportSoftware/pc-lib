@@ -16,8 +16,8 @@ export enum Type {
   /********************************
    * TheatreJS
    ********************************/
-  TheatreJSSubscribe = 21001,
-  TheatreJSSubscribeSheetEnd = 21002,
+  TheatreJSSubscribe = 210001,
+  TheatreJSSubscribeSheetEnd = 210002,
 
   /********************************
    * Entity

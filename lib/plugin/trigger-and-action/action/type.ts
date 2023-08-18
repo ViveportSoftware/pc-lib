@@ -15,8 +15,8 @@ export enum Type {
   /********************************
    * TheatreJS
    ********************************/
-  TheatreJSPublish = 21001,
-  TheatreJSPlaySheet = 21002,
+  TheatreJSPublish = 210001,
+  TheatreJSPlaySheet = 210002,
 
   /********************************
    * Entity
