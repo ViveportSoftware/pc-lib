@@ -64,4 +64,18 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntitySubscribeIntersectsBoundingSphereStart]: {
+    numberParams: [
+      {
+        desc: 'sphere radius',
+      },
+    ],
+  },
+  [Type.EntitySubscribeIntersectsBoundingSphereEnd]: {
+    numberParams: [
+      {
+        desc: 'sphere radius',
+      },
+    ],
+  },
 };

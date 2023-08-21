@@ -29,4 +29,6 @@ export enum Type {
   EntitySubscribeCollisionEnd = 300005,
   EntitySubscribeTriggerEnter = 300006,
   EntitySubscribeTriggerLeave = 300007,
+  EntitySubscribeIntersectsBoundingSphereStart = 300008,
+  EntitySubscribeIntersectsBoundingSphereEnd = 300009,
 }
