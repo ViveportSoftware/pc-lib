@@ -11,5 +11,8 @@ export const Desc = {
     vrmUrl: {
       desc: 'VRM URL',
     },
+    greetingMessageToNpc: {
+      desc: 'greeting Message to NPC (optional)',
+    },
   },
 };
