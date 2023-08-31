@@ -19,6 +19,11 @@ export const Configs = {
           type: 'string',
           description: 'VRM URL',
         },
+        {
+          name: 'greetingMessageToVrm',
+          type: 'string',
+          description: 'greeting Message to NPC (optional)',
+        },
       ],
     },
   ],
