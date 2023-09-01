@@ -14,5 +14,8 @@ export const Desc = {
     greetingMessageToNpc: {
       desc: 'greeting Message to NPC (optional)',
     },
+    autoFollowMode: {
+      desc: 'auto follow mode',
+    },
   },
 };
