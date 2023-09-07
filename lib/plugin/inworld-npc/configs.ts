@@ -27,21 +27,15 @@ export const Configs = {
         },
         {
           name: 'autoFollowMode',
-          type: 'stringSelect',
-          options: [
-            {
-              name: 'none',
-              type: 'string',
-            },
-            {
-              name: 'pathFinding',
-              type: 'string',
-            },
-            {
-              name: 'phaseWall',
-              type: 'string',
-            },
-          ],
+          type: 'number',
+          description: 'auto follow mode',
+          default: 1,
+          // eslint-disable-next-line prettier/prettier
+          enum: [
+            { 'None': 1 },
+            { 'PathFinding': 2 },
+            { 'PhaseWall': 3 }
+          ]
         },
       ],
     },
