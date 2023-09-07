@@ -74,4 +74,11 @@ export const Desc = {
       },
     ],
   },
+  [Type.InworldNpcSpeak]: {
+    stringParams: [
+      {
+        desc: 'goals activation trigger',
+      },
+    ],
+  },
 };
