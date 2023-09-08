@@ -5,6 +5,7 @@ export const Desc = {
     actions: {
       default: [],
       array: true,
+      desc: 'trigger indexs',
     },
   },
 };

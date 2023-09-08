@@ -3,4 +3,5 @@ export enum Type {
   TriggerAndAction,
   PickAndThrow,
   InworldNpc,
+  Flow
 }
