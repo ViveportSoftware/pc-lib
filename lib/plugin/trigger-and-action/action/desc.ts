@@ -81,11 +81,4 @@ export const Desc = {
       },
     ],
   },
-  [Type.InworldNpcStopWaitingSpeak]: {
-    stringParams: [
-      {
-        desc: 'goals activation trigger',
-      },
-    ],
-  },
 };
