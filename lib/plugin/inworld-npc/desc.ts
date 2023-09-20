@@ -16,6 +16,7 @@ export const Desc = {
     },
     autoFollowMode: {
       desc: 'auto follow mode',
+      default: 1,
     },
   },
 };
