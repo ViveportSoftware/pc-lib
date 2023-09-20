@@ -29,13 +29,8 @@ export const Configs = {
           name: 'autoFollowMode',
           type: 'number',
           description: 'auto follow mode',
+          select: true,
           default: 1,
-          // eslint-disable-next-line prettier/prettier
-          enum: [
-            { 'None': 1 },
-            { 'PathFinding': 2 },
-            { 'PhaseWall': 3 }
-          ]
         },
       ],
     },
