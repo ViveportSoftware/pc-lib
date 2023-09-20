@@ -6,5 +6,8 @@ export const Desc = {
       default: [],
       array: true,
     },
+    triggerIndexes: {
+      desc: 'selected triggers',
+    },
   },
 };

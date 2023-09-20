@@ -14,7 +14,9 @@ export const Configs = {
         {
           name: 'triggerIndexes',
           type: 'number',
+          description: 'selected triggers',
           array: true,
+          select: true,
         },
         {
           name: 'actionParams',
