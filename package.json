@@ -21,13 +21,18 @@
     "fix": "gts fix",
     "prepare": "pnpm compile && husky install",
     "pretest": "pnpm compile",
-    "posttest": "pnpm lint"
+    "posttest": "pnpm lint",
+    "commit": "cz"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^20.2.5",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "gts": "^3.1.1",
     "husky": "^8.0.0",
     "playcanvas": "^1.63.6",
@@ -35,5 +40,10 @@
     "vite": "^4.0.4",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-mkcert": "^1.15.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
