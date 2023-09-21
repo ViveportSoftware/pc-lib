@@ -33,5 +33,7 @@ export enum Type {
   EntityDisableCollision = 300010,
   EntityToggleCollision = 300011,
   InworldNpcWaitingSpeak = 300012,
-  InworldNpcStopWaitingSpeak = 300013
+  InworldNpcStopWaitingSpeak = 300013,
+  EnableEntityByTag = 300014,
+  DisableEntityByTag = 300015,
 }

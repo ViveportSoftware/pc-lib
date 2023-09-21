@@ -81,4 +81,18 @@ export const Desc = {
       },
     ],
   },
+  [Type.EnableEntityByTag]: {
+    tagsFilter: [
+      {
+        desc: 'enable entity with tag',
+      },
+    ]
+  },
+  [Type.DisableEntityByTag]: {
+    tagsFilter: [
+      {
+        desc: 'disable entity with tag',
+      },
+    ]
+  },
 };
