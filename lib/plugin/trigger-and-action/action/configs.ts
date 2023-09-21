@@ -23,6 +23,11 @@ export const Configs = {
       array: true,
     },
     {
+      name: 'tagsFilter',
+      type: 'string',
+      array: true,
+    },
+    {
       name: 'numberParams',
       type: 'number',
       array: true,
