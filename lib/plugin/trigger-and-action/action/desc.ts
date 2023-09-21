@@ -6,6 +6,11 @@ export const Desc = {
       default: 0,
       desc: 'delay in ms',
     },
+    tagsFilter: [
+      {
+        desc: 'target entities by tags',
+      },
+    ],
   },
   [Type.PCAppEventPublish]: {
     stringParams: [
