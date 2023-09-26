@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.1.0...v1.2.0) (2023-09-26)
+
+
+### Features
+
+* upgrade package version: node18.18.0, pnpm8.7.6 ([d409189](https://github.com/ViveportSoftware/pc-lib/commit/d409189125ebd55e8ec3941ac109081fe6fb0091))
+
 ## [1.1.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.0.0...v1.1.0) (2023-09-26)
 
 
