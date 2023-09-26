@@ -40,6 +40,7 @@ export const Configs = {
           name: 'tagsFilter',
           type: 'string',
           array: true,
+          tags: true,
         },
         {
           name: 'triggerParams',
