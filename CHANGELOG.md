@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.0.0...v1.1.0) (2023-09-26)
+
+
+### Features
+
+* **trigger/config:** add tags boolean flag ([fd20f62](https://github.com/ViveportSoftware/pc-lib/commit/fd20f629efb623f2ba204cb5057dbdd1224f73e6))
+
 ## 1.0.0 (2023-09-21)
 
 
