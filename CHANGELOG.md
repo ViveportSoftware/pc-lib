@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.2.0...v1.2.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* upgraded GTS to avoid encountering the originalKeywordKind error ([55a2551](https://github.com/ViveportSoftware/pc-lib/commit/55a2551e0aebc300385f3c6453ebf7edee480592))
+
 ## [1.2.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.1.0...v1.2.0) (2023-09-26)
 
 
