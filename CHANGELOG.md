@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.2.1...v1.3.0) (2023-09-28)
+
+
+### Features
+
+* add .npmrc to limit Node.JS versions for development use ([222abe4](https://github.com/ViveportSoftware/pc-lib/commit/222abe4314baba44d44dd8adb355220392aeab46))
+
 ## [1.2.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.2.0...v1.2.1) (2023-09-27)
 
 
