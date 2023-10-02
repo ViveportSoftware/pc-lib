@@ -27,5 +27,10 @@ export const Configs = {
       type: 'number',
       array: true,
     },
+    {
+      name: 'tagsFilter',
+      type: 'string',
+      array: true,
+    },
   ],
 };

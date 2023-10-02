@@ -1,4 +1,4 @@
-import {Type} from './type';
+import { Type } from './type';
 
 export const Desc = {
   [Type.Base]: {
@@ -78,6 +78,20 @@ export const Desc = {
     stringParams: [
       {
         desc: 'goals activation trigger',
+      },
+    ],
+  },
+  [Type.EntityEnableByTag]: {
+    tagsFilter: [
+      {
+        desc: 'enable entity with tag',
+      },
+    ],
+  },
+  [Type.EntityDisableByTag]: {
+    tagsFilter: [
+      {
+        desc: 'disable entity with tag',
       },
     ],
   },
