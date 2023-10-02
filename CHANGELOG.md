@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.3.0...v1.4.0) (2023-10-02)
+
+
+### Features
+
+* add enable/disable entity by tag action type ([7d56b84](https://github.com/ViveportSoftware/pc-lib/commit/7d56b84cdeae294556686a97d9614ef7dbbcf965))
+
 ## [1.3.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.2.1...v1.3.0) (2023-09-28)
 
 
