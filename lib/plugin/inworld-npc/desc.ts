@@ -18,5 +18,9 @@ export const Desc = {
       desc: 'auto follow mode',
       default: 1,
     },
+    autoFollowDelay: {
+      desc: 'auto follow delay in ms',
+      default: 0,
+    },
   },
 };

@@ -32,6 +32,12 @@ export const Configs = {
           select: true,
           default: 1,
         },
+        {
+          name: 'autoFollowDelay',
+          type: 'number',
+          description: 'auto follow delay in ms',
+          default: 0,
+        },
       ],
     },
   ],
