@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.4.0...v1.5.0) (2023-10-04)
+
+
+### Features
+
+* add tags attribute ([d99c255](https://github.com/ViveportSoftware/pc-lib/commit/d99c2557d3bef142c189216a658e2a5209cdaf1a))
+
 ## [1.4.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.3.0...v1.4.0) (2023-10-02)
 
 
