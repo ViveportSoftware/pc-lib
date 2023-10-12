@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.7.0...v1.7.1) (2023-10-12)
+
+
+### Bug Fixes
+
+* fix readme to trigger new release pr ([fa7bbf2](https://github.com/ViveportSoftware/pc-lib/commit/fa7bbf2f4a814a8304176faf40d545fb24333e9f))
+
 ## [1.7.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.6.0...v1.7.0) (2023-10-12)
 
 
