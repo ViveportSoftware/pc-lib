@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.5.0...v1.6.0) (2023-10-12)
+
+
+### Features
+
+* [CONNECT-1713] Add delay setting for NPC auto follow ([2debc72](https://github.com/ViveportSoftware/pc-lib/commit/2debc726cce2c80214685a352ea70087f7cfec19))
+
 ## [1.5.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.4.0...v1.5.0) (2023-10-04)
 
 
