@@ -1,6 +1,6 @@
 # pc-lib
 
-Welcome to our project! When committing code, please keep in mind the following important instructions:
+A types library for viverse-world, pc-ui-ext.
 
 ## Use `pnpm commit` for code commits
 
