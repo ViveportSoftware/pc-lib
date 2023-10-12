@@ -33,5 +33,12 @@ export const Configs = {
       array: true,
       tags: true,
     },
+    {
+      name: 'inworldTriggerMode',
+      type: 'number',
+      description: 'goals trigger mode',
+      select: true,
+      default: 1,
+    },
   ],
 };

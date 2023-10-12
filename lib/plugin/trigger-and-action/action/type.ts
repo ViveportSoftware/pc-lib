@@ -37,3 +37,9 @@ export enum Type {
   EntityEnableByTag = 300014,
   EntityDisableByTag = 300015,
 }
+
+export enum InworldTriggerMode {
+  Instruction = 1,
+  SayVerbatim = 2,
+  TriggerName = 3,
+}

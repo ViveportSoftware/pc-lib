@@ -134,6 +134,13 @@ export const Configs = {
               array: true,
               tags: true,
             },
+            {
+              name: 'inworldTriggerMode',
+              type: 'number',
+              description: 'trigger goals mode',
+              select: true,
+              default: 1,
+            },
           ],
           array: true,
         },
