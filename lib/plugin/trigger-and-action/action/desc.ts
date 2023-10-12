@@ -1,4 +1,4 @@
-import { Type } from './type';
+import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
@@ -75,9 +75,13 @@ export const Desc = {
     ],
   },
   [Type.InworldNpcWaitingSpeak]: {
+    inworldTriggerMode: {
+      desc: 'goals trigger mode',
+      default: 1,
+    },
     stringParams: [
       {
-        desc: 'goals activation trigger',
+        desc: 'trigger content',
       },
     ],
   },
