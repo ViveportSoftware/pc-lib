@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.6.0...v1.7.0) (2023-10-12)
+
+
+### Features
+
+* upadte pc version ([d018f23](https://github.com/ViveportSoftware/pc-lib/commit/d018f2321d0a2703c25a7359122936528ff843f5))
+
 ## [1.6.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.5.0...v1.6.0) (2023-10-12)
 
 
