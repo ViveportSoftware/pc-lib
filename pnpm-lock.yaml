@@ -27,8 +27,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3
   playcanvas:
-    specifier: ^1.65.5
-    version: 1.65.5
+    specifier: 1.65.4
+    version: 1.65.4
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -2917,8 +2917,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /playcanvas@1.65.5:
-    resolution: {integrity: sha512-1zN9y+9gCmgFi6gh4trHmQULh7OEIITQgsYqIj8ye0N1IJCmdaNsmMxHJtK0n3KDWP/EEfnLHhf/tQnC/aKqdg==}
+  /playcanvas@1.65.4:
+    resolution: {integrity: sha512-awWalFBYXjNv3xFd0vBn8fmMtd3u8vNwOwa9+3bvZfEQ9KvWzj0EcrjlRFoONa3uVs6dmAaq2x3huKB2Vw0BpA==}
     dev: true
 
   /postcss@8.4.30:
