@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.7.1...v1.8.0) (2023-10-13)
+
+
+### Features
+
+* added Goals2.0 variable to npc greeting ([a2dfb60](https://github.com/ViveportSoftware/pc-lib/commit/a2dfb6029a9d034004a34e5ceb3fa32c6cd09496))
+
 ## [1.7.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.7.0...v1.7.1) (2023-10-12)
 
 
