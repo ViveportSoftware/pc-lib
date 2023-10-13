@@ -21,6 +21,19 @@ export const Configs = {
           description: 'VRM URL',
         },
         {
+          name: 'greetingMode',
+          type: 'number',
+          description: 'greeting mode',
+          select: true,
+          default: 1,
+        },
+        {
+          name: 'greetingMessage',
+          type: 'string',
+          description: 'greeting message',
+        },
+        {
+          // old version of greetingMessage
           name: 'greetingMessageToNpc',
           type: 'string',
           description: 'greeting Message to NPC (optional)',
