@@ -11,8 +11,12 @@ export const Desc = {
     vrmUrl: {
       desc: 'VRM URL',
     },
-    greetingMessageToNpc: {
-      desc: 'greeting Message to NPC (optional)',
+    greetingMode: {
+      desc: 'greeting mode',
+      default: 1,
+    },
+    greetingMessage: {
+      desc: 'greeting message',
     },
     autoFollowMode: {
       desc: 'auto follow mode',
