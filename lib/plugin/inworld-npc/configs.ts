@@ -51,6 +51,16 @@ export const Configs = {
           description: 'auto follow delay in ms',
           default: 0,
         },
+        {
+          name: 'idleAssetId',
+          type: 'number',
+          desc: 'idle animation asset (optional)',
+        },
+        {
+          name: 'frontWalkAssetId',
+          type: 'number',
+          desc: 'front walk animation asset (optional)',
+        },
       ],
     },
   ],
