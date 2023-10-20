@@ -26,5 +26,11 @@ export const Desc = {
       desc: 'auto follow delay in ms',
       default: 0,
     },
+    idleAssetId: {
+      desc: 'custom idle animation (optional)',
+    },
+    frontWalkAssetId: {
+      desc: 'custom front walk animation (optional)',
+    },
   },
 };
