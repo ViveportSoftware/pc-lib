@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.8.0...v1.9.0) (2023-10-20)
+
+
+### Features
+
+* added idleAssetId and frontWalkAssetId to InworldNpc ([9c2546d](https://github.com/ViveportSoftware/pc-lib/commit/9c2546d82d6fa3ccf7ac1928fbfd0b4a5ae156b7))
+
 ## [1.8.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.7.1...v1.8.0) (2023-10-13)
 
 
