@@ -3,5 +3,5 @@ export enum Type {
   TriggerAndAction,
   PickAndThrow,
   InworldNpc,
-  UploadMedia,
+  AddMedia,
 }
