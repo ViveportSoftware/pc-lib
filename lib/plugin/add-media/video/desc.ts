@@ -2,7 +2,7 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
-    videoSrc: {
+    src: {
       desc: 'video URL',
     },
     billboard: {

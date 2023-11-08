@@ -6,7 +6,7 @@ export const Configs = {
       type: 'json',
       schema: [
         {
-          name: 'videoSrc',
+          name: 'src',
           type: 'string',
           description: 'video src',
         },
@@ -16,7 +16,7 @@ export const Configs = {
           default: false,
         },
         {
-          name: 'controlsPanel',
+          name: 'controls',
           type: 'boolean',
           default: true,
         },
