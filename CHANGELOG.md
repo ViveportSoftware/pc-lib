@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.9.0...v1.10.0) (2023-11-09)
+
+
+### Features
+
+* added media plugin ([622dae8](https://github.com/ViveportSoftware/pc-lib/commit/622dae874b71a65d3287f8176b3a02eb491b2f89))
+
 ## [1.9.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.8.0...v1.9.0) (2023-10-20)
 
 
