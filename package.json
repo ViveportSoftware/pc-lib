@@ -8,7 +8,7 @@
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
   "engines": {
-    "node": ">= 18.18.0"
+    "node": ">= 20.9.0"
   },
   "exports": {
     "types": "./dist/lib/index.d.ts",
@@ -31,16 +31,16 @@
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@types/node": "^20.7.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@types/node": "^20.8.10",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "gts": "^5.0.1",
+    "gts": "^5.2.0",
     "husky": "^8.0.3",
     "playcanvas": "1.65.4",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "vite": "^4.5.0",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-mkcert": "^1.16.0"
   },
