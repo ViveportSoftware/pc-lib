@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.11.0...v1.11.1) (2023-11-10)
+
+
+### Bug Fixes
+
+* fixed media configs schema ([897d5d3](https://github.com/ViveportSoftware/pc-lib/commit/897d5d34c3c77bd79cf6fda3c864a180b377e172))
+
 ## [1.11.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.10.0...v1.11.0) (2023-11-09)
 
 
