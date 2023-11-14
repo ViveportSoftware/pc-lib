@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.11.1...v1.12.0) (2023-11-14)
+
+
+### Features
+
+* added comment to force release PR ([f5cc891](https://github.com/ViveportSoftware/pc-lib/commit/f5cc891f753550ed53dbb97a17e08abb5a0ee8f9))
+
 ## [1.11.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.11.0...v1.11.1) (2023-11-10)
 
 
