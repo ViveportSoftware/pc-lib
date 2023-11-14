@@ -50,8 +50,8 @@ export const Desc = {
     },
   },
   [Type.PolygonStreaming]: {
-    assetId: {
-      desc: 'polygon streaming asset',
+    url: {
+      desc: 'polygon streaming url',
     },
   },
 };
