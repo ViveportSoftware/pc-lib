@@ -40,6 +40,11 @@ export const Configs = {
           type: 'boolean',
           default: false,
         },
+        {
+          name: 'url',
+          type: 'string',
+          default: '',
+        },
       ],
     },
   ],
