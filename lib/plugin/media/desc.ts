@@ -53,5 +53,6 @@ export const Desc = {
     url: {
       desc: 'polygon streaming url',
     },
+    // TODO: streamController and streamableModel settings
   },
 };
