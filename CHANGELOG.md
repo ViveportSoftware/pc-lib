@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.0...v1.12.1) (2023-11-17)
+
+
+### Bug Fixes
+
+* **lib/plugin/media/desc:** link button text desc ([2d59740](https://github.com/ViveportSoftware/pc-lib/commit/2d5974067636dea2c4bf5f67edc041052c220b37))
+
 ## [1.12.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.11.1...v1.12.0) (2023-11-14)
 
 
