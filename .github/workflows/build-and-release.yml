@@ -36,3 +36,4 @@ jobs:
         with:
           release-type: node
           package-name: pc-lib
+          default-branch: test/john_cheng/build-flow
