@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.13.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.1...v1.13.0) (2023-11-23)
+
+
+### Features
+
+* add condition to prevent ([2b0c602](https://github.com/ViveportSoftware/pc-lib/commit/2b0c602366f6d65c7e7276d06adcc478b50f3104))
+* test again ([c7d28cf](https://github.com/ViveportSoftware/pc-lib/commit/c7d28cfa1d5622fb2b583f02a3c35c52cd8cb9b5))
+* test commit ([3dd590a](https://github.com/ViveportSoftware/pc-lib/commit/3dd590a3ff8c206dd8e3fea2914cb11d3a923ce4))
+
+
+### Bug Fixes
+
+* add target-branch ([6ebf699](https://github.com/ViveportSoftware/pc-lib/commit/6ebf6997cec063bd82ace34476aa5741fe723238))
+* add work-flow dependencies ([f8a4d0b](https://github.com/ViveportSoftware/pc-lib/commit/f8a4d0b1be71618cdc2443d8f368f3335d8da0c2))
+* integrate two actions ([05c0e4e](https://github.com/ViveportSoftware/pc-lib/commit/05c0e4ee7587eba23ca5e0e2bf923fcc4e2def90))
+* remove need in release-pipeline ([f9cf413](https://github.com/ViveportSoftware/pc-lib/commit/f9cf41343dbf691c552332763833d05f721565a3))
+* test flow ([e0b5cb5](https://github.com/ViveportSoftware/pc-lib/commit/e0b5cb5cb06e7bd4245fa5411a4e30dbcf7b77b4))
+* try release again ([8ed7a80](https://github.com/ViveportSoftware/pc-lib/commit/8ed7a801188aeba7b6f8030f253e6e621cc4274d))
+* update commit for commitlint check ([f4902f6](https://github.com/ViveportSoftware/pc-lib/commit/f4902f6f7c392d3a395b0ea58a58d241a613b3da))
+
 ## [1.12.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.0...v1.12.1) (2023-11-17)
 
 
