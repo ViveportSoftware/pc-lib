@@ -11,4 +11,5 @@ var type_2 = require("./plugin/trigger-and-action/type");
 Object.defineProperty(exports, "TriggerAndActionPluginType", { enumerable: true, get: function () { return type_2.Type; } });
 //
 //
+//
 //# sourceMappingURL=index.js.map
