@@ -1,0 +1,1 @@
+{"version":3,"file":"desc.js","sourceRoot":"","sources":["../../../../../lib/plugin/trigger-and-action/flow/desc.ts"],"names":[],"mappings":";;;AAAA,iCAA4B;AAEf,QAAA,IAAI,GAAG;IAClB,CAAC,WAAI,CAAC,IAAI,CAAC,EAAE;QACX,OAAO,EAAE;YACP,OAAO,EAAE,EAAE;YACX,KAAK,EAAE,IAAI;SACZ;QACD,cAAc,EAAE;YACd,IAAI,EAAE,mBAAmB;SAC1B;KACF;CACF,CAAC"}
