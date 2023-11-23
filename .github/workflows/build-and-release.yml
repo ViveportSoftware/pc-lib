@@ -7,7 +7,7 @@ permissions:
   contents: write
   pull-requests: write
 
-name: build-and-push
+name: build-and-release
 
 jobs:
   build-and-push:
@@ -27,3 +27,12 @@ jobs:
           git add -f dist/*
           git commit -m "build(dist): update dist [skip ci]"
           git push origin test/john_cheng/build-flow
+
+  release-please:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: pc-lib
