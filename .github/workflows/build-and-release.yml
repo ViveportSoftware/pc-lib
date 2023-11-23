@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: Build and Release
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore(release):')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '>=20.9.0'
+      - run: npm install -g pnpm
+      - run: pnpm install
+      - run: pnpm build
+      - name: Push to main
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add -f dist/*
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+          else
+            git commit -m "build(dist): update dist"
+            git push origin main
+          fi
+      - name: Commit and tag version
+        run: |
+          npx commit-and-tag-version
+          git push --follow-tags origin main
