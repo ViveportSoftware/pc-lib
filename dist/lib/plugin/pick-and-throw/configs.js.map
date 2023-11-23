@@ -1,0 +1,1 @@
+{"version":3,"file":"configs.js","sourceRoot":"","sources":["../../../../lib/plugin/pick-and-throw/configs.ts"],"names":[],"mappings":";;;AAAa,QAAA,OAAO,GAAG;IACrB,IAAI,EAAE,MAAM;IACZ,MAAM,EAAE;QACN;YACE,IAAI,EAAE,UAAU;YAChB,IAAI,EAAE,MAAM;YACZ,MAAM,EAAE;gBACN;oBACE,IAAI,EAAE,eAAe;oBACrB,IAAI,EAAE,QAAQ;oBACd,OAAO,EAAE,EAAE;oBACX,IAAI,EAAE,gBAAgB;iBACvB;aACF;SACF;KACF;CACF,CAAC"}
