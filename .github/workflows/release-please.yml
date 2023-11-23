@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - test/john_cheng/build-flow
 
 permissions:
   contents: write
