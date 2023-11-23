@@ -25,5 +25,5 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add -f dist/*
-          git commit -m "Update dist [skip ci]"
+          git commit -m "build(dist): update dist [skip ci]"
           git push origin test/john_cheng/build-flow
