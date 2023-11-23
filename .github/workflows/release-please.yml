@@ -1,7 +1,8 @@
 on:
-  push:
-    branches:
-      - test/john_cheng/build-flow
+  workflow_run:
+    workflows: ['build-and-push']
+    types:
+      - completed
 
 permissions:
   contents: write
