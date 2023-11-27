@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.1...v1.13.0) (2023-11-27)
+
+
+### Features
+
+* add postinstall dist ([10fd5d3](https://github.com/ViveportSoftware/pc-lib/commit/10fd5d3d9d847fe857ab90c802b90e6bee6655c3))
+
 ## [1.12.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.0...v1.12.1) (2023-11-17)
 
 
