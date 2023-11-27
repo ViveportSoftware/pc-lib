@@ -4,4 +4,5 @@ export enum Type {
   PickAndThrow,
   InworldNpc,
   Media,
+  Setting,
 }
