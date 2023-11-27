@@ -25,7 +25,8 @@
     "prepare": "pnpm compile && husky install",
     "pretest": "pnpm compile",
     "posttest": "pnpm lint",
-    "commit": "cz"
+    "commit": "cz",
+    "postinstall": "mkdir -p dist"
   },
   "publishConfig": {
     "access": "public"
