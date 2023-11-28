@@ -50,9 +50,36 @@ export const Desc = {
     },
   },
   [Type.PolygonStreaming]: {
+    // streamableModel attributes
     url: {
       desc: 'polygon streaming url',
     },
-    // TODO: streamController and streamableModel settings
+    qualityPriority: {
+      desc: 'Quality priority',
+    },
+    useAlpha: {
+      desc: 'Use Alpha',
+    },
+    useMetalRoughness: {
+      desc: 'Use MetalRoughness',
+    },
+    castShadows: {
+      desc: 'Cast shadows',
+    },
+    castLightmapShadows: {
+      desc: 'Cast lightmap shadows',
+    },
+    receiveShadows: {
+      desc: 'Receive shadows',
+    },
+    doubleSidedMaterials: {
+      desc: 'Double sided materials',
+    },
+    environmentAssetId: {
+      desc: 'Environment asset',
+    },
+    initialLOD: {
+      desc: 'Initial LOD',
+    },
   },
 };
