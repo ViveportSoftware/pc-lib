@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.14.0...v1.15.0) (2023-11-28)
+
+
+### Features
+
+* added polygon-streaming streamable-model attributes ([df0b100](https://github.com/ViveportSoftware/pc-lib/commit/df0b10099e2d3a70fa095024ab39b38a39dd0e39))
+
 ## [1.14.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.13.0...v1.14.0) (2023-11-28)
 
 
