@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.14.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.13.0...v1.14.0) (2023-11-28)
+
+
+### Features
+
+* **lib/index.ts:** add Setting plugin to index.ts ([f47b2a9](https://github.com/ViveportSoftware/pc-lib/commit/f47b2a98a986d1e6695fc079d0b9dcb380e3cff6))
+* **lib/plugin:** add setting plugin ([2194998](https://github.com/ViveportSoftware/pc-lib/commit/219499825933768125e082e09ddc5ce650acf7ff))
+
 ## [1.13.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.12.1...v1.13.0) (2023-11-27)
 
 
