@@ -1,4 +1,4 @@
-const polygonStreamingConfigs = [
+export const polygonStreamingConfigs = [
   {
     name: 'url',
     type: 'string',
