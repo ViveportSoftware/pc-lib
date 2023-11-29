@@ -2,10 +2,17 @@
 
 A types library for viverse-world, pc-ui-ext.
 
-## Use `pnpm commit` for code commits
-
-For better commit messages, please use `pnpm commit` instead of `git commit`. This will guide you through a series of prompts to help you write a better commit message.
-
+## Committing Code
+For improved commit messages, use either:
 ```bash
 pnpm commit
 ```
+or
+```bash
+git commit -m "{type}: {description}"
+# e.g.
+# git commit -m "feat: add new feature"
+# git commit -m "fix: fix a bug"
+```
+Follow the Conventional Commits guidelines at:
+[https://www.conventionalcommits.org/en/v1.0.0/](https://www.conventionalcommits.org/en/v1.0.0/)
