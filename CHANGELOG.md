@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.15.0...v1.16.0) (2023-11-29)
+
+
+### Features
+
+* forced update pc-lib version for polygon-streaming ([be92bc2](https://github.com/ViveportSoftware/pc-lib/commit/be92bc2817fbf1f75765d8c65865aee69e0efd95))
+
 ## [1.15.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.14.0...v1.15.0) (2023-11-28)
 
 
