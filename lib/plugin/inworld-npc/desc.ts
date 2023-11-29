@@ -32,5 +32,8 @@ export const Desc = {
     frontWalkAssetId: {
       desc: 'custom front walk animation (optional)',
     },
+    navMeshEntityId: {
+      desc: 'nav mesh used by NPC to find paths (optional)',
+    },
   },
 };
