@@ -1,3 +1,4 @@
+// streamableModel attributes
 export const polygonStreamingConfigs = [
   {
     name: 'url',
