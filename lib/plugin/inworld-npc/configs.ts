@@ -61,6 +61,11 @@ export const Configs = {
           type: 'number',
           desc: 'front walk animation asset (optional)',
         },
+        {
+          name: 'navMeshEntityId',
+          type: 'string',
+          desc: 'nav mesh used by NPC to find paths (optional)',
+        },
       ],
     },
   ],
