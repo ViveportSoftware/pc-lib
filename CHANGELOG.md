@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.16.0...v1.17.0) (2023-11-30)
+
+
+### Features
+
+* **inworld-npc:** add nav mesh ([4ed44c2](https://github.com/ViveportSoftware/pc-lib/commit/4ed44c207305913669b35dd402e164000796264d))
+
 ## [1.16.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.15.0...v1.16.0) (2023-11-29)
 
 
