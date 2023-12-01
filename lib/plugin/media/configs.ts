@@ -95,6 +95,11 @@ export const Configs = {
           type: 'boolean',
           default: false,
         },
+        {
+          name: 'spatialSound',
+          type: 'boolean',
+          default: true,
+        },
       ],
     },
   ],
