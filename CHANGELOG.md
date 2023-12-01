@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.17.0...v1.18.0) (2023-12-01)
+
+
+### Features
+
+* add spatial sound toggle to video/audio component ([#62](https://github.com/ViveportSoftware/pc-lib/issues/62)) ([62819ac](https://github.com/ViveportSoftware/pc-lib/commit/62819ac7e865af5d5e4ddf9e0403cfceb22fdec0))
+
 ## [1.17.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.16.0...v1.17.0) (2023-11-30)
 
 
