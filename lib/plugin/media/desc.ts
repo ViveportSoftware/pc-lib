@@ -34,6 +34,9 @@ export const Desc = {
     loop: {
       desc: 'loop',
     },
+    spatialSound: {
+      desc: 'spatial sound',
+    },
   },
   [Type.Audio]: {
     assetId: {
@@ -47,6 +50,9 @@ export const Desc = {
     },
     loop: {
       desc: 'loop',
+    },
+    spatialSound: {
+      desc: 'spatial sound',
     },
   },
   [Type.PolygonStreaming]: {
