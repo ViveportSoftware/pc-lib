@@ -38,6 +38,7 @@ export type Schema<K extends keyof SchemaTypes> = {
   name: string;
   type: K;
   default?: SchemaTypes[K];
+  enum?: (string | number)[] | Record<string, string | number>;
 } & FunctionTypesMap;
 
 export type Schemas = (
