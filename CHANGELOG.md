@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.20.0...v1.21.0) (2023-12-05)
+
+
+### Features
+
+* add needed export ([cd53ff5](https://github.com/ViveportSoftware/pc-lib/commit/cd53ff5acb606adf26a35e0e3dc8ddbabf182f04))
+
 ## [1.20.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.19.0...v1.20.0) (2023-12-05)
 
 
