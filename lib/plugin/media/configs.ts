@@ -83,23 +83,31 @@ export const Configs = {
         {
           name: 'controls',
           type: 'boolean',
-          default: false,
+          default: true,
         },
         {
           name: 'autoPlay',
           type: 'boolean',
-          default: false,
+          default: true,
         },
         {
           name: 'loop',
           type: 'boolean',
-          default: false,
+          default: true,
         },
         {
           name: 'spatialSound',
           type: 'boolean',
           default: true,
         },
+        {
+          name: 'projectionType',
+          type: 'number',
+          description: 'projection',
+          select: true,
+          default: 0,
+        },
+
       ],
     },
   ],

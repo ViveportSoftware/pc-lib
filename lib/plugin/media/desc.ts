@@ -16,14 +16,11 @@ export const Desc = {
     assetId: {
       desc: 'video asset',
     },
+    projectionType: {
+      desc: 'projection',
+    },
     billboard: {
       desc: 'billboard',
-    },
-    linkHref: {
-      desc: 'link href',
-    },
-    linkButtonText: {
-      desc: 'link button text (8 words maximum)',
     },
     controls: {
       desc: 'controls',
@@ -36,6 +33,12 @@ export const Desc = {
     },
     spatialSound: {
       desc: 'spatial sound',
+    },
+    linkHref: {
+      desc: 'link href',
+    },
+    linkButtonText: {
+      desc: 'link button text (8 words maximum)',
     },
   },
   [Type.Audio]: {
