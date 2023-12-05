@@ -4,3 +4,8 @@ export enum Type {
   Audio = 2,
   PolygonStreaming = 3,
 }
+
+export enum ProjectionType {
+  Flat = 0,
+  Sphere = 1,
+}
