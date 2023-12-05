@@ -1,5 +1,7 @@
+import {ConfigsType, Schemas} from '../type';
+
 // streamableModel attributes
-export const polygonStreamingConfigs = [
+export const polygonStreamingConfigs: Schemas = [
   {
     name: 'url',
     type: 'string',
@@ -52,7 +54,7 @@ export const polygonStreamingConfigs = [
   },
 ];
 
-export const Configs = {
+export const Configs: ConfigsType = {
   type: 'json',
   schema: [
     {
@@ -107,7 +109,6 @@ export const Configs = {
           select: true,
           default: 0,
         },
-
       ],
     },
   ],
