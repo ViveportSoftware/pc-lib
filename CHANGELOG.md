@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.19.0...v1.20.0) (2023-12-05)
+
+
+### Features
+
+* revamp schema and config types ([#66](https://github.com/ViveportSoftware/pc-lib/issues/66)) ([21a403e](https://github.com/ViveportSoftware/pc-lib/commit/21a403e11690e6f26909a27571bbb2a12b2c3466))
+
 ## [1.19.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.18.0...v1.19.0) (2023-12-05)
 
 
