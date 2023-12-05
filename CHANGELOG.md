@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.18.0...v1.19.0) (2023-12-05)
+
+
+### Features
+
+* add projection type of media plugin ([#64](https://github.com/ViveportSoftware/pc-lib/issues/64)) ([dff46ae](https://github.com/ViveportSoftware/pc-lib/commit/dff46aead13f11e341416d33384ad081a107fa6a))
+
 ## [1.18.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.17.0...v1.18.0) (2023-12-01)
 
 
