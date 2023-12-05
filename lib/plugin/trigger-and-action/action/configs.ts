@@ -1,4 +1,6 @@
-export const Configs = {
+import {ConfigsType} from '../../type';
+
+export const Configs: ConfigsType = {
   type: 'json',
   schema: [
     {
