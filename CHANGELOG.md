@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.22.0...v1.23.0) (2023-12-08)
+
+
+### Features
+
+* implement EntityCheckPoint ([24084b9](https://github.com/ViveportSoftware/pc-lib/commit/24084b997c84b4b62a928389876d7f80e8c50fdb))
+
 ## [1.22.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.21.0...v1.22.0) (2023-12-08)
 
 
