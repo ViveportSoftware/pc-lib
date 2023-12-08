@@ -36,6 +36,7 @@ export enum Type {
   InworldNpcStopWaitingSpeak = 300013,
   EntityEnableByTag = 300014,
   EntityDisableByTag = 300015,
+  EntityCheckPoint = 300016,
 }
 
 export enum InworldTriggerMode {

@@ -34,7 +34,7 @@ type SchemaTypes = {
   json: string; // use string temporarily
 };
 
-export type Schema<K extends keyof SchemaTypes> = {
+type Schema<K extends keyof SchemaTypes> = {
   name: string;
   type: K;
   default?: SchemaTypes[K];
@@ -50,5 +50,5 @@ export type Schemas = (
 
 export type ConfigsType = {
   type: string;
-  schema?: Schemas;
+  schema: Schemas;
 };
