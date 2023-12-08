@@ -22,6 +22,7 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
+    "copybranch": "git branch --show-current | tr -d '\n' | pbcopy",
     "prepare": "pnpm compile && husky install",
     "pretest": "pnpm compile",
     "posttest": "pnpm lint",
