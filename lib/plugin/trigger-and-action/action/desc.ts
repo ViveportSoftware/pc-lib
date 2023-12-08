@@ -99,4 +99,9 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntityCheckPoint]: {
+    entityId: {
+      desc: 'pick up an entity id',
+    },
+  },
 };

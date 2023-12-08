@@ -143,6 +143,10 @@ export const Configs: ConfigsType = {
               select: true,
               default: 1,
             },
+            {
+              name: 'entityId',
+              type: 'string',
+            },
           ],
           array: true,
         },
