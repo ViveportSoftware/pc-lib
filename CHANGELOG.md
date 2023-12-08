@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.21.0...v1.22.0) (2023-12-08)
+
+
+### Features
+
+* added streamController configs for polygon-streaming ([611c327](https://github.com/ViveportSoftware/pc-lib/commit/611c3270caecd3a2277c399106124a3462bf5d8d))
+
 ## [1.21.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.20.0...v1.21.0) (2023-12-05)
 
 
