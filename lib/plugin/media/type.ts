@@ -9,3 +9,8 @@ export enum ProjectionType {
   Flat = 0,
   Sphere = 1,
 }
+
+export enum SourceType {
+  Asset = 0,
+  Url = 1,
+}

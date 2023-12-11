@@ -154,9 +154,19 @@ export const Configs: ConfigsType = {
       schema: [
         ...polygonStreamingConfigs.streamableModel,
         {
+          name: 'sourceType',
+          type: 'number',
+          default: 0,
+        },
+        {
           name: 'assetId',
           type: 'number',
           default: 0,
+        },
+        {
+          name: 'url',
+          type: 'string',
+          default: '',
         },
         {
           name: 'billboard',
