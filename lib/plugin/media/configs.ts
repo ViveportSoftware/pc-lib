@@ -156,6 +156,7 @@ export const Configs: ConfigsType = {
         {
           name: 'sourceType',
           type: 'number',
+          select: true,
           default: 0,
         },
         {
