@@ -40,6 +40,12 @@ export const Desc = {
     linkButtonText: {
       desc: 'link button text (8 words maximum)',
     },
+    audioZone: {
+      desc: 'audio zone',
+    },
+    audioZoneScale: {
+      desc: 'audio zone scale',
+    },
   },
   [Type.Audio]: {
     assetId: {
@@ -56,6 +62,12 @@ export const Desc = {
     },
     spatialSound: {
       desc: 'spatial sound',
+    },
+    audioZone: {
+      desc: 'audio zone',
+    },
+    audioZoneScale: {
+      desc: 'audio zone scale',
     },
   },
   [Type.PolygonStreaming]: {
