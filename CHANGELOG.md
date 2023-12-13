@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.24.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.23.0...v1.24.0) (2023-12-13)
+
+
+### Features
+
+* add audio zone toggle ([4036510](https://github.com/ViveportSoftware/pc-lib/commit/4036510aca7a867c73bd5e51ffaaaccac554837c))
+
+
+### Bug Fixes
+
+* set audioZoneScale default [1,1,1] ([d6a89cd](https://github.com/ViveportSoftware/pc-lib/commit/d6a89cd4e04a18236c4aef27546c332f2622bb06))
+
 ## [1.23.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.22.0...v1.23.0) (2023-12-08)
 
 
