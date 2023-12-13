@@ -32,6 +32,7 @@ type SchemaTypes = {
   string: string;
   boolean: boolean;
   json: string; // use string temporarily
+  vec3: [number, number, number];
 };
 
 type Schema<K extends keyof SchemaTypes> = {
@@ -46,6 +47,7 @@ export type Schemas = (
   | Schema<'number'>
   | Schema<'string'>
   | Schema<'json'>
+  | Schema<'vec3'>
 )[];
 
 export type ConfigsType = {

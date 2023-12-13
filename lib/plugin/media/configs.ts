@@ -200,6 +200,21 @@ export const Configs: ConfigsType = {
           select: true,
           default: 0,
         },
+        {
+          name: 'audioZone',
+          type: 'boolean',
+          default: false,
+        },
+        {
+          name: 'audioZone',
+          type: 'boolean',
+          default: false,
+        },
+        {
+          name: 'audioZoneScale',
+          type: 'vec3',
+          default: [1,1,1],
+        },
       ],
     },
     {
