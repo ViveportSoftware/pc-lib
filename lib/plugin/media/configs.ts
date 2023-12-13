@@ -213,7 +213,7 @@ export const Configs: ConfigsType = {
         {
           name: 'audioZoneScale',
           type: 'vec3',
-          default: [0, 0, 0],
+          default: [1,1,1],
         },
       ],
     },
