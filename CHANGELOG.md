@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.24.0...v1.24.1) (2023-12-18)
+
+
+### Bug Fixes
+
+* audio zone config ([0cfd3c0](https://github.com/ViveportSoftware/pc-lib/commit/0cfd3c0a9b89dac76ca439ec83d2f9e4df8c1032))
+
 ## [1.24.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.23.0...v1.24.0) (2023-12-13)
 
 
