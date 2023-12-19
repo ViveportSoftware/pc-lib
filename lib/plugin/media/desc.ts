@@ -13,8 +13,14 @@ export const Desc = {
     },
   },
   [Type.Video]: {
+    sourceType: {
+      desc: 'video source',
+    },
     assetId: {
-      desc: 'video asset',
+      desc: 'asset',
+    },
+    url: {
+      desc: 'url',
     },
     projectionType: {
       desc: 'projection',
