@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.24.1...v1.25.0) (2023-12-19)
+
+
+### Features
+
+* add video source option ([ea46eaf](https://github.com/ViveportSoftware/pc-lib/commit/ea46eaf25de5f2a84a9408f2424fa8a801ff4b6b))
+
 ## [1.24.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.24.0...v1.24.1) (2023-12-18)
 
 
