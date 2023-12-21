@@ -37,6 +37,13 @@ export enum Type {
   EntityEnableByTag = 300014,
   EntityDisableByTag = 300015,
   EntityCheckPoint = 300016,
+  EntityEnableById = 300017,
+  EntityDisableById = 300018,
+
+  /********************************
+   * Quest task
+   ********************************/
+  Quest = 400001,
 }
 
 export enum InworldTriggerMode {

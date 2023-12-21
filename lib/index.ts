@@ -3,6 +3,7 @@ export * as TriggerAndAction from './plugin/trigger-and-action';
 export * as InworldNpc from './plugin/inworld-npc';
 export * as Media from './plugin/media';
 export * as Setting from './plugin/setting';
+export * as Quest from './plugin/quest';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
