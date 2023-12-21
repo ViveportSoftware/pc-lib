@@ -39,6 +39,7 @@ export enum Type {
   EntityCheckPoint = 300016,
   EntityEnableById = 300017,
   EntityDisableById = 300018,
+  EntityStopSound = 3000019,
 
   /********************************
    * Quest task

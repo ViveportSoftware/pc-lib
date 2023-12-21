@@ -132,4 +132,14 @@ export const Desc = {
       desc: 'selected task',
     },
   },
+  [Type.EntityStopSound]: {
+    stringParams: [
+      {
+        desc: 'sound name to stop',
+      },
+    ],
+    entityId: {
+      desc: 'pick up specify execution entity',
+    },
+  },
 };
