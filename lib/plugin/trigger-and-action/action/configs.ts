@@ -47,5 +47,24 @@ export const Configs: ConfigsType = {
       type: 'string',
       entityPicker: true,
     },
+    {
+      name: 'questIndex',
+      type: 'number',
+      description: 'selected quest',
+      select: true,
+    },
+    {
+      name: 'response',
+      type: 'number',
+      description: 'quest response',
+      select: true,
+      default: 1,
+    },
+    {
+      name: 'taskIndex',
+      type: 'number',
+      description: 'selected task',
+      select: true,
+    },
   ],
 };

@@ -52,6 +52,9 @@ export const Desc = {
         desc: 'is transition',
       },
     ],
+    entityId: {
+      desc: 'pick up specify execution entity (optional)',
+    },
   },
   [Type.EntityFadeIn]: {
     numberParams: [
@@ -73,6 +76,9 @@ export const Desc = {
         desc: 'sound name to play',
       },
     ],
+    entityId: {
+      desc: 'pick up specify execution entity',
+    },
   },
   [Type.InworldNpcWaitingSpeak]: {
     inworldTriggerMode: {
@@ -99,9 +105,41 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntityEnableById]: {
+    entityId: {
+      desc: 'pick up specify execution entity',
+    },
+  },
+  [Type.EntityDisableById]: {
+    entityId: {
+      desc: 'pick up specify execution entity',
+    },
+  },
   [Type.EntityCheckPoint]: {
     entityId: {
       desc: 'pick up an entity id',
+    },
+  },
+  [Type.Quest]: {
+    questIndex: {
+      desc: 'selected quest',
+    },
+    response: {
+      desc: 'response',
+      default: 1,
+    },
+    taskIndex: {
+      desc: 'selected task',
+    },
+  },
+  [Type.EntityStopSound]: {
+    stringParams: [
+      {
+        desc: 'sound name to stop',
+      },
+    ],
+    entityId: {
+      desc: 'pick up specify execution entity',
     },
   },
 };
