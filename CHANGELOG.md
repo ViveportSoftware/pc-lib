@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.26.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.25.0...v1.26.0) (2023-12-22)
+
+
+### Features
+
+* **action:** add stop sound type ([6cd09c7](https://github.com/ViveportSoftware/pc-lib/commit/6cd09c79e6043863a5d093d3ec4b33ba2b0560ee))
+* **quest:** add quest configs ([38bce2f](https://github.com/ViveportSoftware/pc-lib/commit/38bce2f3518069a4cd0fe0213f00b17c49c8d56f))
+
 ## [1.25.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.24.1...v1.25.0) (2023-12-19)
 
 
