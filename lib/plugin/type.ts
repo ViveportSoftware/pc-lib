@@ -5,6 +5,7 @@ export enum Type {
   InworldNpc,
   Media,
   Setting,
+  Equipment,
 }
 
 export enum FunctionTypes {

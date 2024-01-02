@@ -4,6 +4,7 @@ export * as InworldNpc from './plugin/inworld-npc';
 export * as Media from './plugin/media';
 export * as Setting from './plugin/setting';
 export * as Quest from './plugin/quest';
+export * as Equipment from './plugin/equipment';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
