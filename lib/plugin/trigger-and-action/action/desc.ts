@@ -142,4 +142,9 @@ export const Desc = {
       desc: 'pick up specify execution entity',
     },
   },
+  [Type.TeleportAvatar]: {
+    entityId: {
+      desc: 'Specify the Entity whose location you want to teleport to',
+    },
+  },
 };
