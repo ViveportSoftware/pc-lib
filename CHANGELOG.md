@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.26.0...v1.27.0) (2024-01-04)
+
+
+### Features
+
+* add new action type - teleport avatar ([3556a57](https://github.com/ViveportSoftware/pc-lib/commit/3556a57fb80b4462bca3568a0e11bbd66abf710e))
+
 ## [1.26.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.25.0...v1.26.0) (2023-12-22)
 
 
