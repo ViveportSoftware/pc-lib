@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.27.0...v1.28.0) (2024-01-08)
+
+
+### Features
+
+* upgrade package version: node 20.10.0, pnpm 8.14.0 ([912996c](https://github.com/ViveportSoftware/pc-lib/commit/912996c59822c72c547363e7e816646828e1da56))
+
 ## [1.27.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.26.0...v1.27.0) (2024-01-04)
 
 
