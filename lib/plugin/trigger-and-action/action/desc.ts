@@ -147,4 +147,11 @@ export const Desc = {
       desc: 'Specify the Entity whose location you want to teleport to',
     },
   },
+  [Type.AssignUserAsset]: {
+    stringParams: [
+      {
+        desc: 'asset id',
+      },
+    ],
+  },
 };
