@@ -41,6 +41,7 @@ export enum Type {
   EntityDisableById = 300018,
   EntityStopSound = 3000019,
   TeleportAvatar = 300020,
+  AssignUserAsset = 300021,
 
   /********************************
    * Quest task
