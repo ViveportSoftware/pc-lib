@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.28.0...v1.29.0) (2024-01-12)
+
+
+### Features
+
+* add new action - assign user asset ([ac1e609](https://github.com/ViveportSoftware/pc-lib/commit/ac1e609ccb3f9e4938b768c20b243eb154dcc69d))
+
 ## [1.28.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.27.0...v1.28.0) (2024-01-08)
 
 
