@@ -1,2 +1,2 @@
-export {TaskType, ResponseType} from './type';
+export {Type, TaskType, ResponseType} from './type';
 export {Configs} from './configs';

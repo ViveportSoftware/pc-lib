@@ -1,3 +1,7 @@
+export enum Type {
+  Base = 0,
+}
+
 export enum TaskType {
   check = 1,
   progressBar = 2,
