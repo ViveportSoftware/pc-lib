@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.29.0...v1.30.0) (2024-01-17)
+
+
+### Features
+
+* update quest desc ([f19ebe4](https://github.com/ViveportSoftware/pc-lib/commit/f19ebe471e53e4b35e6d4f908d402eded516b366))
+
 ## [1.29.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.28.0...v1.29.0) (2024-01-12)
 
 
