@@ -1,7 +1,8 @@
 import {ConfigsType} from '../type';
 
 export const Configs: ConfigsType = {
-  type: 'array',
+  // type: 'array',
+  type: 'json',
   schema: [
     {
       name: 'quests',
@@ -91,7 +92,7 @@ export const Configs: ConfigsType = {
           array: true,
         },
       ],
-      array: true,
+      // array: true,
     },
   ],
 };
