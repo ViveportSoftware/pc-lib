@@ -72,7 +72,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'distanceType',
       type: 'string',
-      default: 'boundingBoxCenter',
+      default: 'boundingBox',
       enum: DistanceTypeEnum,
     },
     {
