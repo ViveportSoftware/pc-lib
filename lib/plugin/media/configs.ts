@@ -36,7 +36,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'occlusionCulling',
       type: 'boolean',
-      default: false,
+      default: true,
     },
     {
       name: 'occlusionGeometry',
