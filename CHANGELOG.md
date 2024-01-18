@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.30.0...v1.31.0) (2024-01-18)
+
+
+### Features
+
+* update Polygon Streaming default values ([23fbe9e](https://github.com/ViveportSoftware/pc-lib/commit/23fbe9ec29c1d3a089982a44a7cac102d91c94d4))
+
 ## [1.30.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.29.0...v1.30.0) (2024-01-17)
 
 
