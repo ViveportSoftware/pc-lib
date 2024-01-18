@@ -30,7 +30,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'cameraType',
       type: 'string',
-      default: 'nonPlayer',
+      default: 'player',
       enum: CameraTypeEnum,
     },
     {
@@ -52,12 +52,12 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'triangleBudget',
       type: 'number',
-      default: 3000000,
+      default: 5000000,
     },
     {
       name: 'mobileTriangleBudget',
       type: 'number',
-      default: 1000000,
+      default: 3000000,
     },
     {
       name: 'minimumDistance',
