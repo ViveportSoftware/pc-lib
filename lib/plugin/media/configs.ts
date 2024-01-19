@@ -142,6 +142,11 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       type: 'number',
       default: -1,
     },
+    {
+      name: 'initialTrianglePercent',
+      type: 'number',
+      default: 0,
+    },
   ],
 };
 
