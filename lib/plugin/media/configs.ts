@@ -30,13 +30,13 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'cameraType',
       type: 'string',
-      default: 'nonPlayer',
+      default: 'player',
       enum: CameraTypeEnum,
     },
     {
       name: 'occlusionCulling',
       type: 'boolean',
-      default: false,
+      default: true,
     },
     {
       name: 'occlusionGeometry',
@@ -52,12 +52,12 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'triangleBudget',
       type: 'number',
-      default: 3000000,
+      default: 5000000,
     },
     {
       name: 'mobileTriangleBudget',
       type: 'number',
-      default: 1000000,
+      default: 3000000,
     },
     {
       name: 'minimumDistance',
@@ -72,7 +72,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     {
       name: 'distanceType',
       type: 'string',
-      default: 'boundingBoxCenter',
+      default: 'boundingBox',
       enum: DistanceTypeEnum,
     },
     {
@@ -141,6 +141,11 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       name: 'initialLOD',
       type: 'number',
       default: -1,
+    },
+    {
+      name: 'initialTrianglePercent',
+      type: 'number',
+      default: 0,
     },
   ],
 };
