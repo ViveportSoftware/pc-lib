@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.30.0...v1.31.0) (2024-01-19)
+
+
+### Features
+
+* add ps default values ([45f4ea2](https://github.com/ViveportSoftware/pc-lib/commit/45f4ea26ea24fd80045952d2fa6621993944a2a0))
+
 ## [1.30.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.29.0...v1.30.0) (2024-01-17)
 
 
