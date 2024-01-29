@@ -6,6 +6,7 @@ export enum Type {
   Media,
   Setting,
   Quest,
+  GPUMeshInstancing,
 }
 
 export enum FunctionTypes {
