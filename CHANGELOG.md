@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.31.0...v1.32.0) (2024-01-29)
+
+
+### Features
+
+* gPU mesh instancing ([98d1afc](https://github.com/ViveportSoftware/pc-lib/commit/98d1afcfbb23dbf39c3307c8769fd2d54bbfc9f7))
+
 ## [1.31.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.30.0...v1.31.0) (2024-01-19)
 
 
