@@ -7,6 +7,7 @@ export enum Type {
   Setting,
   Quest,
   GPUMeshInstancing,
+  Networked,
 }
 
 export enum FunctionTypes {
