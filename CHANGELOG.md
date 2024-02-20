@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.33.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.32.0...v1.33.0) (2024-02-20)
+
+
+### Features
+
+* add networked type ([7372ad2](https://github.com/ViveportSoftware/pc-lib/commit/7372ad23d9d5de8fc5f86df106b049b82a07732a))
+* test networked type 4 ([7372ad2](https://github.com/ViveportSoftware/pc-lib/commit/7372ad23d9d5de8fc5f86df106b049b82a07732a))
+
 ## [1.32.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.31.0...v1.32.0) (2024-01-29)
 
 
