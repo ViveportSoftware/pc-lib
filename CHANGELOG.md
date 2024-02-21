@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.34.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.33.0...v1.34.0) (2024-02-21)
+
+
+### Features
+
+* add scene-settings enums for backpack usage ([#111](https://github.com/ViveportSoftware/pc-lib/issues/111)) ([8c908bd](https://github.com/ViveportSoftware/pc-lib/commit/8c908bd154739fe84d2bae639933064349baf945))
+
 ## [1.33.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.32.0...v1.33.0) (2024-02-20)
 
 
