@@ -11,23 +11,23 @@ export enum Type {
 }
 
 export enum FunctionTypes {
-  description = 'description',
-  desc = 'desc',
-  schema = 'schema',
-  array = 'array',
-  tags = 'tags',
-  select = 'select',
-  entityPicker = 'entityPicker',
+  Description = 'description',
+  Desc = 'desc',
+  Schema = 'schema',
+  Array = 'array',
+  Tags = 'tags',
+  Select = 'select',
+  EntityPicker = 'entityPicker',
 }
 
 type FunctionTypesMap = {
-  [FunctionTypes.description]?: string;
-  [FunctionTypes.desc]?: string;
-  [FunctionTypes.array]?: boolean;
-  [FunctionTypes.tags]?: boolean;
-  [FunctionTypes.select]?: boolean;
-  [FunctionTypes.entityPicker]?: boolean;
-  [FunctionTypes.schema]?: Schemas;
+  [FunctionTypes.Description]?: string;
+  [FunctionTypes.Desc]?: string;
+  [FunctionTypes.Array]?: boolean;
+  [FunctionTypes.Tags]?: boolean;
+  [FunctionTypes.Select]?: boolean;
+  [FunctionTypes.EntityPicker]?: boolean;
+  [FunctionTypes.Schema]?: Schemas;
 };
 
 type SchemaTypes = {
