@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.35.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.34.0...v1.35.0) (2024-03-05)
+
+
+### Features
+
+* add animation-path & update trigger&action schema ([#113](https://github.com/ViveportSoftware/pc-lib/issues/113)) ([c52f83f](https://github.com/ViveportSoftware/pc-lib/commit/c52f83f179edfe6a35517be72a990d279ee635ed))
+
 ## [1.34.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.33.0...v1.34.0) (2024-02-21)
 
 
