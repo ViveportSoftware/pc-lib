@@ -23,6 +23,11 @@ export const Configs: ConfigsType = {
           default: false,
         },
         {
+          name: 'cameraEntityId',
+          type: 'string',
+          entityPicker: true,
+        },
+        {
           name: 'autoStart',
           type: 'boolean',
           default: false,
@@ -39,6 +44,11 @@ export const Configs: ConfigsType = {
         },
         {
           name: 'animateOnce',
+          type: 'boolean',
+          default: false,
+        },
+        {
+          name: 'animationRotation',
           type: 'boolean',
           default: false,
         },
