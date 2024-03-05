@@ -13,6 +13,9 @@ export const Desc = {
       default: false,
       desc: 'hide player',
     },
+    cameraEntityId: {
+      desc: 'camera entity id',
+    },
     autoStart: {
       default: false,
       desc: 'auto start',
@@ -26,22 +29,25 @@ export const Desc = {
       desc: 'animate once',
     },
     animationDuration: {
-      desc: 'animation Duration',
+      desc: 'animation duration',
+    },
+    animationRotation: {
+      desc: 'animation rotation',
     },
     startEvent: {
-      desc: 'start Event',
+      desc: 'start event',
     },
     resumeEvent: {
-      desc: 'resume Event',
+      desc: 'resume event',
     },
     pauseEvent: {
-      desc: 'pause Event',
+      desc: 'pause event',
     },
     stopEvent: {
-      desc: 'stop Event',
+      desc: 'stop event',
     },
     endEvent: {
-      desc: 'end Event',
+      desc: 'end event',
     },
   },
 };
