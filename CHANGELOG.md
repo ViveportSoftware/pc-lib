@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.35.0...v1.36.0) (2024-03-05)
+
+
+### Features
+
+* update animate path parameter ([04ecf7f](https://github.com/ViveportSoftware/pc-lib/commit/04ecf7f014dabd74acb933c1ac4e616b0170dd89))
+
 ## [1.35.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.34.0...v1.35.0) (2024-03-05)
 
 
