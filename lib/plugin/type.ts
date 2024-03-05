@@ -8,6 +8,7 @@ export enum Type {
   Quest,
   GPUMeshInstancing,
   Networked,
+  AnimatePath,
 }
 
 export enum FunctionTypes {
