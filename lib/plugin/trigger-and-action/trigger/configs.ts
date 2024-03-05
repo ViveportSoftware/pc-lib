@@ -144,6 +144,12 @@ export const Configs: ConfigsType = {
               default: 1,
             },
             {
+              name: 'inworldAutoTrigger',
+              type: 'boolean',
+              description: 'auto trigger',
+              default: false,
+            },
+            {
               name: 'entityId',
               type: 'string',
             },

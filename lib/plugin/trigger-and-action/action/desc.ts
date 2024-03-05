@@ -81,6 +81,9 @@ export const Desc = {
     },
   },
   [Type.InworldNpcWaitingSpeak]: {
+    inworldAutoTrigger: {
+      desc: 'auto trigger',
+    },
     inworldTriggerMode: {
       desc: 'goals trigger mode',
       default: 1,
