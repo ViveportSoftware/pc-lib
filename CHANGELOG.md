@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.37.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.36.0...v1.37.0) (2024-03-13)
+
+
+### Features
+
+* add plugin type & update animated-path parameter ([#117](https://github.com/ViveportSoftware/pc-lib/issues/117)) ([dba2ca4](https://github.com/ViveportSoftware/pc-lib/commit/dba2ca482dafb7742ff9540da9017e19038f9626))
+
 ## [1.36.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.35.0...v1.36.0) (2024-03-05)
 
 
