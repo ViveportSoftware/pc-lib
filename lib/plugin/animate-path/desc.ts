@@ -2,9 +2,6 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
-    moveEntityId: {
-      desc: 'move entity id',
-    },
     withPlayer: {
       default: false,
       desc: 'with player',
@@ -14,25 +11,31 @@ export const Desc = {
       desc: 'hide player',
     },
     cameraEntityId: {
-      desc: 'camera entity id',
+      desc: "camera (player's) on move entity",
+    },
+    cameraRotationOffset: {
+      desc: 'camera rotation offset X Y',
+    },
+    moveEntityId: {
+      desc: 'move entity id',
     },
     autoStart: {
       default: false,
       desc: 'auto start',
     },
-    animationLoop: {
-      default: false,
-      desc: 'animation loop',
+    animateRotation: {
+      desc: 'animate rotation',
     },
     animateOnce: {
       default: false,
       desc: 'animate once',
     },
+    animationLoop: {
+      default: false,
+      desc: 'animation loop',
+    },
     animationDuration: {
       desc: 'animation duration',
-    },
-    animationRotation: {
-      desc: 'animation rotation',
     },
     startEvent: {
       desc: 'start event',
