@@ -8,11 +8,6 @@ export const Configs: ConfigsType = {
       type: 'json',
       schema: [
         {
-          name: 'moveEntityId',
-          type: 'string',
-          entityPicker: true,
-        },
-        {
           name: 'withPlayer',
           type: 'boolean',
           default: false,
@@ -28,17 +23,22 @@ export const Configs: ConfigsType = {
           entityPicker: true,
         },
         {
+          name: 'cameraRotationOffset',
+          type: 'vec2',
+          default: [0, 0],
+        },
+        {
+          name: 'moveEntityId',
+          type: 'string',
+          entityPicker: true,
+        },
+        {
           name: 'autoStart',
           type: 'boolean',
           default: false,
         },
         {
-          name: 'animationDuration',
-          type: 'number',
-          default: 10,
-        },
-        {
-          name: 'animationLoop',
+          name: 'animateRotation',
           type: 'boolean',
           default: false,
         },
@@ -48,9 +48,14 @@ export const Configs: ConfigsType = {
           default: false,
         },
         {
-          name: 'animationRotation',
+          name: 'animationLoop',
           type: 'boolean',
           default: false,
+        },
+        {
+          name: 'animationDuration',
+          type: 'number',
+          default: 10,
         },
         {
           name: 'startEvent',
