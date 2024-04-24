@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.38.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.37.0...v1.38.0) (2024-04-24)
+
+
+### Features
+
+* update schema to support array type for number[], string[], bool[] ([3e74e26](https://github.com/ViveportSoftware/pc-lib/commit/3e74e2653f439697f64fd51ca012aba36b3419a9))
+
 ## [1.37.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.36.0...v1.37.0) (2024-03-13)
 
 
