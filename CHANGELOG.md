@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.39.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.38.0...v1.39.0) (2024-04-24)
+
+
+### Features
+
+* add LayersPicker for layers attributes ([90cb9d2](https://github.com/ViveportSoftware/pc-lib/commit/90cb9d2ff627ed4cdddffa1be9848f54a5f1cc18))
+
 ## [1.38.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.37.0...v1.38.0) (2024-04-24)
 
 
