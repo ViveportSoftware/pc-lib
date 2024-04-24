@@ -19,6 +19,7 @@ export enum FunctionTypes {
   Tags = 'tags',
   Select = 'select',
   EntityPicker = 'entityPicker',
+  LayersPicker = 'layersPicker',
 }
 
 type FunctionTypesMap = {
@@ -28,6 +29,7 @@ type FunctionTypesMap = {
   [FunctionTypes.Tags]?: boolean;
   [FunctionTypes.Select]?: boolean;
   [FunctionTypes.EntityPicker]?: boolean;
+  [FunctionTypes.LayersPicker]?: boolean;
   [FunctionTypes.Schema]?: Schemas;
 };
 

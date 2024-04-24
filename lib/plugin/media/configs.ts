@@ -147,6 +147,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       type: 'number',
       array: true,
       default: [],
+      layersPicker: true,
     },
   ],
 };
