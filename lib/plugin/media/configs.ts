@@ -138,14 +138,15 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: 0,
     },
     {
-      name: 'initialLOD',
-      type: 'number',
-      default: -1,
-    },
-    {
       name: 'initialTrianglePercent',
       type: 'number',
       default: 0,
+    },
+    {
+      name: 'layers',
+      type: 'number',
+      array: true,
+      default: [],
     },
   ],
 };

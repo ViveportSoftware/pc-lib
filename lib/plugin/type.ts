@@ -32,9 +32,9 @@ type FunctionTypesMap = {
 };
 
 type SchemaTypes = {
-  number: number;
-  string: string;
-  boolean: boolean;
+  number: number | number[];
+  string: string | string[];
+  boolean: boolean | boolean[];
   json: string; // use string temporarily
   vec3: [number, number, number];
   vec2: [number, number];
