@@ -105,8 +105,11 @@ export const Desc = {
     environmentAssetId: {
       desc: 'Environment asset',
     },
-    initialLOD: {
-      desc: 'Initial LOD',
+    initialTrianglePercent: {
+      desc: 'Initial triangle percentage',
+    },
+    layers: {
+      desc: 'layers to render',
     },
   },
 };
