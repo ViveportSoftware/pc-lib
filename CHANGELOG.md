@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.41.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.40.0...v1.41.0) (2024-04-26)
+
+
+### Features
+
+* update Polygon Streaming attributes ([c91c931](https://github.com/ViveportSoftware/pc-lib/commit/c91c9312c6ac8f959d6df6fe7c1889f2b022a7fe))
+
 ## [1.40.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.39.0...v1.40.0) (2024-04-26)
 
 
