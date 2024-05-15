@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.42.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.41.0...v1.42.0) (2024-05-15)
+
+
+### Features
+
+* upgrade release-please version ([1ea935a](https://github.com/ViveportSoftware/pc-lib/commit/1ea935a7762937ed9e07a3031eab05d96fb5e7ba))
+
 ## [1.41.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.40.0...v1.41.0) (2024-04-26)
 
 
