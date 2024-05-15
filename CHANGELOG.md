@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.43.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.42.0...v1.43.0) (2024-05-15)
+
+
+### Features
+
+* upgrade package version node 20.12.2 and pnpm 9.0.6 ([#131](https://github.com/ViveportSoftware/pc-lib/issues/131)) ([9bb1e05](https://github.com/ViveportSoftware/pc-lib/commit/9bb1e05cc99e5695b4fe8f12ff4162e258334306))
+
 ## [1.42.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.41.0...v1.42.0) (2024-05-15)
 
 
