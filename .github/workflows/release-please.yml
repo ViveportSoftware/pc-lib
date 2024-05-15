@@ -1,7 +1,8 @@
 on:
   push:
     branches:
-      - master
+      # - master
+      - test/john_cheng/action-flow
 
 permissions:
   contents: write
