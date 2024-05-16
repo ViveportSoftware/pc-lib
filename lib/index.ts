@@ -9,6 +9,7 @@ export * as Networked from './plugin/networked';
 export * as SceneSettings from './enums/scene-settings';
 export * as AnimatePath from './plugin/animate-path';
 export * as InworldIntegration from './plugin/inworld-integration';
+export * as Seat from './plugin/seat';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
