@@ -9,6 +9,7 @@ export enum Type {
   GPUMeshInstancing,
   Networked,
   AnimatePath,
+  InworldIntegration,
 }
 
 export enum FunctionTypes {

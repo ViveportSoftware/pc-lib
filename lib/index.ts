@@ -8,6 +8,7 @@ export * as GPUMeshInstancing from './plugin/gpu-mesh-instancing';
 export * as Networked from './plugin/networked';
 export * as SceneSettings from './enums/scene-settings';
 export * as AnimatePath from './plugin/animate-path';
+export * as InworldIntegration from './plugin/inworld-integration';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
