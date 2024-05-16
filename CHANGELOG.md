@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.44.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.43.0...v1.44.0) (2024-05-16)
+
+
+### Features
+
+* add plugin inworld integration ([a8bede6](https://github.com/ViveportSoftware/pc-lib/commit/a8bede6f8131c89bb8b85c088b2337d1c7a0cb2b))
+
 ## [1.43.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.42.0...v1.43.0) (2024-05-15)
 
 
