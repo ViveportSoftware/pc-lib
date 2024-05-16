@@ -10,6 +10,7 @@ export enum Type {
   Networked,
   AnimatePath,
   InworldIntegration,
+  Seat,
 }
 
 export enum FunctionTypes {
