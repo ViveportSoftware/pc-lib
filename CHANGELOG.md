@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.44.0...v1.45.0) (2024-05-16)
+
+
+### Features
+
+* seat plugin ([7ade4ae](https://github.com/ViveportSoftware/pc-lib/commit/7ade4ae285c1f472c4566280e66166eb5ac8bffa))
+
 ## [1.44.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.43.0...v1.44.0) (2024-05-16)
 
 
