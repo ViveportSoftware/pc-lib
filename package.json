@@ -7,17 +7,12 @@
   "main": "./dist/lib/index.umd.cjs",
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
-  "engines": {
-    "node": ">= 20.12.2",
-    "pnpm": ">= 9.0.6"
-  },
   "exports": {
     "types": "./dist/lib/index.d.ts",
     "import": "./dist/lib/index.js",
     "require": "./dist/lib/index.umd.cjs"
   },
   "scripts": {
-    "dev": "vite",
     "build": "pnpm clean && tsc",
     "lint": "gts lint",
     "clean": "gts clean",
