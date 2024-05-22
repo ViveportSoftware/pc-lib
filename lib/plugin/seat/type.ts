@@ -5,3 +5,18 @@ export enum Type {
 export enum PostureType {
   Base = 1,
 }
+
+export enum SeatHintName {
+  Base = 'SeatHint',
+  FarAway = 'SeatHintFarAway',
+}
+
+export enum SeatHintTriggerSphereName {
+  Base = 'SeatHintTriggerSphere',
+  FarAway = 'SeatHintFarAwayTriggerSphere',
+}
+
+export const SeatEntityConfigs = {
+  Name: 'Seat',
+  Tag: 'canSit',
+};
