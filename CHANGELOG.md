@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.46.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.45.0...v1.46.0) (2024-05-22)
+
+
+### Features
+
+* **seat-plugin:** add seat constants ([b5ba728](https://github.com/ViveportSoftware/pc-lib/commit/b5ba72833d81204350327e70e13bea27e03d444a))
+
 ## [1.45.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.44.0...v1.45.0) (2024-05-16)
 
 
