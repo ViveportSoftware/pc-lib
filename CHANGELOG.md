@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.46.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.46.0...v1.46.1) (2024-05-22)
+
+
+### Bug Fixes
+
+* remove useless codes ([4c8a615](https://github.com/ViveportSoftware/pc-lib/commit/4c8a615ce2c7be5267e67aab278f23175c3d488d))
+
 ## [1.46.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.45.0...v1.46.0) (2024-05-22)
 
 
