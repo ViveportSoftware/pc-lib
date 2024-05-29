@@ -157,4 +157,14 @@ export const Desc = {
       },
     ],
   },
+  [Type.Vote]: {
+    stringParams: [
+      {
+        desc: 'Vote event id',
+      },
+      {
+        desc: 'Vote candidate id',
+      },
+    ],
+  },
 };
