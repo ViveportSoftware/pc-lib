@@ -42,11 +42,12 @@ export enum Type {
   EntityStopSound = 3000019,
 
   /********************************
-   * Quest task
+   * Player related
    ********************************/
   Quest = 400001,
   TeleportAvatar = 400002,
   AssignUserAsset = 400003,
+  Vote = 400004,
 }
 
 export enum InworldTriggerMode {
