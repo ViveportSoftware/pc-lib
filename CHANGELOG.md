@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.46.1...v1.47.0) (2024-05-30)
+
+
+### Features
+
+* add new action:vote ([739a750](https://github.com/ViveportSoftware/pc-lib/commit/739a750e94b92de805a6ff137f9e309c2b222847))
+
 ## [1.46.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.46.0...v1.46.1) (2024-05-22)
 
 
