@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.0...v1.47.1) (2024-06-04)
+
+
+### Bug Fixes
+
+* **entitysubscribeanimationevent:** fix missing string params in desc ([16b2411](https://github.com/ViveportSoftware/pc-lib/commit/16b2411d7448a8ef2af4319f13f77048bb011714))
+
 ## [1.47.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.46.1...v1.47.0) (2024-05-30)
 
 
