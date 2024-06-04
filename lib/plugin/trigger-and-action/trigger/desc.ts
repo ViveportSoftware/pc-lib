@@ -36,6 +36,13 @@ export const Desc = {
       },
     ],
   },
+  [Type.EntitySubscribeAnimationEvent]: {
+    stringParams: [
+      {
+        desc: 'event name to subscribe',
+      },
+    ],
+  },
   [Type.EntitySubscribeTriggerEnter]: {
     tagsFilter: [
       {
