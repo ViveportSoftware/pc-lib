@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.2](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.1...v1.47.2) (2024-06-11)
+
+
+### Bug Fixes
+
+* **flow:** fix quest action config missing ([9845027](https://github.com/ViveportSoftware/pc-lib/commit/98450270c4df909a9d3345a545c58fd62b06705f))
+
 ## [1.47.1](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.0...v1.47.1) (2024-06-04)
 
 
