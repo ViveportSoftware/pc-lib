@@ -2,6 +2,10 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
+    enabled: {
+      default: true,
+      desc: 'enabled',
+    },
     delay: {
       default: 0,
       desc: 'delay in ms',

@@ -14,6 +14,11 @@ export const Configs: ConfigsType = {
           description: 'trigger type',
         },
         {
+          name: 'enabled',
+          type: 'boolean',
+          default: true,
+        },
+        {
           name: 'sync',
           type: 'boolean',
           default: false,
