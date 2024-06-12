@@ -14,6 +14,11 @@ export const Configs: ConfigsType = {
           description: 'trigger type',
         },
         {
+          name: 'enabled',
+          type: 'boolean',
+          default: true,
+        },
+        {
           name: 'sync',
           type: 'boolean',
           default: false,
@@ -55,6 +60,11 @@ export const Configs: ConfigsType = {
               description: 'trigger type',
             },
             {
+              name: 'enabled',
+              type: 'boolean',
+              default: true,
+            },
+            {
               name: 'booleanParams',
               type: 'boolean',
               array: true,
@@ -78,6 +88,11 @@ export const Configs: ConfigsType = {
                   type: 'number',
                   default: 0,
                   description: 'action type',
+                },
+                {
+                  name: 'enabled',
+                  type: 'boolean',
+                  default: true,
                 },
                 {
                   name: 'booleanParams',
@@ -109,6 +124,11 @@ export const Configs: ConfigsType = {
               type: 'number',
               default: 0,
               description: 'action type',
+            },
+            {
+              name: 'enabled',
+              type: 'boolean',
+              default: true,
             },
             {
               name: 'delay',

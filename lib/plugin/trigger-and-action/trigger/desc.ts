@@ -2,6 +2,10 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
+    enabled: {
+      default: true,
+      desc: 'enabled',
+    },
     sync: {
       default: true,
       desc: 'sync the trigger',

@@ -10,6 +10,11 @@ export const Configs: ConfigsType = {
       description: 'action type',
     },
     {
+      name: 'enabled',
+      type: 'boolean',
+      default: true,
+    },
+    {
       name: 'delay',
       type: 'number',
       default: 0,
