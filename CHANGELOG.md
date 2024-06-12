@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.4](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.3...v1.47.4) (2024-06-12)
+
+
+### Bug Fixes
+
+* **trigger/config.ts:** add `enable` to triggerParams and actionParams ([28192ac](https://github.com/ViveportSoftware/pc-lib/commit/28192acf462b2081a31feece9cc4a574588add51))
+
 ## [1.47.3](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.2...v1.47.3) (2024-06-12)
 
 
