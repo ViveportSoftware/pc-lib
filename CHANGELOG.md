@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.47.3](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.2...v1.47.3) (2024-06-12)
+
+
+### Bug Fixes
+
+* hide options that are not yet implemented ([84f763b](https://github.com/ViveportSoftware/pc-lib/commit/84f763bbe64c888c18168301970ca3f630750fbf))
+
 ## [1.47.2](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.1...v1.47.2) (2024-06-11)
 
 
