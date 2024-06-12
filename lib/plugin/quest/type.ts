@@ -5,7 +5,7 @@ export enum Type {
 export enum TaskType {
   check = 1,
   progressBar = 2,
-  eventListening = 3,
+  // eventListening = 3,
 }
 
 export enum ResponseType {

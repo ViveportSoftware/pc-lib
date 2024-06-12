@@ -22,16 +22,16 @@ export const Configs: ConfigsType = {
           type: 'boolean',
           default: false,
         },
-        {
-          name: 'saveUserProgress',
-          type: 'boolean',
-          default: false,
-        },
-        {
-          name: 'tasksAreOrdered',
-          type: 'boolean',
-          default: false,
-        },
+        // {
+        //   name: 'saveUserProgress',
+        //   type: 'boolean',
+        //   default: false,
+        // },
+        // {
+        //   name: 'tasksAreOrdered',
+        //   type: 'boolean',
+        //   default: false,
+        // },
         {
           name: 'celebrateOnComplete',
           type: 'boolean',
