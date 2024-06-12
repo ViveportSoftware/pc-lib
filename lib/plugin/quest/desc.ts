@@ -12,14 +12,14 @@ export const Desc = {
       desc: 'Start Automatically',
       default: false,
     },
-    saveUserProgress: {
-      desc: 'Save User Progress',
-      default: false,
-    },
-    tasksAreOrdered: {
-      desc: 'Tasks Are Ordered',
-      default: false,
-    },
+    // saveUserProgress: {
+    //   desc: 'Save User Progress',
+    //   default: false,
+    // },
+    // tasksAreOrdered: {
+    //   desc: 'Tasks Are Ordered',
+    //   default: false,
+    // },
     celebrateOnComplete: {
       desc: 'Celebrate On Complete',
       default: false,
