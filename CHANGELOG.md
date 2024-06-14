@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.48.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.4...v1.48.0) (2024-06-14)
+
+
+### Features
+
+* **external-creator:** add external creator enum ([8915338](https://github.com/ViveportSoftware/pc-lib/commit/891533837b5b3f80b1fcf58b77069a702b2b5791))
+
 ## [1.47.4](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.3...v1.47.4) (2024-06-12)
 
 
