@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.49.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.48.0...v1.49.0) (2024-06-17)
+
+
+### Features
+
+* remove enabled check box ([bbe579e](https://github.com/ViveportSoftware/pc-lib/commit/bbe579e1fc42452e19b0bbdfbfab863aec792827))
+
 ## [1.48.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.47.4...v1.48.0) (2024-06-14)
 
 
