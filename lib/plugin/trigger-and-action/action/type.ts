@@ -48,6 +48,7 @@ export enum Type {
   TeleportAvatar = 400002,
   AssignUserAsset = 400003,
   Vote = 400004,
+  ShowToastMessage = 400005,
 }
 
 export enum InworldTriggerMode {
@@ -91,4 +92,5 @@ export enum ExternalCreatorType {
   Quest = 400001,
   TeleportAvatar = 400002,
   Vote = 400004,
+  ShowToastMessage = 400005,
 }

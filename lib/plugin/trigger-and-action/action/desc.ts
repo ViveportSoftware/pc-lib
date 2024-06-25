@@ -167,4 +167,12 @@ export const Desc = {
       },
     ],
   },
+  [Type.ShowToastMessage]: {
+    toastTitle: {
+      desc: 'toast title',
+    },
+    toastDescription: {
+      desc: 'toast description',
+    },
+  },
 };
