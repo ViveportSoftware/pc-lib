@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.51.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.50.0...v1.51.0) (2024-06-26)
+
+
+### Features
+
+* add toast to trigger configs and change title and description display names ([3eee0c6](https://github.com/ViveportSoftware/pc-lib/commit/3eee0c658e720b301bd5c257f77d7f6d04365051))
+
 ## [1.50.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.49.0...v1.50.0) (2024-06-26)
 
 
