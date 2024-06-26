@@ -169,10 +169,10 @@ export const Desc = {
   },
   [Type.ShowToastMessage]: {
     toastTitle: {
-      desc: 'toast title',
+      desc: 'title',
     },
     toastDescription: {
-      desc: 'toast description',
+      desc: 'description',
     },
   },
 };
