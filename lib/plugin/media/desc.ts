@@ -9,7 +9,7 @@ export const Desc = {
       desc: 'link href',
     },
     linkButtonText: {
-      desc: 'link button text (8 words maximum)',
+      desc: 'link button text',
     },
   },
   [Type.Video]: {
@@ -44,7 +44,7 @@ export const Desc = {
       desc: 'link href',
     },
     linkButtonText: {
-      desc: 'link button text (8 words maximum)',
+      desc: 'link button text',
     },
     audioZone: {
       desc: 'audio zone',
