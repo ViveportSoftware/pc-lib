@@ -80,12 +80,12 @@ export const Configs: ConfigsType = {
     {
       name: 'toastTitle',
       type: 'string',
-      description: 'toast title',
+      description: 'title',
     },
     {
       name: 'toastDescription',
       type: 'string',
-      description: 'toast description',
+      description: 'description',
     },
   ],
 };

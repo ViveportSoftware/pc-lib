@@ -192,6 +192,16 @@ export const Configs: ConfigsType = {
               description: 'selected task',
               select: true,
             },
+            {
+              name: 'toastTitle',
+              type: 'string',
+              description: 'title',
+            },
+            {
+              name: 'toastDescription',
+              type: 'string',
+              description: 'description',
+            },
           ],
           array: true,
         },
