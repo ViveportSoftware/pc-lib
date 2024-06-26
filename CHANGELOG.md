@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.50.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.49.0...v1.50.0) (2024-06-26)
+
+
+### Features
+
+* add new action - show toast message ([268f282](https://github.com/ViveportSoftware/pc-lib/commit/268f282094e514c7ef064a77ed536a8a2b7c17f5))
+* modify linkButtonText description ([e09ecce](https://github.com/ViveportSoftware/pc-lib/commit/e09ecceb1ace203503518fc01dba43cd79277d4b))
+
 ## [1.49.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.48.0...v1.49.0) (2024-06-17)
 
 
