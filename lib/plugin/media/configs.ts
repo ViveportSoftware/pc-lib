@@ -184,6 +184,7 @@ export const Configs: ConfigsType = {
         {
           name: 'modalDescription',
           type: 'string',
+          default: '',
         },
         {
           name: 'isOpenInNewTab',
