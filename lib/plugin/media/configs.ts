@@ -182,6 +182,20 @@ export const Configs: ConfigsType = {
           default: false,
         },
         {
+          name: 'modalDescription',
+          type: 'string',
+        },
+        {
+          name: 'isOpenInNewTab',
+          type: 'boolean',
+          default: false,
+        },
+        {
+          name: 'activationTime',
+          type: 'unixEpochMs',
+          default: '',
+        },
+        {
           name: 'linkHref',
           type: 'string',
           default: '',

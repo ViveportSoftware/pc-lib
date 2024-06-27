@@ -5,6 +5,15 @@ export const Desc = {
     billboard: {
       desc: 'billboard',
     },
+    modalDescription: {
+      desc: 'modal description (30 words maximum)',
+    },
+    isOpenInNewTab: {
+      desc: 'open link in new tab',
+    },
+    activationTime: {
+      desc: 'link activation time (UTC+0)',
+    },
     linkHref: {
       desc: 'link href',
     },

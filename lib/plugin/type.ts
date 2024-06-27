@@ -42,6 +42,7 @@ type SchemaTypes = {
   json: string; // use string temporarily
   vec3: [number, number, number];
   vec2: [number, number];
+  unixEpochMs: string;
 };
 
 type Schema<K extends keyof SchemaTypes> = {
@@ -58,6 +59,7 @@ export type Schemas = (
   | Schema<'json'>
   | Schema<'vec3'>
   | Schema<'vec2'>
+  | Schema<'unixEpochMs'>
 )[];
 
 export type ConfigsType = {
