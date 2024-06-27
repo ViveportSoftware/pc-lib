@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.52.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.51.0...v1.52.0) (2024-06-27)
+
+
+### Features
+
+* add modal description default value ([0a940d4](https://github.com/ViveportSoftware/pc-lib/commit/0a940d4a9dda19fe4aae82ea54753637170d9f87))
+* add new input to image plugin ([d3f6dd2](https://github.com/ViveportSoftware/pc-lib/commit/d3f6dd2e19bf32d460bd605a9bfd75fe5864cc1e))
+
 ## [1.51.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.50.0...v1.51.0) (2024-06-26)
 
 
