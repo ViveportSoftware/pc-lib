@@ -6,7 +6,7 @@ export const Desc = {
       desc: 'billboard',
     },
     modalDescription: {
-      desc: 'model description (64 words maximum)',
+      desc: 'dialog title',
     },
     isOpenInNewTab: {
       desc: 'open link in new tab',
