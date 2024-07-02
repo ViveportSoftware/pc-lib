@@ -6,7 +6,7 @@ export const Desc = {
       desc: 'billboard',
     },
     modalDescription: {
-      desc: 'dialog title',
+      desc: 'dialog title', // count down dialog title
     },
     isOpenInNewTab: {
       desc: 'open link in new tab',
