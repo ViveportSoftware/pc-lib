@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.53.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.52.0...v1.53.0) (2024-07-02)
+
+
+### Features
+
+* force build ([2f8e8c8](https://github.com/ViveportSoftware/pc-lib/commit/2f8e8c8baf79f581be4c859cf9d6e4d3f1454c65))
+
 ## [1.52.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.51.0...v1.52.0) (2024-06-27)
 
 
