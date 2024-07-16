@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.54.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.53.0...v1.54.0) (2024-07-16)
+
+
+### Features
+
+* add physic plugin and custom rigidbody module ([8e07698](https://github.com/ViveportSoftware/pc-lib/commit/8e07698cfc469b66da2d4b1889e489f24b6953c4))
+
 ## [1.53.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.52.0...v1.53.0) (2024-07-02)
 
 
