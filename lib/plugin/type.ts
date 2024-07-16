@@ -11,6 +11,7 @@ export enum Type {
   AnimatePath,
   InworldIntegration,
   Seat,
+  Physic,
 }
 
 export enum FunctionTypes {
