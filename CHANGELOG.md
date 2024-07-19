@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.55.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.54.0...v1.55.0) (2024-07-19)
+
+
+### Features
+
+* add performer area setting in custom rigidbody module ([7c9ffb7](https://github.com/ViveportSoftware/pc-lib/commit/7c9ffb7295aa0ee6d6a92f801acae658f292c50f))
+
 ## [1.54.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.53.0...v1.54.0) (2024-07-16)
 
 
