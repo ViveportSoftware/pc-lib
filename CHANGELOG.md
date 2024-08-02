@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.56.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.55.0...v1.56.0) (2024-08-02)
+
+
+### Features
+
+* add sitInSeat trigger type ([004b1e9](https://github.com/ViveportSoftware/pc-lib/commit/004b1e93d017dea7b35faa85477d69b92faa4707))
+
 ## [1.55.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.54.0...v1.55.0) (2024-07-19)
 
 
