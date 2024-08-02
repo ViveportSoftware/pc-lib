@@ -29,6 +29,7 @@ export enum Type {
   EntitySubscribeCollisionEnd = 300005,
   EntitySubscribeTriggerEnter = 300006,
   EntitySubscribeTriggerLeave = 300007,
+  SitInSeat = 300008,
 }
 
 export enum ExternalCreatorType {
