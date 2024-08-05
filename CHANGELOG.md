@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.57.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.56.0...v1.57.0) (2024-08-05)
+
+
+### Features
+
+* add trigger type - share photo ([ff82da5](https://github.com/ViveportSoftware/pc-lib/commit/ff82da5e23cd3da52f48dbcc4ea90991f2d7b528))
+
 ## [1.56.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.55.0...v1.56.0) (2024-08-02)
 
 
