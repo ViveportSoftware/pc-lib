@@ -30,6 +30,11 @@ export enum Type {
   EntitySubscribeTriggerEnter = 300006,
   EntitySubscribeTriggerLeave = 300007,
   SitInSeat = 300008,
+
+  /********************************
+   * User Operation
+   ********************************/
+  SharePhoto = 400001,
 }
 
 export enum ExternalCreatorType {
