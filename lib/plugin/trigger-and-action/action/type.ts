@@ -49,6 +49,7 @@ export enum Type {
   AssignUserAsset = 400003,
   Vote = 400004,
   ShowToastMessage = 400005,
+  TaskComplete = 400006,
 }
 
 export enum InworldTriggerMode {

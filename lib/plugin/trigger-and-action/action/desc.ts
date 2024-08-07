@@ -175,4 +175,11 @@ export const Desc = {
       desc: 'description',
     },
   },
+  [Type.TaskComplete]: {
+    stringParams: [
+      {
+        desc: 'task id',
+      },
+    ],
+  },
 };
