@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.58.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.57.0...v1.58.0) (2024-08-07)
+
+
+### Features
+
+* add TaskComplete action type ([6953da8](https://github.com/ViveportSoftware/pc-lib/commit/6953da8f7898f08e44c47f0ec6641b15828a28d1))
+
 ## [1.57.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.56.0...v1.57.0) (2024-08-05)
 
 
