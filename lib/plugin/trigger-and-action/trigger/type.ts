@@ -35,6 +35,8 @@ export enum Type {
    * User Operation
    ********************************/
   SharePhoto = 400001,
+  EnterAnyWorld = 400002,
+  EnterMyWorld = 400003,
 }
 
 export enum ExternalCreatorType {
