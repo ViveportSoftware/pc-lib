@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.60.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.59.0...v1.60.0) (2024-08-19)
+
+
+### Features
+
+* set vote and show-toast-message as internal ([9ba0be4](https://github.com/ViveportSoftware/pc-lib/commit/9ba0be4d694742f6e5b0b5821a41c138eb4e8a47))
+
 ## [1.59.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.58.0...v1.59.0) (2024-08-08)
 
 
