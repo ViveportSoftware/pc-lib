@@ -92,6 +92,4 @@ export enum ExternalCreatorType {
    ********************************/
   Quest = 400001,
   TeleportAvatar = 400002,
-  Vote = 400004,
-  ShowToastMessage = 400005,
 }
