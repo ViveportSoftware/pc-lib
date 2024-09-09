@@ -11,6 +11,7 @@ export * as AnimatePath from './plugin/animate-path';
 export * as InworldIntegration from './plugin/inworld-integration';
 export * as Seat from './plugin/seat';
 export * as Physic from './plugin/physic';
+export * as Minimap from './plugin/minimap';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
