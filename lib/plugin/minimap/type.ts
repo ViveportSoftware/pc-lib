@@ -3,8 +3,8 @@ export enum Type {
 }
 
 export enum MapTextureSizeType {
-  Small = 0,
-  Medium = 1,
-  Large = 2,
-  XLarge = 3,
+  Small = '512',
+  Medium = '1024',
+  Large = '2048',
+  XLarge = '4096',
 }

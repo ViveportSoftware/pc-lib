@@ -11,7 +11,7 @@ export const Desc = {
     clipHeight: {
       desc: 'clip height',
     },
-    textureId: {
+    assetId: {
       desc: 'texture',
     },
     zoom: {

@@ -9,9 +9,9 @@ export const Configs: ConfigsType = {
       schema: [
         {
           name: 'mapTextureSize',
-          type: 'number',
+          type: 'string',
           select: true,
-          default: 0,
+          default: '512',
         },
         {
           name: 'captureRange',
@@ -24,7 +24,7 @@ export const Configs: ConfigsType = {
           default: 2,
         },
         {
-          name: 'textureId',
+          name: 'assetId',
           type: 'number',
           default: 0,
         },
