@@ -2,23 +2,41 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
-    mapTextureSize: {
-      desc: 'map texture size',
+    isEditingCaptureSettings: {
+      desc: 'edit map capture settings',
     },
-    captureRange: {
-      desc: 'capture range',
+    mapResolution: {
+      desc: 'map resolution',
+    },
+    center: {
+      desc: 'center',
     },
     clipHeight: {
       desc: 'clip height',
     },
-    assetId: {
-      desc: 'texture',
+    captureArea: {
+      desc: 'capture area',
+    },
+    captureDepth: {
+      desc: 'capture depth',
+    },
+    mapAssetId: {
+      desc: 'map texture',
     },
     zoom: {
       desc: 'zoom',
     },
-    isCrossSectionEnabled: {
-      desc: 'cross section enabled',
+    arrowAssetId: {
+      desc: 'center arrow',
+    },
+    coneAssetId: {
+      desc: 'cone of view',
+    },
+    frameAssetId: {
+      desc: 'frame',
+    },
+    maskAssetId: {
+      desc: 'mask',
     },
   },
 };

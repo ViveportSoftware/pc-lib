@@ -8,35 +8,66 @@ export const Configs: ConfigsType = {
       type: 'json',
       schema: [
         {
-          name: 'mapTextureSize',
-          type: 'string',
-          select: true,
-          default: '512',
+          name: 'isEditingCaptureSettings',
+          type: 'boolean',
+          default: true,
         },
         {
-          name: 'captureRange',
+          name: 'mapResolution',
           type: 'number',
-          default: 10,
+          select: true,
+          default: 512,
+        },
+        {
+          name: 'center',
+          type: 'vec2',
+          default: [0, 0],
         },
         {
           name: 'clipHeight',
           type: 'number',
-          default: 2,
+          default: 10,
+        },
+
+        {
+          name: 'captureArea',
+          type: 'number',
+          default: 10,
         },
         {
-          name: 'assetId',
+          name: 'captureDepth',
+          type: 'number',
+          default: 100,
+        },
+        {
+          name: 'mapAssetId',
           type: 'number',
           default: 0,
         },
         {
           name: 'zoom',
           type: 'number',
-          default: 1,
+          default: 100,
         },
         {
-          name: 'isCrossSectionEnabled',
-          type: 'boolean',
-          default: false,
+          name: 'arrowAssetId',
+          type: 'number',
+          default: 0,
+        },
+        {
+          name: 'coneAssetId',
+          type: 'number',
+          default: 0,
+        },
+        {
+          name: 'frameAssetId',
+          type: 'number',
+          default: 0,
+        },
+        {
+          name: 'maskAssetId',
+          type: 'number',
+          default: 0,
         },
       ],
     },
