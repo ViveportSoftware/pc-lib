@@ -182,19 +182,4 @@ export const Desc = {
       },
     ],
   },
-  [Type.EntityAssetUnload]: {
-    entityId: {
-      desc: 'pick up specify execution entity',
-    },
-  },
-  [Type.EntityAssetReload]: {
-    entityId: {
-      desc: 'pick up specify execution entity',
-    },
-  },
-  [Type.EntityDestroy]: {
-    entityId: {
-      desc: 'pick up specify execution entity',
-    },
-  },
 };
