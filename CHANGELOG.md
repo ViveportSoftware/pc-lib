@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.61.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.60.0...v1.61.0) (2024-09-18)
+
+
+### Features
+
+* add action types EnterAnyWorld and EnterMyWorld ([96a56a6](https://github.com/ViveportSoftware/pc-lib/commit/96a56a65d24d312913b5cbda2a0aa8b0720e08ce))
+
 ## [1.60.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.59.0...v1.60.0) (2024-08-19)
 
 
