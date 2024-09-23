@@ -23,8 +23,14 @@ export const Desc = {
     mapAssetId: {
       desc: 'map texture',
     },
+    isOrientingMapToCamera: {
+      desc: 'orient map to camera direction',
+    },
     zoom: {
       desc: 'zoom',
+    },
+    baseColor: {
+      desc: 'out of scope color',
     },
     arrowAssetId: {
       desc: 'center arrow',

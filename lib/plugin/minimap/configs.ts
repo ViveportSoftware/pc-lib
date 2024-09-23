@@ -45,9 +45,19 @@ export const Configs: ConfigsType = {
           default: 0,
         },
         {
+          name: 'isOrientingMapToCamera',
+          type: 'boolean',
+          default: false,
+        },
+        {
           name: 'zoom',
           type: 'number',
           default: 100,
+        },
+        {
+          name: 'baseColor',
+          type: 'number',
+          default: [50, 50, 50],
         },
         {
           name: 'arrowAssetId',
