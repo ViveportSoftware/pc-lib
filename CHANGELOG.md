@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.62.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.61.0...v1.62.0) (2024-09-24)
+
+
+### Features
+
+* add minimap orientation and base color ([fe76a21](https://github.com/ViveportSoftware/pc-lib/commit/fe76a21c0006adafa5c9958a92efdcacad97e1a3))
+
+
+### Bug Fixes
+
+* add base color array true ([8ba1f82](https://github.com/ViveportSoftware/pc-lib/commit/8ba1f82f45e2e7645e6bce2aceee8277f1ed8386))
+* add base color array value ([3226ada](https://github.com/ViveportSoftware/pc-lib/commit/3226ada4d7171143096feda7ed8f7f4a0447a2f4))
+
 ## [1.61.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.60.0...v1.61.0) (2024-09-18)
 
 
