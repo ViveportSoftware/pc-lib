@@ -57,7 +57,7 @@ export const Configs: ConfigsType = {
         {
           name: 'baseColor',
           type: 'number',
-          default: [50, 50, 50],
+          default: [0.5, 0.5, 0.5],
         },
         {
           name: 'arrowAssetId',
