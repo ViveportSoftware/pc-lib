@@ -12,6 +12,7 @@ export enum Type {
   InworldIntegration,
   Seat,
   Physic,
+  Minimap,
 }
 
 export enum FunctionTypes {
