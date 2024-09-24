@@ -57,6 +57,7 @@ export const Configs: ConfigsType = {
         {
           name: 'baseColor',
           type: 'number',
+          array: true,
           default: [0.5, 0.5, 0.5],
         },
         {
