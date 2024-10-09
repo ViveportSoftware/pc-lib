@@ -181,6 +181,9 @@ export const Desc = {
         desc: 'task id',
       },
     ],
+    taskDescription: {
+      desc: 'description',
+    },
   },
   [Type.EntityAssetUnload]: {
     entityId: {
