@@ -78,6 +78,12 @@ export const Configs: ConfigsType = {
       select: true,
     },
     {
+      name: 'taskDescription',
+      type: 'string',
+      description: 'description',
+      default: 'task',
+    },
+    {
       name: 'toastTitle',
       type: 'string',
       description: 'title',
