@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.63.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.62.0...v1.63.0) (2024-10-09)
+
+
+### Features
+
+* add a description input to the [Action] taskComplete ([8e488c6](https://github.com/ViveportSoftware/pc-lib/commit/8e488c609d203c5a3eb1c0fc65be773d16bb2b7a))
+
 ## [1.62.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.61.0...v1.62.0) (2024-09-24)
 
 
