@@ -3,7 +3,13 @@
   "compilerOptions": {
     "lib": ["dom"],
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "package.json": ["./package.json"]
+    }
   },
   "include": ["lib", "src"],
   "exclude": ["node_modules"]
