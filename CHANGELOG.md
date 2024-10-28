@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.64.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.63.0...v1.64.0) (2024-10-28)
+
+
+### Features
+
+* add create-extension-sdk instance ([1de3e80](https://github.com/ViveportSoftware/pc-lib/commit/1de3e80575cd8b4a8490bee7deac991ff75f92c8))
+
 ## [1.63.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.62.0...v1.63.0) (2024-10-09)
 
 
