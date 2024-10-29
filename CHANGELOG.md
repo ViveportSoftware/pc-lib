@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.65.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.64.0...v1.65.0) (2024-10-29)
+
+
+### Features
+
+* **create-extensions-sdk:** improve typescript private field. improve template format ([02c6ad5](https://github.com/ViveportSoftware/pc-lib/commit/02c6ad54fd23127df3b80cc8fea08735cabda58e))
+
 ## [1.64.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.63.0...v1.64.0) (2024-10-28)
 
 
