@@ -1,8 +1,8 @@
 import * as TriggerAndAction from '../plugin/trigger-and-action';
 
 export default class CreateExtensionsSDK {
-  TriggerType: Record<string, number>;
-  ActionType: Record<string, number>;
+  private TriggerType: Record<string, number>;
+  private ActionType: Record<string, number>;
   prefix: Record<string, string>;
 
   constructor() {
@@ -35,10 +35,10 @@ export default class CreateExtensionsSDK {
       ActionType: 'action:',
     };
 
-    this._generateGetters();
+    this.generateGetters();
   }
 
-  _generateGetters() {
+  private generateGetters() {
     Object.keys(this.TriggerType).forEach(key => {
       Object.defineProperty(this, `getTrigger${key}`, {
         get: () => `${this.prefix['TriggerType'] + this.TriggerType[key]}`,
@@ -59,13 +59,13 @@ export default class CreateExtensionsSDK {
  * @description The VIVERSE Create Extensions SDK provides developers with the capability to interact with the extended features of the VIVERSE platform, allowing them to integrate specific extension features through custom code to enhance the platform's flexibility and functionality.
  */
   export const TriggerTypes = {
-    ${Object.keys(this.TriggerType)
+            ${Object.keys(this.TriggerType)
       .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
       .join(',\n            ')}
   }
 
   export const ActionTypes = {
-    ${Object.keys(this.ActionType)
+            ${Object.keys(this.ActionType)
       .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
       .join(',\n            ')}
   }
