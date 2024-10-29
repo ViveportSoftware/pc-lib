@@ -60,14 +60,14 @@ export default class CreateExtensionsSDK {
  */
   export const TriggerTypes = {
             ${Object.keys(this.TriggerType)
-      .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
-      .join(',\n            ')}
+              .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
+              .join(',\n            ')}
   }
 
   export const ActionTypes = {
             ${Object.keys(this.ActionType)
-      .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
-      .join(',\n            ')}
+              .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
+              .join(',\n            ')}
   }
 `;
   }
