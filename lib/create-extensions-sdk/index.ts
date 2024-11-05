@@ -53,22 +53,17 @@ export default class CreateExtensionsSDK {
   }
 
   toTemplateLiteral() {
-    return `
-/**
- * @namespace Create Extension SDK
- * @description The VIVERSE Create Extensions SDK provides developers with the capability to interact with the extended features of the VIVERSE platform, allowing them to integrate specific extension features through custom code to enhance the platform's flexibility and functionality.
- */
-  export const TriggerTypes = {
-            ${Object.keys(this.TriggerType)
-              .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
-              .join(',\n            ')}
-  }
+    return `export const TriggerTypes = {
+  ${Object.keys(this.TriggerType)
+    .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
+    .join(',\n  ')}
+}
 
-  export const ActionTypes = {
-            ${Object.keys(this.ActionType)
-              .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
-              .join(',\n            ')}
-  }
+export const ActionTypes = {
+  ${Object.keys(this.ActionType)
+    .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
+    .join(',\n  ')}
+}
 `;
   }
 }
