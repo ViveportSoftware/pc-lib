@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.66.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.65.0...v1.66.0) (2024-11-05)
+
+
+### Features
+
+* **create-ext-sdk:** update template content ([abf60ba](https://github.com/ViveportSoftware/pc-lib/commit/abf60babd33f0b2239d10a9fe0137928c48696ce))
+
 ## [1.65.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.64.0...v1.65.0) (2024-10-29)
 
 
