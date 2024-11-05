@@ -1,4 +1,4 @@
-import * as TriggerAndAction from '../plugin/trigger-and-action';
+import * as TriggerAndAction from '../../lib/plugin/trigger-and-action';
 
 export default class CreateExtensionsSDK {
   private TriggerType: Record<string, number>;
