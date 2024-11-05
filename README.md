@@ -34,3 +34,14 @@ pnpm add github:ViveportSoftware/pc-lib#master
 # tag
 pnpm add github:ViveportSoftware/pc-lib#v1.32.0
 ```
+
+## Create create-sdk template
+
+1.  Bundle ESM interfaces script with Rollup
+2.  Convert bundle to a string and export as template.ts
+
+### After modifying the create-sdk interface, run the command below:
+
+```bash
+pnpm build-template
+```

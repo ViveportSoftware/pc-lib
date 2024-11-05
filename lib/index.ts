@@ -20,4 +20,5 @@ export {
 } from './plugin/type';
 
 export {Type as TriggerAndActionPluginType} from './plugin/trigger-and-action/type';
-export {default as CreateExtensionsSDK} from './create-extensions-sdk';
+export {default as CreateExtensionsSDK} from '../sdk/create-extensions-sdk';
+export {default as CreateSDK} from '../sdk/create-sdk';

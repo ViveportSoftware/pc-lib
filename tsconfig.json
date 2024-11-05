@@ -5,8 +5,8 @@
     "rootDir": ".",
     "outDir": "dist",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "include": ["lib", "src"],
-  "exclude": ["node_modules"]
+  "include": ["lib", "sdk"],
+  "exclude": ["node_modules", "sdk/create-sdk-template/**/*"]
 }
