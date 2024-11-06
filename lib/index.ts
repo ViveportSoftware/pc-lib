@@ -7,6 +7,7 @@ export * as Quest from './plugin/quest';
 export * as GPUMeshInstancing from './plugin/gpu-mesh-instancing';
 export * as Networked from './plugin/networked';
 export * as SceneSettings from './enums/scene-settings';
+export * as Avatar from './enums/avatar';
 export * as AnimatePath from './plugin/animate-path';
 export * as InworldIntegration from './plugin/inworld-integration';
 export * as Seat from './plugin/seat';
