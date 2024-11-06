@@ -1,4 +1,5 @@
 import * as TriggerAndAction from '../../lib/plugin/trigger-and-action';
+import * as Avatar from '../../lib/enums/avatar';
 
 export default class CreateExtensionsSDK {
   private TriggerType: Record<string, number>;
@@ -53,6 +54,18 @@ export default class CreateExtensionsSDK {
   }
 
   toTemplateLiteral() {
+    const AvatarGenderType = Object.entries(Avatar.AvatarGenderType)
+      .filter(
+        (entry): entry is [string, number] => typeof entry[1] === 'number'
+      )
+      .reduce(
+        (acc, [key, value]) => {
+          acc[key] = value;
+          return acc;
+        },
+        {} as Record<string, number>
+      );
+
     return `export const TriggerTypes = {
   ${Object.keys(this.TriggerType)
     .map(key => `${key}: '${(this as any)[`getTrigger${key}`]}'`)
@@ -62,6 +75,12 @@ export default class CreateExtensionsSDK {
 export const ActionTypes = {
   ${Object.keys(this.ActionType)
     .map(key => `${key}: '${(this as any)[`getAction${key}`]}'`)
+    .join(',\n  ')}
+}
+
+export const AvatarGenderType = {
+  ${Object.entries(AvatarGenderType)
+    .map(([key, value]) => `${key}: ${value}`)
     .join(',\n  ')}
 }
 `;
