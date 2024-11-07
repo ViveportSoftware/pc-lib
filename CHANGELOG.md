@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.67.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.66.0...v1.67.0) (2024-11-07)
+
+
+### Features
+
+* **create-extension-sdk:** revamp codebase ([54bfcea](https://github.com/ViveportSoftware/pc-lib/commit/54bfcea06953763ec6b0ae2e86de53c28c98d085))
+* create-sdk template bundle process ([978acb3](https://github.com/ViveportSoftware/pc-lib/commit/978acb34c187bed2a1aee7cbd6226057e9d53f1b))
+* export avatar related enum ([5e79ee3](https://github.com/ViveportSoftware/pc-lib/commit/5e79ee30dbb34ffb6d547934c5f45896da981a99))
+
 ## [1.66.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.65.0...v1.66.0) (2024-11-05)
 
 
