@@ -43,5 +43,10 @@ pnpm add github:ViveportSoftware/pc-lib#v1.32.0
 ### After modifying the create-sdk interface, run the command below:
 
 ```bash
-pnpm build-template
+pnpm generate-create-sdk
 ```
+
+## Read create-sdk docs
+
+1. Open the create-sdk documentation by navigating to the `docs` directory in your project.
+2. Open the `index.html` file in your web browser to view the documentation.
