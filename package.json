@@ -26,7 +26,8 @@
     "pretest": "pnpm compile",
     "posttest": "pnpm lint",
     "commit": "cz",
-    "postinstall": "mkdir -p dist"
+    "postinstall": "mkdir -p dist",
+    "generate-create-sdk": "pnpm build-template && pnpm build-sdk-docs"
   },
   "publishConfig": {
     "access": "public"
