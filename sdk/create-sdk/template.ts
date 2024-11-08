@@ -328,12 +328,11 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 傳入 stateName 來結束動畫播放
+     * 停止所有正在播放的動畫
      * @memberof IControlledPlayer
-     * @param {string} stateName: The stateName of animation.
      * @returns {void}
      */
-    stopAnimation(stateName){
+    stopAnimation(){
         throw new Error("Please implement the playAnimation() function.");
     }
 
