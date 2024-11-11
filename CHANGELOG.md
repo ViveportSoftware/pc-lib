@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.69.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.68.0...v1.69.0) (2024-11-11)
+
+
+### Features
+
+* **extension-sdk:** export AvatarDataType ([6fb3fac](https://github.com/ViveportSoftware/pc-lib/commit/6fb3fac038f5be0f750a63d7e2010f7a6151695a))
+
 ## [1.68.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.67.0...v1.68.0) (2024-11-11)
 
 
