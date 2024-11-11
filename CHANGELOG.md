@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.68.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.67.0...v1.68.0) (2024-11-11)
+
+
+### Features
+
+* **create-sdk:** add PlayerService interface. generate create-sdk template ([ae7ec85](https://github.com/ViveportSoftware/pc-lib/commit/ae7ec85db9146c28b58c1568e52542126f74036d))
+* **docs:** add jsdoc ([b9fc378](https://github.com/ViveportSoftware/pc-lib/commit/b9fc3783ed79389f248165b84d327f0d00754112))
+* **icontrolledplayer:** remove stopAnimation param ([45f947c](https://github.com/ViveportSoftware/pc-lib/commit/45f947c05b434a199e093c8c1c37072de93b3218))
+
 ## [1.67.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.66.0...v1.67.0) (2024-11-07)
 
 
