@@ -17,12 +17,14 @@ export default class CreateExtensionsSDK {
   private TriggerType: Record<string, number>;
   private ActionType: Record<string, number>;
   private AvatarGenderType: Record<string, number>;
+  private AvatarDataType: Record<string, number>;
   prefix: Record<string, string>;
 
   constructor() {
     this.TriggerType = enumToNumberRecord(TriggerAndAction.Trigger.Type)
     this.ActionType = enumToNumberRecord(TriggerAndAction.Action.Type)
     this.AvatarGenderType = enumToNumberRecord(Avatar.AvatarGenderType)
+    this.AvatarDataType = enumToNumberRecord(Avatar.AvatarDataType)
 
     this.prefix = {
       TriggerType: 'trigger:',
@@ -45,6 +47,12 @@ export const ActionTypes = {
 
 export const AvatarGenderType = {
   ${Object.entries(this.AvatarGenderType)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join(',\n  ')}
+}
+
+export const AvatarDataType = {
+  ${Object.entries(this.AvatarDataType)
     .map(([key, value]) => `${key}: ${value}`)
     .join(',\n  ')}
 }
