@@ -16,6 +16,7 @@
   "scripts": {
     "build": "pnpm clean && tsc",
     "build-template": "pnpm rollup -c",
+    "build-sdk-docs": "jsdoc -c jsdoc.json",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
@@ -25,7 +26,8 @@
     "pretest": "pnpm compile",
     "posttest": "pnpm lint",
     "commit": "cz",
-    "postinstall": "mkdir -p dist"
+    "postinstall": "mkdir -p dist",
+    "generate-create-sdk": "pnpm build-template && pnpm build-sdk-docs"
   },
   "publishConfig": {
     "access": "public"
@@ -38,6 +40,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "gts": "^5.2.0",
     "husky": "^8.0.3",
+    "jsdoc": "^4.0.4",
     "rollup": "^4.24.4",
     "typescript": "^5.3.3"
   },
