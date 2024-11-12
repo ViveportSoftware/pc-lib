@@ -47,7 +47,7 @@ class IControlledPlayer extends IPlayer{
      * 跳躍高度倍率
      * @type {number}
     */
-    jumpHeightMultiplier
+    jumpMultiplier
 
     /**
      * 是否能讓遠端玩家看見
@@ -55,11 +55,28 @@ class IControlledPlayer extends IPlayer{
     */
     isVisibleRemotely
 
+    /**
+     * 當 Player 的 avatar 開始移動時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#startMove
+     */
+
+    /**
+     * 當 Player 的 avatar 停止移動時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#stopMove
+     */
 
     /**
      * 當 Player 的 avatar 跳起時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jump
+     * @event IControlledPlayer#jumpStart
+     */
+
+     /**
+     * 當 Player 的 avatar 落地時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#jumpEnd
      */
 
     /**
@@ -97,7 +114,7 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色往上跳
+     * 使角色原地跳起，如果成功跳起會觸發 jumpStart 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
      * @memberof IControlledPlayer
      * @returns {void}
      */
@@ -110,10 +127,12 @@ class IControlledPlayer extends IPlayer{
      * @memberof IControlledPlayer
      * @param {string} stateName: The stateName of animation.
      * @param {pc.Asset} asset: Send the vram file.
-     * @param {boolean} [loop] Loop the animation. default is true.
+     * @param {Object} [options] - Optional parameters.
+     * @param {boolean} [options.loop=false] - Loop the animation. default is false.
+     * @param {boolean} [options.lock=false] - Lock the animation. default is false.
      * @returns {void}
      */
-    playAnimation(stateName, asset, loop = true){
+    playAnimation(stateName, asset, {loop = false, lock = false}){
         throw new Error("Please implement the playAnimation() function.");
     }
 
