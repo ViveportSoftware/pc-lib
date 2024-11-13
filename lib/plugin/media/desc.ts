@@ -11,6 +11,9 @@ export const Desc = {
     isOpenInNewTab: {
       desc: 'open link in new tab',
     },
+    enableHoverBackgroundMask: {
+      desc: 'enable hover background mask',
+    },
     activationTime: {
       desc: 'link activation time (UTC+0)',
     },
