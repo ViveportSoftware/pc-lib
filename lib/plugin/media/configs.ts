@@ -192,6 +192,11 @@ export const Configs: ConfigsType = {
           default: false,
         },
         {
+          name: 'enableHoverBackgroundMask',
+          type: 'boolean',
+          default: true,
+        },
+        {
           name: 'activationTime',
           type: 'unixEpochMs',
           default: '',
