@@ -4,8 +4,9 @@ import INameTag from './INameTag'
 /**
  * @interface
  * @abstract
+ * @extends {pc.EventHandler}
  */
-class IPlayer{
+class IPlayer extends pc.EventHandler {
     /**
      * 玩家的角色暱稱
      * @readonly
@@ -72,6 +73,7 @@ class IPlayer{
     profile;
 
     constructor(){
+        super();
         if (this.constructor === IPlayer) {
             throw new Error("This is an abstract class and cannot be instantiated directly.");
         }
