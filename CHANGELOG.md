@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.70.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.69.0...v1.70.0) (2024-11-13)
+
+
+### Features
+
+* add toggle for hover bg mask in image module ([f0b6d24](https://github.com/ViveportSoftware/pc-lib/commit/f0b6d240e166431fe61388b922d281f5b74ad8bc))
+
 ## [1.69.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.68.0...v1.69.0) (2024-11-11)
 
 
