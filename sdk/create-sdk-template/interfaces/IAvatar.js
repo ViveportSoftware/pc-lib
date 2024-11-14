@@ -4,50 +4,50 @@
  */
 class IAvatar{
     /**
-     * Player 的 avatar ID
+     * 取得 Player 的 avatar ID
      * @readonly
      * @type {string}
     */
-    avatarID
+    avatarID;
 
     /**
-     * Player 的 avatar 模型連結
+     * 取得 Player 的 avatar 模型連結
      * @readonly
      * @type {string}
     */
-    avatarGlb
+    avatarGlb;
 
     /**
-     * Player 的 avatar 照片
+     * 取得 Player 的 avatar 照片
      * @readonly
      * @type {object}
      * @property {string} head - 玩家的 avatar 大頭照
      * @property {string} fullBody - 玩家的 avatar 全身照
     */
-    snapshot
+    snapshot;
 
     /**
-     * Player 的 avatar 性別，default: 0
+     * 取得 Player 的 avatar 性別，default: 0
      * @readonly
      * @type {CreateExtensionsSDK.AvatarGenderType}
     */
     gender;
 
     /**
-     * Player 的 avatar 種類
+     * 取得 Player 的 avatar 種類
      * @readonly
      * @type {CreateExtensionsSDK.AvatarDataType}
     */
     dataType;
 
     /**
-     * 取得 Player avatar 的 BoundingBox
+     * Player avatar 的 BoundingBox
      * @type {pc.BoundingBox}
     */
     boundingBox;
 
     /**
-     * 取得 Player 的 collision，預設 collision type 為 capsule
+     * Player 的 collision，預設 collision type 為 capsule
      * @type {pc.CollisionComponent | undefined}
     */
     collision;
@@ -63,16 +63,6 @@ class IAvatar{
         if (this.constructor === IAvatar) {
             throw new Error("This is an abstract class and cannot be instantiated directly.");
         }
-    }
-
-    /**
-     * Change the avatar.
-     * @memberof IAvatar
-     * @param {pc.Asset} asset - Create container asset.
-     * @returns {void}
-     */
-    changeAvatar(asset){
-        throw new Error("Please implement the changeAvatar() function.");
     }
 }
 
