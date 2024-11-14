@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.71.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.70.0...v1.71.0) (2024-11-14)
+
+
+### Features
+
+* **create-sdk/icontrolledplayer:** add events, Modify methods ([41f9144](https://github.com/ViveportSoftware/pc-lib/commit/41f914408d8bf613a9b42711fef803eecf209076))
+* **create-sdk/iplayer:** update IPlayer extends pc.EventHandler ([e204d93](https://github.com/ViveportSoftware/pc-lib/commit/e204d9303354b78148c3b9f8b406d4473fc11ba0))
+* **create-sdk:** update player-service p0 topic ([200535c](https://github.com/ViveportSoftware/pc-lib/commit/200535cd62feb6bff1659cef3d8aad6935af5bd5))
+
 ## [1.70.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.69.0...v1.70.0) (2024-11-13)
 
 
