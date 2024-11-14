@@ -50,3 +50,5 @@ pnpm generate-create-sdk
 
 1. Open the create-sdk documentation by navigating to the `docs` directory in your project.
 2. Open the `index.html` file in your web browser to view the documentation.
+
+update 1
