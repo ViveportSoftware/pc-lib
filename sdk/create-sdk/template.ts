@@ -4,50 +4,50 @@ const content = `/**
  */
 class IAvatar{
     /**
-     * Player 的 avatar ID
+     * 取得 Player 的 avatar ID
      * @readonly
      * @type {string}
     */
-    avatarID
+    avatarID;
 
     /**
-     * Player 的 avatar 模型連結
+     * 取得 Player 的 avatar 模型連結
      * @readonly
      * @type {string}
     */
-    avatarGlb
+    avatarGlb;
 
     /**
-     * Player 的 avatar 照片
+     * 取得 Player 的 avatar 照片
      * @readonly
      * @type {object}
      * @property {string} head - 玩家的 avatar 大頭照
      * @property {string} fullBody - 玩家的 avatar 全身照
     */
-    snapshot
+    snapshot;
 
     /**
-     * Player 的 avatar 性別，default: 0
+     * 取得 Player 的 avatar 性別，default: 0
      * @readonly
      * @type {CreateExtensionsSDK.AvatarGenderType}
     */
     gender;
 
     /**
-     * Player 的 avatar 種類
+     * 取得 Player 的 avatar 種類
      * @readonly
      * @type {CreateExtensionsSDK.AvatarDataType}
     */
     dataType;
 
     /**
-     * 取得 Player avatar 的 BoundingBox
+     * Player avatar 的 BoundingBox
      * @type {pc.BoundingBox}
     */
     boundingBox;
 
     /**
-     * 取得 Player 的 collision，預設 collision type 為 capsule
+     * Player 的 collision，預設 collision type 為 capsule
      * @type {pc.CollisionComponent | undefined}
     */
     collision;
@@ -64,16 +64,6 @@ class IAvatar{
             throw new Error("This is an abstract class and cannot be instantiated directly.");
         }
     }
-
-    /**
-     * Change the avatar.
-     * @memberof IAvatar
-     * @param {pc.Asset} asset - Create container asset.
-     * @returns {void}
-     */
-    changeAvatar(asset){
-        throw new Error("Please implement the changeAvatar() function.");
-    }
 }
 
 /**
@@ -81,7 +71,7 @@ class IAvatar{
  */
 class INetwork {
   /**
-   * Player 的 network session ID
+   * 取得 Player 的 network session ID
    * @readonly
    * @type {string}
   */
@@ -111,7 +101,7 @@ class INetwork {
  */
 class INameTag {
     /**
-     * 是否在本地端顯示 Player 上方 nameTag，包含 nameTag 裡所有的 icon 和按鈕
+     * 是否在本地端顯示 nameTag，包含 nameTag 裡所有的 icon 和按鈕
      * @type {boolean}
     */
     isVisible;
@@ -120,16 +110,6 @@ class INameTag {
         if (this.constructor === INameTag) {
             throw new Error("This is an abstract class and cannot be instantiated directly.");
         }
-    }
-
-    /**
-     * 更改 Player 的 nameTag 是否在本地端顯示
-     * @memberof INameTag
-     * @param {boolean} isVisible
-     * @returns {void}
-     */
-    setIsVisible(isVisible) {
-
     }
 }
 
@@ -140,49 +120,48 @@ class INameTag {
  */
 class IPlayer extends pc.EventHandler {
     /**
-     * 玩家的角色暱稱
+     * Player 在本地端是否可見
+     * @type {boolean}
+    */
+    isVisible;
+
+    /**
+     * 取得玩家的角色暱稱
      * @readonly
      * @type {string}
     */
     displayName;
 
     /**
-     * 玩家是否已經和伺服器斷開連線
+     * 取得玩家是否已經和伺服器斷開連線
      * @readonly
      * @type {boolean}
     */
-    isDisposed
+    isDisposed;
     
     /**
-     * 玩家的角色
+     * 取得玩家的角色資訊
      * @readonly
      * @type {IAvatar}
     */
     avatar;
 
     /**
-     * 玩家的伺服器連線資訊
+     * 取得玩家的伺服器連線資訊
      * @readonly
      * @type {INetwork}
     */
     network;
 
     /**
-     * 玩家的 nameTag 功能
+     * 取得玩家的 nameTag 功能
      * @readonly
      * @type {INameTag}
     */
     nameTag;
 
     /**
-     * Player 在本地端是否為可見
-     * @readonly
-     * @type {boolean}
-    */
-    isVisible;
-
-    /**
-     * Player 的位置,旋轉,大小資訊
+     * 取得 Player 的位置,旋轉,大小資訊
      * @readonly
      * @type {object}
      * @property {pc.Vec3} position - Player 的位置資訊
@@ -192,7 +171,7 @@ class IPlayer extends pc.EventHandler {
     transform;
 
     /**
-     * Player 的 profile 資訊
+     * 取得 Player 的 profile 資訊
      * @readonly
      * @type {object}
      * @property {string} displayName - Player 的暱稱
@@ -203,6 +182,14 @@ class IPlayer extends pc.EventHandler {
      * @property {string | undefined} userName - Player 的名稱
     */
     profile;
+
+
+    /**
+     * 當 Player 的 avatar collider 碰撞到其他 collider 時觸發
+     * @memberof IPlayer
+     * @event IPlayer#colliderHit
+     * @property {pc.Entity} entity - 被觸碰的對象 Entity
+     */
 
     constructor(){
         super();
@@ -218,14 +205,32 @@ class IPlayer extends pc.EventHandler {
  */
 class IControlledPlayer extends IPlayer{
     /**
-     * 取得 Player 重生的次數
-     * @readonly
-     * @type {number}
+     * Player 是否可以移動
+     * @type {boolean}
     */
-    spawnCount;
+    canMove;
 
     /**
-     * 下墜感設定的倍率。使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」。
+     * Player 是否可以跳躍
+     * @type {boolean}
+    */
+    canJump;
+
+    /**
+     * Player 是否可以跑步
+     * @type {boolean}
+    */
+    canRun;
+
+    /**
+     * Player 的重生點
+     * @type {pc.Vec3}
+    */
+    respawnPosition;
+
+    /**
+     * 下墜感設定的倍率
+     * 使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」
      * 例如，當角色跳躍後開始下落，重力會隨著這個倍率增加，讓角色更快接觸地面
      * @type {number}
     */
@@ -235,37 +240,51 @@ class IControlledPlayer extends IPlayer{
      * 重力設定的倍率，會對上升及下墜造成影響
      * @type {number}
     */
-    gravityMultiplier
+    gravityMultiplier;
 
     /**
      * 飛行速度倍率
      * @type {number}
     */
-    flySpeedMultiplier
+    flySpeedMultiplier;
 
     /**
      * 跑步速度倍率
      * @type {number}
     */
-    runSpeedMultiplier
+    runSpeedMultiplier;
 
     /**
      * 走路速度倍率
      * @type {number}
     */
-    walkSpeedMultiplier
+    walkSpeedMultiplier;
 
     /**
      * 跳躍高度倍率
      * @type {number}
     */
-    jumpMultiplier
+    jumpMultiplier;
 
     /**
      * 是否能讓遠端玩家看見
      * @type {number}
     */
-    isVisibleRemotely
+    isVisibleRemotely;
+
+    /**
+     * 取得角色當前的速度
+     * @readonly
+     * @type {pc.Vec3}
+    */
+    velocity;
+
+    /**
+     * 取得 Player 重生的次數
+     * @readonly
+     * @type {number}
+    */
+    spawnCount;
 
     /**
      * 當 Player 的 avatar 開始移動時觸發
@@ -299,13 +318,6 @@ class IControlledPlayer extends IPlayer{
      */
 
     /**
-     * 當 Player 的 avatar collider 碰撞到其他 collider 時觸發
-     * @memberof IControlledPlayer
-     * @event IControlledPlayer#colliderHit
-     * @property {pc.Entity} entity - 被觸碰的對象 Entity
-     */
-
-    /**
      * 當 Player 的 avatar 進入無限墜落狀態時觸發，通常用來判斷角色已經不在場景中，需要額外做邏輯處理
      * @memberof IControlledPlayer
      * @event IControlledPlayer#infiniteFalling
@@ -331,7 +343,7 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     jump(){
-        throw new Error("Please implement the jump() function.");
+        throw new Error("Please implement jump() method.");
     }
 
     /**
@@ -345,7 +357,7 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     playAnimation(stateName, asset, {loop = false, lock = false}){
-        throw new Error("Please implement the playAnimation() function.");
+        throw new Error("Please implement playAnimation() method.");
     }
 
     /**
@@ -354,17 +366,38 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     stopAnimation(){
-        throw new Error("Please implement the playAnimation() function.");
+        throw new Error("Please implement stopAnimation() method.");
     }
 
     /**
-     * 使角色回到重生點，預設為場景設定的重生點位置
+     * 使角色回到重生點，重生點為 respawnPosition ，並在重生後觸發 respawned 事件
      * @memberof IControlledPlayer
-     * @param {pc.Vec3} [destination] The respawn destination.
+     * @param {number} [timeout] The respawn destination.
+     * @emits IControlledPlayer#respawned
      * @returns {void}
      */
-    respawn(destination){
-         throw new Error("Please implement the respawn() function.");
+    respawn(timeout = 0){
+        throw new Error("Please implement respawn() method.");
+    }
+
+    /**
+     * 使角色瞬移至指定位置
+     * @memberof IControlledPlayer
+     * @param {pc.Vec3} destination The teleport destination.
+     * @returns {void}
+     */
+    teleport(destination) {
+        throw new Error("Please implement teleport() method.");
+    }
+
+    /**
+     * 更換角色的 avatar 模型
+     * @memberof IAvatar
+     * @param {pc.Asset} asset - Create container asset.
+     * @returns {void}
+     */
+    changeAvatar(asset){
+        throw new Error("Please implement changeAvatar() method.");
     }
 }
 
@@ -404,36 +437,37 @@ class ISyncedPlayer extends IPlayer{
  */
 class PlayerService {
     /**
-     * The instance in runtime.
-     * @type {PlayerService}
+     * 取得 PlayerService 的實例
      * @readonly
+     * @type {PlayerService}
     */
     static instance;
 
     /**
+     * 取得 PlayerService 的版本
+     * @readonly
      * @type {string}
-     *  @readonly
     */
     static version = 'create-sdk-version';
 
     /**
-     * 取得 Local player
-     * @type {IControlledPlayer}
+     * 取得本地端的 Player 資訊
      * @readonly
+     * @type {IControlledPlayer}
     */
     controlledPlayer;
 
     /**
-     * 取得 Remote players
-     * @type {ISyncedPlayer[]}
+     * 取得所有在房間內的遠端 Player 資訊
      * @readonly
+     * @type {ISyncedPlayer[]}
     */
     syncedPlayers;
 
     /**
-     * 統計目前在房間內有連線的 Players 數量
-     * @type {number}
+     * 取得目前在房間內有連線的 Players 數量
      * @readonly
+     * @type {number}
     */
     playerCount;
 
