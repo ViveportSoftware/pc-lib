@@ -6,14 +6,32 @@ import IPlayer from './IPlayer';
  */
 class IControlledPlayer extends IPlayer{
     /**
-     * 取得 Player 重生的次數
-     * @readonly
-     * @type {number}
+     * Player 是否可以移動
+     * @type {boolean}
     */
-    spawnCount;
+    canMove;
 
     /**
-     * 下墜感設定的倍率。使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」。
+     * Player 是否可以跳躍
+     * @type {boolean}
+    */
+    canJump;
+
+    /**
+     * Player 是否可以跑步
+     * @type {boolean}
+    */
+    canRun;
+
+    /**
+     * Player 的重生點
+     * @type {pc.Vec3}
+    */
+    respawnPosition;
+
+    /**
+     * 下墜感設定的倍率
+     * 使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」
      * 例如，當角色跳躍後開始下落，重力會隨著這個倍率增加，讓角色更快接觸地面
      * @type {number}
     */
@@ -23,37 +41,51 @@ class IControlledPlayer extends IPlayer{
      * 重力設定的倍率，會對上升及下墜造成影響
      * @type {number}
     */
-    gravityMultiplier
+    gravityMultiplier;
 
     /**
      * 飛行速度倍率
      * @type {number}
     */
-    flySpeedMultiplier
+    flySpeedMultiplier;
 
     /**
      * 跑步速度倍率
      * @type {number}
     */
-    runSpeedMultiplier
+    runSpeedMultiplier;
 
     /**
      * 走路速度倍率
      * @type {number}
     */
-    walkSpeedMultiplier
+    walkSpeedMultiplier;
 
     /**
      * 跳躍高度倍率
      * @type {number}
     */
-    jumpMultiplier
+    jumpMultiplier;
 
     /**
      * 是否能讓遠端玩家看見
      * @type {number}
     */
-    isVisibleRemotely
+    isVisibleRemotely;
+
+    /**
+     * 取得角色當前的速度
+     * @readonly
+     * @type {pc.Vec3}
+    */
+    velocity;
+
+    /**
+     * 取得 Player 重生的次數
+     * @readonly
+     * @type {number}
+    */
+    spawnCount;
 
     /**
      * 當 Player 的 avatar 開始移動時觸發
@@ -87,13 +119,6 @@ class IControlledPlayer extends IPlayer{
      */
 
     /**
-     * 當 Player 的 avatar collider 碰撞到其他 collider 時觸發
-     * @memberof IControlledPlayer
-     * @event IControlledPlayer#colliderHit
-     * @property {pc.Entity} entity - 被觸碰的對象 Entity
-     */
-
-    /**
      * 當 Player 的 avatar 進入無限墜落狀態時觸發，通常用來判斷角色已經不在場景中，需要額外做邏輯處理
      * @memberof IControlledPlayer
      * @event IControlledPlayer#infiniteFalling
@@ -119,7 +144,7 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     jump(){
-        throw new Error("Please implement the jump() function.");
+        throw new Error("Please implement jump() method.");
     }
 
     /**
@@ -133,7 +158,7 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     playAnimation(stateName, asset, {loop = false, lock = false}){
-        throw new Error("Please implement the playAnimation() function.");
+        throw new Error("Please implement playAnimation() method.");
     }
 
     /**
@@ -142,17 +167,38 @@ class IControlledPlayer extends IPlayer{
      * @returns {void}
      */
     stopAnimation(){
-        throw new Error("Please implement the playAnimation() function.");
+        throw new Error("Please implement stopAnimation() method.");
     }
 
     /**
-     * 使角色回到重生點，預設為場景設定的重生點位置
+     * 使角色回到重生點，重生點為 respawnPosition ，並在重生後觸發 respawned 事件
      * @memberof IControlledPlayer
-     * @param {pc.Vec3} [destination] The respawn destination.
+     * @param {number} [timeout] The respawn destination.
+     * @emits IControlledPlayer#respawned
      * @returns {void}
      */
-    respawn(destination){
-         throw new Error("Please implement the respawn() function.");
+    respawn(timeout = 0){
+        throw new Error("Please implement respawn() method.");
+    }
+
+    /**
+     * 使角色瞬移至指定位置
+     * @memberof IControlledPlayer
+     * @param {pc.Vec3} destination The teleport destination.
+     * @returns {void}
+     */
+    teleport(destination) {
+        throw new Error("Please implement teleport() method.");
+    }
+
+    /**
+     * 更換角色的 avatar 模型
+     * @memberof IAvatar
+     * @param {pc.Asset} asset - Create container asset.
+     * @returns {void}
+     */
+    changeAvatar(asset){
+        throw new Error("Please implement changeAvatar() method.");
     }
 }
 

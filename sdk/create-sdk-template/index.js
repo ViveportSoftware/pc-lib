@@ -6,36 +6,37 @@ import ISyncedPlayer from './interfaces/ISyncedPlayer';
  */
 class PlayerService {
     /**
-     * The instance in runtime.
-     * @type {PlayerService}
+     * 取得 PlayerService 的實例
      * @readonly
+     * @type {PlayerService}
     */
     static instance;
 
     /**
+     * 取得 PlayerService 的版本
+     * @readonly
      * @type {string}
-     *  @readonly
     */
     static version = 'create-sdk-version';
 
     /**
-     * 取得 Local player
-     * @type {IControlledPlayer}
+     * 取得本地端的 Player 資訊
      * @readonly
+     * @type {IControlledPlayer}
     */
     controlledPlayer;
 
     /**
-     * 取得 Remote players
-     * @type {ISyncedPlayer[]}
+     * 取得所有在房間內的遠端 Player 資訊
      * @readonly
+     * @type {ISyncedPlayer[]}
     */
     syncedPlayers;
 
     /**
-     * 統計目前在房間內有連線的 Players 數量
-     * @type {number}
+     * 取得目前在房間內有連線的 Players 數量
      * @readonly
+     * @type {number}
     */
     playerCount;
 

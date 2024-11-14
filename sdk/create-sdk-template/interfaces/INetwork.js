@@ -3,7 +3,7 @@
  */
 class INetwork {
   /**
-   * Player 的 network session ID
+   * 取得 Player 的 network session ID
    * @readonly
    * @type {string}
   */

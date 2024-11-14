@@ -8,49 +8,48 @@ import INameTag from './INameTag'
  */
 class IPlayer extends pc.EventHandler {
     /**
-     * 玩家的角色暱稱
+     * Player 在本地端是否可見
+     * @type {boolean}
+    */
+    isVisible;
+
+    /**
+     * 取得玩家的角色暱稱
      * @readonly
      * @type {string}
     */
     displayName;
 
     /**
-     * 玩家是否已經和伺服器斷開連線
+     * 取得玩家是否已經和伺服器斷開連線
      * @readonly
      * @type {boolean}
     */
-    isDisposed
+    isDisposed;
     
     /**
-     * 玩家的角色
+     * 取得玩家的角色資訊
      * @readonly
      * @type {IAvatar}
     */
     avatar;
 
     /**
-     * 玩家的伺服器連線資訊
+     * 取得玩家的伺服器連線資訊
      * @readonly
      * @type {INetwork}
     */
     network;
 
     /**
-     * 玩家的 nameTag 功能
+     * 取得玩家的 nameTag 功能
      * @readonly
      * @type {INameTag}
     */
     nameTag;
 
     /**
-     * Player 在本地端是否為可見
-     * @readonly
-     * @type {boolean}
-    */
-    isVisible;
-
-    /**
-     * Player 的位置,旋轉,大小資訊
+     * 取得 Player 的位置,旋轉,大小資訊
      * @readonly
      * @type {object}
      * @property {pc.Vec3} position - Player 的位置資訊
@@ -60,7 +59,7 @@ class IPlayer extends pc.EventHandler {
     transform;
 
     /**
-     * Player 的 profile 資訊
+     * 取得 Player 的 profile 資訊
      * @readonly
      * @type {object}
      * @property {string} displayName - Player 的暱稱
@@ -71,6 +70,14 @@ class IPlayer extends pc.EventHandler {
      * @property {string | undefined} userName - Player 的名稱
     */
     profile;
+
+
+    /**
+     * 當 Player 的 avatar collider 碰撞到其他 collider 時觸發
+     * @memberof IPlayer
+     * @event IPlayer#colliderHit
+     * @property {pc.Entity} entity - 被觸碰的對象 Entity
+     */
 
     constructor(){
         super();
