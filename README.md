@@ -52,3 +52,4 @@ pnpm generate-create-sdk
 2. Open the `index.html` file in your web browser to view the documentation.
 
 update 1
+update 2
