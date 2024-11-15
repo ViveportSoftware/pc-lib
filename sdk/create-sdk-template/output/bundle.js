@@ -289,25 +289,25 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 開始移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#startMove
+     * @event IControlledPlayer#move:start
      */
 
     /**
      * 當 Player 的 avatar 停止移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#stopMove
+     * @event IControlledPlayer#move:end
      */
 
     /**
      * 當 Player 的 avatar 跳起時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpStart
+     * @event IControlledPlayer#jump:start
      */
 
-     /**
+    /**
      * 當 Player 的 avatar 落地時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpEnd
+     * @event IControlledPlayer#jump:end
      */
 
     /**
@@ -326,7 +326,7 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 重生時觸發，回傳重生點位置資訊
      * @memberof IControlledPlayer
-     * @event IControlledPlayer.respawned
+     * @event IControlledPlayer#respawned
      * @property {pc.Vec3} position - 重生點的坐標位置
      */
 
@@ -338,7 +338,7 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色原地跳起，如果成功跳起會觸發 jumpStart 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
+     * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
      * @memberof IControlledPlayer
      * @returns {void}
      */
@@ -437,18 +437,10 @@ class ISyncedPlayer extends IPlayer{
  */
 class PlayerService {
     /**
-     * 取得 PlayerService 的實例
      * @readonly
      * @type {PlayerService}
     */
     static instance;
-
-    /**
-     * 取得 PlayerService 的版本
-     * @readonly
-     * @type {string}
-    */
-    static version = 'create-sdk-version';
 
     /**
      * 取得本地端的 Player 資訊
@@ -476,4 +468,37 @@ class PlayerService {
     }
 }
 
-export { PlayerService };
+/**
+ * @class
+ */
+class CameraService {
+    /**
+     * @readonly
+     * @type {CameraService}
+    */
+    static instance;
+
+    constructor(){
+        return CameraService.instance;
+    }
+
+    /**
+     * 切換為客製化的相機，使用客製相機期間，會關閉所有 Viverse 內建的相機機制
+     * @memberof CameraService
+     * @param {pc.Entity} camera - 相機 Entity，此 Entity 必須包含 pc.CameraComponent
+     * @returns {Function} 結束使用客製相機並恢復 Viverse 內建的相機機制
+     */
+    switchCamera(camera){
+        throw new Error("Please implement switchCamera() method.");
+        return function() {};
+    }
+}
+
+/**
+ * 取得 Create SDK 的版本
+ * @readonly
+ * @type {string}
+*/
+const version = 'create-sdk-version';
+
+export { CameraService, PlayerService, version };
