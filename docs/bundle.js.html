@@ -317,25 +317,25 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 開始移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#startMove
+     * @event IControlledPlayer#move:start
      */
 
     /**
      * 當 Player 的 avatar 停止移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#stopMove
+     * @event IControlledPlayer#move:end
      */
 
     /**
      * 當 Player 的 avatar 跳起時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpStart
+     * @event IControlledPlayer#jump:start
      */
 
-     /**
+    /**
      * 當 Player 的 avatar 落地時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpEnd
+     * @event IControlledPlayer#jump:end
      */
 
     /**
@@ -354,7 +354,7 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 重生時觸發，回傳重生點位置資訊
      * @memberof IControlledPlayer
-     * @event IControlledPlayer.respawned
+     * @event IControlledPlayer#respawned
      * @property {pc.Vec3} position - 重生點的坐標位置
      */
 
@@ -366,7 +366,7 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色原地跳起，如果成功跳起會觸發 jumpStart 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
+     * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
      * @memberof IControlledPlayer
      * @returns {void}
      */
@@ -465,18 +465,10 @@ class ISyncedPlayer extends IPlayer{
  */
 class PlayerService {
     /**
-     * 取得 PlayerService 的實例
      * @readonly
      * @type {PlayerService}
     */
     static instance;
-
-    /**
-     * 取得 PlayerService 的版本
-     * @readonly
-     * @type {string}
-    */
-    static version = 'create-sdk-version';
 
     /**
      * 取得本地端的 Player 資訊
@@ -504,7 +496,40 @@ class PlayerService {
     }
 }
 
-export { PlayerService };
+/**
+ * @class
+ */
+class CameraService {
+    /**
+     * @readonly
+     * @type {CameraService}
+    */
+    static instance;
+
+    constructor(){
+        return CameraService.instance;
+    }
+
+    /**
+     * 切換為客製化的相機，使用客製相機期間，會關閉所有 Viverse 內建的相機機制
+     * @memberof CameraService
+     * @param {pc.Entity} camera - 相機 Entity，此 Entity 必須包含 pc.CameraComponent
+     * @returns {Function} 結束使用客製相機並恢復 Viverse 內建的相機機制
+     */
+    switchCamera(camera){
+        throw new Error("Please implement switchCamera() method.");
+        return function() {};
+    }
+}
+
+/**
+ * 取得 Create SDK 的版本
+ * @readonly
+ * @type {string}
+*/
+const version = 'create-sdk-version';
+
+export { CameraService, PlayerService, version };
 </code></pre>
         </article>
     </section>
@@ -515,13 +540,13 @@ export { PlayerService };
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:jumpEnd">jumpEnd</a></li><li><a href="IControlledPlayer.html#event:jumpStart">jumpStart</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:startMove">startMove</a></li><li><a href="IControlledPlayer.html#event:stopMove">stopMove</a></li><li><a href="IControlledPlayer.html#.event:respawned">respawned</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CameraService.html">CameraService</a></li><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:respawned">respawned</a></li><li><a href="IControlledPlayer.html#event:jump:end">jump:end</a></li><li><a href="IControlledPlayer.html#event:jump:start">jump:start</a></li><li><a href="IControlledPlayer.html#event:move:end">move:end</a></li><li><a href="IControlledPlayer.html#event:move:start">move:start</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#version">version</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Nov 14 2024 11:35:10 GMT+0800 (Taipei Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Fri Nov 15 2024 15:03:13 GMT+0800 (Taipei Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
