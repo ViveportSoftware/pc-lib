@@ -90,25 +90,25 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 開始移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#startMove
+     * @event IControlledPlayer#move:start
      */
 
     /**
      * 當 Player 的 avatar 停止移動時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#stopMove
+     * @event IControlledPlayer#move:end
      */
 
     /**
      * 當 Player 的 avatar 跳起時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpStart
+     * @event IControlledPlayer#jump:start
      */
 
-     /**
+    /**
      * 當 Player 的 avatar 落地時觸發
      * @memberof IControlledPlayer
-     * @event IControlledPlayer#jumpEnd
+     * @event IControlledPlayer#jump:end
      */
 
     /**
@@ -127,7 +127,7 @@ class IControlledPlayer extends IPlayer{
     /**
      * 當 Player 的 avatar 重生時觸發，回傳重生點位置資訊
      * @memberof IControlledPlayer
-     * @event IControlledPlayer.respawned
+     * @event IControlledPlayer#respawned
      * @property {pc.Vec3} position - 重生點的坐標位置
      */
 
@@ -139,7 +139,7 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色原地跳起，如果成功跳起會觸發 jumpStart 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
+     * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
      * @memberof IControlledPlayer
      * @returns {void}
      */

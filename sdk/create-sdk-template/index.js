@@ -6,18 +6,10 @@ import ISyncedPlayer from './interfaces/ISyncedPlayer';
  */
 class PlayerService {
     /**
-     * 取得 PlayerService 的實例
      * @readonly
      * @type {PlayerService}
     */
     static instance;
-
-    /**
-     * 取得 PlayerService 的版本
-     * @readonly
-     * @type {string}
-    */
-    static version = 'create-sdk-version';
 
     /**
      * 取得本地端的 Player 資訊
@@ -45,5 +37,38 @@ class PlayerService {
     }
 }
 
+/**
+ * @class
+ */
+class CameraService {
+    /**
+     * @readonly
+     * @type {CameraService}
+    */
+    static instance;
 
-export { PlayerService };
+    constructor(){
+        return CameraService.instance;
+    }
+
+    /**
+     * 切換為客製化的相機，使用客製相機期間，會關閉所有 Viverse 內建的相機機制
+     * @memberof CameraService
+     * @param {pc.Entity} camera - 相機 Entity，此 Entity 必須包含 pc.CameraComponent
+     * @returns {Function} 結束使用客製相機並恢復 Viverse 內建的相機機制
+     */
+    switchCamera(camera){
+        throw new Error("Please implement switchCamera() method.");
+        return function() {};
+    }
+}
+
+/**
+ * 取得 Create SDK 的版本
+ * @readonly
+ * @type {string}
+*/
+const version = 'create-sdk-version'
+
+
+export { PlayerService, CameraService, version };
