@@ -1,0 +1,16 @@
+export enum Type {
+  Blend = 'blend',
+  Bloom = 'bloom',
+  Bokeh = 'bokeh',
+  BrightnessContrast = 'brightnessContrast',
+  Ssao = 'ssao',
+  Sepia = 'sepia',
+  Vignette = 'vignette',
+  Luminosity = 'luminosity',
+  HueSaturation = 'hueSaturation',
+  EdgeDetect = 'edgeDetect',
+  Fxaa = 'fxaa',
+  HorizontalTiltShift = 'horizontalTiltShift',
+  VerticalTiltShift = 'verticalTiltShift',
+  MotionBlur = 'motionBlur',
+}
