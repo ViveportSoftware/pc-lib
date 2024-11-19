@@ -8,7 +8,6 @@ export const Desc = {
     blendMap: {
       desc: 'blend map',
     },
-    default: {},
   },
   [Type.Bloom]: {
     bloomIntensity: {
@@ -20,7 +19,6 @@ export const Desc = {
     blurAmount: {
       desc: 'blur amount',
     },
-    default: {},
   },
   [Type.Bokeh]: {
     maxBlur: {
@@ -32,7 +30,6 @@ export const Desc = {
     focus: {
       desc: 'focus',
     },
-    default: {},
   },
   [Type.BrightnessContrast]: {
     brightness: {
@@ -41,7 +38,6 @@ export const Desc = {
     contrast: {
       desc: 'contrast',
     },
-    default: {},
   },
   [Type.Ssao]: {
     radius: {
@@ -50,13 +46,11 @@ export const Desc = {
     intensity: {
       desc: 'intensity',
     },
-    default: {},
   },
   [Type.Sepia]: {
     amount: {
       desc: 'amount',
     },
-    default: {},
   },
   [Type.Vignette]: {
     darkness: {
@@ -65,11 +59,8 @@ export const Desc = {
     offset: {
       desc: 'offset',
     },
-    default: {},
   },
-  [Type.Luminosity]: {
-    default: {},
-  },
+  [Type.Luminosity]: {},
   [Type.HueSaturation]: {
     hue: {
       desc: 'hue',
@@ -77,7 +68,6 @@ export const Desc = {
     saturation: {
       desc: 'saturation',
     },
-    default: {},
   },
   [Type.EdgeDetect]: {
     intensity: {
@@ -86,27 +76,21 @@ export const Desc = {
     color: {
       desc: 'color',
     },
-    default: {},
   },
-  [Type.Fxaa]: {
-    default: {},
-  },
+  [Type.Fxaa]: {},
   [Type.HorizontalTiltShift]: {
     focus: {
       desc: 'focus',
     },
-    default: {},
   },
   [Type.VerticalTiltShift]: {
     focus: {
       desc: 'focus',
     },
-    default: {},
   },
   [Type.MotionBlur]: {
     amount: {
       desc: 'amount',
     },
-    default: {},
   },
 };
