@@ -490,8 +490,8 @@
 
 
 <div class="description">
-    下墜感設定的倍率
-使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」
+    下墜感設定的倍率<br>
+使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」<br>
 例如，當角色跳躍後開始下落，重力會隨著這個倍率增加，讓角色更快接觸地面
 </div>
 
@@ -540,7 +540,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line237">line 237</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line239">line 239</a>
     </li></ul></dd>
     
 
@@ -612,7 +612,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line249">line 249</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line251">line 251</a>
     </li></ul></dd>
     
 
@@ -684,7 +684,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line243">line 243</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line245">line 245</a>
     </li></ul></dd>
     
 
@@ -910,7 +910,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line273">line 273</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line275">line 275</a>
     </li></ul></dd>
     
 
@@ -982,7 +982,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line267">line 267</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line269">line 269</a>
     </li></ul></dd>
     
 
@@ -1429,13 +1429,15 @@
 
         
             
-<h4 class="name" id="respawnPosition"><span class="type-signature"></span>respawnPosition<span class="type-signature"> :pc.Vec3</span></h4>
+<h4 class="name" id="respawnPosition"><span class="type-signature"></span>respawnPosition<span class="type-signature"> :pc.Vec3|null</span></h4>
 
 
 
 
 <div class="description">
-    Player 的重生點
+    Player 的重生點，預設為 null<br>
+執行 respawn() 時，優先使用 respawnPosition 作為重生位置<br>
+若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
 </div>
 
 
@@ -1445,6 +1447,9 @@
         <li>
             
 <span class="param-type">pc.Vec3</span>
+|
+
+<span class="param-type">null</span>
 
 
         </li>
@@ -1483,7 +1488,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line229">line 229</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line231">line 231</a>
     </li></ul></dd>
     
 
@@ -1555,7 +1560,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line255">line 255</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line257">line 257</a>
     </li></ul></dd>
     
 
@@ -1627,7 +1632,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line287">line 287</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line289">line 289</a>
     </li></ul></dd>
     
 
@@ -1874,7 +1879,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line280">line 280</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line282">line 282</a>
     </li></ul></dd>
     
 
@@ -1946,7 +1951,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line261">line 261</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line263">line 263</a>
     </li></ul></dd>
     
 
@@ -1982,7 +1987,8 @@
 
 
 <div class="description">
-    使角色原地跳起，如果成功跳起會觸發 jump:start 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
+    使角色原地跳起，如果成功跳起會觸發 jump:start 事件<br>
+在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響
 </div>
 
 
@@ -2026,7 +2032,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line345">line 345</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line373">line 373</a>
     </li></ul></dd>
     
 
@@ -2080,7 +2086,7 @@
     
 
     
-    <h4 class="name" id="playAnimation"><span class="type-signature"></span>playAnimation<span class="signature">(stateName:, asset:, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {void}</span></h4>
+    <h4 class="name" id="playAnimation"><span class="type-signature"></span>playAnimation<span class="signature">(stateName, asset, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {void}</span></h4>
     
 
     
@@ -2126,7 +2132,7 @@
 
         <tr>
             
-                <td class="name"><code>stateName:</code></td>
+                <td class="name"><code>stateName</code></td>
             
 
             <td class="type">
@@ -2157,7 +2163,7 @@
 
         <tr>
             
-                <td class="name"><code>asset:</code></td>
+                <td class="name"><code>asset</code></td>
             
 
             <td class="type">
@@ -2363,7 +2369,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line359">line 359</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line387">line 387</a>
     </li></ul></dd>
     
 
@@ -2425,7 +2431,8 @@
 
 
 <div class="description">
-    使角色回到重生點，重生點為 respawnPosition ，並在重生後觸發 respawned 事件
+    使角色回到重生點，重生點為 respawnPosition，並在重生後觸發 respawned 事件<br>
+若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
 </div>
 
 
@@ -2497,7 +2504,7 @@
                 </td>
             
 
-            <td class="description last">The respawn destination.</td>
+            <td class="description last">延遲重生的時間，單位為毫秒</td>
         </tr>
 
     
@@ -2538,7 +2545,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line379">line 379</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line408">line 408</a>
     </li></ul></dd>
     
 
@@ -2649,7 +2656,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line368">line 368</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line396">line 396</a>
     </li></ul></dd>
     
 
@@ -2703,7 +2710,7 @@
     
 
     
-    <h4 class="name" id="teleport"><span class="type-signature"></span>teleport<span class="signature">(destination)</span><span class="type-signature"> &rarr; {void}</span></h4>
+    <h4 class="name" id="teleport"><span class="type-signature"></span>teleport<span class="signature">(destination, rotationY<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {void}</span></h4>
     
 
     
@@ -2711,7 +2718,7 @@
 
 
 <div class="description">
-    使角色瞬移至指定位置
+    使角色瞬移至目標位置
 </div>
 
 
@@ -2734,6 +2741,8 @@
 
         <th>Type</th>
 
+        
+        <th>Attributes</th>
         
 
         
@@ -2760,10 +2769,51 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">The teleport destination.</td>
+            <td class="description last">目標位置</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rotationY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">y 軸旋轉角度</td>
         </tr>
 
     
@@ -2804,7 +2854,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line389">line 389</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line419">line 419</a>
     </li></ul></dd>
     
 
@@ -3019,7 +3069,8 @@
 
 
 <div class="description">
-    當 Player 的 avatar 進入無限墜落狀態時觸發，通常用來判斷角色已經不在場景中，需要額外做邏輯處理
+    當 Player 的 avatar 進入無限墜落狀態時觸發<br>
+通常用來判斷角色已經不在場景中，需要額外做邏輯處理
 </div>
 
 
@@ -3063,7 +3114,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line320">line 320</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line346">line 346</a>
     </li></ul></dd>
     
 
@@ -3203,7 +3254,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line313">line 313</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line339">line 339</a>
     </li></ul></dd>
     
 
@@ -3343,7 +3394,183 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line326">line 326</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line353">line 353</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:fly:end">fly:end</h4>
+    
+
+    
+
+
+
+<div class="description">
+    當 Player 的 avatar 停止飛行時觸發
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line321">line 321</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:fly:start">fly:start</h4>
+    
+
+    
+
+
+
+<div class="description">
+    當 Player 的 avatar 開始飛行時觸發
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line315">line 315</a>
     </li></ul></dd>
     
 
@@ -3431,7 +3658,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line307">line 307</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line333">line 333</a>
     </li></ul></dd>
     
 
@@ -3519,7 +3746,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line301">line 301</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line327">line 327</a>
     </li></ul></dd>
     
 
@@ -3607,7 +3834,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line295">line 295</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line297">line 297</a>
     </li></ul></dd>
     
 
@@ -3695,7 +3922,183 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line289">line 289</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line291">line 291</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:run:end">run:end</h4>
+    
+
+    
+
+
+
+<div class="description">
+    當 Player 的 avatar 停止跑步時觸發
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line309">line 309</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:run:start">run:start</h4>
+    
+
+    
+
+
+
+<div class="description">
+    當 Player 的 avatar 開始跑步時觸發
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line303">line 303</a>
     </li></ul></dd>
     
 
@@ -3737,13 +4140,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CameraService.html">CameraService</a></li><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:respawned">respawned</a></li><li><a href="IControlledPlayer.html#event:jump:end">jump:end</a></li><li><a href="IControlledPlayer.html#event:jump:start">jump:start</a></li><li><a href="IControlledPlayer.html#event:move:end">move:end</a></li><li><a href="IControlledPlayer.html#event:move:start">move:start</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#version">version</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CameraService.html">CameraService</a></li><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:respawned">respawned</a></li><li><a href="IControlledPlayer.html#event:fly:end">fly:end</a></li><li><a href="IControlledPlayer.html#event:fly:start">fly:start</a></li><li><a href="IControlledPlayer.html#event:jump:end">jump:end</a></li><li><a href="IControlledPlayer.html#event:jump:start">jump:start</a></li><li><a href="IControlledPlayer.html#event:move:end">move:end</a></li><li><a href="IControlledPlayer.html#event:move:start">move:start</a></li><li><a href="IControlledPlayer.html#event:run:end">run:end</a></li><li><a href="IControlledPlayer.html#event:run:start">run:start</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#version">version</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Fri Nov 15 2024 15:03:13 GMT+0800 (Taipei Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Nov 20 2024 13:40:30 GMT+0800 (Taipei Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

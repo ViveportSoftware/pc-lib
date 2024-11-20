@@ -89,7 +89,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line474">line 474</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line504">line 504</a>
     </li></ul></dd>
     
 
@@ -136,6 +136,78 @@
 
     
         <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="activeCamera"><span class="type-signature">(readonly) </span>activeCamera<span class="type-signature"> :pc.Entity</span></h4>
+
+
+
+
+<div class="description">
+    取得目前啟用的 Camera
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">pc.Entity</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line516">line 516</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
 
         
             
@@ -189,7 +261,223 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line479">line 479</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line509">line 509</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="isLockCameraZoomDistance"><span class="type-signature"></span>isLockCameraZoomDistance<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    控制 Viverse Create Camera 是否能進行縮放
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line529">line 529</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="isUsingExternalCamera"><span class="type-signature">(readonly) </span>isUsingExternalCamera<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    取得自行上傳的 Camera 啟用狀態
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line523">line 523</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="zoomDistance"><span class="type-signature"></span>zoomDistance<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    控制 Viverse Create Camera 第三人稱視角相機與 Player 之間的距離
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line535">line 535</a>
     </li></ul></dd>
     
 
@@ -217,7 +505,7 @@
     
 
     
-    <h4 class="name" id="switchCamera"><span class="type-signature"></span>switchCamera<span class="signature">(camera)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id="switchCamera"><span class="type-signature"></span>switchCamera<span class="signature">(camera<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -225,7 +513,8 @@
 
 
 <div class="description">
-    切換為客製化的相機，使用客製相機期間，會關閉所有 Viverse 內建的相機機制
+    將視角切換成傳入的 camera<br>
+若沒傳入 camera，則恢復到 Viverse Create 內建的預設相機機制
 </div>
 
 
@@ -249,7 +538,11 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -274,7 +567,23 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
             
 
             <td class="description last">相機 Entity，此 Entity 必須包含 pc.CameraComponent</td>
@@ -318,7 +627,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line491">line 491</a>
+        <a href="bundle.js.html">bundle.js</a>, <a href="bundle.js.html#line547">line 547</a>
     </li></ul></dd>
     
 
@@ -343,28 +652,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    結束使用客製相機並恢復 Viverse 內建的相機機制
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">function</span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
@@ -386,13 +673,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CameraService.html">CameraService</a></li><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:respawned">respawned</a></li><li><a href="IControlledPlayer.html#event:jump:end">jump:end</a></li><li><a href="IControlledPlayer.html#event:jump:start">jump:start</a></li><li><a href="IControlledPlayer.html#event:move:end">move:end</a></li><li><a href="IControlledPlayer.html#event:move:start">move:start</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#version">version</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CameraService.html">CameraService</a></li><li><a href="PlayerService.html">PlayerService</a></li></ul><h3>Interfaces</h3><ul><li><a href="IAvatar.html">IAvatar</a></li><li><a href="IControlledPlayer.html">IControlledPlayer</a></li><li><a href="INameTag.html">INameTag</a></li><li><a href="INetwork.html">INetwork</a></li><li><a href="IPlayer.html">IPlayer</a></li><li><a href="ISyncedPlayer.html">ISyncedPlayer</a></li></ul><h3>Events</h3><ul><li><a href="IAvatar.html#event:avatarExistsChanged">avatarExistsChanged</a></li><li><a href="IControlledPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="IControlledPlayer.html#event:infiniteFalling">infiniteFalling</a></li><li><a href="IControlledPlayer.html#event:landed">landed</a></li><li><a href="IControlledPlayer.html#event:respawned">respawned</a></li><li><a href="IControlledPlayer.html#event:fly:end">fly:end</a></li><li><a href="IControlledPlayer.html#event:fly:start">fly:start</a></li><li><a href="IControlledPlayer.html#event:jump:end">jump:end</a></li><li><a href="IControlledPlayer.html#event:jump:start">jump:start</a></li><li><a href="IControlledPlayer.html#event:move:end">move:end</a></li><li><a href="IControlledPlayer.html#event:move:start">move:start</a></li><li><a href="IControlledPlayer.html#event:run:end">run:end</a></li><li><a href="IControlledPlayer.html#event:run:start">run:start</a></li><li><a href="INetwork.html#event:joined">joined</a></li><li><a href="INetwork.html#event:left">left</a></li><li><a href="IPlayer.html#event:colliderHit">colliderHit</a></li><li><a href="ISyncedPlayer.html#event:colliderHit">colliderHit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#version">version</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Fri Nov 15 2024 15:03:13 GMT+0800 (Taipei Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Nov 20 2024 13:40:30 GMT+0800 (Taipei Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
