@@ -24,14 +24,16 @@ class IControlledPlayer extends IPlayer{
     canRun;
 
     /**
-     * Player 的重生點
-     * @type {pc.Vec3}
+     * Player 的重生點，預設為 null<br>
+     * 執行 respawn() 時，優先使用 respawnPosition 作為重生位置<br>
+     * 若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
+     * @type {pc.Vec3|null}
     */
-    respawnPosition;
+    respawnPosition = null;
 
     /**
-     * 下墜感設定的倍率
-     * 使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」
+     * 下墜感設定的倍率<br>
+     * 使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」<br>
      * 例如，當角色跳躍後開始下落，重力會隨著這個倍率增加，讓角色更快接觸地面
      * @type {number}
     */
@@ -100,6 +102,30 @@ class IControlledPlayer extends IPlayer{
      */
 
     /**
+     * 當 Player 的 avatar 開始跑步時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#run:start
+     */
+
+    /**
+     * 當 Player 的 avatar 停止跑步時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#run:end
+     */
+
+    /**
+     * 當 Player 的 avatar 開始飛行時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#fly:start
+     */
+
+    /**
+     * 當 Player 的 avatar 停止飛行時觸發
+     * @memberof IControlledPlayer
+     * @event IControlledPlayer#fly:end
+     */
+
+    /**
      * 當 Player 的 avatar 跳起時觸發
      * @memberof IControlledPlayer
      * @event IControlledPlayer#jump:start
@@ -119,7 +145,8 @@ class IControlledPlayer extends IPlayer{
      */
 
     /**
-     * 當 Player 的 avatar 進入無限墜落狀態時觸發，通常用來判斷角色已經不在場景中，需要額外做邏輯處理
+     * 當 Player 的 avatar 進入無限墜落狀態時觸發<br>
+     * 通常用來判斷角色已經不在場景中，需要額外做邏輯處理
      * @memberof IControlledPlayer
      * @event IControlledPlayer#infiniteFalling
      */
@@ -139,7 +166,8 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件。在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響。
+     * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件<br>
+     * 在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響
      * @memberof IControlledPlayer
      * @returns {void}
      */
@@ -150,8 +178,8 @@ class IControlledPlayer extends IPlayer{
     /**
      * 播放客製的動畫
      * @memberof IControlledPlayer
-     * @param {string} stateName: The stateName of animation.
-     * @param {pc.Asset} asset: Send the vram file.
+     * @param {string} stateName - The stateName of animation.
+     * @param {pc.Asset} asset - Send the vram file.
      * @param {Object} [options] - Optional parameters.
      * @param {boolean} [options.loop=false] - Loop the animation. default is false.
      * @param {boolean} [options.lock=false] - Lock the animation. default is false.
@@ -171,9 +199,10 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色回到重生點，重生點為 respawnPosition ，並在重生後觸發 respawned 事件
+     * 使角色回到重生點，重生點為 respawnPosition，並在重生後觸發 respawned 事件<br>
+     * 若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
      * @memberof IControlledPlayer
-     * @param {number} [timeout] The respawn destination.
+     * @param {number} [timeout] - 延遲重生的時間，單位為毫秒
      * @emits IControlledPlayer#respawned
      * @returns {void}
      */
@@ -182,9 +211,10 @@ class IControlledPlayer extends IPlayer{
     }
 
     /**
-     * 使角色瞬移至指定位置
+     * 使角色瞬移至目標位置
      * @memberof IControlledPlayer
-     * @param {pc.Vec3} destination The teleport destination.
+     * @param {pc.Vec3} destination - 目標位置
+     * @param {number} [rotationY] - y 軸旋轉角度
      * @returns {void}
      */
     teleport(destination) {
