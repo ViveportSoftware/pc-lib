@@ -1,5 +1,10 @@
 export enum EnvironmentFlyModeType {
   Default = 0,
-  EnableAll = 1,
-  DisableAll = 2,
+  Enabled = 1,
+  Disabled = 2,
+}
+
+export enum EnvironmentImpostorModeType {
+  Default = 0,
+  Disabled = 1,
 }
