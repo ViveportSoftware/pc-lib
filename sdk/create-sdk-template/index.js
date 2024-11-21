@@ -1,4 +1,4 @@
-import { PlayerService, CameraService } from './services/index';
+import { PlayerService, CameraService, EnvironmentService } from './services/index';
 
 /**
  * 取得 Create SDK 的版本
@@ -7,5 +7,4 @@ import { PlayerService, CameraService } from './services/index';
 */
 const version = 'create-sdk-version'
 
-
-export {  PlayerService, CameraService, version };
+export { PlayerService, CameraService, EnvironmentService, version };

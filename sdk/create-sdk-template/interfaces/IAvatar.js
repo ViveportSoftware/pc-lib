@@ -29,14 +29,14 @@ class IAvatar{
     /**
      * 取得 Player 的 avatar 性別，default: 0
      * @readonly
-     * @type {CreateExtensionsSDK.AvatarGenderType}
+     * @type {CreateExtensionsSDK.Avatar.GenderTypes}
     */
     gender;
 
     /**
      * 取得 Player 的 avatar 種類
      * @readonly
-     * @type {CreateExtensionsSDK.AvatarDataType}
+     * @type {CreateExtensionsSDK.Avatar.DataTypes}
     */
     dataType;
 
