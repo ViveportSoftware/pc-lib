@@ -4,8 +4,8 @@ export const Configs: ConfigsType = {
   type: 'json',
   schema: [
     {
-      name: 'PostEffect',
-      description: 'Post effect',
+      name: 'postEffect',
+      description: 'post effect',
       type: 'json',
       schema: [
         {
