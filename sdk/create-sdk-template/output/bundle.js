@@ -384,7 +384,7 @@ class IControlledPlayer extends IPlayer{
      * @param {boolean} [options.lock=false] - Lock the animation. default is false.
      * @returns {void}
      */
-    playAnimation(stateName, asset, {loop = false, lock = false}){
+    playAnimation(stateName, asset, options){
         throw new Error("Please implement playAnimation() method.");
     }
 
@@ -416,7 +416,7 @@ class IControlledPlayer extends IPlayer{
      * @param {number} [rotationY] - y 軸旋轉角度
      * @returns {void}
      */
-    teleport(destination) {
+    teleport(destination, rotationY) {
         throw new Error("Please implement teleport() method.");
     }
 
