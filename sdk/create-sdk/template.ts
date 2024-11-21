@@ -29,14 +29,14 @@ class IAvatar{
     /**
      * 取得 Player 的 avatar 性別，default: 0
      * @readonly
-     * @type {CreateExtensionsSDK.AvatarGenderType}
+     * @type {CreateExtensionsSDK.Avatar.GenderTypes}
     */
     gender;
 
     /**
      * 取得 Player 的 avatar 種類
      * @readonly
-     * @type {CreateExtensionsSDK.AvatarDataType}
+     * @type {CreateExtensionsSDK.Avatar.DataTypes}
     */
     dataType;
 
@@ -550,13 +550,41 @@ class CameraService {
 }
 
 /**
+ * @class
+ */
+class EnvironmentService {
+  /**
+   * @readonly
+   * @type {EnvironmentService}
+  */
+  static instance;
+
+  /**
+   * 改變飛行模式
+   * @type {CreateExtensionsSDK.Environment.FlyModeTypes}
+  */
+ flyMode;
+
+ /**
+   * 改變 Impostor 模式
+   * @type {CreateExtensionsSDK.Environment.ImpostorModeTypes}
+  */
+ impostorMode;
+
+  constructor(){
+      return EnvironmentService.instance;
+  }
+
+}
+
+/**
  * 取得 Create SDK 的版本
  * @readonly
  * @type {string}
 */
 const version = 'create-sdk-version';
 
-export { CameraService, PlayerService, version };
+export { CameraService, EnvironmentService, PlayerService, version };
 `;
 
 export { content };
