@@ -41,12 +41,12 @@ export const Avatar = {
   GenderTypes: {
     ${Object.entries(enumToNumberRecord(Avatar.GenderTypes))
       .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n  ')}
+      .join(',\n    ')}
   },
   DataTypes: {
     ${Object.entries(enumToNumberRecord(Avatar.DataTypes))
       .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n  ')}
+      .join(',\n    ')}
   }
 }
 
@@ -54,12 +54,12 @@ export const Environment = {
   FlyModeTypes: {
     ${Object.entries(enumToNumberRecord(Environment.FlyModeTypes))
       .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n  ')}
+      .join(',\n    ')}
   },
   ImpostorModeTypes: {
     ${Object.entries(enumToNumberRecord(Environment.ImpostorModeTypes))
       .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n  ')}
+      .join(',\n    ')}
   }
 }
 `;
