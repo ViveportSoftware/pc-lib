@@ -101,10 +101,10 @@ class INetwork {
  */
 class INameTag {
     /**
-     * 是否在本地端顯示 nameTag，包含 nameTag 裡所有的 icon 和按鈕
-     * @type {boolean}
+     * 是否在本地端顯示 nameTag，或是應用系統的自動判定，包含 nameTag 裡所有的 icon 和按鈕
+     * @type {CreateExtensionsSDK.NameTag.VisibilityTypes}
     */
-    isVisible;
+    visibility;
 
     constructor(){
         if (this.constructor === INameTag) {
