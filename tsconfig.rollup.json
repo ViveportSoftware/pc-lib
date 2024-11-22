@@ -1,0 +1,15 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "target": "esnext", 
+    "module": "esnext",
+    "lib": ["dom"],
+    "rootDir": ".",
+    "outDir": "sdk/create-sdk-ts/dist",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strict": true 
+  },
+  "include": ["sdk/create-sdk-ts"],
+  "exclude": ["node_modules", "sdk/create-sdk-ts/dist"]
+}

@@ -1,8 +1,8 @@
 import * as TriggerAndAction from '../../lib/plugin/trigger-and-action';
-import * as Avatar from '../../lib/enums/avatar';
-import * as Environment from '../../lib/enums/environment';
 
-function enumToNumberRecord<T extends Record<string, any>>(enumObj: T): Record<string, number> {
+function enumToNumberRecord<T extends Record<string, any>>(
+  enumObj: T
+): Record<string, number> {
   return Object.entries(enumObj)
     .filter((entry): entry is [string, number] => typeof entry[1] === 'number')
     .reduce(
@@ -37,31 +37,6 @@ export const ActionTypes = {
     .join(',\n  ')}
 }
 
-export const Avatar = {
-  GenderTypes: {
-    ${Object.entries(enumToNumberRecord(Avatar.GenderTypes))
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n    ')}
-  },
-  DataTypes: {
-    ${Object.entries(enumToNumberRecord(Avatar.DataTypes))
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n    ')}
-  }
-}
-
-export const Environment = {
-  FlyModeTypes: {
-    ${Object.entries(enumToNumberRecord(Environment.FlyModeTypes))
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n    ')}
-  },
-  ImpostorModeTypes: {
-    ${Object.entries(enumToNumberRecord(Environment.ImpostorModeTypes))
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(',\n    ')}
-  }
-}
 `;
   }
 }
