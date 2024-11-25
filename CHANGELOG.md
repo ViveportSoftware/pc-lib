@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.72.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.71.0...v1.72.0) (2024-11-25)
+
+
+### Features
+
+* [CONNECT-3075] add post effect setting ([a8664cd](https://github.com/ViveportSoftware/pc-lib/commit/a8664cd3a2a1bdfb51768d3a502712405c8b972e))
+
 ## [1.71.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.70.0...v1.71.0) (2024-11-14)
 
 
