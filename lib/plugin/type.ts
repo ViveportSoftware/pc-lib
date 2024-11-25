@@ -13,6 +13,7 @@ export enum Type {
   Seat,
   Physic,
   Minimap,
+  PostEffect,
 }
 
 export enum FunctionTypes {
