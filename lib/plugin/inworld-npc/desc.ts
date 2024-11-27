@@ -2,14 +2,20 @@ import {Type} from './type';
 
 export const Desc = {
   [Type.Base]: {
+    vrmSourceType: {
+      desc: 'VRM source type',
+    },
+    vrmAssetId: {
+      desc: 'VRM asset',
+    },
+    vrmUrl: {
+      desc: 'VRM URL',
+    },
     sceneId: {
       desc: 'scene Id',
     },
     characterId: {
       desc: 'character Id',
-    },
-    vrmUrl: {
-      desc: 'VRM URL',
     },
     greetingMode: {
       desc: 'greeting mode',

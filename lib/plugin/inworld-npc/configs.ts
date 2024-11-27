@@ -8,6 +8,20 @@ export const Configs: ConfigsType = {
       type: 'json',
       schema: [
         {
+          name: 'vrmSourceType',
+          type: 'number',
+          select: true,
+          default: 1,
+        },
+        {
+          name: 'vrmAssetId',
+          type: 'string',
+        },
+        {
+          name: 'vrmUrl',
+          type: 'string',
+        },
+        {
           name: 'sceneId',
           type: 'string',
           description: 'scene Id',
@@ -16,11 +30,6 @@ export const Configs: ConfigsType = {
           name: 'characterId',
           type: 'string',
           description: 'character Id',
-        },
-        {
-          name: 'vrmUrl',
-          type: 'string',
-          description: 'VRM URL',
         },
         {
           name: 'greetingMode',
