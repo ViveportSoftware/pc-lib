@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.73.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.72.0...v1.73.0) (2024-11-27)
+
+
+### Features
+
+* **inworld-npc:** add vrm asset picker ([483a14d](https://github.com/ViveportSoftware/pc-lib/commit/483a14d7adf845c7708241ba790a7451c07ebc34))
+
 ## [1.72.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.71.0...v1.72.0) (2024-11-25)
 
 
