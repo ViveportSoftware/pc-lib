@@ -1,3 +1,3 @@
 export {Configs} from './configs';
 export {Desc} from './desc';
-export {Type, AutoFollowMode, GreetingMode} from './type';
+export {Type, VrmSourceType, AutoFollowMode, GreetingMode} from './type';
