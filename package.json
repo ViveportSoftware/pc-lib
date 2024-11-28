@@ -42,10 +42,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "gts": "^5.2.0",
     "husky": "^8.0.3",
-    "jsdoc": "^4.0.4",
     "playcanvas": "^2.2.2",
     "rollup": "^4.24.4",
-    "tslib": "^2.8.1",
     "typedoc": "^0.26.11",
     "typescript": "^5.3.3"
   },
