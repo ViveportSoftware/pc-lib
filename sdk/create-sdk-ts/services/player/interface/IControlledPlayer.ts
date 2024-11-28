@@ -151,8 +151,9 @@ export interface IControlledPlayer extends IPlayer {
 export interface IControlledPlayerEvents extends IPlayerEvents {
   /**
    * 當 Player 初始化完成時觸發
+   * @param entity - Player 的 entity
    */
-  'player:ready': () => void;
+  'player:ready': (entity: pc.Entity) => void;
 
   /**
    * 當 Player 的 avatar 開始移動時觸發
