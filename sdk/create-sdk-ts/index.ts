@@ -33,4 +33,5 @@ export {
   IPlayerEvents,
   PlayerService,
   AvatarTypes,
+  NameTagTypes,
 } from './services/player';

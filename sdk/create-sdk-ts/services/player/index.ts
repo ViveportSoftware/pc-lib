@@ -23,3 +23,4 @@ export {default as ControlledPlayer} from './ControlledPlayer';
 export {default as PlayerService} from './PlayerService';
 
 export * as AvatarTypes from './enums/avatar';
+export * as NameTagTypes from './enums/nameTag';

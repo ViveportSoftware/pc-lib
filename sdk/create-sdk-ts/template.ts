@@ -206,10 +206,22 @@ class Avatar {
     }
 }
 
+var VisibilityTypes;
+(function (VisibilityTypes) {
+    VisibilityTypes[VisibilityTypes["Auto"] = 0] = "Auto";
+    VisibilityTypes[VisibilityTypes["Enabled"] = 1] = "Enabled";
+    VisibilityTypes[VisibilityTypes["Disabled"] = 2] = "Disabled";
+})(VisibilityTypes || (VisibilityTypes = {}));
+
+var nameTag = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get VisibilityTypes () { return VisibilityTypes; }
+});
+
 class NameTag {
-    isVisible;
+    visibility;
     constructor() {
-        this.isVisible = true;
+        this.visibility = VisibilityTypes.Auto;
     }
 }
 
@@ -373,7 +385,7 @@ class PlayerService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, PlayerService, version };
+export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, PlayerService, version };
 `;
 
 export { content };

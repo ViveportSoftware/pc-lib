@@ -1,9 +1,10 @@
 import {INameTag} from './interface/INameTag';
+import * as NameTagTypes from './enums/nameTag';
 
 class NameTag implements INameTag {
-  isVisible: boolean;
+  visibility: NameTagTypes.VisibilityTypes;
   constructor() {
-    this.isVisible = true;
+    this.visibility = NameTagTypes.VisibilityTypes.Auto;
   }
 }
 
