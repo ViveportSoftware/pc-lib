@@ -20,6 +20,10 @@ class CameraService implements ICameraService {
   }
 
   switchCamera(camera?: pc.Entity): void {}
+
+  addLayer(layerId: string, order?: number): void {}
+
+  removeLayer(layerId: string): void {}
 }
 
 export default CameraService;
