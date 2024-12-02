@@ -35,3 +35,10 @@ export {
   AvatarTypes,
   NameTagTypes,
 } from './services/player';
+export {
+  NetworkService,
+  INetworkService,
+  IMessage,
+  ITriggerMessage,
+  INetworkServiceEvents,
+} from './services/network';
