@@ -24,6 +24,8 @@ class CameraService {
         return false;
     }
     switchCamera(camera) { }
+    addLayer(layerId, order) { }
+    removeLayer(layerId) { }
 }
 
 var FlyModeTypes;

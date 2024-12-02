@@ -37,4 +37,17 @@ export interface ICameraService {
    * @param {pc.Entity | undefined} [camera] - 相機 Entity，此 Entity 必須包含 pc.CameraComponent
    */
   switchCamera(camera?: pc.Entity): void;
+
+  /**
+   * 將 layer 新增到 Viverse Create 內建的預設相機
+   * @param {string} layerId - Layer ID
+   * @param {number | undefined} [order] - Layer 排序，預設排至最後
+   */
+  addLayer(layerId: string, order?: number): void;
+
+  /**
+   * 將 layer 從 Viverse Create 內建的預設相機中移除
+   * @param {pc.Entity | undefined} layerId - Layer ID
+   */
+  removeLayer(layerId: string): void;
 }
