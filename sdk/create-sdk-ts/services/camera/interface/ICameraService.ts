@@ -43,11 +43,11 @@ export interface ICameraService {
    * @param {string} layerId - Layer ID
    * @param {number | undefined} [order] - Layer 排序，預設排至最後
    */
-  addLayer(layerId: string, order?: number): void;
+  addLayer(layerId: number, order?: number): void;
 
   /**
    * 將 layer 從 Viverse Create 內建的預設相機中移除
    * @param {pc.Entity | undefined} layerId - Layer ID
    */
-  removeLayer(layerId: string): void;
+  removeLayer(layerId: number): void;
 }
