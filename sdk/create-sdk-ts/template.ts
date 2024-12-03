@@ -379,7 +379,7 @@ class PlayerService {
     /**
      * @type {RemotePlayer[]}
      */
-    get RemotePlayers() {
+    get remotePlayers() {
         return [];
     }
     get playerCount() {
