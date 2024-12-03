@@ -1,6 +1,6 @@
 import {IPlayerService} from './interface/IPlayerService';
-import {IControlledPlayer} from './interface/IControlledPlayer';
-import {ISyncedPlayer} from './interface/ISyncedPlayer';
+import {ILocalPlayer} from './interface/ILocalPlayer';
+import {IRemotePlayer} from './interface/IRemotePlayer';
 
 class PlayerService implements IPlayerService {
   private static _instance?: PlayerService;
@@ -11,16 +11,16 @@ class PlayerService implements IPlayerService {
   }
 
   /**
-   * @type {ControlledPlayer | null}
+   * @type {LocalPlayer | null}
    */
-  get controlledPlayer(): IControlledPlayer | null {
+  get localPlayer(): ILocalPlayer | null {
     return null;
   }
 
   /**
-   * @type {SyncedPlayer[]}
+   * @type {RemotePlayer[]}
    */
-  get syncedPlayers(): ISyncedPlayer[] {
+  get remotePlayers(): IRemotePlayer[] {
     return [];
   }
 

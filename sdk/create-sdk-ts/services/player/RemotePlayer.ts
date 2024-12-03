@@ -1,8 +1,8 @@
-import {ISyncedPlayer} from './interface/ISyncedPlayer';
+import {IRemotePlayer} from './interface/IRemotePlayer';
 import {IPlayerEvents} from './interface/IPlayer';
 import Player from './Player';
 
-class SyncedPlayer extends Player implements ISyncedPlayer {
+class RemotePlayer extends Player implements IRemotePlayer {
   constructor() {
     super();
   }
@@ -41,4 +41,4 @@ class SyncedPlayer extends Player implements ISyncedPlayer {
   }
 }
 
-export default SyncedPlayer;
+export default RemotePlayer;
