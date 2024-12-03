@@ -1,9 +1,9 @@
 import {IPlayer, IPlayerEvents} from './IPlayer';
 
 /**
- * 定義 ControlledPlayer 介面
+ * 定義 LocalPlayer 介面
  */
-export interface IControlledPlayer extends IPlayer {
+export interface ILocalPlayer extends IPlayer {
   /**
    * Player 是否可以移動
    */
@@ -129,9 +129,9 @@ export interface IControlledPlayer extends IPlayer {
    * @param event - 事件名稱
    * @param listener - 回調函數
    */
-  on<T extends keyof IControlledPlayerEvents>(
+  on<T extends keyof ILocalPlayerEvents>(
     event: T,
-    listener: IControlledPlayerEvents[T]
+    listener: ILocalPlayerEvents[T]
   ): pc.EventHandle;
 
   /**
@@ -139,16 +139,16 @@ export interface IControlledPlayer extends IPlayer {
    * @param event - 事件名稱
    * @param listener - 回調函數
    */
-  off<T extends keyof IControlledPlayerEvents>(
+  off<T extends keyof ILocalPlayerEvents>(
     event: T,
-    listener: IControlledPlayerEvents[T]
+    listener: ILocalPlayerEvents[T]
   ): pc.EventHandler;
 }
 
 /**
- * 定義 IControlledPlayer 支援的事件和對應的參數
+ * 定義 ILocalPlayer 支援的事件和對應的參數
  */
-export interface IControlledPlayerEvents extends IPlayerEvents {
+export interface ILocalPlayerEvents extends IPlayerEvents {
   /**
    * 當 Player 初始化完成時觸發
    * @param entity - Player 的 entity

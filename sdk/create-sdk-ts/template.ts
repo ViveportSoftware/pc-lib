@@ -295,7 +295,7 @@ class Player {
     }
 }
 
-class SyncedPlayer extends Player {
+class RemotePlayer extends Player {
     constructor() {
         super();
     }
@@ -319,7 +319,7 @@ class SyncedPlayer extends Player {
     }
 }
 
-class ControlledPlayer extends Player {
+class LocalPlayer extends Player {
     canMove = true;
     canJump = true;
     canRun = true;
@@ -371,15 +371,15 @@ class PlayerService {
         PlayerService._instance = this;
     }
     /**
-     * @type {ControlledPlayer | null}
+     * @type {LocalPlayer | null}
      */
-    get controlledPlayer() {
+    get localPlayer() {
         return null;
     }
     /**
-     * @type {SyncedPlayer[]}
+     * @type {RemotePlayer[]}
      */
-    get syncedPlayers() {
+    get RemotePlayers() {
         return [];
     }
     get playerCount() {

@@ -1,9 +1,9 @@
 import {IPlayer} from './IPlayer';
 
 /**
- * 定義 SyncedPlayer 介面
+ * 定義 RemotePlayer 介面
  */
-export interface ISyncedPlayer extends IPlayer {
+export interface IRemotePlayer extends IPlayer {
   /**
    * 是否為 admin
    */
