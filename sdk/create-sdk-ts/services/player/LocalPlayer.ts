@@ -1,11 +1,8 @@
 import * as pc from 'playcanvas';
-import {
-  IControlledPlayer,
-  IControlledPlayerEvents,
-} from './interface/IControlledPlayer';
+import {ILocalPlayer, ILocalPlayerEvents} from './interface/ILocalPlayer';
 import Player from './Player';
 
-class ControlledPlayer extends Player implements IControlledPlayer {
+class LocalPlayer extends Player implements ILocalPlayer {
   canMove = true;
   canJump = true;
   canRun = true;
@@ -53,21 +50,21 @@ class ControlledPlayer extends Player implements IControlledPlayer {
 
   changeAvatar(asset: pc.Asset): void {}
 
-  on<T extends keyof IControlledPlayerEvents>(
+  on<T extends keyof ILocalPlayerEvents>(
     event: T,
-    listener: IControlledPlayerEvents[T]
+    listener: ILocalPlayerEvents[T]
   ): pc.EventHandle {
     return {} as pc.EventHandle;
   }
 
-  off<T extends keyof IControlledPlayerEvents>(
+  off<T extends keyof ILocalPlayerEvents>(
     event: T,
-    listener: IControlledPlayerEvents[T]
+    listener: ILocalPlayerEvents[T]
   ): pc.EventHandler {
     return {} as pc.EventHandler;
   }
 
-  fire<T extends keyof IControlledPlayerEvents>(
+  fire<T extends keyof ILocalPlayerEvents>(
     event: T,
     ...args: any[]
   ): pc.EventHandler {
@@ -75,4 +72,4 @@ class ControlledPlayer extends Player implements IControlledPlayer {
   }
 }
 
-export default ControlledPlayer;
+export default LocalPlayer;
