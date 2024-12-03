@@ -387,7 +387,29 @@ class PlayerService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, PlayerService, version };
+class NetworkService {
+    static _instance;
+    moveSyncInterval = 150;
+    constructor() {
+        if (NetworkService._instance)
+            return NetworkService._instance;
+        NetworkService._instance = this;
+    }
+    sendMessage(message, options) {
+        return '';
+    }
+    generateMessageId() {
+        return '';
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+}
+
+export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
 export { content };
