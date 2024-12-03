@@ -3,6 +3,6 @@
  */
 export interface IPlayerTransform {
   position: pc.Vec3;
-  rotation: pc.Vec4;
+  rotation: pc.Quat;
   scale: pc.Vec3;
 }

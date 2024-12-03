@@ -4,7 +4,7 @@ type PlayerTransformData = IPlayerTransform;
 
 class PlayerTransform implements IPlayerTransform {
   #position: pc.Vec3;
-  #rotation: pc.Vec4;
+  #rotation: pc.Quat;
   #scale: pc.Vec3;
 
   constructor(data: PlayerTransformData) {
@@ -23,9 +23,9 @@ class PlayerTransform implements IPlayerTransform {
   }
 
   /**
-   * @type {pc.Vec4}
+   * @type {pc.Quat}
    */
-  get rotation(): pc.Vec4 {
+  get rotation(): pc.Quat {
     return this.#rotation;
   }
 

@@ -114,7 +114,7 @@ class PlayerTransform {
         return this.#position;
     }
     /**
-     * @type {pc.Vec4}
+     * @type {pc.Quat}
      */
     get rotation() {
         return this.#rotation;
