@@ -42,6 +42,10 @@ class Avatar implements IAvatar {
     return undefined;
   }
 
+  get entity(): pc.Entity | undefined {
+    return undefined;
+  }
+
   on<T extends keyof IAvatarEvents>(
     event: T,
     listener: IAvatarEvents[T]
