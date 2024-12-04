@@ -97,7 +97,7 @@ class PlayerProfile {
     }
 }
 
-class PlayerTransform {
+class AvatarTransform {
     #position;
     #rotation;
     #scale;
@@ -197,6 +197,12 @@ class Avatar {
     get dataType() {
         return DataTypes.VRM;
     }
+    /**
+     * @type {AvatarTransform | undefined}
+     */
+    get transform() {
+        return undefined;
+    }
     on(event, listener) {
         return {};
     }
@@ -270,12 +276,6 @@ class Player {
      * @type {NameTag | undefined}
      */
     get nameTag() {
-        return undefined;
-    }
-    /**
-     * @type {PlayerTransform | undefined}
-     */
-    get transform() {
         return undefined;
     }
     /**

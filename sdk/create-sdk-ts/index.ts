@@ -17,8 +17,8 @@ export {
   EnvironmentTypes,
 } from './services/environment';
 export {
-  IPlayerTransform,
   IPlayerProfile,
+  IAvatarTransform,
   IAvatarSnapshot,
   IAvatar,
   ILocalPlayer,
