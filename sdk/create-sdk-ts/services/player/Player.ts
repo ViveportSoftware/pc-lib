@@ -47,6 +47,10 @@ class Player implements IPlayer {
     return undefined;
   }
 
+  get entity(): pc.Entity | undefined {
+    return undefined;
+  }
+
   on<T extends keyof IPlayerEvents>(
     event: T,
     listener: IPlayerEvents[T]

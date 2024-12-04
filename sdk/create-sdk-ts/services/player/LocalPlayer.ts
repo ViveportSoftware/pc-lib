@@ -50,6 +50,8 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   changeAvatar(asset: pc.Asset): void {}
 
+  resetToViverseAvatar(): void {}
+
   on<T extends keyof ILocalPlayerEvents>(
     event: T,
     listener: ILocalPlayerEvents[T]

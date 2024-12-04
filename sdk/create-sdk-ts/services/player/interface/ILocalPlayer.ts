@@ -125,6 +125,11 @@ export interface ILocalPlayer extends IPlayer {
   changeAvatar(asset: pc.Asset): void;
 
   /**
+   * 重置角色的 avatar 模型為 Viverse Create 預設的 avatar 模型
+   */
+  resetToViverseAvatar(): void;
+
+  /**
    * 訂閱指定的事件
    * @param event - 事件名稱
    * @param listener - 回調函數
