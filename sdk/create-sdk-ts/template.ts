@@ -203,6 +203,9 @@ class Avatar {
     get transform() {
         return undefined;
     }
+    get entity() {
+        return undefined;
+    }
     on(event, listener) {
         return {};
     }
@@ -284,6 +287,9 @@ class Player {
     get profile() {
         return undefined;
     }
+    get entity() {
+        return undefined;
+    }
     on(event, listener) {
         return {};
     }
@@ -352,6 +358,7 @@ class LocalPlayer extends Player {
     respawn(timeout) { }
     teleport(destination, rotationY) { }
     changeAvatar(asset) { }
+    resetToViverseAvatar() { }
     on(event, listener) {
         return {};
     }
