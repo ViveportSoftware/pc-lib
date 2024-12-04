@@ -1,4 +1,3 @@
 {
-  "extends": "./node_modules/gts/",
-  "ignores": ["sdk/create-sdk-template/*"]
+  "extends": "./node_modules/gts/"
 }
