@@ -1,6 +1,7 @@
 import {IAvatar, IAvatarEvents} from './interface/IAvatar';
 import * as AvatarTypes from './enums/avatar';
 import AvatarSnapshot from './AvatarSnapshot';
+import AvatarTransform from './AvatarTransform';
 
 class Avatar implements IAvatar {
   boundingBox?: pc.BoundingBox;
@@ -32,6 +33,13 @@ class Avatar implements IAvatar {
 
   get dataType(): AvatarTypes.DataTypes {
     return AvatarTypes.DataTypes.VRM;
+  }
+
+  /**
+   * @type {AvatarTransform | undefined}
+   */
+  get transform(): AvatarTransform | undefined {
+    return undefined;
   }
 
   on<T extends keyof IAvatarEvents>(

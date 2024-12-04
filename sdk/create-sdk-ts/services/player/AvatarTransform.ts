@@ -1,13 +1,13 @@
-import {IPlayerTransform} from './interface/IPlayerTransform';
+import {IAvatarTransform} from './interface/IAvatarTransform';
 
-type PlayerTransformData = IPlayerTransform;
+type AvatarTransformData = IAvatarTransform;
 
-class PlayerTransform implements IPlayerTransform {
+class AvatarTransform implements IAvatarTransform {
   #position: pc.Vec3;
   #rotation: pc.Quat;
   #scale: pc.Vec3;
 
-  constructor(data: PlayerTransformData) {
+  constructor(data: AvatarTransformData) {
     const {position, rotation, scale} = data;
 
     this.#position = position;
@@ -37,4 +37,4 @@ class PlayerTransform implements IPlayerTransform {
   }
 }
 
-export default PlayerTransform;
+export default AvatarTransform;
