@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.75.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.74.0...v1.75.0) (2024-12-04)
+
+
+### Features
+
+* **create-SDK:** develop merge master ([#222](https://github.com/ViveportSoftware/pc-lib/issues/222)) ([db70898](https://github.com/ViveportSoftware/pc-lib/commit/db70898fd5fdbd34c987b7adcd188a9a628e6dc6))
+
 ## [1.74.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.73.0...v1.74.0) (2024-12-04)
 
 
