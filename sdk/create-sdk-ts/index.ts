@@ -17,8 +17,8 @@ export {
   EnvironmentTypes,
 } from './services/environment';
 export {
-  IPlayerTransform,
   IPlayerProfile,
+  IAvatarTransform,
   IAvatarSnapshot,
   IAvatar,
   ILocalPlayer,
@@ -35,3 +35,10 @@ export {
   AvatarTypes,
   NameTagTypes,
 } from './services/player';
+export {
+  NetworkService,
+  INetworkService,
+  IMessage,
+  ITriggerMessage,
+  INetworkServiceEvents,
+} from './services/network';

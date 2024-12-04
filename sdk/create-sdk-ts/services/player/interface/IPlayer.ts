@@ -3,7 +3,6 @@ import {EventHandlerMethods} from '../../../types';
 import {IAvatar} from './IAvatar';
 import {INetwork} from './INetwork';
 import {INameTag} from './INameTag';
-import {IPlayerTransform} from './IPlayerTransform';
 import {IPlayerProfile} from './IPlayerProfile';
 
 /**
@@ -41,14 +40,14 @@ export interface IPlayer extends EventHandlerMethods {
   readonly nameTag?: INameTag;
 
   /**
-   * 取得 Player 的位置,旋轉,大小資訊
-   */
-  readonly transform?: IPlayerTransform;
-
-  /**
    * 取得 Player 的 profile 資訊
    */
   readonly profile?: IPlayerProfile;
+
+  /**
+   * 取得 player entity
+   */
+  readonly entity?: pc.Entity;
 
   /**
    * 訂閱指定的事件

@@ -97,7 +97,7 @@ class PlayerProfile {
     }
 }
 
-class PlayerTransform {
+class AvatarTransform {
     #position;
     #rotation;
     #scale;
@@ -197,6 +197,15 @@ class Avatar {
     get dataType() {
         return DataTypes.VRM;
     }
+    /**
+     * @type {AvatarTransform | undefined}
+     */
+    get transform() {
+        return undefined;
+    }
+    get entity() {
+        return undefined;
+    }
     on(event, listener) {
         return {};
     }
@@ -273,15 +282,12 @@ class Player {
         return undefined;
     }
     /**
-     * @type {PlayerTransform | undefined}
-     */
-    get transform() {
-        return undefined;
-    }
-    /**
      * @type {PlayerProfile | undefined}
      */
     get profile() {
+        return undefined;
+    }
+    get entity() {
         return undefined;
     }
     on(event, listener) {
@@ -352,6 +358,7 @@ class LocalPlayer extends Player {
     respawn(timeout) { }
     teleport(destination, rotationY) { }
     changeAvatar(asset) { }
+    resetToViverseAvatar() { }
     on(event, listener) {
         return {};
     }
@@ -387,7 +394,29 @@ class PlayerService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, PlayerService, version };
+class NetworkService {
+    static _instance;
+    moveSyncInterval = 150;
+    constructor() {
+        if (NetworkService._instance)
+            return NetworkService._instance;
+        NetworkService._instance = this;
+    }
+    sendMessage(message, options) {
+        return '';
+    }
+    generateMessageId() {
+        return '';
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+}
+
+export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
 export { content };

@@ -2,6 +2,7 @@ import * as pc from 'playcanvas';
 import {EventHandlerMethods} from '../../../types';
 import * as AvatarTypes from '../enums/avatar';
 import {IAvatarSnapshot} from './IAvatarSnapshot';
+import {IAvatarTransform} from './IAvatarTransform';
 
 /**
  * 定義 Avatar 介面
@@ -41,6 +42,16 @@ export interface IAvatar extends EventHandlerMethods {
    * 取得 Player 的 avatar 種類
    */
   readonly dataType: AvatarTypes.DataTypes;
+
+  /**
+   * 取得 Player 的 avatar 位置,旋轉,大小資訊
+   */
+  readonly transform?: IAvatarTransform;
+
+  /**
+   * 取得 Player 的 avatar entity
+   */
+  readonly entity?: pc.Entity;
 
   /**
    * 訂閱指定的事件

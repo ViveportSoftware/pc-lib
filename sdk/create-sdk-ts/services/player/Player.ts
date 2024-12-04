@@ -2,7 +2,6 @@ import {IPlayer, IPlayerEvents} from './interface/IPlayer';
 import Network from './Network';
 import NameTag from './NameTag';
 import Avatar from './Avatar';
-import PlayerTransform from './PlayerTransform';
 import PlayerProfile from './PlayerProfile';
 
 class Player implements IPlayer {
@@ -42,16 +41,13 @@ class Player implements IPlayer {
   }
 
   /**
-   * @type {PlayerTransform | undefined}
-   */
-  get transform(): PlayerTransform | undefined {
-    return undefined;
-  }
-
-  /**
    * @type {PlayerProfile | undefined}
    */
   get profile(): PlayerProfile | undefined {
+    return undefined;
+  }
+
+  get entity(): pc.Entity | undefined {
     return undefined;
   }
 
