@@ -10,10 +10,10 @@ export interface INetworkService {
   /**
    * Send custom message.
    * @param {Record<string, any>} message - Custom message content.
-   * @param {Object} options - Other options.
-   * @param {boolean} options.batch - Batch processing of messages: If set to `true`, the messages will be cached and sent together later.
-   * @param {string} options.messageId - Message ID: Used to override messages with the same ID that have not been sent yet.
-   * @param {string} options.entityId - Entity GUID: Specifies the entity that can receive the message through the receive:message event.
+   * @param {Object} [options] - Other options.
+   * @param {boolean} [options.batch=true] - Batch processing of messages: If set to `true`, the messages will be cached and sent together later.
+   * @param {string} [options.messageId] - Message ID: Used to override messages with the same ID that have not been sent yet.
+   * @param {string} [options.entityId] - Entity GUID: Specifies the entity that can receive the message through the receive:message event.
    * @returns {string} - Message ID.
    */
   sendMessage<T = Record<string, unknown>>(
