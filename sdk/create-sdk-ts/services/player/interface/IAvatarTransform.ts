@@ -1,7 +1,7 @@
 /**
- * 定義 PlayerTransform 介面
+ * 定義 AvatarTransform 介面
  */
-export interface IPlayerTransform {
+export interface IAvatarTransform {
   position: pc.Vec3;
   rotation: pc.Quat;
   scale: pc.Vec3;
