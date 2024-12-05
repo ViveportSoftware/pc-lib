@@ -10,10 +10,10 @@ export interface INetworkService {
   /**
    * 發送自定義訊息
    * @param {Record<string, any>} message - 自定義訊息內容
-   * @param {Object} options - 其他選項
-   * @param {boolean} options.batch - 是否批次處理訊息，若為 `true`，訊息會被暫存後一併發送
-   * @param {string} options.messageId - 訊息ID，用於覆蓋尚未傳出的相同ID訊息
-   * @param {string} options.entityId - entity guid，指定entity可以透過 receive:message 事件接收到訊息
+   * @param {Object} [options] - 其他選項
+   * @param {boolean} [options.batch=true] - 是否批次處理訊息，若為 `true`，訊息會被暫存後一併發送（預設值為 `true`）
+   * @param {string} [options.messageId] - 訊息ID，用於覆蓋尚未傳出的相同ID訊息
+   * @param {string} [options.entityId] - entity guid，指定entity可以透過 receive:message 事件接收到訊息
    * @returns {string} - 訊息ID
    */
   sendMessage<T = Record<string, unknown>>(
