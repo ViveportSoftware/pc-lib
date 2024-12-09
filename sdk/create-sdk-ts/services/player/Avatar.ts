@@ -12,7 +12,7 @@ class Avatar implements IAvatar {
     this.collision = undefined;
   }
 
-  get avatarID(): string {
+  get avatarId(): string {
     return '';
   }
 

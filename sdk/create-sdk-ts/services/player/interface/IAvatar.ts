@@ -21,7 +21,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * Get player's avatar ID.
    */
-  readonly avatarID: string;
+  readonly avatarId: string;
 
   /**
    * Get player's avatar model link.

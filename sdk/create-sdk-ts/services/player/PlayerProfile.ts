@@ -8,15 +8,15 @@ class PlayerProfile implements IPlayerProfile {
     head: string;
     fullBody: string;
   };
-  #userID: string;
+  #userId: string;
   #userName: string;
 
   constructor(data: PlayerProfileData) {
-    const {displayName, snapshot, userID, userName} = data;
+    const {displayName, snapshot, userId, userName} = data;
 
     this.#displayName = displayName;
     this.#snapshot = snapshot;
-    this.#userID = userID;
+    this.#userId = userId;
     this.#userName = userName;
   }
 
@@ -42,8 +42,8 @@ class PlayerProfile implements IPlayerProfile {
   /**
    * @type {string}
    */
-  get userID(): string {
-    return this.#userID;
+  get userId(): string {
+    return this.#userId;
   }
 
   /**
