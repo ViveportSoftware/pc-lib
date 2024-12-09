@@ -21,7 +21,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * 取得 Player 的 avatar ID
    */
-  readonly avatarID: string;
+  readonly avatarId: string;
 
   /**
    * 取得 Player 的 avatar 模型連結
