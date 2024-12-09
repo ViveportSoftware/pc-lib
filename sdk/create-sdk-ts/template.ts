@@ -60,13 +60,13 @@ class EnvironmentService {
 class PlayerProfile {
     #displayName;
     #snapshot;
-    #userID;
+    #userId;
     #userName;
     constructor(data) {
-        const { displayName, snapshot, userID, userName } = data;
+        const { displayName, snapshot, userId, userName } = data;
         this.#displayName = displayName;
         this.#snapshot = snapshot;
-        this.#userID = userID;
+        this.#userId = userId;
         this.#userName = userName;
     }
     /**
@@ -86,8 +86,8 @@ class PlayerProfile {
     /**
      * @type {string}
      */
-    get userID() {
-        return this.#userID;
+    get userId() {
+        return this.#userId;
     }
     /**
      * @type {string}
@@ -179,7 +179,7 @@ class Avatar {
         this.boundingBox = undefined;
         this.collision = undefined;
     }
-    get avatarID() {
+    get avatarId() {
         return '';
     }
     get avatarGlb() {

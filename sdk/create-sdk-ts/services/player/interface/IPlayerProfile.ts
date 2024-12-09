@@ -22,7 +22,7 @@ export interface IPlayerProfile {
   /**
    * Player 的 ID
    */
-  userID: string;
+  userId: string;
   /**
    * Player 的名稱
    */
