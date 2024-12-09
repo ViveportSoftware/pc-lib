@@ -54,14 +54,14 @@ export interface INetworkService {
 }
 
 export interface IMessage<T = Record<string, unknown>> {
-  userId: string;
+  playerId: string;
   messageId: string;
   entityId?: string;
   data: T;
 }
 
 export interface ITriggerMessage {
-  playerId?: string | null;
+  playerId: string;
   entityId?: string | null;
   type?: number | null;
 }
