@@ -1,16 +1,16 @@
 import * as EnvironmentTypes from '../enums/environment';
 
 /**
- * 定義 EnvironmentService 介面
+ * Define the interface of EnvironmentService.
  */
 export interface IEnvironmentService {
   /**
-   * 改變飛行模式
+   * Change fly mode.
    */
   flyMode: EnvironmentTypes.FlyModeTypes;
 
   /**
-   * 改變 Impostor 模式
+   * Change impostor mode.
    */
   impostorMode: EnvironmentTypes.ImpostorModeTypes;
 }
