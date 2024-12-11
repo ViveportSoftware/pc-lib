@@ -392,6 +392,15 @@ class PlayerService {
     get playerCount() {
         return 0;
     }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
 }
 
 class NetworkService {
