@@ -7,5 +7,6 @@ export enum HorizontalTypes {
 export enum VerticalTypes {
   Ground = 0,
   Jump = 1,
-  Fly= 2,
+  Fly = 2,
+  HardLanding = 3,
 }
