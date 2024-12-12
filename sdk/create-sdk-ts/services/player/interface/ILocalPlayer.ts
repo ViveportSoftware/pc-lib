@@ -1,4 +1,5 @@
 import {IPlayer, IPlayerEvents} from './IPlayer';
+import * as MoveTypes from '../enums/move';
 
 /**
  * 定義 LocalPlayer 介面
@@ -161,36 +162,6 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   'player:ready': (entity: pc.Entity) => void;
 
   /**
-   * 當 Player 的 avatar 開始移動時觸發
-   */
-  'move:start': () => void;
-
-  /**
-   * 當 Player 的 avatar 停止移動時觸發
-   */
-  'move:end': () => void;
-
-  /**
-   * 當 Player 的 avatar 開始跑步時觸發
-   */
-  'run:start': () => void;
-
-  /**
-   * 當 Player 的 avatar 停止跑步時觸發
-   */
-  'run:end': () => void;
-
-  /**
-   * 當 Player 的 avatar 開始飛行時觸發
-   */
-  'fly:start': () => void;
-
-  /**
-   * 當 Player 的 avatar 停止飛行時觸發
-   */
-  'fly:end': () => void;
-
-  /**
    * 當 Player 的 avatar 跳起時觸發
    */
   'jump:start': () => void;
@@ -216,4 +187,28 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
    * @param position - 重生點的坐標位置
    */
   respawned: (position: pc.Vec3) => void;
+
+  /**
+   * 當 Player 的 avatar 在 XR teleport時觸發
+   */
+  'xr:teleport': () => void;
+
+   /**
+   * 當 Player 的 avatar 在 XR turning時觸發
+   */
+  'xr:turning': () => void;
+
+  /**
+   * 當 Player 的 avatar 水平移動狀態改變時觸發
+   * @param nextState - 下一個移動狀態
+   * @param prevState - 上一個移動狀態
+   */
+  'move:horizontal': (nextState: MoveTypes.HorizontalTypes, prevState: MoveTypes.HorizontalTypes) => void;
+
+   /**
+   * 當 Player 的 avatar 垂直移動狀態改變時觸發
+   * @param nextState - 下一個移動狀態
+   * @param prevState - 上一個移動狀態
+   */
+  'move:vertical': (nextState: MoveTypes.VerticalTypes, prevState: MoveTypes.VerticalTypes) => void;
 }
