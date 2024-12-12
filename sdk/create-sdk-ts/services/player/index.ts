@@ -21,3 +21,4 @@ export {default as PlayerService} from './PlayerService';
 
 export * as AvatarTypes from './enums/avatar';
 export * as NameTagTypes from './enums/nameTag';
+export * as MoveTypes from './enums/move';
