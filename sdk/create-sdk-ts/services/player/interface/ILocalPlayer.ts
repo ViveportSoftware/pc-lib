@@ -1,4 +1,5 @@
 import {IPlayer, IPlayerEvents} from './IPlayer';
+import * as MoveTypes from '../enums/move';
 
 /**
  * 定義 LocalPlayer 介面
@@ -199,11 +200,15 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
 
   /**
    * 當 Player 的 avatar 水平移動狀態改變時觸發
+   * @param nextState - 下一個移動狀態
+   * @param prevState - 上一個移動狀態
    */
-  'move:horizontal': () => void;
+  'move:horizontal': (nextState: MoveTypes.HorizontalTypes, prevState: MoveTypes.HorizontalTypes) => void;
 
    /**
    * 當 Player 的 avatar 垂直移動狀態改變時觸發
+   * @param nextState - 下一個移動狀態
+   * @param prevState - 上一個移動狀態
    */
-  'move:vertical': () => void;
+  'move:vertical': (nextState: MoveTypes.VerticalTypes, prevState: MoveTypes.VerticalTypes) => void;
 }
