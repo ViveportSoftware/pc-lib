@@ -35,6 +35,7 @@ export {
   IPlayerServiceEvents,
   AvatarTypes,
   NameTagTypes,
+  MoveTypes,
 } from './services/player';
 export {
   NetworkService,
