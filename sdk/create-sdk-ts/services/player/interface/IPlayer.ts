@@ -86,7 +86,7 @@ export interface IPlayer extends EventHandlerMethods {
 export interface IPlayerEvents {
   /**
    * 當 Player 的 avatar collider 碰撞到其他 collider 時觸發
-   * @param entity - 當前的坐標位置
+   * @param event - 碰撞結果的詳細資訊
    */
-  colliderHit: (entity: pc.Entity) => void;
+  colliderHit: (event: pc.ContactResult) => void;
 }
