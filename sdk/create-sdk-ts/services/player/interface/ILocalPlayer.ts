@@ -131,10 +131,11 @@ export interface ILocalPlayer extends IPlayer {
   resetToViverseAvatar(): void;
 
   /**
-  * 使角色轉向目標位置
-  * @param {pc.Vec3} targetPosition - 目標位置
+  * 使角色轉向目標在水平方向上的位置
+  * @param {number | pc.Vec2} x - 目標在水平方向上的位置的 x座標，或目標在水平方向上的位置
+  * @param {number} [y] - 目標在水平方向上的位置的 y座標
   */
-   turnToward(targetPosition: pc.Vec3): void;
+   turnToward(x: number | pc.Vec2, y?: number): void;
 
   /**
    * 訂閱指定的事件
