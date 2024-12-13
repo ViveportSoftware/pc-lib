@@ -52,6 +52,8 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   resetToViverseAvatar(): void {}
 
+  turnToward(targetPosition: pc.Vec3): void {}
+
   on<T extends keyof ILocalPlayerEvents>(
     event: T,
     listener: ILocalPlayerEvents[T]

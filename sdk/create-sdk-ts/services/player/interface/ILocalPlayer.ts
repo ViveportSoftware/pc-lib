@@ -131,6 +131,12 @@ export interface ILocalPlayer extends IPlayer {
   resetToViverseAvatar(): void;
 
   /**
+  * 使角色轉向目標位置
+  * @param {pc.Vec3} targetPosition - 目標位置
+  */
+   turnToward(targetPosition: pc.Vec3): void;
+
+  /**
    * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function
