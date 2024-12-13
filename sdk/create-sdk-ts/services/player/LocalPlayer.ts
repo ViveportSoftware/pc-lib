@@ -52,7 +52,7 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   resetToViverseAvatar(): void {}
 
-  turnToward(targetPosition: pc.Vec3): void {}
+  turnToward(x: number | pc.Vec2, y?: number): void {}
 
   on<T extends keyof ILocalPlayerEvents>(
     event: T,
