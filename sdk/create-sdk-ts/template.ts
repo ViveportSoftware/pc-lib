@@ -359,6 +359,7 @@ class LocalPlayer extends Player {
     teleport(destination, rotationY) { }
     changeAvatar(asset) { }
     resetToViverseAvatar() { }
+    turnToward(targetPosition) { }
     on(event, listener) {
         return {};
     }
@@ -403,6 +404,26 @@ class PlayerService {
     }
 }
 
+var HorizontalTypes;
+(function (HorizontalTypes) {
+    HorizontalTypes[HorizontalTypes["Idle"] = 0] = "Idle";
+    HorizontalTypes[HorizontalTypes["Walk"] = 1] = "Walk";
+    HorizontalTypes[HorizontalTypes["Run"] = 2] = "Run";
+})(HorizontalTypes || (HorizontalTypes = {}));
+var VerticalTypes;
+(function (VerticalTypes) {
+    VerticalTypes[VerticalTypes["Ground"] = 0] = "Ground";
+    VerticalTypes[VerticalTypes["Jump"] = 1] = "Jump";
+    VerticalTypes[VerticalTypes["Fly"] = 2] = "Fly";
+    VerticalTypes[VerticalTypes["HardLanding"] = 3] = "HardLanding";
+})(VerticalTypes || (VerticalTypes = {}));
+
+var move = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get HorizontalTypes () { return HorizontalTypes; },
+    get VerticalTypes () { return VerticalTypes; }
+});
+
 class NetworkService {
     static _instance;
     moveSyncInterval = 150;
@@ -425,7 +446,7 @@ class NetworkService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
+export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
 export { content };
