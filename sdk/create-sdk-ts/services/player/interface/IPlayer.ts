@@ -88,5 +88,5 @@ export interface IPlayerEvents {
    * Triggered when the player's avatar collider collides with another collider.
    * @param entity - Current coordinate.
    */
-  colliderHit: (entity: pc.Entity) => void;
+  colliderHit: (event: pc.ContactResult) => void;
 }
