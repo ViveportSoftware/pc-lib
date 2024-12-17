@@ -427,6 +427,9 @@ var move = /*#__PURE__*/Object.freeze({
 class NetworkService {
     static _instance;
     moveSyncInterval = 150;
+    masterId = '';
+    playerIdMap = {};
+    _gameId = '';
     constructor() {
         if (NetworkService._instance)
             return NetworkService._instance;
@@ -438,6 +441,10 @@ class NetworkService {
     generateMessageId() {
         return '';
     }
+    sendGameStart() { }
+    sendGameEnd() { }
+    sendOwnerUpdate(event, targetId) { }
+    _sendGameUpdate(params) { }
     on(event, listener) {
         return {};
     }
