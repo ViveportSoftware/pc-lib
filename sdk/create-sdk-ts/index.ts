@@ -42,5 +42,6 @@ export {
   INetworkService,
   IMessage,
   ITriggerMessage,
+  IOwnerUpdateMessage,
   INetworkServiceEvents,
 } from './services/network';
