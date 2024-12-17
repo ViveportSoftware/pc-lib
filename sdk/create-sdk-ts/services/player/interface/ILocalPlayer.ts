@@ -16,6 +16,11 @@ export interface ILocalPlayer extends IPlayer {
   canJump: boolean;
 
   /**
+   * Player 是否可以硬著陸
+   */
+  canHardLanding: boolean;
+
+  /**
    * Player 是否可以跑步
    */
   canRun: boolean;
