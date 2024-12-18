@@ -45,11 +45,6 @@ export interface IPlayer extends EventHandlerMethods {
   readonly profile?: IPlayerProfile;
 
   /**
-   * Get the player entity.
-   */
-  readonly entity?: pc.Entity;
-
-  /**
    * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function

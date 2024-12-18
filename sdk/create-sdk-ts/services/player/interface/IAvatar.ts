@@ -49,11 +49,6 @@ export interface IAvatar extends EventHandlerMethods {
   readonly transform?: IAvatarTransform;
 
   /**
-   * Get player's avatar entity.
-   */
-  readonly entity?: pc.Entity;
-
-  /**
    * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function
