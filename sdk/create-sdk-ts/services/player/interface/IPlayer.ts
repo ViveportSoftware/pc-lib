@@ -45,11 +45,6 @@ export interface IPlayer extends EventHandlerMethods {
   readonly profile?: IPlayerProfile;
 
   /**
-   * 取得 player entity
-   */
-  readonly entity?: pc.Entity;
-
-  /**
    * 訂閱指定的事件
    * @param event - 事件名稱
    * @param listener - 回調函數
