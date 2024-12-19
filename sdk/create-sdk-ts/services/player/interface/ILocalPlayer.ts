@@ -19,6 +19,11 @@ export interface ILocalPlayer extends IPlayer {
    * Player 是否可以硬著陸
    */
   canHardLanding: boolean;
+  
+  /**
+   * Player 是否可以飛行
+   */
+  canFly: boolean | undefined;
 
   /**
    * Player 是否可以跑步
@@ -68,11 +73,6 @@ export interface ILocalPlayer extends IPlayer {
    * 是否能讓遠端玩家看見
    */
   isVisibleRemotely: boolean;
-
-  /**
-   * Player 是否可以飛行
-   */
-  readonly canFly: boolean;
 
   /**
    * 取得角色當前的速度

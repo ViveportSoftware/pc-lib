@@ -7,6 +7,7 @@ class LocalPlayer extends Player implements ILocalPlayer {
   canJump = true;
   canHardLanding = true;
   canRun = true;
+  canFly = undefined;
   respawnPosition: pc.Vec3 | null = null;
   fallingGravityMultiplier = 1;
   gravityMultiplier = 1;
@@ -18,10 +19,6 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   constructor() {
     super();
-  }
-
-  get canFly(): boolean {
-    return true;
   }
 
   /**

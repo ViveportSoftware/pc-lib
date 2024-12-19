@@ -5,11 +5,6 @@ import * as EnvironmentTypes from '../enums/environment';
  */
 export interface IEnvironmentService {
   /**
-   * 改變飛行模式
-   */
-  flyMode: EnvironmentTypes.FlyModeTypes;
-
-  /**
    * 改變 Impostor 模式
    */
   impostorMode: EnvironmentTypes.ImpostorModeTypes;
