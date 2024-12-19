@@ -48,6 +48,13 @@ export interface IAvatar extends EventHandlerMethods {
    */
   readonly transform?: IAvatarTransform;
 
+  /*
+   * 取得 Avatar 的 Bone Entity
+   * @param boneName - 骨架名稱
+   * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM 骨架名稱}
+   */
+  getBone(boneName: string): pc.Entity | null;
+
   /**
    * 訂閱指定的事件
    * @param event - 事件名稱

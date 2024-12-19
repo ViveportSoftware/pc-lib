@@ -22,6 +22,34 @@ export interface IPlayerService extends EventHandlerMethods {
   readonly playerCount: number;
 
   /**
+   * 用 Network ID 取得 Player 資訊
+   * @param id - Player 的 Network ID
+   * @returns {ILocalPlayer | IRemotePlayer | null}
+   */
+  getPlayerById(id: string): ILocalPlayer | IRemotePlayer | null;
+
+  /**
+   * 用 Entity 取得 Player 資訊
+   * @param entity - Player 的 Entity
+   * @returns {ILocalPlayer | IRemotePlayer | null}
+   */
+  getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null;
+
+  /**
+   * 確認 Entity 是否為 LocalPlayer
+   * @param entity - Entity
+   * @returns {boolean}
+   */
+  checkIsLocalPlayerEntity(entity: pc.Entity): boolean;
+
+  /**
+   * 確認 Entity 是否為 RemotePlayer
+   * @param entity - Entity
+   * @returns {boolean}
+   */
+  checkIsRemotePlayerEntity(entity: pc.Entity): boolean;
+
+  /**
    * 訂閱指定的事件
    * @param event - 事件名稱
    * @param listener - 回調函數
