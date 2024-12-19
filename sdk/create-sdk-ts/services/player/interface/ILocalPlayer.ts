@@ -19,6 +19,11 @@ export interface ILocalPlayer extends IPlayer {
    * Player 是否可以硬著陸
    */
   canHardLanding: boolean;
+  
+  /**
+   * Player 是否可以飛行
+   */
+  canFly: boolean | undefined;
 
   /**
    * @beta Whether the player can run.
