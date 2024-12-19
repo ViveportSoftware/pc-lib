@@ -46,6 +46,10 @@ class Avatar implements IAvatar {
     return undefined;
   }
 
+  getBone(boneName: string): pc.Entity | null {
+    return null;
+  }
+
   on<T extends keyof IAvatarEvents>(
     event: T,
     listener: IAvatarEvents[T]

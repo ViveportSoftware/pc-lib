@@ -28,6 +28,22 @@ class PlayerService implements IPlayerService {
     return 0;
   }
 
+  getPlayerById(id: string): ILocalPlayer | IRemotePlayer | null {
+    return null;
+  }
+
+  getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null {
+    return null;
+  }
+
+  checkIsLocalPlayerEntity(entity: pc.Entity) {
+    return false;
+  }
+
+  checkIsRemotePlayerEntity(entity: pc.Entity) {
+    return false;
+  }
+
   on<T extends keyof IPlayerServiceEvents>(
     event: T,
     listener: IPlayerServiceEvents[T]
