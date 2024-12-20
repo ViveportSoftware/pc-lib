@@ -138,7 +138,7 @@ interface IBotService {
    * // server決定A玩家獲得owner
    * // 通知所有玩家A玩家獲得owner
    *
-   * networkService.on('owner:update', (params) => {
+   * networkService.on('receive:ownerUpdate', (params) => {
    *    if (params.event === 'take-ownership') {
    *      // A玩家獲得owner，successor為A玩家id
    *    }
@@ -178,10 +178,10 @@ interface IBotGameEvents {
 
   /**
    * 滿足遊戲人數條件，通知所有玩家遊戲可以開始
-   * @param playerIDMap - 提供所有玩家的id，並排列順序
+   * @param playerIdMap - 提供所有玩家的id，並排列順序
    * @returns
    */
-  'game:allPlayerReady': (playerIDMap: {[index: number]: string}) => void;
+  'game:allPlayerReady': (playerIdMap: {[index: number]: string}) => void;
 
   /**
    * 觸發遊戲開始，開始倒數計時（目前只會發送一次）
