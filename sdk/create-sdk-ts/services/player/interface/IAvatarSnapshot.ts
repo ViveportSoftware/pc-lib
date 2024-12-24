@@ -1,13 +1,13 @@
 /**
- * 定義 AvatarSnapshot 介面
+ * Define AvatarSnapshot interface
  */
 export interface IAvatarSnapshot {
   /**
-   * 玩家的 avatar 大頭照
+   * Player's avatar headshot.
    */
   head: string;
   /**
-   * 玩家的 avatar 全身照
+   * Player's avatar full-body picture.
    */
   fullBody: string;
 }

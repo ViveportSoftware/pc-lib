@@ -10,7 +10,7 @@ export interface IEnvironmentService {
   flyMode: EnvironmentTypes.FlyModeTypes;
 
   /**
-   * Change impostor mode.
+   * @beta Change impostor mode.
    */
   impostorMode: EnvironmentTypes.ImpostorModeTypes;
 }

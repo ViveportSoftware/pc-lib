@@ -5,7 +5,7 @@ import * as pc from 'playcanvas';
  */
 export interface ICameraService {
   /**
-   * Retrieve the current active camera.
+   * @beta Retrieve the current active camera.
    */
   readonly activeCamera: pc.Entity | null;
 
@@ -20,19 +20,19 @@ export interface ICameraService {
   isLockCameraZoomDistance: boolean;
 
   /**
-   * Control the minimum distance between the VIVERSE CREATE third-person camera and the player.
+   * @beta Control the minimum distance between the VIVERSE CREATE third-person camera and the player.
    * @type {number}
    */
   minZoomDistance: number;
 
   /**
-   * Control the maximum distance between the VIVERSE CREATE third-person camera and the player.
+   * @beta Control the maximum distance between the VIVERSE CREATE third-person camera and the player.
    * @type {number}
    */
   maxZoomDistance: number;
 
   /**
-   * Switch the perspective to the provided camera.<br>
+   * @beta Switch the perspective to the provided camera.<br>
    * If no camera is provided, revert to the default camera mechanism in VIVERSE CREATE.
    * @param {pc.Entity | undefined} [camera] - This Entity must include the pc.CameraComponent.
    */
@@ -46,7 +46,7 @@ export interface ICameraService {
   addLayer(layerId: number, order?: number): void;
 
   /**
-   * Remove the layer from the default camera in VIVERSE CREATE.
+   * @beta Remove the layer from the default camera in VIVERSE CREATE.
    * @param {pc.Entity | undefined} layerId - Layer ID
    */
   removeLayer(layerId: number): void;
