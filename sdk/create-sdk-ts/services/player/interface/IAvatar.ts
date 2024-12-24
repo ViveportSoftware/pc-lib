@@ -5,58 +5,58 @@ import {IAvatarSnapshot} from './IAvatarSnapshot';
 import {IAvatarTransform} from './IAvatarTransform';
 
 /**
- * 定義 Avatar 介面
+ * Define Avatar interface.
  */
 export interface IAvatar extends EventHandlerMethods {
   /**
-   * Player avatar 的 BoundingBox
+   * Player avatar's BoundingBox.
    */
   boundingBox?: pc.BoundingBox;
 
   /**
-   * Player 的 collision，預設 collision type 為 capsule
+   * Player's collision, default collision type is capsule.
    */
   collision?: pc.CollisionComponent;
 
   /**
-   * 取得 Player 的 avatar ID
+   * Get player's avatar ID.
    */
   readonly avatarID: string;
 
   /**
-   * 取得 Player 的 avatar 模型連結
+   * Get player's avatar model link.
    */
   readonly avatarGlb: string;
 
   /**
-   * 取得 Player 的 avatar 照片
+   * Get player's avatar photo.
    */
   readonly snapshot?: IAvatarSnapshot;
 
   /**
-   * 取得 Player 的 avatar 性別，default: 0
+   * Get player's avatar gender, default: 0.
    */
   readonly gender: AvatarTypes.GenderTypes;
 
   /**
-   * 取得 Player 的 avatar 種類
+   * Get player's avatar type.
    */
   readonly dataType: AvatarTypes.DataTypes;
 
   /**
-   * 取得 Player 的 avatar 位置,旋轉,大小資訊
+   * @beta Get player's avatar position, rotation, and size information.
    */
   readonly transform?: IAvatarTransform;
 
   /**
-   * 取得 Player 的 avatar entity
+   * Get player's avatar entity.
    */
   readonly entity?: pc.Entity;
 
   /**
-   * 訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Subscribe to a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   on<T extends keyof IAvatarEvents>(
     event: T,
@@ -64,9 +64,9 @@ export interface IAvatar extends EventHandlerMethods {
   ): pc.EventHandle;
 
   /**
-   * 取消訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Unsubscribe from a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   off<T extends keyof IAvatarEvents>(
     event: T,
@@ -74,9 +74,9 @@ export interface IAvatar extends EventHandlerMethods {
   ): pc.EventHandler;
 
   /**
-   * 發送指定的事件
-   * @param event - 事件名稱
-   * @param [args] - 事件參數
+   * Send a specific event.
+   * @param event - Event name
+   * @param [args] - Event parameters
    */
   fire<T extends keyof IAvatarEvents>(
     event: T,
@@ -85,12 +85,12 @@ export interface IAvatar extends EventHandlerMethods {
 }
 
 /**
- * 定義 IPlayer 支援的事件和對應的參數
+ * @beta Define events supported by IPlayer and their corresponding parameters.
  */
 export interface IAvatarEvents {
   /**
-   * 當 Player 的 avatar 被渲染時觸發；當 avatar 變為 impostor 時則為 null
-   * @param entity - 當前的坐標位置
+   * Triggered when the player's avatar is rendered. If the avatar becomes an impostor, it is null.
+   * @param entity - Current coordinates.
    */
   avatarExistsChanged: (entity: pc.Entity | null) => void;
 }

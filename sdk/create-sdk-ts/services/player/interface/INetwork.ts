@@ -2,18 +2,18 @@ import * as pc from 'playcanvas';
 import {EventHandlerMethods} from '../../../types';
 
 /**
- * 定義 Network 介面
+ * Define Network interface.
  */
 export interface INetwork extends EventHandlerMethods {
   /**
-   * 取得 Player 的 network session ID
+   * @beta Get player's network session ID.
    */
   readonly id: string;
 
   /**
-   * 訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Subscribe to a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   on<T extends keyof INetworkEvents>(
     event: T,
@@ -21,9 +21,9 @@ export interface INetwork extends EventHandlerMethods {
   ): pc.EventHandle;
 
   /**
-   * 取消訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Unsubscribe from a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   off<T extends keyof INetworkEvents>(
     event: T,
@@ -31,9 +31,9 @@ export interface INetwork extends EventHandlerMethods {
   ): pc.EventHandler;
 
   /**
-   * 發送指定的事件
-   * @param event - 事件名稱
-   * @param [args] - 事件參數
+   * Send a specific event.
+   * @param event - Event name
+   * @param [args] - Event parameters
    */
   fire<T extends keyof INetworkEvents>(
     event: T,
@@ -42,16 +42,16 @@ export interface INetwork extends EventHandlerMethods {
 }
 
 /**
- * 定義 IPlayer 支援的事件和對應的參數
+ * Define events supported by IPlayer and their corresponding parameters.
  */
 export interface INetworkEvents {
   /**
-   * 當 Player 成功連線並加入 session 時觸發
+   * Triggered when the player successfully connects and joins the session.
    */
   joined: () => void;
 
   /**
-   * 當 Player 斷線或是離開 session 時觸發
+   * Triggered when the player disconnects or leaves the session.
    */
   left: () => void;
 }

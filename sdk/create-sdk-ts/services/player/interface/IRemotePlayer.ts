@@ -1,21 +1,21 @@
 import {IPlayer} from './IPlayer';
 
 /**
- * 定義 RemotePlayer 介面
+ * Define RemotePlayer interface.
  */
 export interface IRemotePlayer extends IPlayer {
   /**
-   * 是否為 admin
+   * Whether the player is admin.
    */
   readonly isAdmin: boolean;
 
   /**
-   * 是否為 owner
+   * Whether the player is owner.
    */
   readonly isOwner: boolean;
 
   /**
-   * 是否正在說話
+   * Whether the player is talking.
    */
   readonly isTalking: boolean;
 }

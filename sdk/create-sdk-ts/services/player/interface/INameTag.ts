@@ -1,11 +1,11 @@
 import * as NameTagTypes from '../enums/nameTag';
 
 /**
- * 定義 NameTag 介面
+ * Define NameTag interface.
  */
 export interface INameTag {
   /**
-   * 是否在本地端顯示 nameTag，或是使用 Viverse Create 的自動判定，包含 nameTag 裡所有的 icon 和按鈕
+   * @beta Whether to display the name tag locally or use VIVERSE CREATE's automatic setting, including all icons and buttons in the name tag.
    */
   visibility: NameTagTypes.VisibilityTypes;
 }

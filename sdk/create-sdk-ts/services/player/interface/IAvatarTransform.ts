@@ -1,5 +1,5 @@
 /**
- * 定義 AvatarTransform 介面
+ * @beta Define AvatarTransform interface.
  */
 export interface IAvatarTransform {
   position: pc.Vec3;

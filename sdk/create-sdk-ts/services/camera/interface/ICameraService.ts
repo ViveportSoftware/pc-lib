@@ -1,52 +1,52 @@
 import * as pc from 'playcanvas';
 
 /**
- * 定義 CameraService 介面
+ * Define the interface of CameraService.
  */
 export interface ICameraService {
   /**
-   * 取得目前啟用的 Camera
+   * @beta Retrieve the current active camera.
    */
   readonly activeCamera: pc.Entity | null;
 
   /**
-   * 取得自行上傳的 Camera 啟用狀態
+   * Retrieve the activation status of the Camera that was uploaded by the user.
    */
   readonly isUsingExternalCamera: boolean;
 
   /**
-   * 控制 Viverse Create Camera 是否能進行縮放
+   * Control whether the VIVERSE CREATE Camera can zoom or not.
    */
   isLockCameraZoomDistance: boolean;
 
   /**
-   * 控制 Viverse Create Camera 第三人稱視角相機與 Player 之間的最小距離
+   * @beta Control the minimum distance between the VIVERSE CREATE third-person camera and the player.
    * @type {number}
    */
   minZoomDistance: number;
 
   /**
-   * 控制 Viverse Create Camera 第三人稱視角相機與 Player 之間的最大距離
+   * @beta Control the maximum distance between the VIVERSE CREATE third-person camera and the player.
    * @type {number}
    */
   maxZoomDistance: number;
 
   /**
-   * 將視角切換成傳入的 camera<br>
-   * 若沒傳入 camera，則恢復到 Viverse Create 內建的預設相機機制
-   * @param {pc.Entity | undefined} [camera] - 相機 Entity，此 Entity 必須包含 pc.CameraComponent
+   * @beta Switch the perspective to the provided camera.<br>
+   * If no camera is provided, revert to the default camera mechanism in VIVERSE CREATE.
+   * @param {pc.Entity | undefined} [camera] - This Entity must include the pc.CameraComponent.
    */
   switchCamera(camera?: pc.Entity): void;
 
   /**
-   * 將 layer 新增到 Viverse Create 內建的預設相機
+   * Add the layer to the default camera in VIVERSE CREATE.
    * @param {string} layerId - Layer ID
-   * @param {number | undefined} [order] - Layer 排序，預設排至最後
+   * @param {number | undefined} [order] - Layer sorting: By default, it will be placed last.
    */
   addLayer(layerId: number, order?: number): void;
 
   /**
-   * 將 layer 從 Viverse Create 內建的預設相機中移除
+   * @beta Remove the layer from the default camera in VIVERSE CREATE.
    * @param {pc.Entity | undefined} layerId - Layer ID
    */
   removeLayer(layerId: number): void;

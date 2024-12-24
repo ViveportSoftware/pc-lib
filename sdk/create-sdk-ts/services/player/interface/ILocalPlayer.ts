@@ -1,96 +1,96 @@
 import {IPlayer, IPlayerEvents} from './IPlayer';
 
 /**
- * 定義 LocalPlayer 介面
+ * Define LocalPlayer interface.
  */
 export interface ILocalPlayer extends IPlayer {
   /**
-   * Player 是否可以移動
+   * @beta Whether the player can move.
    */
   canMove: boolean;
 
   /**
-   * Player 是否可以跳躍
+   * @beta Whether the player can jump.
    */
   canJump: boolean;
 
   /**
-   * Player 是否可以跑步
+   * @beta Whether the player can run.
    */
   canRun: boolean;
 
   /**
-   * Player 的重生點，預設為 null<br>
-   * 執行 respawn() 時，優先使用 respawnPosition 作為重生位置<br>
-   * 若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
+   * @beta Player's respawn point, default is null.<br>
+   * When executing respawn(), first using respawnPosition as the respawn location.<br>
+   * If respawnPosition is null, the respawn location will be determined by the original VIVERSE CREATE mechanism (checkpoint, spawn-point tag).
    */
   respawnPosition: pc.Vec3 | null;
 
   /**
-   * 下墜感設定的倍率<br>
-   * 使用這個參數來加強下落的感覺，使得角色下墜更有重量感，讓玩家能感覺到明顯的「重力效果」<br>
-   * 例如，當角色跳躍後開始下落，重力會隨著這個倍率增加，讓角色更快接觸地面
+   * Fall speed multiplier<br>
+   * Use this parameter to enhance the feeling of gravity effect when falling.<br>
+   * For example, when the character starts to fall after jumping, gravity will increase with this multiplier, causing the character to reach the ground faster.
    */
   fallingGravityMultiplier: number;
 
   /**
-   * 重力設定的倍率，會對上升及下墜造成影響
+   * The gravity multiplier that affects both ascent and descent.
    */
   gravityMultiplier: number;
 
   /**
-   * 飛行速度倍率
+   * Flight speed multiplier.
    */
   flySpeedMultiplier: number;
 
   /**
-   * 跑步速度倍率
+   * Running speed multiplier.
    */
   runSpeedMultiplier: number;
 
   /**
-   * 走路速度倍率
+   * Walking speed multiplier.
    */
   walkSpeedMultiplier: number;
 
   /**
-   * 跳躍高度倍率
+   * @beta Jump height multiplier.
    */
   jumpMultiplier: number;
 
   /**
-   * 是否能讓遠端玩家看見
+   * Whether the character can be seen by remote players.
    */
   isVisibleRemotely: boolean;
 
   /**
-   * Player 是否可以飛行
+   * Whether the player can fly.
    */
   readonly canFly: boolean;
 
   /**
-   * 取得角色當前的速度
+   * Get the character's current speed.
    */
   readonly velocity?: pc.Vec3;
 
   /**
-   * 取得 Player 重生的次數
+   * @beta Get the player's respawn count.
    */
   readonly spawnCount: number;
 
   /**
-   * 使角色原地跳起，如果成功跳起會觸發 jump:start 事件<br>
-   * 在部分情況下角色會無法跳起，例如角色正在下墜時，或者是角色已經處於跳躍狀態中，又或是角色受到其他外部力量影響
+   * @beta Make the character jump in place. If successful, it will trigger the jump:start event.<br>
+   * In some cases, the character may not be able to jump, such as when the character is falling, is already in a jumping state, or is affected by external forces.
    */
   jump(): void;
 
   /**
-   * 播放客製的動畫
+   * @beta Play a custom animation.
    * @param {string} stateName - The stateName of animation.
    * @param {pc.Asset} asset - Send the vram file.
    * @param {Object} [options] - Optional parameters.
-   * @param {boolean} [options.loop=false] - Loop the animation. default is false.
-   * @param {boolean} [options.lock=false] - Lock the animation. default is false.
+   * @param {boolean} [options.loop=false] - Loop the animation. Default is false.
+   * @param {boolean} [options.lock=false] - Lock the animation. Default is false.
    */
   playAnimation(
     stateName: string,
@@ -99,40 +99,40 @@ export interface ILocalPlayer extends IPlayer {
   ): void;
 
   /**
-   * 停止所有正在播放的動畫
+   * @beta Stop all currently playing animations.
    * @returns {void}
    */
   stopAnimation(): void;
 
   /**
-   * 使角色回到重生點，重生點為 respawnPosition，並在重生後觸發 respawned 事件<br>
-   * 若 respawnPosition 為 null，則會使用 Viverse Create 原本的機制決定重生位置(checkpoint, spawn-point tag)
-   * @param {number} [timeout] - 延遲重生的時間，單位為毫秒
+   * @beta Send the character back to the respawn point (respawnPosition), with the respawned event triggered.<br>
+   * If respawnPosition is null, the respawn location will be determined by the original VIVERSE CREATE mechanism (checkpoint, spawn-point tag).
+   * @param {number} [timeout] - Delay the respawn time (in milliseconds).
    */
   respawn(timeout?: number): void;
 
   /**
-   * 使角色瞬移至目標位置
-   * @param {pc.Vec3} destination - 目標位置
-   * @param {number} [rotationY] - y 軸旋轉角度
+   * @beta Teleport the character to the target location.
+   * @param {pc.Vec3} destination - Target location
+   * @param {number} [rotationY] - Y-axis rotation angle
    */
   teleport(destination: pc.Vec3, rotationY?: number): void;
 
   /**
-   * 更換角色的 avatar 模型
-   * @param {pc.Asset} asset - avatar 模型的 asset
+   * @beta Change the avatar model.
+   * @param {pc.Asset} asset - Avatar model asset.
    */
   changeAvatar(asset: pc.Asset): void;
 
   /**
-   * 重置角色的 avatar 模型為 Viverse Create 預設的 avatar 模型
+   * Reset the avatar model to the default VIVERSE CREATE avatar model.
    */
   resetToViverseAvatar(): void;
 
   /**
-   * 訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Subscribe to a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   on<T extends keyof ILocalPlayerEvents>(
     event: T,
@@ -140,9 +140,9 @@ export interface ILocalPlayer extends IPlayer {
   ): pc.EventHandle;
 
   /**
-   * 取消訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Unsubscribe from a specific event.
+   * @param event - Event name
+   * @param listener - Callback function
    */
   off<T extends keyof ILocalPlayerEvents>(
     event: T,
@@ -151,69 +151,69 @@ export interface ILocalPlayer extends IPlayer {
 }
 
 /**
- * 定義 ILocalPlayer 支援的事件和對應的參數
+ * Define events supported by ILocalPlayer and their corresponding parameters.
  */
 export interface ILocalPlayerEvents extends IPlayerEvents {
   /**
-   * 當 Player 初始化完成時觸發
-   * @param entity - Player 的 entity
+   * @beta Triggered when the player's initialization is complete.
+   * @param entity - Player's entity
    */
   'player:ready': (entity: pc.Entity) => void;
 
   /**
-   * 當 Player 的 avatar 開始移動時觸發
+   * Triggered when the player's avatar starts moving.
    */
   'move:start': () => void;
 
   /**
-   * 當 Player 的 avatar 停止移動時觸發
+   * Triggered when the player's avatar stops moving.
    */
   'move:end': () => void;
 
   /**
-   * 當 Player 的 avatar 開始跑步時觸發
+   * Triggered when the player's avatar starts running.
    */
   'run:start': () => void;
 
   /**
-   * 當 Player 的 avatar 停止跑步時觸發
+   * Triggered when the player's avatar stops running.
    */
   'run:end': () => void;
 
   /**
-   * 當 Player 的 avatar 開始飛行時觸發
+   * Triggered when the player's avatar starts flying.
    */
   'fly:start': () => void;
 
   /**
-   * 當 Player 的 avatar 停止飛行時觸發
+   * Triggered when the player's avatar stops flying.
    */
   'fly:end': () => void;
 
   /**
-   * 當 Player 的 avatar 跳起時觸發
+   * @beta Triggered when the player's avatar jumps.
    */
   'jump:start': () => void;
 
   /**
-   * 當 Player 的 avatar 落地時觸發
+   * @beta Triggered when the player's avatar lands.
    */
   'jump:end': () => void;
 
   /**
-   * 當 Player 的 avatar 著陸在場景中時觸發，並回傳當前坐標位置資訊
-   * @param position - 當前的坐標位置
+   * Triggered when the player's avatar lands in the scene, and returns the current coordinates.
+   * @param position - Current coordinates.
    */
   landed: (position: pc.Vec3) => void;
 
   /**
-   * 當 Player 的 avatar 進入無限墜落狀態時觸發，通常用來判斷角色已經不在場景中，需要額外做邏輯處理
+   * Triggered when the player's avatar is in an infinite fall state, typically used to check if the character is no longer in the scene.
    */
   infiniteFalling: () => void;
 
   /**
-   * 當 Player 的 avatar 重生時觸發，回傳重生點位置資訊
-   * @param position - 重生點的坐標位置
+   * @beta Triggered when the player's avatar respawns, and returns the respawn point coordinates.
+   * @param position - Respawn point coordinates.
    */
   respawned: (position: pc.Vec3) => void;
 }

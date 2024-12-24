@@ -1,30 +1,30 @@
 /**
- * 定義 PlayerProfile 介面
+ * Define PlayerProfile interface.
  */
 export interface IPlayerProfile {
   /**
-   * Player 的暱稱
+   * Player's display name.
    */
   displayName: string;
   /**
-   * Player 的 avatar 圖片
+   * Player's avatar snapshot.
    */
   snapshot: {
     /**
-     * Player 的 avatar 大頭照
+     * Player's avatar headshot.
      */
     head: string;
     /**
-     * Player 的 avatar 全身照
+     * Player's avatar full-body picture.
      */
     fullBody: string;
   };
   /**
-   * Player 的 ID
+   * Player's user ID.
    */
   userID: string;
   /**
-   * Player 的名稱
+   * Player's user name.
    */
   userName: string;
 }
