@@ -28,12 +28,6 @@ class CameraService {
     removeLayer(layerId) { }
 }
 
-var FlyModeTypes;
-(function (FlyModeTypes) {
-    FlyModeTypes[FlyModeTypes["Auto"] = 0] = "Auto";
-    FlyModeTypes[FlyModeTypes["Enabled"] = 1] = "Enabled";
-    FlyModeTypes[FlyModeTypes["Disabled"] = 2] = "Disabled";
-})(FlyModeTypes || (FlyModeTypes = {}));
 var ImpostorModeTypes;
 (function (ImpostorModeTypes) {
     ImpostorModeTypes[ImpostorModeTypes["Auto"] = 0] = "Auto";
@@ -42,14 +36,13 @@ var ImpostorModeTypes;
 
 var environment = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    get FlyModeTypes () { return FlyModeTypes; },
     get ImpostorModeTypes () { return ImpostorModeTypes; }
 });
 
 class EnvironmentService {
     static _instance;
-    flyMode = FlyModeTypes.Auto;
     impostorMode = ImpostorModeTypes.Auto;
+    canPlayersCollide = true;
     constructor() {
         if (EnvironmentService._instance)
             return EnvironmentService._instance;
@@ -206,6 +199,9 @@ class Avatar {
     get entity() {
         return undefined;
     }
+    getBone(boneName) {
+        return null;
+    }
     on(event, listener) {
         return {};
     }
@@ -328,7 +324,9 @@ class RemotePlayer extends Player {
 class LocalPlayer extends Player {
     canMove = true;
     canJump = true;
+    canHardLanding = true;
     canRun = true;
+    canFly = undefined;
     respawnPosition = null;
     fallingGravityMultiplier = 1;
     gravityMultiplier = 1;
@@ -339,9 +337,6 @@ class LocalPlayer extends Player {
     isVisibleRemotely = true;
     constructor() {
         super();
-    }
-    get canFly() {
-        return true;
     }
     /**
      * @type {pc.Vec3 | undefined}
@@ -359,7 +354,7 @@ class LocalPlayer extends Player {
     teleport(destination, rotationY) { }
     changeAvatar(asset) { }
     resetToViverseAvatar() { }
-    turnToward(targetPosition) { }
+    turnToward(x, y) { }
     on(event, listener) {
         return {};
     }
@@ -392,6 +387,18 @@ class PlayerService {
     }
     get playerCount() {
         return 0;
+    }
+    getPlayerById(id) {
+        return null;
+    }
+    getPlayerByEntity(entity) {
+        return null;
+    }
+    checkIsLocalPlayerEntity(entity) {
+        return false;
+    }
+    checkIsRemotePlayerEntity(entity) {
+        return false;
     }
     on(event, listener) {
         return {};
@@ -456,4 +463,4 @@ class NetworkService {
 export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
-export { content };
+export {content};
