@@ -19,7 +19,7 @@ export interface ILocalPlayer extends IPlayer {
    * Player 是否可以硬著陸
    */
   canHardLanding: boolean;
-  
+
   /**
    * Player 是否可以飛行
    */
@@ -73,11 +73,6 @@ export interface ILocalPlayer extends IPlayer {
    * Whether the character can be seen by remote players.
    */
   isVisibleRemotely: boolean;
-
-  /**
-   * Whether the player can fly.
-   */
-  readonly canFly: boolean;
 
   /**
    * Get the character's current speed.
@@ -141,11 +136,11 @@ export interface ILocalPlayer extends IPlayer {
   resetToViverseAvatar(): void;
 
   /**
-  * 使角色轉向目標在水平方向上的位置
-  * @param {number | pc.Vec2} x - 目標在水平方向上的位置的 x座標，或目標在水平方向上的位置
-  * @param {number} [y] - 目標在水平方向上的位置的 y座標
-  */
-   turnToward(x: number | pc.Vec2, y?: number): void;
+   * 使角色轉向目標在水平方向上的位置
+   * @param {number | pc.Vec2} x - 目標在水平方向上的位置的 x座標，或目標在水平方向上的位置
+   * @param {number} [y] - 目標在水平方向上的位置的 y座標
+   */
+  turnToward(x: number | pc.Vec2, y?: number): void;
 
   /**
    * Subscribe to a specific event.
@@ -240,7 +235,7 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
    */
   'xr:teleport': () => void;
 
-   /**
+  /**
    * 當 Player 的 avatar 在 XR turning時觸發
    */
   'xr:turning': () => void;
@@ -250,12 +245,18 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
    * @param currentState - 當前的移動狀態
    * @param prevState - 上一個移動狀態
    */
-  'move:horizontal': (currentState: MoveTypes.HorizontalTypes, prevState: MoveTypes.HorizontalTypes) => void;
+  'move:horizontal': (
+    currentState: MoveTypes.HorizontalTypes,
+    prevState: MoveTypes.HorizontalTypes
+  ) => void;
 
-   /**
+  /**
    * 當 Player 的 avatar 垂直移動狀態改變時觸發
    * @param currentState - 當前的移動狀態
    * @param prevState - 上一個移動狀態
    */
-  'move:vertical': (currentState: MoveTypes.VerticalTypes, prevState: MoveTypes.VerticalTypes) => void;
+  'move:vertical': (
+    currentState: MoveTypes.VerticalTypes,
+    prevState: MoveTypes.VerticalTypes
+  ) => void;
 }
