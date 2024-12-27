@@ -172,9 +172,10 @@ interface IBotGameEvents {
 
   /**
    * 當有玩家進入遊戲時觸發，通知所有玩家需等待其他玩家
+   * @param playerIdMap - 提供所有玩家的id，並排列順序
    * @returns
    */
-  'game:waitForPlayer': () => void;
+  'game:waitForPlayer': (playerIdMap: {[index: number]: string}) => void;
 
   /**
    * 滿足遊戲人數條件，通知所有玩家遊戲可以開始
