@@ -200,4 +200,9 @@ export const Desc = {
       desc: 'pick up specify execution entity',
     },
   },
+  [Type.ParticleSystemPlay]: {
+    entityId: {
+      desc: 'Specify the particle system that you want to play',
+    },
+  },
 };

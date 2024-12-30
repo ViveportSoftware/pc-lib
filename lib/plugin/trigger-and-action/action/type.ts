@@ -43,6 +43,7 @@ export enum Type {
   EntityAssetUnload = 3000020,
   EntityAssetReload = 3000021,
   EntityDestroy = 3000022,
+  ParticleSystemPlay = 3000023,
 
   /********************************
    * Player related
