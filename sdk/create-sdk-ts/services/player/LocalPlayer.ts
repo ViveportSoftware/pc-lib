@@ -34,11 +34,13 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   jump(): void {}
 
-  playAnimation(
+  async playAnimation(
     stateName: string,
-    asset: pc.Asset,
-    options?: {loop: boolean; lock: boolean}
-  ): void {}
+    options?: {loop: boolean; lock: boolean; asset?: pc.Asset} | pc.Asset,
+    legacyOptions?: {loop: boolean; lock: boolean}
+  ): Promise<pc.Asset | null> {
+    return null;
+  }
 
   stopAnimation(): void {}
 
