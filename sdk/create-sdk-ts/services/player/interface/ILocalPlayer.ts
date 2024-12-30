@@ -93,16 +93,17 @@ export interface ILocalPlayer extends IPlayer {
   /**
    * Play a custom animation.
    * @param {string} stateName - The stateName of animation.
-   * @param {pc.Asset} asset - Send the vram file.
    * @param {Object} [options] - Optional parameters.
    * @param {boolean} [options.loop=false] - Loop the animation. Default is false.
    * @param {boolean} [options.lock=false] - Lock the animation. Default is false.
+   * @param {boolean} [options.asset] - Send the vram file.
+   * @returns {Promise<pc.Asset|null>} - Return the animation asset.
    */
   playAnimation(
     stateName: string,
-    asset: pc.Asset,
-    options?: {loop: boolean; lock: boolean}
-  ): void;
+    options?: {loop: boolean; lock: boolean; asset?: pc.Asset} | pc.Asset,
+    legacyOptions?: {loop: boolean; lock: boolean}
+  ): Promise<pc.Asset | null>;
 
   /**
    * Stop all currently playing animations.
