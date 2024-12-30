@@ -32,15 +32,18 @@ class PlayerService implements IPlayerService {
     return null;
   }
 
-  getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null {
+  getPlayerByEntity(
+    entity: pc.Entity,
+    recursive?: boolean
+  ): ILocalPlayer | IRemotePlayer | null {
     return null;
   }
 
-  checkIsLocalPlayerEntity(entity: pc.Entity) {
+  checkIsLocalPlayerEntity(entity: pc.Entity, recursive?: boolean) {
     return false;
   }
 
-  checkIsRemotePlayerEntity(entity: pc.Entity) {
+  checkIsRemotePlayerEntity(entity: pc.Entity, recursive?: boolean) {
     return false;
   }
 
