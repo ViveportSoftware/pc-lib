@@ -3,7 +3,7 @@ export {ILocalPlayer, ILocalPlayerEvents} from './interface/ILocalPlayer';
 export {INameTag} from './interface/INameTag';
 export {INetwork, INetworkEvents} from './interface/INetwork';
 export {IPlayer, IPlayerEvents} from './interface/IPlayer';
-export {IPlayerService} from './interface/IPlayerService';
+export {IPlayerService, IPlayerServiceEvents} from './interface/IPlayerService';
 export {IRemotePlayer} from './interface/IRemotePlayer';
 export {IAvatarSnapshot} from './interface/IAvatarSnapshot';
 export {IAvatarTransform} from './interface/IAvatarTransform';
@@ -21,3 +21,4 @@ export {default as PlayerService} from './PlayerService';
 
 export * as AvatarTypes from './enums/avatar';
 export * as NameTagTypes from './enums/nameTag';
+export * as MoveTypes from './enums/move';

@@ -45,11 +45,6 @@ export interface IPlayer extends EventHandlerMethods {
   readonly profile?: IPlayerProfile;
 
   /**
-   * Get the player entity.
-   */
-  readonly entity?: pc.Entity;
-
-  /**
    * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function
@@ -88,5 +83,5 @@ export interface IPlayerEvents {
    * Triggered when the player's avatar collider collides with another collider.
    * @param entity - Current coordinate.
    */
-  colliderHit: (entity: pc.Entity) => void;
+  colliderHit: (result: pc.ContactResult) => void;
 }

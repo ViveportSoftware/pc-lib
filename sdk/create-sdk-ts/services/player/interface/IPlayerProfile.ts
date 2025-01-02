@@ -22,7 +22,7 @@ export interface IPlayerProfile {
   /**
    * Player's user ID.
    */
-  userID: string;
+  userId: string;
   /**
    * Player's user name.
    */

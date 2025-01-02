@@ -1,4 +1,4 @@
-import {IPlayerService} from './interface/IPlayerService';
+import {IPlayerService, IPlayerServiceEvents} from './interface/IPlayerService';
 import {ILocalPlayer} from './interface/ILocalPlayer';
 import {IRemotePlayer} from './interface/IRemotePlayer';
 
@@ -26,6 +26,43 @@ class PlayerService implements IPlayerService {
 
   get playerCount(): number {
     return 0;
+  }
+
+  getPlayerById(id: string): ILocalPlayer | IRemotePlayer | null {
+    return null;
+  }
+
+  getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null {
+    return null;
+  }
+
+  checkIsLocalPlayerEntity(entity: pc.Entity) {
+    return false;
+  }
+
+  checkIsRemotePlayerEntity(entity: pc.Entity) {
+    return false;
+  }
+
+  on<T extends keyof IPlayerServiceEvents>(
+    event: T,
+    listener: IPlayerServiceEvents[T]
+  ): pc.EventHandle {
+    return {} as pc.EventHandle;
+  }
+
+  off<T extends keyof IPlayerServiceEvents>(
+    event: T,
+    listener: IPlayerServiceEvents[T]
+  ): pc.EventHandler {
+    return {} as pc.EventHandler;
+  }
+
+  fire<T extends keyof IPlayerServiceEvents>(
+    event: T,
+    ...args: any[]
+  ): pc.EventHandler {
+    return {} as pc.EventHandler;
   }
 }
 

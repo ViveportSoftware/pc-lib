@@ -5,7 +5,9 @@ import Player from './Player';
 class LocalPlayer extends Player implements ILocalPlayer {
   canMove = true;
   canJump = true;
+  canHardLanding = true;
   canRun = true;
+  canFly = undefined;
   respawnPosition: pc.Vec3 | null = null;
   fallingGravityMultiplier = 1;
   gravityMultiplier = 1;
@@ -17,10 +19,6 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   constructor() {
     super();
-  }
-
-  get canFly(): boolean {
-    return true;
   }
 
   /**
@@ -51,6 +49,8 @@ class LocalPlayer extends Player implements ILocalPlayer {
   changeAvatar(asset: pc.Asset): void {}
 
   resetToViverseAvatar(): void {}
+
+  turnToward(x: number | pc.Vec2, y?: number): void {}
 
   on<T extends keyof ILocalPlayerEvents>(
     event: T,

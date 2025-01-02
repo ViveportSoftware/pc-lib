@@ -21,7 +21,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * Get player's avatar ID.
    */
-  readonly avatarID: string;
+  readonly avatarId: string;
 
   /**
    * Get player's avatar model link.
@@ -48,10 +48,12 @@ export interface IAvatar extends EventHandlerMethods {
    */
   readonly transform?: IAvatarTransform;
 
-  /**
-   * Get player's avatar entity.
+  /*
+   * 取得 Avatar 的 Bone Entity
+   * @param boneName - 骨架名稱
+   * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM 骨架名稱}
    */
-  readonly entity?: pc.Entity;
+  getBone(boneName: string): pc.Entity | null;
 
   /**
    * Subscribe to a specific event.

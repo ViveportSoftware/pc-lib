@@ -28,12 +28,6 @@ class CameraService {
     removeLayer(layerId) { }
 }
 
-var FlyModeTypes;
-(function (FlyModeTypes) {
-    FlyModeTypes[FlyModeTypes["Auto"] = 0] = "Auto";
-    FlyModeTypes[FlyModeTypes["Enabled"] = 1] = "Enabled";
-    FlyModeTypes[FlyModeTypes["Disabled"] = 2] = "Disabled";
-})(FlyModeTypes || (FlyModeTypes = {}));
 var ImpostorModeTypes;
 (function (ImpostorModeTypes) {
     ImpostorModeTypes[ImpostorModeTypes["Auto"] = 0] = "Auto";
@@ -42,14 +36,13 @@ var ImpostorModeTypes;
 
 var environment = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    get FlyModeTypes () { return FlyModeTypes; },
     get ImpostorModeTypes () { return ImpostorModeTypes; }
 });
 
 class EnvironmentService {
     static _instance;
-    flyMode = FlyModeTypes.Auto;
     impostorMode = ImpostorModeTypes.Auto;
+    canPlayersCollide = true;
     constructor() {
         if (EnvironmentService._instance)
             return EnvironmentService._instance;
@@ -60,13 +53,13 @@ class EnvironmentService {
 class PlayerProfile {
     #displayName;
     #snapshot;
-    #userID;
+    #userId;
     #userName;
     constructor(data) {
-        const { displayName, snapshot, userID, userName } = data;
+        const { displayName, snapshot, userId, userName } = data;
         this.#displayName = displayName;
         this.#snapshot = snapshot;
-        this.#userID = userID;
+        this.#userId = userId;
         this.#userName = userName;
     }
     /**
@@ -86,8 +79,8 @@ class PlayerProfile {
     /**
      * @type {string}
      */
-    get userID() {
-        return this.#userID;
+    get userId() {
+        return this.#userId;
     }
     /**
      * @type {string}
@@ -179,7 +172,7 @@ class Avatar {
         this.boundingBox = undefined;
         this.collision = undefined;
     }
-    get avatarID() {
+    get avatarId() {
         return '';
     }
     get avatarGlb() {
@@ -205,6 +198,9 @@ class Avatar {
     }
     get entity() {
         return undefined;
+    }
+    getBone(boneName) {
+        return null;
     }
     on(event, listener) {
         return {};
@@ -328,7 +324,9 @@ class RemotePlayer extends Player {
 class LocalPlayer extends Player {
     canMove = true;
     canJump = true;
+    canHardLanding = true;
     canRun = true;
+    canFly = undefined;
     respawnPosition = null;
     fallingGravityMultiplier = 1;
     gravityMultiplier = 1;
@@ -339,9 +337,6 @@ class LocalPlayer extends Player {
     isVisibleRemotely = true;
     constructor() {
         super();
-    }
-    get canFly() {
-        return true;
     }
     /**
      * @type {pc.Vec3 | undefined}
@@ -359,6 +354,7 @@ class LocalPlayer extends Player {
     teleport(destination, rotationY) { }
     changeAvatar(asset) { }
     resetToViverseAvatar() { }
+    turnToward(x, y) { }
     on(event, listener) {
         return {};
     }
@@ -392,11 +388,55 @@ class PlayerService {
     get playerCount() {
         return 0;
     }
+    getPlayerById(id) {
+        return null;
+    }
+    getPlayerByEntity(entity) {
+        return null;
+    }
+    checkIsLocalPlayerEntity(entity) {
+        return false;
+    }
+    checkIsRemotePlayerEntity(entity) {
+        return false;
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
 }
+
+var HorizontalTypes;
+(function (HorizontalTypes) {
+    HorizontalTypes[HorizontalTypes["Idle"] = 0] = "Idle";
+    HorizontalTypes[HorizontalTypes["Walk"] = 1] = "Walk";
+    HorizontalTypes[HorizontalTypes["Run"] = 2] = "Run";
+})(HorizontalTypes || (HorizontalTypes = {}));
+var VerticalTypes;
+(function (VerticalTypes) {
+    VerticalTypes[VerticalTypes["Ground"] = 0] = "Ground";
+    VerticalTypes[VerticalTypes["Jump"] = 1] = "Jump";
+    VerticalTypes[VerticalTypes["Fly"] = 2] = "Fly";
+    VerticalTypes[VerticalTypes["HardLanding"] = 3] = "HardLanding";
+})(VerticalTypes || (VerticalTypes = {}));
+
+var move = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get HorizontalTypes () { return HorizontalTypes; },
+    get VerticalTypes () { return VerticalTypes; }
+});
 
 class NetworkService {
     static _instance;
     moveSyncInterval = 150;
+    masterId = '';
+    playerIdMap = {};
+    _gameId = '';
     constructor() {
         if (NetworkService._instance)
             return NetworkService._instance;
@@ -408,6 +448,10 @@ class NetworkService {
     generateMessageId() {
         return '';
     }
+    sendGameStart() { }
+    sendGameEnd() { }
+    sendOwnerUpdate(event, targetId) { }
+    _sendGameUpdate(params) { }
     on(event, listener) {
         return {};
     }
@@ -416,7 +460,7 @@ class NetworkService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
+export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
-export { content };
+export {content};

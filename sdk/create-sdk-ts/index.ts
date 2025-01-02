@@ -32,13 +32,16 @@ export {
   INetworkEvents,
   IPlayerEvents,
   PlayerService,
+  IPlayerServiceEvents,
   AvatarTypes,
   NameTagTypes,
+  MoveTypes,
 } from './services/player';
 export {
   NetworkService,
   INetworkService,
   IMessage,
   ITriggerMessage,
+  IOwnerUpdateMessage,
   INetworkServiceEvents,
 } from './services/network';

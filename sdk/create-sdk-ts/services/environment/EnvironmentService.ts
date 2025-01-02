@@ -3,8 +3,8 @@ import * as EnvironmentTypes from './enums/environment';
 
 class EnvironmentService implements IEnvironmentService {
   private static _instance?: EnvironmentService;
-  flyMode = EnvironmentTypes.FlyModeTypes.Auto;
   impostorMode = EnvironmentTypes.ImpostorModeTypes.Auto;
+  canPlayersCollide = true;
 
   constructor() {
     if (EnvironmentService._instance) return EnvironmentService._instance;

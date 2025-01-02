@@ -12,7 +12,7 @@ class Avatar implements IAvatar {
     this.collision = undefined;
   }
 
-  get avatarID(): string {
+  get avatarId(): string {
     return '';
   }
 
@@ -44,6 +44,10 @@ class Avatar implements IAvatar {
 
   get entity(): pc.Entity | undefined {
     return undefined;
+  }
+
+  getBone(boneName: string): pc.Entity | null {
+    return null;
   }
 
   on<T extends keyof IAvatarEvents>(
