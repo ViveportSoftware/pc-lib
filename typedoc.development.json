@@ -1,0 +1,6 @@
+{
+  "entryPoints": ["sdk/create-sdk-ts/index.ts"],
+  "out": "docs/development",
+  "name": "Create SDK API Reference",
+  "readme": "CREATE_SDK_README.md"
+}

@@ -1,0 +1,12 @@
+{
+  "entryPoints": ["sdk/create-sdk-ts/index.ts"],
+  "out": "docs/production",
+  "name": "Create SDK API Reference",
+  "readme": "CREATE_SDK_README.md",
+  "excludeInternal": true,
+  "visibilityFilters": {
+    "@beta": false,
+    "@todo": false
+  },
+  "customCss": "./typedoc.custom.css"
+}

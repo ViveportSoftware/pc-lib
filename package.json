@@ -16,7 +16,8 @@
   "scripts": {
     "build": "pnpm clean && tsc",
     "build-template": "pnpm rollup -c",
-    "build-sdk-docs": "pnpm typedoc",
+    "build-sdk-docs:production": "pnpm typedoc --options typedoc.production.json",
+    "build-sdk-docs:development": "pnpm typedoc --options typedoc.development.json",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
@@ -27,7 +28,8 @@
     "posttest": "pnpm lint",
     "commit": "cz",
     "postinstall": "mkdir -p dist",
-    "generate-create-sdk": "pnpm build-template && pnpm build-sdk-docs"
+    "generate-create-sdk:production": "pnpm build-template && pnpm build-sdk-docs:production",
+    "generate-create-sdk:development": "pnpm build-template && pnpm build-sdk-docs:development"
   },
   "publishConfig": {
     "access": "public"
@@ -44,7 +46,7 @@
     "husky": "^8.0.3",
     "playcanvas": "^2.2.2",
     "rollup": "^4.24.4",
-    "typedoc": "^0.26.11",
+    "typedoc": "^0.27.6",
     "typescript": "^5.3.3"
   },
   "config": {
