@@ -90,6 +90,9 @@ export enum ExternalCreatorType {
   EntityEnableById = 300017,
   EntityDisableById = 300018,
   EntityStopSound = 3000019,
+  EntityAssetUnload = 3000020,
+  EntityAssetReload = 3000021,
+  EntityDestroy = 3000022,
 
   /********************************
    * Player related
