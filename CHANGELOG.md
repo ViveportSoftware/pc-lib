@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.77.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.76.0...v1.77.0) (2025-01-15)
+
+
+### Features
+
+* [CONNECT-2822] open entity resource release actions to external creator ([#250](https://github.com/ViveportSoftware/pc-lib/issues/250)) ([#251](https://github.com/ViveportSoftware/pc-lib/issues/251)) ([052513e](https://github.com/ViveportSoftware/pc-lib/commit/052513e36370337adbf05546e244c91bddde560a))
+
 ## [1.76.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.75.0...v1.76.0) (2025-01-02)
 
 
