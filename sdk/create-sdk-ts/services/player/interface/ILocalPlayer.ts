@@ -174,36 +174,6 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   'player:ready': (entity: pc.Entity) => void;
 
   /**
-   * Triggered when the player's avatar starts moving.
-   */
-  'move:start': () => void;
-
-  /**
-   * Triggered when the player's avatar stops moving.
-   */
-  'move:end': () => void;
-
-  /**
-   * Triggered when the player's avatar starts running.
-   */
-  'run:start': () => void;
-
-  /**
-   * Triggered when the player's avatar stops running.
-   */
-  'run:end': () => void;
-
-  /**
-   * Triggered when the player's avatar starts flying.
-   */
-  'fly:start': () => void;
-
-  /**
-   * Triggered when the player's avatar stops flying.
-   */
-  'fly:end': () => void;
-
-  /**
    * @beta Triggered when the player's avatar jumps.
    */
   'jump:start': () => void;
