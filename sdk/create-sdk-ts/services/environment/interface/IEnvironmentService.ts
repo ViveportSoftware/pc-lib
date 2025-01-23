@@ -5,12 +5,12 @@ import * as EnvironmentTypes from '../enums/environment';
  */
 export interface IEnvironmentService {
   /**
-   * @beta Change impostor mode.
+   * Change impostor mode.
    */
   impostorMode: EnvironmentTypes.ImpostorModeTypes;
 
   /**
-   * Player 互相可否物理碰撞
+   * @inProgress If players can physically collide with each other.
    */
   canPlayersCollide: boolean;
 }

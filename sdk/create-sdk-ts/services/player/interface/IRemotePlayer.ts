@@ -5,17 +5,17 @@ import {IPlayer} from './IPlayer';
  */
 export interface IRemotePlayer extends IPlayer {
   /**
-   * Whether the player is admin.
+   * @planned Whether the player is admin.
    */
   readonly isAdmin: boolean;
 
   /**
-   * Whether the player is owner.
+   * @planned Whether the player is owner.
    */
   readonly isOwner: boolean;
 
   /**
-   * Whether the player is talking.
+   * @planned Whether the player is talking.
    */
   readonly isTalking: boolean;
 }

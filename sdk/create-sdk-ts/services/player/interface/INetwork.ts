@@ -6,7 +6,7 @@ import {EventHandlerMethods} from '../../../types';
  */
 export interface INetwork extends EventHandlerMethods {
   /**
-   * @beta Get player's network session ID.
+   * Get player's network session ID.
    */
   readonly id: string;
 
@@ -46,12 +46,12 @@ export interface INetwork extends EventHandlerMethods {
  */
 export interface INetworkEvents {
   /**
-   * Triggered when the player successfully connects and joins the session.
+   * @planned Triggered when the player successfully connects and joins the session.
    */
   joined: () => void;
 
   /**
-   * Triggered when the player disconnects or leaves the session.
+   * @planned Triggered when the player disconnects or leaves the session.
    */
   left: () => void;
 }

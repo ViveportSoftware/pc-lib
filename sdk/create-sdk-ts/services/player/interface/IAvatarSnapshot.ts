@@ -3,11 +3,11 @@
  */
 export interface IAvatarSnapshot {
   /**
-   * Player's avatar headshot.
+   * @planned Player's avatar headshot.
    */
   head: string;
   /**
-   * Player's avatar full-body picture.
+   * @planned Player's avatar full-body picture.
    */
   fullBody: string;
 }

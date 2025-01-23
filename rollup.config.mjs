@@ -9,7 +9,7 @@ export default {
     file: 'sdk/create-sdk-ts/dist/bundle.js',
     format: 'esm',
     banner: `/******************************************************************************
-Copyright (c) 2024 HTC CORPORATION.
+Copyright (c) 2025 HTC CORPORATION.
 ***************************************************************************** */
 `,
     footer: '',

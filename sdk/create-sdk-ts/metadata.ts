@@ -1,4 +1,4 @@
 /**
- * 取得 Create SDK 的版本
+ * Retrieve the version of the Create SDK.
  */
 export const version = 'create-sdk-version';

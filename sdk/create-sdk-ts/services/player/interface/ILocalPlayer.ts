@@ -6,92 +6,92 @@ import * as MoveTypes from '../enums/move';
  */
 export interface ILocalPlayer extends IPlayer {
   /**
-   * @beta Whether the player can move.
+   * Whether the player can move.
    */
   canMove: boolean;
 
   /**
-   * @beta Whether the player can jump.
+   * Whether the player can jump.
    */
   canJump: boolean;
 
   /**
-   * Player 是否可以硬著陸
+   * @inProgress Whenther the player can hard land.
    */
   canHardLanding: boolean;
 
   /**
-   * Player 是否可以飛行
+   * @inProgress Whenther the player can fly.
    */
   canFly: boolean | undefined;
 
   /**
-   * @beta Whether the player can run.
+   * Whether the player can run.
    */
   canRun: boolean;
 
   /**
-   * @beta Player's respawn point, default is null.<br>
+   * Player's respawn point, default is null.<br>
    * When executing respawn(), first using respawnPosition as the respawn location.<br>
    * If respawnPosition is null, the respawn location will be determined by the original VIVERSE CREATE mechanism (checkpoint, spawn-point tag).
    */
   respawnPosition: pc.Vec3 | null;
 
   /**
-   * Fall speed multiplier<br>
+   * @planned Fall speed multiplier<br>
    * Use this parameter to enhance the feeling of gravity effect when falling.<br>
    * For example, when the character starts to fall after jumping, gravity will increase with this multiplier, causing the character to reach the ground faster.
    */
   fallingGravityMultiplier: number;
 
   /**
-   * The gravity multiplier that affects both ascent and descent.
+   * @planned The gravity multiplier that affects both ascent and descent.
    */
   gravityMultiplier: number;
 
   /**
-   * Flight speed multiplier.
+   * @planned Flight speed multiplier.
    */
   flySpeedMultiplier: number;
 
   /**
-   * Running speed multiplier.
+   * @planned Running speed multiplier.
    */
   runSpeedMultiplier: number;
 
   /**
-   * Walking speed multiplier.
+   * @planned Walking speed multiplier.
    */
   walkSpeedMultiplier: number;
 
   /**
-   * @beta Jump height multiplier.
+   * Jump height multiplier.
    */
   jumpMultiplier: number;
 
   /**
-   * Whether the character can be seen by remote players.
+   * @planned Whether the character can be seen by remote players.
    */
   isVisibleRemotely: boolean;
 
   /**
-   * Get the character's current speed.
+   * @planned Get the character's current speed.
    */
   readonly velocity?: pc.Vec3;
 
   /**
-   * @beta Get the player's respawn count.
+   * Get the player's respawn count.
    */
   readonly spawnCount: number;
 
   /**
-   * @beta Make the character jump in place. If successful, it will trigger the jump:start event.<br>
+   * Make the character jump in place. If successful, it will trigger the jump:start event.<br>
    * In some cases, the character may not be able to jump, such as when the character is falling, is already in a jumping state, or is affected by external forces.
    */
   jump(): void;
 
   /**
-   * @beta Play a custom animation.
+   * Play a custom animation.
    * @param {string} stateName - The stateName of animation.
    * @param {pc.Asset} asset - Send the vram file.
    * @param {Object} [options] - Optional parameters.
@@ -105,40 +105,40 @@ export interface ILocalPlayer extends IPlayer {
   ): void;
 
   /**
-   * @beta Stop all currently playing animations.
+   * Stop all currently playing animations.
    * @returns {void}
    */
   stopAnimation(): void;
 
   /**
-   * @beta Send the character back to the respawn point (respawnPosition), with the respawned event triggered.<br>
+   * Send the character back to the respawn point (respawnPosition), with the respawned event triggered.<br>
    * If respawnPosition is null, the respawn location will be determined by the original VIVERSE CREATE mechanism (checkpoint, spawn-point tag).
    * @param {number} [timeout] - Delay the respawn time (in milliseconds).
    */
   respawn(timeout?: number): void;
 
   /**
-   * @beta Teleport the character to the target location.
+   * Teleport the character to the target location.
    * @param {pc.Vec3} destination - Target location
    * @param {number} [rotationY] - Y-axis rotation angle
    */
   teleport(destination: pc.Vec3, rotationY?: number): void;
 
   /**
-   * @beta Change the avatar model.
+   * Change the avatar model.
    * @param {pc.Asset} asset - Avatar model asset.
    */
   changeAvatar(asset: pc.Asset): void;
 
   /**
-   * Reset the avatar model to the default VIVERSE CREATE avatar model.
+   * @planned Reset the avatar model to the default VIVERSE avatar model.
    */
   resetToViverseAvatar(): void;
 
   /**
-   * 使角色轉向目標在水平方向上的位置
-   * @param {number | pc.Vec2} x - 目標在水平方向上的位置的 x座標，或目標在水平方向上的位置
-   * @param {number} [y] - 目標在水平方向上的位置的 y座標
+   * @inProgress Make the character face the target’s position on the horizontal plane.
+   * @param {number | pc.Vec2} x - X-coordinate of the target’s position on the horizontal plane, or the target's horizontal position.
+   * @param {number} [y] - Y-coordinate of the target’s position on the horizontal plane.
    */
   turnToward(x: number | pc.Vec2, y?: number): void;
 
@@ -168,52 +168,52 @@ export interface ILocalPlayer extends IPlayer {
  */
 export interface ILocalPlayerEvents extends IPlayerEvents {
   /**
-   * @beta Triggered when the player's initialization is complete.
+   * Triggered when the player's initialization is complete.
    * @param entity - Player's entity
    */
   'player:ready': (entity: pc.Entity) => void;
 
   /**
-   * @beta Triggered when the player's avatar jumps.
+   * Triggered when the player's avatar jumps.
    */
   'jump:start': () => void;
 
   /**
-   * @beta Triggered when the player's avatar lands.
+   * Triggered when the player's avatar lands.
    */
   'jump:end': () => void;
 
   /**
-   * Triggered when the player's avatar lands in the scene, and returns the current coordinates.
+   * @planned Triggered when the player's avatar lands in the scene, and returns the current coordinates.
    * @param position - Current coordinates.
    */
   landed: (position: pc.Vec3) => void;
 
   /**
-   * Triggered when the player's avatar is in an infinite fall state, typically used to check if the character is no longer in the scene.
+   * @planned Triggered when the player's avatar is in an infinite fall state, typically used to check if the character is no longer in the scene.
    */
   infiniteFalling: () => void;
 
   /**
-   * @beta Triggered when the player's avatar respawns, and returns the respawn point coordinates.
+   * Triggered when the player's avatar respawns, and returns the respawn point coordinates.
    * @param position - Respawn point coordinates.
    */
   respawned: (position: pc.Vec3) => void;
 
   /**
-   * 當 Player 的 avatar 在 XR teleport時觸發
+   * @inProgress Trigger when the player’s avatar is in XR teleportation.
    */
   'xr:teleport': () => void;
 
   /**
-   * 當 Player 的 avatar 在 XR turning時觸發
+   * @inProgress Trigger when the player’s avatar is in XR turning.
    */
   'xr:turning': () => void;
 
   /**
-   * 當 Player 的 avatar 水平移動狀態改變時觸發
-   * @param currentState - 當前的移動狀態
-   * @param prevState - 上一個移動狀態
+   * @inProgress Trigger when the player’s avatar horizontal movement state changes.
+   * @param currentState - Current movement state.
+   * @param prevState - Previous movement state.
    */
   'move:horizontal': (
     currentState: MoveTypes.HorizontalTypes,
@@ -221,9 +221,9 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   ) => void;
 
   /**
-   * 當 Player 的 avatar 垂直移動狀態改變時觸發
-   * @param currentState - 當前的移動狀態
-   * @param prevState - 上一個移動狀態
+   * @inProgress Trigger when the player’s avatar vertical movement state changes.
+   * @param currentState - Current movement state.
+   * @param prevState - Previous movement state.
    */
   'move:vertical': (
     currentState: MoveTypes.VerticalTypes,

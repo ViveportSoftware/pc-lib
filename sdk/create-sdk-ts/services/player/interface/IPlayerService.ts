@@ -7,52 +7,52 @@ import {EventHandlerMethods} from '../../../types';
  */
 export interface IPlayerService extends EventHandlerMethods {
   /**
-   * Get local player information.
+   * @planned Get local player information.
    */
   readonly localPlayer: ILocalPlayer | null;
 
   /**
-   * Get the information of all remote players in the room.
+   * @planned Get the information of all remote players in the room.
    */
   readonly remotePlayers: IRemotePlayer[];
 
   /**
-   * Get the number of players currently connected in the room.
+   * @planned Get the number of players currently connected in the room.
    */
   readonly playerCount: number;
 
   /**
-   * 用 Network ID 取得 Player 資訊
-   * @param id - Player 的 Network ID
+   * @inProgress Retrieve player information using Network ID.
+   * @param id - Player's Network ID.
    * @returns {ILocalPlayer | IRemotePlayer | null}
    */
   getPlayerById(id: string): ILocalPlayer | IRemotePlayer | null;
 
   /**
-   * 用 Entity 取得 Player 資訊
-   * @param entity - Player 的 Entity
+   * @inProgress Retrieve player information using Entity.
+   * @param entity - Player's Entity.
    * @returns {ILocalPlayer | IRemotePlayer | null}
    */
   getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null;
 
   /**
-   * 確認 Entity 是否為 LocalPlayer
+   * @inProgress Check if the Entity is the LocalPlayer.
    * @param entity - Entity
    * @returns {boolean}
    */
   checkIsLocalPlayerEntity(entity: pc.Entity): boolean;
 
   /**
-   * 確認 Entity 是否為 RemotePlayer
+   * @inProgress Check if the Entity is the RemotePlayer.
    * @param entity - Entity
    * @returns {boolean}
    */
   checkIsRemotePlayerEntity(entity: pc.Entity): boolean;
 
   /**
-   * 訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Subscribe to a specific event.
+   * @param event - Event name.
+   * @param listener - Callback function.
    */
   on<T extends keyof IPlayerServiceEvents>(
     event: T,
@@ -60,9 +60,9 @@ export interface IPlayerService extends EventHandlerMethods {
   ): pc.EventHandle;
 
   /**
-   * 取消訂閱指定的事件
-   * @param event - 事件名稱
-   * @param listener - 回調函數
+   * Unsubscribe from a specific event.
+   * @param event - Event name.
+   * @param listener - Callback function.
    */
   off<T extends keyof IPlayerServiceEvents>(
     event: T,
@@ -72,14 +72,14 @@ export interface IPlayerService extends EventHandlerMethods {
 
 export interface IPlayerServiceEvents {
   /**
-   * 當 Remote Player 加入 session 時觸發
-   * @param remotePlayer - 遠端玩家的實例，該物件為 `IRemotePlayer` 類別，包含玩家的相關資訊。
+   * @inProgress Trigger when a remote player joins the session.
+   * @param remotePlayer - An instance of the remote player, it's an object of type 'IRemotePlayer', containing player-related information.
    */
   'remotePlayer:joined': (remotePlayer: IRemotePlayer) => void;
 
   /**
-   * 當 Remote Player 離開 session 時觸發
-   * @param remotePlayer - 遠端玩家的實例，該物件為 `IRemotePlayer` 類別，包含玩家的相關資訊。
+   * @inProgress Trigger when a remote player leaves the session.
+   * @param remotePlayer - An instance of the remote player, it's an object of type 'IRemotePlayer', containing player-related information.
    */
   'remotePlayer:left': (remotePlayer: IRemotePlayer) => void;
 }

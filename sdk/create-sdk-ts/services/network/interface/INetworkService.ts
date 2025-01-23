@@ -2,13 +2,13 @@ import * as pc from 'playcanvas';
 
 export interface INetworkService extends IBotService {
   /**
-   * Synchronization frequency of player's movement.
+   * @inProgress Synchronization frequency of player's movement.
    * Default value is 150ms, the configurable range is 30ms to 150ms.
    */
   moveSyncInterval: number;
 
   /**
-   * Send custom message.
+   * @inProgress Send custom message.
    * @param {Record<string, any>} message - Custom message content.
    * @param {Object} [options] - Other options.
    * @param {boolean} [options.batch=true] - Batch processing of messages: If set to `true`, the messages will be cached and sent together later.
@@ -26,12 +26,12 @@ export interface INetworkService extends IBotService {
   ): string;
 
   /**
-   * Generate a message ID.
+   * @inProgress Generate a message ID.
    */
   generateMessageId(): string;
 
   /**
-   * Subscribe to a specific event.
+   * @inProgress Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function
    */
@@ -41,7 +41,7 @@ export interface INetworkService extends IBotService {
   ): pc.EventHandle;
 
   /**
-   * Unsubscribe from a specific event.
+   * @inProgress Unsubscribe from a specific event.
    * @param event - Event name
    * @param listener - Callback function
    */
@@ -66,26 +66,26 @@ export interface ITriggerMessage {
 
 export interface INetworkServiceEvents extends IBotGameEvents, IBotOwnerEvents {
   /**
-   * Triggered when the game successfully connects.
+   * @inProgress Triggered when the game successfully connects.
    * @returns
    */
   connected: () => void;
 
   /**
-   * Triggered when the game fails to connect.
+   * @inProgress Triggered when the game fails to connect.
    * @returns
    */
   error: () => void;
 
   /**
-   * Triggered when a custom message is received.
+   * @inProgress Triggered when a custom message is received.
    * @param messages - Custom message
    * @returns
    */
   'receive:messages': (messages: IMessage[]) => void;
 
   /**
-   * Triggered when a trigger message is received.
+   * @inProgress Triggered when a trigger message is received.
    * @param triggerMessage - Trigger message
    * @returns
    */
@@ -95,52 +95,52 @@ export interface INetworkServiceEvents extends IBotGameEvents, IBotOwnerEvents {
 interface IBotService {
   /**
    * @private
-   * 定義遊戲id，用於識別遊戲
+   * Define game ID, used to identify the game.
    */
   _gameId: string;
 
   /**
-   * 會從玩家中選擇一位當作master
+   * @planned One player will be selected as the master.
    */
   readonly masterId: string;
 
   /**
-   * 提供所有玩家的id，並排列順序
+   * @planned Provide the IDs of all players and sort them.
    */
   readonly playerIdMap: {[index: number]: string};
 
   /**
-   * 觸發遊戲開始，開始倒數計時
+   * @planned Trigger game start, begin countdown.
    */
   sendGameStart(): void;
 
   /**
-   * 在計時內滿足遊戲結束條件，提前觸發遊戲結束
+   * @planned Trigger game end early if conditions are met within the countdown.
    */
   sendGameEnd(): void;
 
   /**
-   *
-   * @param event - 事件名稱，可根據需求自訂
-   * @param targetId  - 指定的目標id，可根據需求自訂
-   *  指定特定的event與targetId，並由server決定誰獲得owner（最快送出訊息者）
+   * @planned
+   * @param event - Event name, can be customized as needed.
+   * @param targetId  - Specified target ID, can be customized as needed.
+   *  Specify a specific event and targetId, and let the server decide who is the owner (whoever sends the message first).
    *
    * @example
    *
-   * // targetId為entity id
+   * // targetId is the entity ID.
    *
-   * // A玩家送出take-ownership事件
+   * // Player A sends take-ownership event.
    * sendOwnerUpdate('take-ownership', 'f47ac10b-58cb-11d1-a5f3-0000f8751022');
    *
-   * // B玩家送出take-ownership事件
+   * // Player B sends take-ownership event.
    * sendOwnerUpdate('take-ownership', 'f47ac10b-58cb-11d1-a5f3-0000f8751022');
    *
-   * // server決定A玩家獲得owner
-   * // 通知所有玩家A玩家獲得owner
+   * // Server decides Player A is the owner.
+   * // Notify all players that Player A is the owner.
    *
    * networkService.on('receive:ownerUpdate', (params) => {
    *    if (params.event === 'take-ownership') {
-   *      // A玩家獲得owner，successor為A玩家id
+   *      // Player A is the owner, successor is Player A's ID.
    *    }
    * })
    *
@@ -148,14 +148,14 @@ interface IBotService {
   sendOwnerUpdate(event: string, targetId: string): void;
 
   /**
-   * 發送遊戲設定更新
+   * Send game settings update.
    * @private
-   * @param params - 遊戲參數
-   * @param {integer} [params.totalPlayer] - 玩家總數
-   * @param {integer} [params.readyTime] - 遊戲倒數時間
-   * @param {integer} [params.playTime] - 遊戲時間
-   * @param {integer} [params.countdownInterval] - 倒數計時間隔
-   * @param {number} [params.startDelayTime] - 倒數結束語遊戲開始間的延遲時間
+   * @param params - 	Game parameters.
+   * @param {integer} [params.totalPlayer] - Total number of players.
+   * @param {integer} [params.readyTime] - Game countdown time.
+   * @param {integer} [params.playTime] - Game duration.
+   * @param {integer} [params.countdownInterval] - Countdown interval.
+   * @param {number} [params.startDelayTime] - Delay between countdown end and game start.
    * @returns
    *
    */
@@ -164,47 +164,47 @@ interface IBotService {
 
 interface IBotGameEvents {
   /**
-   *
-   * @param masterId - 通知房間的master是哪一位玩家
+   * @planned
+   * @param masterId - Notify which player is the master of the room.
    * @returns
    */
   'game:masterNotify': (masterId: string) => void;
 
   /**
-   * 當有玩家進入遊戲時觸發，通知所有玩家需等待其他玩家
-   * @param playerIdMap - 提供所有玩家的id，並排列順序
+   * @planned Trigger when a player joins the game, notify all players to wait for others.
+   * @param playerIdMap - Provide the IDs of all players and sort them.
    * @returns
    */
   'game:waitForPlayer': (playerIdMap: {[index: number]: string}) => void;
 
   /**
-   * 滿足遊戲人數條件，通知所有玩家遊戲可以開始
-   * @param playerIdMap - 提供所有玩家的id，並排列順序
+   * @planned Once the player count condition is met, notify all players that the game can start.
+   * @param playerIdMap - Provide the IDs of all players and sort them.
    * @returns
    */
   'game:allPlayerReady': (playerIdMap: {[index: number]: string}) => void;
 
   /**
-   * 觸發遊戲開始，開始倒數計時（目前只會發送一次）
-   * @param second - 遊戲倒數時間
+   * @planned Trigger game start, begin countdown (currently only sends once).
+   * @param second - Game countdown time.
    * @returns
    */
   'game:countdown': (second: number) => void;
 
   /**
-   * 遊戲間的倒數計時，根據設定的時間間隔發送
-   * @param second - 遊戲時間
+   * @planned Game countdown during the game, sent at specified intervals.
+   * @param second - Game duration.
    */
   'game:timer': (second: number) => void;
 
   /**
-   * 遊戲時間到，遊戲結束
+   * @planned Game ends when the game time is up.
    * @returns
    */
   'game:timeUp': () => void;
 
   /**
-   * 滿足條件，遊戲結束
+   * @planned Game ends when conditions are met.
    * @returns
    */
   'game:end': () => void;
@@ -212,27 +212,27 @@ interface IBotGameEvents {
 
 export interface IGameUpdateParams {
   /**
-   * 玩家總數，只能為整數
+   * Total number of players, must be an integer.
    * @type {integer}
    */
   totalPlayer?: number;
   /**
-   * 遊戲倒數時間，只能為整數
+   * Game countdown time, must be an integer.
    * @type {integer}
    */
   readyTime?: number;
   /**
-   * 遊戲時間，只能為整數
+   * Game duration, must be an integer.
    * @type {integer}
    */
   playTime?: number;
   /**
-   * 倒數計時間隔，只能為整數
+   * Countdown interval, must be an integer.
    * @type {integer}
    */
   countdownInterval?: number;
   /**
-   * 倒數結束語遊戲開始間的延遲時間
+   * Delay between countdown end and game start.
    * @type {number}
    */
   startDelayTime?: number;
@@ -240,25 +240,25 @@ export interface IGameUpdateParams {
 
 export interface IOwnerUpdateMessage {
   /**
-   * 事件名稱，可根據需求自訂
+   * @inProgress Event name, can be customized as needed.
    * @type {string}
    */
   event: string;
 
   /**
-   * 指定的目標id，可根據需求自訂
+   * @inProgress Specified target ID, can be customized as needed.
    * @type {string}
    */
   targetId: string;
 
   /**
-   * 成功獲得owner的玩家id
+   * @inProgress Player ID of the one who is the owner.
    * @type {string}
    */
   successor: string;
 
   /**
-   * 更新時間 timestamp
+   * @inProgress Update timestamp.
    * @type {number}
    */
   updateTime: number;
@@ -266,8 +266,8 @@ export interface IOwnerUpdateMessage {
 
 interface IBotOwnerEvents {
   /**
-   * 收到owner更新時觸發
-   * @param {IOwnerUpdateMessage} updateMessage - 事件參數，包含事件名稱、目標 id、成功玩家等信息
+   * @planned Triggered when owner update is received.
+   * @param {IOwnerUpdateMessage} updateMessage - Event parameters, including event name, target ID, successful player, etc.
    * @returns
    */
   'receive:ownerUpdate': (updateMessage: IOwnerUpdateMessage) => void;
