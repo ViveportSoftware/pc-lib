@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/tsdoc/v0/tsdoc.schema.json",
+  "extends": ["typedoc/tsdoc.json"],
+  "noStandardTags": false,
+  "tagDefinitions": [
+    {
+      "tagName": "@planned",
+      "syntaxKind": "modifier"
+    },
+    {
+      "tagName": "@inProgress",
+      "syntaxKind": "modifier"
+    },
+    {
+      "tagName": "@removed",
+      "syntaxKind": "modifier"
+    }
+  ]
+}
