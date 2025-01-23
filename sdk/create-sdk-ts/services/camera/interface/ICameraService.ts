@@ -17,7 +17,7 @@ export interface ICameraService {
   /**
    * @planned Control whether the VIVERSE CREATE Camera can zoom or not.
    */
-  isLockCameraZoomDistance: boolean;
+  canZoom: boolean;
 
   /**
    * Control the minimum distance between the VIVERSE CREATE third-person camera and the player.
