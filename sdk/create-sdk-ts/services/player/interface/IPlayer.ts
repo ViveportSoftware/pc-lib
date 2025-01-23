@@ -10,37 +10,37 @@ import {IPlayerProfile} from './IPlayerProfile';
  */
 export interface IPlayer extends EventHandlerMethods {
   /**
-   * Whether the player is visible on the local client.
+   * @planned Whether the player is visible on the local client.
    */
   isVisible: boolean;
 
   /**
-   * Get the display name of player's character.
+   * @planned Get the display name of player's character.
    */
   readonly displayName: string;
 
   /**
-   * Get the status that whether the Player has disconnected from the server.
+   * @planned Get the status that whether the Player has disconnected from the server.
    */
   readonly isDisposed: boolean;
 
   /**
-   * Get the player's avatar information.
+   * @planned Get the player's avatar information.
    */
   readonly avatar?: IAvatar;
 
   /**
-   * Get the player's server connection information.
+   * @planned Get the player's server connection information.
    */
   readonly network?: INetwork;
 
   /**
-   * Get the player's name tag.
+   * @planned Get the player's name tag.
    */
   readonly nameTag?: INameTag;
 
   /**
-   * Get the player's profile information.
+   * @planned Get the player's profile information.
    */
   readonly profile?: IPlayerProfile;
 
@@ -80,7 +80,7 @@ export interface IPlayer extends EventHandlerMethods {
  */
 export interface IPlayerEvents {
   /**
-   * Triggered when the player's avatar collider collides with another collider.
+   * @planned Triggered when the player's avatar collider collides with another collider.
    * @param entity - Current coordinate.
    */
   colliderHit: (result: pc.ContactResult) => void;

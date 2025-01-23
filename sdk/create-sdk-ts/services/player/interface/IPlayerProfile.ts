@@ -3,28 +3,28 @@
  */
 export interface IPlayerProfile {
   /**
-   * Player's display name.
+   * @planned Player's display name.
    */
   displayName: string;
   /**
-   * Player's avatar snapshot.
+   * @planned Player's avatar snapshot.
    */
   snapshot: {
     /**
-     * Player's avatar headshot.
+     * @planned Player's avatar headshot.
      */
     head: string;
     /**
-     * Player's avatar full-body picture.
+     * @planned Player's avatar full-body picture.
      */
     fullBody: string;
   };
   /**
-   * Player's user ID.
+   * @planned Player's user ID.
    */
   userId: string;
   /**
-   * Player's user name.
+   * @planned Player's user name.
    */
   userName: string;
 }

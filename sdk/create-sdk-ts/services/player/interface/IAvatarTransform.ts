@@ -1,5 +1,5 @@
 /**
- * @beta Define AvatarTransform interface.
+ * Define AvatarTransform interface.
  */
 export interface IAvatarTransform {
   position: pc.Vec3;

@@ -9,49 +9,49 @@ import {IAvatarTransform} from './IAvatarTransform';
  */
 export interface IAvatar extends EventHandlerMethods {
   /**
-   * Player avatar's BoundingBox.
+   * @planned Player avatar's BoundingBox.
    */
   boundingBox?: pc.BoundingBox;
 
   /**
-   * Player's collision, default collision type is capsule.
+   * @planned Player's collision, default collision type is capsule.
    */
   collision?: pc.CollisionComponent;
 
   /**
-   * Get player's avatar ID.
+   * @planned Get player's avatar ID.
    */
   readonly avatarId: string;
 
   /**
-   * Get player's avatar model link.
+   * @planned Get player's avatar model link.
    */
   readonly avatarGlb: string;
 
   /**
-   * Get player's avatar photo.
+   * @planned Get player's avatar photo.
    */
   readonly snapshot?: IAvatarSnapshot;
 
   /**
-   * Get player's avatar gender, default: 0.
+   * @planned Get player's avatar gender, default: 0.
    */
   readonly gender: AvatarTypes.GenderTypes;
 
   /**
-   * Get player's avatar type.
+   * @planned Get player's avatar type.
    */
   readonly dataType: AvatarTypes.DataTypes;
 
   /**
-   * @beta Get player's avatar position, rotation, and size information.
+   * Get player's avatar position, rotation, and size information.
    */
   readonly transform?: IAvatarTransform;
 
-  /*
-   * 取得 Avatar 的 Bone Entity
-   * @param boneName - 骨架名稱
-   * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM 骨架名稱}
+  /** 
+   * @inProgress Retrieve the Avatar's Bone Entity.
+   * @param boneName - Bone name
+   * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM Bone name}
    */
   getBone(boneName: string): pc.Entity | null;
 
@@ -87,7 +87,7 @@ export interface IAvatar extends EventHandlerMethods {
 }
 
 /**
- * @beta Define events supported by IPlayer and their corresponding parameters.
+ * Define events supported by IPlayer and their corresponding parameters.
  */
 export interface IAvatarEvents {
   /**

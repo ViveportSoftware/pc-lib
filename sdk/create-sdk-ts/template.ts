@@ -1,9 +1,9 @@
 const content = `/******************************************************************************
-Copyright (c) 2024 HTC CORPORATION.
+Copyright (c) 2025 HTC CORPORATION.
 ***************************************************************************** */
 
 /**
- * 取得 Create SDK 的版本
+ * Retrieve the version of the Create SDK.
  */
 const version = 'create-sdk-version';
 
@@ -463,4 +463,4 @@ class NetworkService {
 export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
-export {content};
+export { content };
