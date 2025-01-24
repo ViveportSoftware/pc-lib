@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.78.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.77.0...v1.78.0) (2025-01-23)
+
+
+### Features
+
+* **create-SDK:** remove unused events ([3998583](https://github.com/ViveportSoftware/pc-lib/commit/39985835aa82746cff786fdf4c49520e9a421fdd))
+
 ## [1.77.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.76.0...v1.77.0) (2025-01-15)
 
 
