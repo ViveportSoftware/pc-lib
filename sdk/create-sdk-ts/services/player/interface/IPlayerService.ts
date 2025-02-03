@@ -31,23 +31,29 @@ export interface IPlayerService extends EventHandlerMethods {
   /**
    * @inProgress Retrieve player information using Entity.
    * @param entity - Player's Entity.
+   * @param recursive - 是否允許傳入的entity是player的子節點，預設為 false
    * @returns {ILocalPlayer | IRemotePlayer | null}
    */
-  getPlayerByEntity(entity: pc.Entity): ILocalPlayer | IRemotePlayer | null;
+  getPlayerByEntity(
+    entity: pc.Entity,
+    recursive?: boolean
+  ): ILocalPlayer | IRemotePlayer | null;
 
   /**
    * @inProgress Check if the Entity is the LocalPlayer.
    * @param entity - Entity
+   * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
    * @returns {boolean}
    */
-  checkIsLocalPlayerEntity(entity: pc.Entity): boolean;
+  checkIsLocalPlayerEntity(entity: pc.Entity, recursive?: boolean): boolean;
 
   /**
    * @inProgress Check if the Entity is the RemotePlayer.
    * @param entity - Entity
+   * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
    * @returns {boolean}
    */
-  checkIsRemotePlayerEntity(entity: pc.Entity): boolean;
+  checkIsRemotePlayerEntity(entity: pc.Entity, recursive?: boolean): boolean;
 
   /**
    * Subscribe to a specific event.

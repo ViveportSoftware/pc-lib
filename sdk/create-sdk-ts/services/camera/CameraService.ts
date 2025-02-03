@@ -2,7 +2,8 @@ import {ICameraService} from './interface/ICameraService';
 
 class CameraService implements ICameraService {
   private static _instance?: CameraService;
-  isLockCameraZoomDistance = false;
+  canZoom = true;
+  canRotate = true;
   minZoomDistance = 0;
   maxZoomDistance = 0;
 
