@@ -66,6 +66,11 @@ export enum ExternalCreatorType {
   Base = 0,
 
   /********************************
+   * PlayCanvas
+   ********************************/
+  PCAppEventPublish = 100001,
+
+  /********************************
    * NotificationCenter
    ********************************/
   NotificationCenterPublish = 200001,
