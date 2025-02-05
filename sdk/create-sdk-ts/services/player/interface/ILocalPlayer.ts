@@ -16,12 +16,12 @@ export interface ILocalPlayer extends IPlayer {
   canJump: boolean;
 
   /**
-   * @inProgress Whenther the player can hard land.
+   * Whenther the player can hard land.
    */
   canHardLanding: boolean;
 
   /**
-   * @inProgress Whenther the player can fly.
+   * Whenther the player can fly.
    */
   canFly: boolean | undefined;
 
@@ -137,7 +137,7 @@ export interface ILocalPlayer extends IPlayer {
   resetToViverseAvatar(): void;
 
   /**
-   * @inProgress Make the character face the target’s position on the horizontal plane.
+   * Make the character face the target’s position on the horizontal plane.
    * @param {number | pc.Vec2} x - X-coordinate of the target’s position on the horizontal plane, or the target's horizontal position.
    * @param {number} [y] - Y-coordinate of the target’s position on the horizontal plane.
    */
@@ -202,17 +202,17 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   respawned: (position: pc.Vec3) => void;
 
   /**
-   * @inProgress Trigger when the player’s avatar is in XR teleportation.
+   * Trigger when the player’s avatar is in XR teleportation.
    */
   'xr:teleport': () => void;
 
   /**
-   * @inProgress Trigger when the player’s avatar is in XR turning.
+   * Trigger when the player’s avatar is in XR turning.
    */
   'xr:turning': () => void;
 
   /**
-   * @inProgress Trigger when the player’s avatar horizontal movement state changes.
+   * Trigger when the player’s avatar horizontal movement state changes.
    * @param currentState - Current movement state.
    * @param prevState - Previous movement state.
    */
@@ -222,7 +222,7 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   ) => void;
 
   /**
-   * @inProgress Trigger when the player’s avatar vertical movement state changes.
+   * Trigger when the player’s avatar vertical movement state changes.
    * @param currentState - Current movement state.
    * @param prevState - Previous movement state.
    */

@@ -10,7 +10,7 @@ export interface IEnvironmentService {
   impostorMode: EnvironmentTypes.ImpostorModeTypes;
 
   /**
-   * @inProgress If players can physically collide with each other.
+   * If players can physically collide with each other.
    */
   canPlayersCollide: boolean;
 }

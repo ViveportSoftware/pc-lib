@@ -2,13 +2,13 @@ import * as pc from 'playcanvas';
 
 export interface INetworkService extends IBotService {
   /**
-   * @inProgress Synchronization frequency of player's movement.
+   * Synchronization frequency of player's movement.
    * Default value is 150ms, the configurable range is 30ms to 150ms.
    */
   moveSyncInterval: number;
 
   /**
-   * @inProgress Send custom message.
+   * Send custom message.
    * @param {Record<string, any>} message - Custom message content.
    * @param {Object} [options] - Other options.
    * @param {boolean} [options.batch=true] - Batch processing of messages: If set to `true`, the messages will be cached and sent together later.
@@ -26,12 +26,12 @@ export interface INetworkService extends IBotService {
   ): string;
 
   /**
-   * @inProgress Generate a message ID.
+   * Generate a message ID.
    */
   generateMessageId(): string;
 
   /**
-   * @inProgress Subscribe to a specific event.
+   * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function
    */
@@ -41,7 +41,7 @@ export interface INetworkService extends IBotService {
   ): pc.EventHandle;
 
   /**
-   * @inProgress Unsubscribe from a specific event.
+   * Unsubscribe from a specific event.
    * @param event - Event name
    * @param listener - Callback function
    */
@@ -66,26 +66,26 @@ export interface ITriggerMessage {
 
 export interface INetworkServiceEvents extends IBotGameEvents, IBotOwnerEvents {
   /**
-   * @inProgress Triggered when the game successfully connects.
+   * Triggered when the game successfully connects.
    * @returns
    */
   connected: () => void;
 
   /**
-   * @inProgress Triggered when the game fails to connect.
+   * Triggered when the game fails to connect.
    * @returns
    */
   error: () => void;
 
   /**
-   * @inProgress Triggered when a custom message is received.
+   * Triggered when a custom message is received.
    * @param messages - Custom message
    * @returns
    */
   'receive:messages': (messages: IMessage[]) => void;
 
   /**
-   * @inProgress Triggered when a trigger message is received.
+   * Triggered when a trigger message is received.
    * @param triggerMessage - Trigger message
    * @returns
    */
@@ -240,25 +240,25 @@ export interface IGameUpdateParams {
 
 export interface IOwnerUpdateMessage {
   /**
-   * @inProgress Event name, can be customized as needed.
+   * Event name, can be customized as needed.
    * @type {string}
    */
   event: string;
 
   /**
-   * @inProgress Specified target ID, can be customized as needed.
+   * Specified target ID, can be customized as needed.
    * @type {string}
    */
   targetId: string;
 
   /**
-   * @inProgress Player ID of the one who is the owner.
+   * Player ID of the one who is the owner.
    * @type {string}
    */
   successor: string;
 
   /**
-   * @inProgress Update timestamp.
+   * Update timestamp.
    * @type {number}
    */
   updateTime: number;
