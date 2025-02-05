@@ -22,14 +22,14 @@ export interface IPlayerService extends EventHandlerMethods {
   readonly playerCount: number;
 
   /**
-   * @inProgress Retrieve player information using Network ID.
+   * Retrieve player information using Network ID.
    * @param id - Player's Network ID.
    * @returns {ILocalPlayer | IRemotePlayer | null}
    */
   getPlayerById(id: string): ILocalPlayer | IRemotePlayer | null;
 
   /**
-   * @inProgress Retrieve player information using Entity.
+   * Retrieve player information using Entity.
    * @param entity - Player's Entity.
    * @param recursive - 是否允許傳入的entity是player的子節點，預設為 false
    * @returns {ILocalPlayer | IRemotePlayer | null}
@@ -40,7 +40,7 @@ export interface IPlayerService extends EventHandlerMethods {
   ): ILocalPlayer | IRemotePlayer | null;
 
   /**
-   * @inProgress Check if the Entity is the LocalPlayer.
+   * Check if the Entity is the LocalPlayer.
    * @param entity - Entity
    * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
    * @returns {boolean}
@@ -48,7 +48,7 @@ export interface IPlayerService extends EventHandlerMethods {
   checkIsLocalPlayerEntity(entity: pc.Entity, recursive?: boolean): boolean;
 
   /**
-   * @inProgress Check if the Entity is the RemotePlayer.
+   * Check if the Entity is the RemotePlayer.
    * @param entity - Entity
    * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
    * @returns {boolean}
@@ -78,13 +78,13 @@ export interface IPlayerService extends EventHandlerMethods {
 
 export interface IPlayerServiceEvents {
   /**
-   * @inProgress Trigger when a remote player joins the session.
+   * Trigger when a remote player joins the session.
    * @param remotePlayer - An instance of the remote player, it's an object of type 'IRemotePlayer', containing player-related information.
    */
   'remotePlayer:joined': (remotePlayer: IRemotePlayer) => void;
 
   /**
-   * @inProgress Trigger when a remote player leaves the session.
+   * Trigger when a remote player leaves the session.
    * @param remotePlayer - An instance of the remote player, it's an object of type 'IRemotePlayer', containing player-related information.
    */
   'remotePlayer:left': (remotePlayer: IRemotePlayer) => void;

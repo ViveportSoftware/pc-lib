@@ -49,7 +49,7 @@ export interface IAvatar extends EventHandlerMethods {
   readonly transform?: IAvatarTransform;
 
   /** 
-   * @inProgress Retrieve the Avatar's Bone Entity.
+   * Retrieve the Avatar's Bone Entity.
    * @param boneName - Bone name
    * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM Bone name}
    */

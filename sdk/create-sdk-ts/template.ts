@@ -9,7 +9,8 @@ const version = 'create-sdk-version';
 
 class CameraService {
     static _instance;
-    isLockCameraZoomDistance = false;
+    canZoom = true;
+    canRotate = true;
     minZoomDistance = 0;
     maxZoomDistance = 0;
     constructor() {
@@ -348,7 +349,9 @@ class LocalPlayer extends Player {
         return 0;
     }
     jump() { }
-    playAnimation(stateName, asset, options) { }
+    async playAnimation(stateName, options, legacyOptions) {
+        return null;
+    }
     stopAnimation() { }
     respawn(timeout) { }
     teleport(destination, rotationY) { }
@@ -391,13 +394,13 @@ class PlayerService {
     getPlayerById(id) {
         return null;
     }
-    getPlayerByEntity(entity) {
+    getPlayerByEntity(entity, recursive) {
         return null;
     }
-    checkIsLocalPlayerEntity(entity) {
+    checkIsLocalPlayerEntity(entity, recursive) {
         return false;
     }
-    checkIsRemotePlayerEntity(entity) {
+    checkIsRemotePlayerEntity(entity, recursive) {
         return false;
     }
     on(event, listener) {
