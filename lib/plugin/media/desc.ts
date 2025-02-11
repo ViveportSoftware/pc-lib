@@ -109,7 +109,7 @@ export const Desc = {
       desc: 'Receive Shadows',
     },
     doubleSidedMaterials: {
-      desc: 'Force Double Sided materials',
+      desc: 'Force Double Sided Materials',
     },
     environmentAssetId: {
       desc: 'Environment Asset',
