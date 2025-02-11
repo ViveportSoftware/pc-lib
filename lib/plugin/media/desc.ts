@@ -115,7 +115,7 @@ export const Desc = {
       desc: 'Environment Asset',
     },
     initialTrianglePercent: {
-      desc: 'Initial Triangle Rercentage',
+      desc: 'Initial Triangle Percentage',
     },
     layers: {
       desc: 'layers to render',
