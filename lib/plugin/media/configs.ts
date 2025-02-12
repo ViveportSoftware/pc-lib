@@ -26,17 +26,11 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       name: 'cameraEntityId',
       type: 'number',
       default: 0,
-    },
-    {
-      name: 'cameraType',
-      type: 'string',
-      default: 'player',
-      enum: CameraTypeEnum,
-    },
+    },    
     {
       name: 'occlusionCulling',
       type: 'boolean',
-      default: true,
+      default: false,
     },
     {
       name: 'occlusionGeometry',
@@ -60,20 +54,9 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: 3000000,
     },
     {
-      name: 'minimumDistance',
-      type: 'number',
-      default: 0.01,
-    },
-    {
       name: 'distanceFactor',
       type: 'number',
       default: 1.1,
-    },
-    {
-      name: 'distanceType',
-      type: 'string',
-      default: 'boundingBox',
-      enum: DistanceTypeEnum,
     },
     {
       name: 'maximumQuality',
@@ -81,14 +64,9 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: 15000,
     },
     {
-      name: 'closeUpDistance',
+      name: 'maximumQuality',
       type: 'number',
-      default: 3,
-    },
-    {
-      name: 'closeUpDistanceFactor',
-      type: 'number',
-      default: 5,
+      default: 15000,
     },
   ],
   streamableModel: [
@@ -104,11 +82,6 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
     },
     {
       name: 'useAlpha',
-      type: 'boolean',
-      default: true,
-    },
-    {
-      name: 'useMetalRoughness',
       type: 'boolean',
       default: true,
     },

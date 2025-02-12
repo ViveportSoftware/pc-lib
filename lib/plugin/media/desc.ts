@@ -91,34 +91,31 @@ export const Desc = {
   [Type.PolygonStreaming]: {
     // streamableModel attributes
     url: {
-      desc: 'polygon streaming url',
+      desc: 'Polygon Streaming url',
     },
     qualityPriority: {
-      desc: 'Quality priority',
+      desc: 'Quality Priority',
     },
     useAlpha: {
       desc: 'Use Alpha',
     },
-    useMetalRoughness: {
-      desc: 'Use MetalRoughness',
-    },
     castShadows: {
-      desc: 'Cast shadows',
+      desc: 'Cast Shadows',
     },
     castLightmapShadows: {
-      desc: 'Cast lightmap shadows',
+      desc: 'Cast Lightmap Shadows',
     },
     receiveShadows: {
-      desc: 'Receive shadows',
+      desc: 'Receive Shadows',
     },
     doubleSidedMaterials: {
-      desc: 'Double sided materials',
+      desc: 'Force Double Sided Materials',
     },
     environmentAssetId: {
-      desc: 'Environment asset',
+      desc: 'Environment Asset',
     },
     initialTrianglePercent: {
-      desc: 'Initial triangle percentage',
+      desc: 'Initial Triangle Percentage',
     },
     layers: {
       desc: 'layers to render',
