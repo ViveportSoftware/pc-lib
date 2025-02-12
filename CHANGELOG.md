@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.80.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.79.0...v1.80.0) (2025-02-12)
+
+
+### Features
+
+* update PS UI ([2c9eeb4](https://github.com/ViveportSoftware/pc-lib/commit/2c9eeb46b1de2866609e57be4337e55a40a4a9c2))
+
 ## [1.79.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.78.0...v1.79.0) (2025-02-03)
 
 
