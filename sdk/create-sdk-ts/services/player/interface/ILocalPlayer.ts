@@ -96,8 +96,18 @@ export interface ILocalPlayer extends IPlayer {
    * @param {Object} [options] - Optional parameters.
    * @param {boolean} [options.loop=false] - Loop the animation. Default is false.
    * @param {boolean} [options.lock=false] - Lock the animation. Default is false.
-   * @param {boolean} [options.asset] - Send the vram file.
+   * @param {pc.Asset} [options.asset] - Send the vram file.
    * @returns {Promise<pc.Asset|null>} - Return the animation asset.
+   */
+  playAnimation(
+    stateName: string,
+    options?: {loop: boolean; lock: boolean; asset?: pc.Asset}
+  ): Promise<pc.Asset | null>;
+
+  /**
+   * @internal
+   * Overload ensures typeDoc only shows `options` as object.
+   * The `pc.Asset` variant is hidden but remains valid in TypeScript.
    */
   playAnimation(
     stateName: string,
