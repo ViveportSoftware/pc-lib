@@ -10,7 +10,7 @@ export const toTemplateLiteral = () => {
 };
 
 export {version} from './metadata';
-export {CameraService, ICameraService} from './services/camera';
+export {CameraService, ICameraService, CameraTypes} from './services/camera';
 export {
   EnvironmentService,
   IEnvironmentService,
