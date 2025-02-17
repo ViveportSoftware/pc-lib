@@ -1,4 +1,5 @@
 import {ICameraService} from './interface/ICameraService';
+import * as CameraTypes from './enums/camera';
 
 class CameraService implements ICameraService {
   private static _instance?: CameraService;
@@ -6,6 +7,8 @@ class CameraService implements ICameraService {
   canRotate = true;
   minZoomDistance = 0;
   maxZoomDistance = 0;
+  canSwitchPerspective = true;
+  perspective = CameraTypes.PerspectiveTypes.ThirdPerson;
 
   constructor() {
     if (CameraService._instance) return CameraService._instance;
@@ -25,6 +28,8 @@ class CameraService implements ICameraService {
   addLayer(layerId: number, order?: number): void {}
 
   removeLayer(layerId: number): void {}
+
+  switchPerspective(perspective: CameraTypes.PerspectiveTypes): void {}
 }
 
 export default CameraService;
