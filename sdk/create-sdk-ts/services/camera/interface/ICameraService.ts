@@ -16,9 +16,9 @@ export interface ICameraService {
   readonly isUsingExternalCamera: boolean;
 
   /**
-   *  Retrieve the current perspective view.
+   *  Retrieve the current point of view.
    */
-  readonly perspective: CameraTypes.PerspectiveTypes;
+  readonly pov: CameraTypes.PovTypes;
 
   /**
    * @planned Control whether the VIVERSE CREATE Camera can zoom or not.
@@ -26,9 +26,9 @@ export interface ICameraService {
   canZoom: boolean;
 
   /**
-   *  Control whether the perspective view can switch or not.
+   *  Control whether the point of view can switch or not.
    */
-  canSwitchPerspective: boolean;
+  canSwitchPov: boolean;
 
   /**
    * Control the minimum distance between the VIVERSE CREATE third-person camera and the player.
@@ -63,8 +63,8 @@ export interface ICameraService {
   removeLayer(layerId: number): void;
 
   /**
-   * Switch the perspective view of the camera.
-   * @param {CameraTypes.PerspectiveTypes} perspective - Perspective view type
+   * Switch the point of view of the camera.
+   * @param {CameraTypes.PovTypes} pov - Point of view type
    */
-  switchPerspective(perspective: CameraTypes.PerspectiveTypes): void;
+  switchPov(pov: CameraTypes.PovTypes): void;
 }
