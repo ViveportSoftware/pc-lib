@@ -7,8 +7,8 @@ class CameraService implements ICameraService {
   canRotate = true;
   minZoomDistance = 0;
   maxZoomDistance = 0;
-  canSwitchPerspective = true;
-  perspective = CameraTypes.PerspectiveTypes.ThirdPerson;
+  canSwitchPov = true;
+  pov = CameraTypes.PovTypes.ThirdPerson;
 
   constructor() {
     if (CameraService._instance) return CameraService._instance;
@@ -29,7 +29,7 @@ class CameraService implements ICameraService {
 
   removeLayer(layerId: number): void {}
 
-  switchPerspective(perspective: CameraTypes.PerspectiveTypes): void {}
+  switchPov(pov: CameraTypes.PovTypes): void {}
 }
 
 export default CameraService;
