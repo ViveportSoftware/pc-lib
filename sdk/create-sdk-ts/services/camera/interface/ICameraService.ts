@@ -16,7 +16,7 @@ export interface ICameraService {
   readonly isUsingExternalCamera: boolean;
 
   /**
-   *  Retrieve the current point of view.
+   * @inProgress Retrieve the current point of view.
    */
   readonly pov: CameraTypes.PovTypes;
 
@@ -26,7 +26,7 @@ export interface ICameraService {
   canZoom: boolean;
 
   /**
-   *  Control whether the point of view can switch or not.
+   * @inProgress Control whether the point of view can switch or not.
    */
   canSwitchPov: boolean;
 
@@ -63,7 +63,7 @@ export interface ICameraService {
   removeLayer(layerId: number): void;
 
   /**
-   * Switch the point of view of the camera.
+   * @inProgress Switch the point of view of the camera.
    * @param {CameraTypes.PovTypes} pov - Point of view type
    */
   switchPov(pov: CameraTypes.PovTypes): void;
