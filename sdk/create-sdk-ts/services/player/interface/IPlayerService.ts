@@ -31,7 +31,7 @@ export interface IPlayerService extends EventHandlerMethods {
   /**
    * Retrieve player information using Entity.
    * @param entity - Player's Entity.
-   * @param recursive - 是否允許傳入的entity是player的子節點，預設為 false
+   * @param recursive - Whether to allow the incoming entity to be a child node of the player, default is false.
    * @returns {ILocalPlayer | IRemotePlayer | null}
    */
   getPlayerByEntity(
@@ -42,7 +42,7 @@ export interface IPlayerService extends EventHandlerMethods {
   /**
    * Check if the Entity is the LocalPlayer.
    * @param entity - Entity
-   * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
+   * @param {boolean} [recursive=false] - Recursively check if the parent of the incoming entity is the player, default is false.
    * @returns {boolean}
    */
   checkIsLocalPlayerEntity(entity: pc.Entity, recursive?: boolean): boolean;
@@ -50,7 +50,7 @@ export interface IPlayerService extends EventHandlerMethods {
   /**
    * Check if the Entity is the RemotePlayer.
    * @param entity - Entity
-   * @param {boolean} [recursive=false] - 遞迴檢查傳入的entity父層是否為player，預設為 false
+   * @param {boolean} [recursive=false] - Recursively check if the parent of the incoming entity is the player, default is false.
    * @returns {boolean}
    */
   checkIsRemotePlayerEntity(entity: pc.Entity, recursive?: boolean): boolean;
