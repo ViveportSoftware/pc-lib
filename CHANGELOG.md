@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.81.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.80.0...v1.81.0) (2025-02-25)
+
+
+### Features
+
+* add perspective control to camera service ([67d5148](https://github.com/ViveportSoftware/pc-lib/commit/67d51481cb1c072813a1bd3a7cb4c92c26e5ae00))
+* **create-sdk:** add scale-avatar sdk ([7083eee](https://github.com/ViveportSoftware/pc-lib/commit/7083eee3563ee21edd09b9b6af04128bca4cd08a))
+* rename perspective to POV(point of view) ([a7d2bb0](https://github.com/ViveportSoftware/pc-lib/commit/a7d2bb05b222273cdbfa1eabdc7ad40e330514f7))
+
 ## [1.80.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.79.0...v1.80.0) (2025-02-12)
 
 
