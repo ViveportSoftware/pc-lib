@@ -7,12 +7,25 @@ Copyright (c) 2025 HTC CORPORATION.
  */
 const version = 'create-sdk-version';
 
+var PovTypes;
+(function (PovTypes) {
+    PovTypes[PovTypes["FirstPerson"] = 0] = "FirstPerson";
+    PovTypes[PovTypes["ThirdPerson"] = 1] = "ThirdPerson";
+})(PovTypes || (PovTypes = {}));
+
+var camera = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get PovTypes () { return PovTypes; }
+});
+
 class CameraService {
     static _instance;
     canZoom = true;
     canRotate = true;
     minZoomDistance = 0;
     maxZoomDistance = 0;
+    canSwitchPov = true;
+    pov = PovTypes.ThirdPerson;
     constructor() {
         if (CameraService._instance)
             return CameraService._instance;
@@ -27,6 +40,7 @@ class CameraService {
     switchCamera(camera) { }
     addLayer(layerId, order) { }
     removeLayer(layerId) { }
+    switchPov(pov) { }
 }
 
 var ImpostorModeTypes;
@@ -311,6 +325,7 @@ class RemotePlayer extends Player {
     get isTalking() {
         return false;
     }
+    scaleAvatar(scale) { }
     on(event, listener) {
         return {};
     }
@@ -358,6 +373,7 @@ class LocalPlayer extends Player {
     changeAvatar(asset) { }
     resetToViverseAvatar() { }
     turnToward(x, y) { }
+    scaleAvatar(scale) { }
     on(event, listener) {
         return {};
     }
@@ -463,7 +479,7 @@ class NetworkService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
+export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
 `;
 
 export { content };
