@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.82.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.81.0...v1.82.0) (2025-02-25)
+
+
+### Features
+
+* **camera:** add camera feature templates and docs ([74fb94a](https://github.com/ViveportSoftware/pc-lib/commit/74fb94af5d4a6867772ecdb3187e1b632631b9f8))
+
 ## [1.81.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.80.0...v1.81.0) (2025-02-25)
 
 
