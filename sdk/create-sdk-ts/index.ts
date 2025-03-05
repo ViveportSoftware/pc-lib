@@ -45,3 +45,10 @@ export {
   IOwnerUpdateMessage,
   INetworkServiceEvents,
 } from './services/network';
+export {
+  XrService,
+  IXrService,
+  IXrServiceEvents,
+  IXrController,
+  IXrControllerEvents,
+} from './services/xr';

@@ -3,13 +3,14 @@ import {IXrService, IXrServiceEvents} from './interface/IXrService';
 import {IXrController} from './interface/IXrController';
 
 class XrService implements IXrService {
-  constructor() {}
+  private static _instance?: XrService;
 
-  get input(): pc.XrInput | undefined {
-    return undefined;
+  constructor() {
+    if (XrService._instance) return XrService._instance;
+    XrService._instance = this;
   }
 
-  get constrollers(): {left?: IXrController; right?: IXrController} {
+  get controllers(): {left?: IXrController; right?: IXrController} {
     return {left: undefined, right: undefined};
   }
 

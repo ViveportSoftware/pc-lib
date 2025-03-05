@@ -1,11 +1,31 @@
 import * as pc from 'playcanvas';
 import {IXrController, IXrControllerEvents} from './interface/IXrController';
-import XrHandControllerBase from './XrHandControllerBase';
 
-class XrController extends XrHandControllerBase implements IXrController {
-  constructor() {
-    super();
+class XrController implements IXrController {
+  constructor() {}
+
+  get modelEntity(): pc.Entity | null {
+    return null;
   }
+
+  get inputSource(): pc.XrInputSource | null {
+    return null;
+  }
+
+  get handedness(): typeof pc.XRHAND_LEFT | typeof pc.XRHAND_RIGHT {
+    return 'left';
+  }
+
+  setModelAsset(
+    asset: pc.Asset,
+    options?: {
+      castShadows: boolean;
+      receiveShadows: boolean;
+      onCompleted?: (entity: pc.Entity) => void;
+    }
+  ): void {}
+
+  resetModelAsset(): void {}
 
   on<T extends keyof IXrControllerEvents>(
     event: T,
