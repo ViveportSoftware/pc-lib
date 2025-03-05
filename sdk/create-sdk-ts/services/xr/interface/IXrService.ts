@@ -6,14 +6,9 @@ import {IXrController} from './IXrController';
  */
 export interface IXrService extends EventHandlerMethods {
   /**
-   * @planned Get XR device input, such as controllers, hands, gaze etc.
+   * @planned Gets {@link IXrController|XrController} information.
    */
-  readonly input: pc.XrInput | undefined;
-
-  /**
-   * @planned Get Viverse XR controller information.
-   */
-  constrollers: {left?: IXrController; right?: IXrController};
+  readonly controllers: {left?: IXrController; right?: IXrController};
 
   /**
    * Subscribe to a specific event.
@@ -34,16 +29,28 @@ export interface IXrService extends EventHandlerMethods {
     event: T,
     listener: IXrServiceEvents[T]
   ): pc.EventHandler;
+
+  /**
+   * Send a specific event.
+   * @param event - Event name
+   * @param [args] - Event parameters
+   */
+  fire<T extends keyof IXrServiceEvents>(
+    event: T,
+    ...args: any[]
+  ): pc.EventHandler;
 }
 
 export interface IXrServiceEvents {
   /**
-   * @planned Triggered when a xr controller added.
+   * @planned Triggered when an {@link IXrController|XrController}'s `XrInputSource` is added.
+   * The handler receives the {@link IXrController|XrController} associated with the added `XrInputSource`.
    */
-  'xr:controllerAdd': (controller: IXrController) => void;
+  'controller:addInput': (controller: IXrController) => void;
 
   /**
-   * @planned Triggered when a xr controller removed.
+   * @planned Triggered when an {@link IXrController|XrController}'s `XrInputSource` is removed.
+   * The handler receives the {@link IXrController|XrController} associated with the removed `XrInputSource`.
    */
-  'xr:controllerRemove': (controller: IXrController) => void;
+  'controller:removeInput': (controller: IXrController) => void;
 }
