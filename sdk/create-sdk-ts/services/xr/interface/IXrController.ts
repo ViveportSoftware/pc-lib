@@ -30,8 +30,8 @@ export interface IXrController {
   setModelAsset(
     asset: pc.Asset,
     options?: {
-      castShadows: boolean;
-      receiveShadows: boolean;
+      castShadows?: boolean;
+      receiveShadows?: boolean;
       onCompleted?: (entity: pc.Entity) => void;
     }
   ): void;
