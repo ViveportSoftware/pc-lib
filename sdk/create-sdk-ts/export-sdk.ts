@@ -8,3 +8,4 @@ export {
   MoveTypes,
 } from './services/player';
 export {NetworkService} from './services/network';
+export {XrService} from './services/xr';

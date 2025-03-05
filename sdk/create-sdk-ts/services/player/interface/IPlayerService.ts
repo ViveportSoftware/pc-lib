@@ -74,6 +74,16 @@ export interface IPlayerService extends EventHandlerMethods {
     event: T,
     listener: IPlayerServiceEvents[T]
   ): pc.EventHandler;
+
+  /**
+   * Send a specific event.
+   * @param event - Event name
+   * @param [args] - Event parameters
+   */
+  fire<T extends keyof IPlayerServiceEvents>(
+    event: T,
+    ...args: any[]
+  ): pc.EventHandler;
 }
 
 export interface IPlayerServiceEvents {
