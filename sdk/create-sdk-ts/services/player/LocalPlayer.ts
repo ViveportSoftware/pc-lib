@@ -54,7 +54,12 @@ class LocalPlayer extends Player implements ILocalPlayer {
 
   turnToward(x: number | pc.Vec2, y?: number): void {}
 
-  scaleAvatar(scale: number): void {}
+  scaleAvatar(
+    scale: number,
+    options?: {
+      sync?: boolean;
+    }
+  ): void {}
 
   on<T extends keyof ILocalPlayerEvents>(
     event: T,
