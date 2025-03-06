@@ -154,6 +154,19 @@ export interface ILocalPlayer extends IPlayer {
   turnToward(x: number | pc.Vec2, y?: number): void;
 
   /**
+   * @planned Scale the avatar model with the specified scale ratio.
+   * @param {number} scale - Scale ratio
+   * @param {Object} [options] - Optional parameters
+   * @param {boolean} [options.sync=true] - Whether to sync scaling to other players over the network. Default is true.
+   */
+  scaleAvatar(
+    scale: number,
+    options?: {
+      sync?: boolean;
+    }
+  ): void;
+
+  /**
    * Subscribe to a specific event.
    * @param event - Event name
    * @param listener - Callback function

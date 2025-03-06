@@ -19,8 +19,6 @@ class RemotePlayer extends Player implements IRemotePlayer {
     return false;
   }
 
-  scaleAvatar(scale: number): void {}
-
   on<T extends keyof IPlayerEvents>(
     event: T,
     listener: IPlayerEvents[T]
