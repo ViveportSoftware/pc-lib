@@ -11,12 +11,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * @planned Player avatar's BoundingBox.
    */
-  boundingBox?: pc.BoundingBox;
-
-  /**
-   * @planned Player's collision, default collision type is capsule.
-   */
-  collision?: pc.CollisionComponent;
+  readonly boundingBox?: pc.BoundingBox;
 
   /**
    * @planned Get player's avatar ID.
@@ -48,7 +43,7 @@ export interface IAvatar extends EventHandlerMethods {
    */
   readonly transform?: IAvatarTransform;
 
-  /** 
+  /**
    * Retrieve the Avatar's Bone Entity.
    * @param boneName - Bone name
    * {@link https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm-1.0/humanoid.md | VRM Bone name}

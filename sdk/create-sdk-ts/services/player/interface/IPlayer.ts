@@ -25,6 +25,11 @@ export interface IPlayer extends EventHandlerMethods {
   readonly isDisposed: boolean;
 
   /**
+   * @planned Player's collision, default collision type is capsule.
+   */
+  readonly collision: pc.CollisionComponent | null;
+
+  /**
    * @planned Get the player's avatar information.
    */
   readonly avatar?: IAvatar;
@@ -78,10 +83,4 @@ export interface IPlayer extends EventHandlerMethods {
 /**
  * Define events supported by IPlayer and their corresponding parameters.
  */
-export interface IPlayerEvents {
-  /**
-   * @planned Triggered when the player's avatar collider collides with another collider.
-   * @param entity - Current coordinate.
-   */
-  colliderHit: (result: pc.ContactResult) => void;
-}
+export interface IPlayerEvents {}

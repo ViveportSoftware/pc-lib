@@ -30,7 +30,6 @@ export {
   IAvatarEvents,
   ILocalPlayerEvents,
   INetworkEvents,
-  IPlayerEvents,
   PlayerService,
   IPlayerServiceEvents,
   AvatarTypes,
