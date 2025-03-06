@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.83.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.82.0...v1.83.0) (2025-03-06)
+
+
+### Features
+
+* add scale avatar interface ([3727cde](https://github.com/ViveportSoftware/pc-lib/commit/3727cde450d33f8b1bebcd029b0da7f43f840d14))
+* add xr service ([69a86cc](https://github.com/ViveportSoftware/pc-lib/commit/69a86cc220073cc61bc717cdc46dd9203ff20f2f))
+* make castShadows and receiveShadows optional ([8f379e9](https://github.com/ViveportSoftware/pc-lib/commit/8f379e90ab08ae0975cc6189bb3f91f21db21e0d))
+
 ## [1.82.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.81.0...v1.82.0) (2025-02-25)
 
 
