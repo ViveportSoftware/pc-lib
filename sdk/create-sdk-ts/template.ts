@@ -325,7 +325,6 @@ class RemotePlayer extends Player {
     get isTalking() {
         return false;
     }
-    scaleAvatar(scale) { }
     on(event, listener) {
         return {};
     }
@@ -373,7 +372,7 @@ class LocalPlayer extends Player {
     changeAvatar(asset) { }
     resetToViverseAvatar() { }
     turnToward(x, y) { }
-    scaleAvatar(scale) { }
+    scaleAvatar(scale, options) { }
     on(event, listener) {
         return {};
     }
@@ -479,7 +478,52 @@ class NetworkService {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, version };
+class XrService {
+    static _instance;
+    constructor() {
+        if (XrService._instance)
+            return XrService._instance;
+        XrService._instance = this;
+    }
+    get controllers() {
+        return { left: undefined, right: undefined };
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+class XrController {
+    constructor() { }
+    get modelEntity() {
+        return null;
+    }
+    get inputSource() {
+        return null;
+    }
+    get handedness() {
+        return 'left';
+    }
+    setModelAsset(asset, options) { }
+    resetModelAsset() { }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, XrService, version };
 `;
 
 export { content };
