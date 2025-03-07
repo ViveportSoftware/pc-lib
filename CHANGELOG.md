@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.84.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.83.0...v1.84.0) (2025-03-07)
+
+
+### Features
+
+* re-gen document files & extension template ([e7bf656](https://github.com/ViveportSoftware/pc-lib/commit/e7bf656b79b79c0fb98ee83890f9ef8e7aeb4008))
+
 ## [1.83.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.82.0...v1.83.0) (2025-03-06)
 
 
