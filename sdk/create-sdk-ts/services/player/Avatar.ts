@@ -5,11 +5,9 @@ import AvatarTransform from './AvatarTransform';
 
 class Avatar implements IAvatar {
   boundingBox?: pc.BoundingBox;
-  collision?: pc.CollisionComponent;
 
   constructor() {
     this.boundingBox = undefined;
-    this.collision = undefined;
   }
 
   get avatarId(): string {
