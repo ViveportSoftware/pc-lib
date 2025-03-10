@@ -86,14 +86,17 @@ export interface IPlayer extends EventHandlerMethods {
 export interface IPlayerEvents {
   /**
    * @planned Triggered when the player starts touching another rigid body.
+   * @param result - Contains details of the contact between the player and the other rigid body.
    */
   collisionstart: (result: pc.ContactResult) => void;
   /**
    * @planned Triggered when the player stops touching another rigid body.
+   * @param other - The rigid body entity that the player is no longer in contact with.
    */
   collisionend: (other: pc.Entity) => void;
   /**
    * @planned Triggered while the player is touching another rigid body.
+   * @param result - Contains details of the contact between the player and the other rigid body.
    */
   contact: (result: pc.ContactResult) => void;
 }
