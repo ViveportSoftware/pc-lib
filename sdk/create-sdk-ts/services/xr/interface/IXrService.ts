@@ -6,7 +6,7 @@ import {IXrController} from './IXrController';
  */
 export interface IXrService extends EventHandlerMethods {
   /**
-   * @planned Gets {@link IXrController|XrController} information.
+   * Gets {@link IXrController|XrController} information.
    */
   readonly controllers: {left?: IXrController; right?: IXrController};
 
@@ -43,13 +43,13 @@ export interface IXrService extends EventHandlerMethods {
 
 export interface IXrServiceEvents {
   /**
-   * @planned Triggered when an {@link IXrController|XrController}'s `XrInputSource` is added.
+   * Triggered when an {@link IXrController|XrController}'s `XrInputSource` is added.
    * The handler receives the {@link IXrController|XrController} associated with the added `XrInputSource`.
    */
   'controller:addInput': (controller: IXrController) => void;
 
   /**
-   * @planned Triggered when an {@link IXrController|XrController}'s `XrInputSource` is removed.
+   * Triggered when an {@link IXrController|XrController}'s `XrInputSource` is removed.
    * The handler receives the {@link IXrController|XrController} associated with the removed `XrInputSource`.
    */
   'controller:removeInput': (controller: IXrController) => void;

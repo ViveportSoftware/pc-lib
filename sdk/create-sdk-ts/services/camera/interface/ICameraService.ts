@@ -21,7 +21,7 @@ export interface ICameraService {
   readonly pov: CameraTypes.PovTypes;
 
   /**
-   * @planned Control whether the VIVERSE CREATE Camera can zoom or not.
+   * Control whether the VIVERSE CREATE Camera can zoom or not.
    */
   canZoom: boolean;
 
