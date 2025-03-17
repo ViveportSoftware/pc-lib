@@ -102,9 +102,6 @@ export const Desc = {
     castShadows: {
       desc: 'Cast Shadows',
     },
-    castLightmapShadows: {
-      desc: 'Cast Lightmap Shadows',
-    },
     receiveShadows: {
       desc: 'Receive Shadows',
     },

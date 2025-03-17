@@ -91,11 +91,6 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: true,
     },
     {
-      name: 'castLightmapShadows',
-      type: 'boolean',
-      default: true,
-    },
-    {
       name: 'receiveShadows',
       type: 'boolean',
       default: true,
