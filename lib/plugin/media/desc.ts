@@ -93,8 +93,8 @@ export const Desc = {
     url: {
       desc: 'Polygon Streaming url',
     },
-    qualityPriority: {
-      desc: 'Quality Priority',
+    priorityLevel: {
+      desc: 'Priority Level',
     },
     useAlpha: {
       desc: 'Use Alpha',
