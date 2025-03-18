@@ -15,11 +15,6 @@ export interface IPlayer extends EventHandlerMethods {
   isVisible: boolean;
 
   /**
-   * @planned Get the display name of player's character.
-   */
-  readonly displayName: string;
-
-  /**
    * @planned Get the status that whether the Player has disconnected from the server.
    */
   readonly isDisposed: boolean;
