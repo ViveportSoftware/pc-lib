@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.85.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.84.0...v1.85.0) (2025-03-20)
+
+
+### Features
+
+* remove cast lightmap shadow for PS ([1a2ddd0](https://github.com/ViveportSoftware/pc-lib/commit/1a2ddd03357eea7871144b0a51124bb23e06e78d))
+
 ## [1.84.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.83.0...v1.84.0) (2025-03-07)
 
 
