@@ -13,11 +13,6 @@ export interface IAvatar extends EventHandlerMethods {
   readonly boundingBox: pc.BoundingBox | null;
 
   /**
-   * @planned Get player's avatar ID.
-   */
-  readonly avatarId: string;
-
-  /**
    * @planned Get player's avatar model link.
    */
   readonly avatarUrl: string;

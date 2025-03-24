@@ -9,10 +9,6 @@ class Avatar implements IAvatar {
     this.boundingBox = null;
   }
 
-  get avatarId(): string {
-    return '';
-  }
-
   get avatarUrl(): string {
     return '';
   }
