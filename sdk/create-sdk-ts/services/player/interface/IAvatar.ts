@@ -1,7 +1,6 @@
 import * as pc from 'playcanvas';
 import {EventHandlerMethods} from '../../../types';
 import * as AvatarTypes from '../enums/avatar';
-import {IAvatarSnapshot} from './IAvatarSnapshot';
 import {IAvatarTransform} from './IAvatarTransform';
 
 /**
@@ -11,7 +10,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * @planned Player avatar's BoundingBox.
    */
-  readonly boundingBox?: pc.BoundingBox;
+  readonly boundingBox: pc.BoundingBox | null;
 
   /**
    * @planned Get player's avatar ID.
@@ -21,12 +20,7 @@ export interface IAvatar extends EventHandlerMethods {
   /**
    * @planned Get player's avatar model link.
    */
-  readonly avatarGlb: string;
-
-  /**
-   * @planned Get player's avatar photo.
-   */
-  readonly snapshot?: IAvatarSnapshot;
+  readonly avatarUrl: string;
 
   /**
    * @planned Get player's avatar gender, default: 0.

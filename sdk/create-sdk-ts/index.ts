@@ -19,7 +19,6 @@ export {
 export {
   IPlayerProfile,
   IAvatarTransform,
-  IAvatarSnapshot,
   IAvatar,
   ILocalPlayer,
   INameTag,

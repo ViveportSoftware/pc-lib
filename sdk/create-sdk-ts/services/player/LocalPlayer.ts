@@ -4,10 +4,10 @@ import Player from './Player';
 
 class LocalPlayer extends Player implements ILocalPlayer {
   canMove = true;
-  canJump = true;
-  canHardLanding = true;
   canRun = true;
+  canJump = true;
   canFly = undefined;
+  canHardLanding = true;
   respawnPosition: pc.Vec3 | null = null;
   fallingGravityMultiplier = 1;
   gravityMultiplier = 1;
