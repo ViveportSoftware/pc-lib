@@ -11,14 +11,14 @@ export interface ILocalPlayer extends IPlayer {
   canMove: boolean;
 
   /**
+   * Whether the player can run.
+   */
+  canRun: boolean;
+
+  /**
    * Whether the player can jump.
    */
   canJump: boolean;
-
-  /**
-   * Whenther the player can hard land.
-   */
-  canHardLanding: boolean;
 
   /**
    * Whenther the player can fly.
@@ -26,9 +26,9 @@ export interface ILocalPlayer extends IPlayer {
   canFly: boolean | undefined;
 
   /**
-   * Whether the player can run.
+   * Whenther the player can hard land.
    */
-  canRun: boolean;
+  canHardLanding: boolean;
 
   /**
    * Player's respawn point, default is null.<br>
@@ -96,7 +96,7 @@ export interface ILocalPlayer extends IPlayer {
    * @param {Object} [options] - Optional parameters.
    * @param {boolean} [options.loop=false] - Loop the animation. Default is false.
    * @param {boolean} [options.lock=false] - Lock the animation. Default is false.
-   * @param {pc.Asset} [options.asset] - Send the vram file.
+   * @param {pc.Asset} [options.asset] - Send the vrma file.
    * @returns {Promise<pc.Asset|null>} - Return the animation asset.
    */
   playAnimation(
@@ -142,7 +142,7 @@ export interface ILocalPlayer extends IPlayer {
   changeAvatar(asset: pc.Asset): void;
 
   /**
-   * @planned Reset the avatar model to the default VIVERSE avatar model.
+   * Reset the avatar model to the default VIVERSE avatar model.
    */
   resetToViverseAvatar(): void;
 

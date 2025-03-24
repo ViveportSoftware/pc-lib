@@ -11,16 +11,12 @@ class Player implements IPlayer {
     this.isVisible = true;
   }
 
-  get collision(): pc.CollisionComponent | null {
-    return null;
-  }
-
-  get displayName(): string {
-    return '';
-  }
-
   get isDisposed(): boolean {
     return false;
+  }
+
+  get collision(): pc.CollisionComponent | null {
+    return null;
   }
 
   /**
@@ -48,10 +44,6 @@ class Player implements IPlayer {
    * @type {PlayerProfile | undefined}
    */
   get profile(): PlayerProfile | undefined {
-    return undefined;
-  }
-
-  get entity(): pc.Entity | undefined {
     return undefined;
   }
 
