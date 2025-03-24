@@ -1,28 +1,20 @@
 import {IAvatar, IAvatarEvents} from './interface/IAvatar';
 import * as AvatarTypes from './enums/avatar';
-import AvatarSnapshot from './AvatarSnapshot';
 import AvatarTransform from './AvatarTransform';
 
 class Avatar implements IAvatar {
-  boundingBox?: pc.BoundingBox;
+  boundingBox: pc.BoundingBox | null;
 
   constructor() {
-    this.boundingBox = undefined;
+    this.boundingBox = null;
   }
 
   get avatarId(): string {
     return '';
   }
 
-  get avatarGlb(): string {
+  get avatarUrl(): string {
     return '';
-  }
-
-  /**
-   * @type {AvatarSnapshot | undefined}
-   */
-  get snapshot(): AvatarSnapshot | undefined {
-    return undefined;
   }
 
   get gender(): AvatarTypes.GenderTypes {
@@ -37,10 +29,6 @@ class Avatar implements IAvatar {
    * @type {AvatarTransform | undefined}
    */
   get transform(): AvatarTransform | undefined {
-    return undefined;
-  }
-
-  get entity(): pc.Entity | undefined {
     return undefined;
   }
 
