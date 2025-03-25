@@ -51,3 +51,13 @@ export {
   IXrController,
   IXrControllerEvents,
 } from './services/xr';
+export {
+  QuestService,
+  IQuestService,
+  IQuestServiceEvents,
+  IQuest,
+  IQuestEvents,
+  ITask,
+  ITaskEvents,
+  TaskTypes,
+} from './services/quest';
