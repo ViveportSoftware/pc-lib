@@ -26,18 +26,6 @@ class Task implements ITask {
     return false;
   }
 
-  get currentProgress(): number | undefined {
-    return undefined;
-  }
-
-  get totalProgress(): number | undefined {
-    return undefined;
-  }
-
-  check(): void {}
-
-  updateProgress(progress: number): void {}
-
   on<T extends keyof ITaskEvents>(
     event: T,
     listener: ITaskEvents[T]

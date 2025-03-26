@@ -1,4 +1,6 @@
+import {TaskType} from '../../../../../lib/plugin/quest/type';
+
 export enum CompletionTypes {
-  Check = 0,
-  ProgressBar = 1,
+  Check = TaskType.check,
+  ProgressBar = TaskType.progressBar,
 }

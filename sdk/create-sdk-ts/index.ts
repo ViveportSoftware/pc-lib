@@ -59,5 +59,8 @@ export {
   IQuestEvents,
   ITask,
   ITaskEvents,
+  ICheckTask,
+  IProgressBarTask,
+  IProgressBarTaskEvents,
   TaskTypes,
 } from './services/quest';
