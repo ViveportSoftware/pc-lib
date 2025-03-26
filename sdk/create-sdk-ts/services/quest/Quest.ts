@@ -1,16 +1,11 @@
 import * as pc from 'playcanvas';
 import {IQuest, IQuestEvents} from './interface/IQuest';
 import {ITask} from './interface/ITask';
-import * as TaskTypes from './enums/task';
+import {ICheckTask} from './interface/ICheckTask';
+import {IProgressBarTask} from './interface/IProgressBarTask';
 
 class Quest implements IQuest {
-  isActive: boolean;
-  startAutomatically: boolean;
-
-  constructor() {
-    this.isActive = false;
-    this.startAutomatically = false;
-  }
+  constructor() {}
 
   get id(): number {
     return 0;
@@ -32,15 +27,27 @@ class Quest implements IQuest {
     return false;
   }
 
-  addTask(
+  get isActive(): boolean {
+    return false;
+  }
+
+  addCheckTask(
     description: string,
-    type: TaskTypes.CompletionTypes,
     options?: {
-      totalProgress?: number;
       onCompleted?: () => void;
     }
-  ): ITask {
-    return {} as ITask;
+  ): ICheckTask {
+    return {} as ICheckTask;
+  }
+
+  addProgressBarTask(
+    description: string,
+    totalProgress: number,
+    options?: {
+      onCompleted?: () => void;
+    }
+  ): IProgressBarTask {
+    return {} as IProgressBarTask;
   }
 
   start(): void {}
@@ -48,14 +55,6 @@ class Quest implements IQuest {
   reset(): void {}
 
   getTaskById(): ITask | null {
-    return null;
-  }
-
-  getTasksByType(): ITask[] | null {
-    return null;
-  }
-
-  getTasksByCompletionStatus(completed: boolean): ITask[] | null {
     return null;
   }
 

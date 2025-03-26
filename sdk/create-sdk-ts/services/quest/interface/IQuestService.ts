@@ -1,28 +1,32 @@
 import {EventHandlerMethods} from '../../../types';
 import {IQuest} from './IQuest';
-import {ITask} from './ITask';
 
 /**
  * Define QuestService interface.
  */
 export interface IQuestService extends EventHandlerMethods {
   /**
-   * @planned Get the information of all remote players in the room.
+   * @planned The information of all quests.
    */
   readonly quests: Map<number, IQuest> | null;
 
   /**
+   * @planned Whether the system is ready.
+   */
+  readonly isSystemReady: boolean;
+
+  /**
    * @planned Add a new quest.
-   * @param {string} name -
+   * @param {string} name - The name of the quest.
    * @param {Object} [options] - Optional parameters.
-   * @param {number} [options.delay=0] -
-   * @param {() => void} [options.onCompleted] - Callback function triggered when the task is completed.
+   * @param {string} [options.description] - The description of the quest.
+   * @param {() => void} [options.onCompleted] - Callback function triggered when the quest is completed.
+   * @returns {IQuest} The quest object.
    */
   addQuest(
     name: string,
     options?: {
       description?: string;
-      startAutomatically?: boolean;
       onCompleted?: () => void;
     }
   ): IQuest;
@@ -35,12 +39,14 @@ export interface IQuestService extends EventHandlerMethods {
   /**
    * @planned Get a quest by ID.
    * @param {number} id - Quest ID.
+   * @returns {IQuest | null} The quest object.
    */
   getQuestById(id: number): IQuest | null;
 
   /**
    * @planned Get a quest by name. If there are multiple quests with the same name, the first one is returned.
    * @param {string} name - Quest name.
+   * @returns {IQuest | null} The quest object.
    */
   getQuestByName(name: string): IQuest | null;
 
@@ -77,9 +83,9 @@ export interface IQuestService extends EventHandlerMethods {
 
 export interface IQuestServiceEvents {
   /**
-   * @planned Triggered when quests from scene settings are loaded.
+   * @planned Triggered when the quest system is ready.
    */
-  load: (quests: IQuest[]) => void;
+  ready: (quests: Map<number, IQuest>) => void;
 
   /**
    * @planned Triggered when all quests are completed.
@@ -88,26 +94,19 @@ export interface IQuestServiceEvents {
 
   /**
    * @planned Triggered when a quest is started.
+   * @param quest - The quest object.
    */
   'quest:start': (quest: IQuest) => void;
 
   /**
+   * @planned Triggered when a quest is updated.
+   * @param quest - The quest object.
+   */
+  'quest:update': (quest: IQuest) => void;
+
+  /**
    * @planned Triggered when a quest is completed.
+   * @param quest - The quest object.
    */
   'quest:complete': (quest: IQuest) => void;
-
-  /**
-   * @planned Triggered when a task is completed.
-   */
-  'task:complete': (task: ITask) => void;
-
-  /**
-   * @planned Triggered when a check task is completed.
-   */
-  'task:check': (task: ITask) => void;
-
-  /**
-   * @planned Triggered when a progressBar task is updated.
-   */
-  'task:progressUpdate': (task: ITask) => void;
 }

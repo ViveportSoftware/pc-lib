@@ -14,11 +14,14 @@ class QuestService implements IQuestService {
     return null;
   }
 
+  get isSystemReady(): boolean {
+    return false;
+  }
+
   addQuest(
     name: string,
     options?: {
       description?: string;
-      startAutomatically?: boolean;
       onCompleted?: () => void;
     }
   ): IQuest {

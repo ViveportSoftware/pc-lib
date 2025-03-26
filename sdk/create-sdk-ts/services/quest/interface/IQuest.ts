@@ -1,9 +1,10 @@
 import * as pc from 'playcanvas';
 import {ITask} from './ITask';
-import * as TaskTypes from '../enums/task';
+import {ICheckTask} from './ICheckTask';
+import {IProgressBarTask} from './IProgressBarTask';
 
 /**
- * Define the interface of XrController.
+ * Define Quest Interface.
  */
 export interface IQuest {
   /**
@@ -27,40 +28,48 @@ export interface IQuest {
   readonly tasks: Map<number, ITask> | null;
 
   /**
-   * @planned The completion status of the quest.
+   * @planned Whether the quest is completed.
    */
   readonly isCompleted: boolean;
 
   /**
-   * @planned The active status of the quest.
+   * @planned Whether the quest is active.
    */
-  isActive: boolean;
+  readonly isActive: boolean;
 
   /**
-   * @planned Determine whether the quest starts automatically when the player joins.
-   */
-  startAutomatically: boolean;
-
-  /**
-   * @planned
-   * @param {TaskTypes.CompletionTypes} type - The type of the task. The asset type can be either `check` or `progressBar`.
+   * @planned Add a new check task.
+   * @param {string} description - The description of the task.
    * @param {Object} [options] - Optional parameters.
-   * @param {number} [options.delay=0] -
    * @param {() => void} [options.onCompleted] - Callback function triggered when the task is completed.
+   * @returns {ICheckTask} The check task object.
    */
-  addTask( // addCheckTask / addProgressBarTask
+  addCheckTask(
     description: string,
-    type: TaskTypes.CompletionTypes,
     options?: {
-      totalProgress?: number;
       onCompleted?: () => void;
     }
-  ): void;
+  ): ICheckTask;
+
+  /**
+   * @planned Add a new progress bar task.
+   * @param {string} description - The description of the task.
+   * @param {Object} [options] - Optional parameters.
+   * @param {() => void} [options.onCompleted] - Callback function triggered when the task is completed.
+   * @returns {IProgressBarTask} The progress bar task object.
+   */
+  addProgressBarTask(
+    description: string,
+    totalProgress: number,
+    options?: {
+      onCompleted?: () => void;
+    }
+  ): IProgressBarTask;
 
   /**
    * @planned Start the quest.
    */
-  start(): void; // is Avtive?
+  start(): void;
 
   /**
    * @planned Reset the quest.
@@ -70,17 +79,7 @@ export interface IQuest {
   /**
    * @planned Get a task by ID.
    */
-  getTaskById(): ITask | null;
-
-  /**
-   * @planned Get tasks by type.
-   */
-  getTasksByType(): ITask[] | null;
-
-  /**
-   * @planned Get tasks by completion status.
-   */
-  getTasksByCompletionStatus(completed: boolean): ITask[] | null; //TODO?
+  getTaskById(id: number): ITask | null;
 
   /**
    * Subscribe to a specific event.
@@ -112,12 +111,32 @@ export interface IQuest {
 
 export interface IQuestEvents {
   /**
+   * @planned Triggered when the quest is started.
+   */
+  start: () => void;
+
+  /**
    * @planned Triggered when the quest is completed.
    */
   complete: () => void;
 
   /**
-   * @planned Triggered when the quest is started.
+   * @planned Triggered when the quest is updated.
    */
-  start: () => void;
+  update: () => void;
+
+  /**
+   * @planned Triggered when a task of the quest is completed.
+   */
+  'task:complete': (task: ITask) => void;
+
+  /**
+   * @planned Triggered when a {@link ICheckTask|CheckTask} of the quest is completed.
+   */
+  'task:check': (task: ICheckTask) => void;
+
+  /**
+   * @planned Triggered when a {@link IProgressBarTask|ProgressBar} of the quest is updated.
+   */
+  'task:progressUpdate': (task: IProgressBarTask) => void;
 }
