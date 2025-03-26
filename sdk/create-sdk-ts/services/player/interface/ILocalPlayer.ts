@@ -142,7 +142,7 @@ export interface ILocalPlayer extends IPlayer {
   changeAvatar(asset: pc.Asset): void;
 
   /**
-   * @planned Reset the avatar model to the default VIVERSE avatar model.
+   * Reset the avatar model to the default VIVERSE avatar model.
    */
   resetToViverseAvatar(): void;
 

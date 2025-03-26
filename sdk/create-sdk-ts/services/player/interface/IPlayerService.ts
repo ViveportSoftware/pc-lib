@@ -7,17 +7,17 @@ import {EventHandlerMethods} from '../../../types';
  */
 export interface IPlayerService extends EventHandlerMethods {
   /**
-   * @planned Get local player information.
+   * Get local player information.
    */
   readonly localPlayer: ILocalPlayer | null;
 
   /**
-   * @planned Get the information of all remote players in the room.
+   * Get the information of all remote players in the room.
    */
   readonly remotePlayers: IRemotePlayer[];
 
   /**
-   * @planned Get the number of players currently connected in the room.
+   * Get the number of players currently connected in the room.
    */
   readonly playerCount: number;
 
