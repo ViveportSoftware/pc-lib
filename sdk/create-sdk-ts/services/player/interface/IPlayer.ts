@@ -25,22 +25,22 @@ export interface IPlayer extends EventHandlerMethods {
   readonly isDisposed: boolean;
 
   /**
-   * @planned Get the player's avatar information.
+   * Get the player's avatar information.
    */
   readonly avatar?: IAvatar;
 
   /**
-   * @planned Get the player's server connection information.
+   * Get the player's server connection information.
    */
   readonly network?: INetwork;
 
   /**
-   * @planned Get the player's name tag.
+   * Get the player's name tag.
    */
   readonly nameTag?: INameTag;
 
   /**
-   * @planned Get the player's profile information.
+   * Get the player's profile information.
    */
   readonly profile?: IPlayerProfile;
 
