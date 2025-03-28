@@ -17,9 +17,9 @@ export interface IProgressBarTask extends ITask {
 
   /**
    * @planned Update the progress of the task.
-   * @param progress - Optional progress value. If not provided, the progress is incremented by 1.
+   * @param increment - Optional increment value. If not provided, the progress is incremented by 1.
    */
-  updateProgress(progress?: number): void;
+  addProgress(increment?: number): void;
 
   /**
    *

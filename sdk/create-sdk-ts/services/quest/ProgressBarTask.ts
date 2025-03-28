@@ -23,7 +23,7 @@ class ProgressBarTask extends Task implements IProgressBarTask {
     return 0;
   }
 
-  updateProgress(progress?: number): void {}
+  addProgress(increment?: number): void {}
 
   on<T extends keyof IProgressBarTaskEvents>(
     event: T,

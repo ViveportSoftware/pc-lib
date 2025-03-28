@@ -85,7 +85,7 @@ export interface IQuestServiceEvents {
   /**
    * @planned Triggered when the quest system is ready.
    */
-  ready: (quests: Map<number, IQuest>) => void;
+  'system:ready': (quests: Map<number, IQuest>) => void;
 
   /**
    * @planned Triggered when all quests are completed.
