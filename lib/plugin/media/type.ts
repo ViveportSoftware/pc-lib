@@ -14,3 +14,10 @@ export enum SourceType {
   Asset = 0,
   Url = 1,
 }
+
+export enum PriorityType {
+  Default = 1,
+  Higher = 2,
+  Highest = 3,
+  Custom = 4,
+}
