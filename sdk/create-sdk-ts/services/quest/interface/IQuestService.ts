@@ -12,6 +12,15 @@ export interface IQuestService extends EventHandlerMethods {
 
   /**
    * @planned Whether the system is ready.
+   * @example
+   * // The quest system might not be ready when the script is loaded.
+   * if(questService.isSystemReady){
+   *   console.log('Quest system is ready', questService.quests);
+   * } else {
+   *   questService.on('system:ready', () => {
+   *     console.log('Quest system is ready', questService.quests);
+   *   });
+   * }
    */
   readonly isSystemReady: boolean;
 
@@ -22,6 +31,17 @@ export interface IQuestService extends EventHandlerMethods {
    * @param {string} [options.description] - The description of the quest.
    * @param {() => void} [options.onCompleted] - Callback function triggered when the quest is completed.
    * @returns {IQuest} The quest object.
+   * @example
+   * const quest = questService.addQuest(
+   *  'Quest 1',
+   *  {
+   *  description: 'This is a quest.',
+   *  onCompleted: () => console.log('Quest 1 is completed.')
+   *  }
+   * );
+   * quest.addCheckTask('Task 1: Move', {onCompleted: () => console.log('Task 1 is completed.')});
+   * quest.addProgressBarTask('Task 2: Jump 3 times', 3, {onCompleted: () => console.log('Task 2 is completed.')});
+   * quest.start();
    */
   addQuest(
     name: string,
@@ -84,6 +104,15 @@ export interface IQuestService extends EventHandlerMethods {
 export interface IQuestServiceEvents {
   /**
    * @planned Triggered when the quest system is ready.
+   * @example
+   * // The quest system might not be ready when the script is loaded.
+   * if(questService.isSystemReady){
+   *   console.log('Quest system is ready', questService.quests);
+   * } else {
+   *   questService.on('system:ready', () => {
+   *     console.log('Quest system is ready', questService.quests);
+   *   });
+   * }
    */
   'system:ready': (quests: Map<number, IQuest>) => void;
 

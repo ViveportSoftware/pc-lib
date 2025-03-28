@@ -68,8 +68,9 @@ export interface IQuest {
 
   /**
    * @planned Start the quest.
+   * @param {number} [delay] - Delay in milliseconds.
    */
-  start(): void;
+  start(delay?: number): void;
 
   /**
    * @planned Reset the quest.
@@ -78,6 +79,7 @@ export interface IQuest {
 
   /**
    * @planned Get a task by ID.
+   * @param {number} id - Task ID.
    */
   getTaskById(id: number): ITask | null;
 
