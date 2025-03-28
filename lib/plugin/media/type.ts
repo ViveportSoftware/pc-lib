@@ -16,8 +16,8 @@ export enum SourceType {
 }
 
 export enum PriorityType {
-  Low = 1,
-  Medium = 2,
-  High = 3,
+  Default = 1,
+  Higher = 2,
+  Highest = 3,
   Custom = 4,
 }
