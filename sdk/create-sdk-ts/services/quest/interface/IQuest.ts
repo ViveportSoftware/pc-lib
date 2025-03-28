@@ -68,9 +68,8 @@ export interface IQuest {
 
   /**
    * @planned Start the quest.
-   * @param {number} [delay] - Delay in milliseconds.
    */
-  start(delay?: number): void;
+  start(): void;
 
   /**
    * @planned Reset the quest.
