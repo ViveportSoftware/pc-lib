@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.86.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.85.0...v1.86.0) (2025-03-31)
+
+
+### Features
+
+* add custom enum ([e07919d](https://github.com/ViveportSoftware/pc-lib/commit/e07919deeb22e75e7a9841e583d426c3fe824897))
+* auto select priority quality ([24cf6a0](https://github.com/ViveportSoftware/pc-lib/commit/24cf6a0241e07c3632c411cacc001dfd77181636))
+* use default as enum ([d004c52](https://github.com/ViveportSoftware/pc-lib/commit/d004c529bd3024d10e75bb0590926ba0f384cb9c))
+
 ## [1.85.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.84.0...v1.85.0) (2025-03-20)
 
 
