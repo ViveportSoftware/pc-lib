@@ -9,3 +9,4 @@ export {
 } from './services/player';
 export {NetworkService} from './services/network';
 export {XrService} from './services/xr';
+export {QuestService, TaskTypes} from './services/quest';
