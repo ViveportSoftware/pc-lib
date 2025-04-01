@@ -135,28 +135,6 @@ class AvatarTransform {
     }
 }
 
-class AvatarSnapshot {
-    #head;
-    #fullBody;
-    constructor(data) {
-        const { head, fullBody } = data;
-        this.#head = head;
-        this.#fullBody = fullBody;
-    }
-    /**
-     * @type {string}
-     */
-    get head() {
-        return this.#head;
-    }
-    /**
-     * @type {string}
-     */
-    get fullBody() {
-        return this.#fullBody;
-    }
-}
-
 var GenderTypes;
 (function (GenderTypes) {
     GenderTypes[GenderTypes["Female"] = 0] = "Female";
@@ -182,22 +160,11 @@ var avatar = /*#__PURE__*/Object.freeze({
 
 class Avatar {
     boundingBox;
-    collision;
     constructor() {
-        this.boundingBox = undefined;
-        this.collision = undefined;
+        this.boundingBox = null;
     }
-    get avatarId() {
+    get avatarUrl() {
         return '';
-    }
-    get avatarGlb() {
-        return '';
-    }
-    /**
-     * @type {AvatarSnapshot | undefined}
-     */
-    get snapshot() {
-        return undefined;
     }
     get gender() {
         return GenderTypes.Female;
@@ -209,9 +176,6 @@ class Avatar {
      * @type {AvatarTransform | undefined}
      */
     get transform() {
-        return undefined;
-    }
-    get entity() {
         return undefined;
     }
     getBone(boneName) {
@@ -268,11 +232,11 @@ class Player {
     constructor() {
         this.isVisible = true;
     }
-    get displayName() {
-        return '';
-    }
     get isDisposed() {
         return false;
+    }
+    get collision() {
+        return null;
     }
     /**
      * @type {Avatar | undefined}
@@ -296,9 +260,6 @@ class Player {
      * @type {PlayerProfile | undefined}
      */
     get profile() {
-        return undefined;
-    }
-    get entity() {
         return undefined;
     }
     on(event, listener) {
@@ -338,10 +299,10 @@ class RemotePlayer extends Player {
 
 class LocalPlayer extends Player {
     canMove = true;
-    canJump = true;
-    canHardLanding = true;
     canRun = true;
+    canJump = true;
     canFly = undefined;
+    canHardLanding = true;
     respawnPosition = null;
     fallingGravityMultiplier = 1;
     gravityMultiplier = 1;
@@ -523,7 +484,157 @@ class XrController {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, XrService, version };
+class QuestService {
+    static _instance;
+    constructor() {
+        if (QuestService._instance)
+            return QuestService._instance;
+        QuestService._instance = this;
+    }
+    get quests() {
+        return null;
+    }
+    get isSystemReady() {
+        return false;
+    }
+    addQuest(name, options) {
+        return {};
+    }
+    resetAllQuests() { }
+    getQuestById(id) {
+        return null;
+    }
+    getQuestByName(name) {
+        return null;
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+class Quest {
+    constructor() { }
+    get id() {
+        return 0;
+    }
+    get name() {
+        return '';
+    }
+    get description() {
+        return '';
+    }
+    get tasks() {
+        return null;
+    }
+    get isCompleted() {
+        return false;
+    }
+    get isActive() {
+        return false;
+    }
+    addCheckTask(description, options) {
+        return {};
+    }
+    addProgressBarTask(description, totalProgress, options) {
+        return {};
+    }
+    start() { }
+    reset() { }
+    getTaskById() {
+        return null;
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+var CompletionTypes;
+(function (CompletionTypes) {
+    CompletionTypes[CompletionTypes["Check"] = 1] = "Check";
+    CompletionTypes[CompletionTypes["ProgressBar"] = 2] = "ProgressBar";
+})(CompletionTypes || (CompletionTypes = {}));
+
+var task = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get CompletionTypes () { return CompletionTypes; }
+});
+
+class Task {
+    constructor() { }
+    get id() {
+        return 0;
+    }
+    get description() {
+        return '';
+    }
+    get type() {
+        return CompletionTypes.Check;
+    }
+    get quest() {
+        return {};
+    }
+    get isCompleted() {
+        return false;
+    }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+class CheckTask extends Task {
+    constructor() {
+        super();
+    }
+    get type() {
+        return CompletionTypes.Check;
+    }
+    check() { }
+}
+
+class ProgressBarTask extends Task {
+    constructor() {
+        super();
+    }
+    get type() {
+        return CompletionTypes.Check;
+    }
+    get currentProgress() {
+        return 0;
+    }
+    get totalProgress() {
+        return 0;
+    }
+    addProgress(increment) { }
+    on(event, listener) {
+        return {};
+    }
+    off(event, listener) {
+        return {};
+    }
+    fire(event, ...args) {
+        return {};
+    }
+}
+
+export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, QuestService, task as TaskTypes, XrService, version };
 `;
 
 export { content };
