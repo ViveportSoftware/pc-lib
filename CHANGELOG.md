@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.87.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.86.0...v1.87.0) (2025-04-01)
+
+
+### Features
+
+* add player collision events, move collision from IAvatar to IPlayer, remove colliderHit ([c34e29e](https://github.com/ViveportSoftware/pc-lib/commit/c34e29e51eccb51c671a074c7e768233db292205))
+* add sdk quest service ([a3f5c26](https://github.com/ViveportSoftware/pc-lib/commit/a3f5c26b604593b891750a1d9b9efac55d5e9c4b))
+* gen document files & extension template ([aa93927](https://github.com/ViveportSoftware/pc-lib/commit/aa93927414e5564ae9f646fca73144d453c2cea8))
+
 ## [1.86.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.85.0...v1.86.0) (2025-03-31)
 
 
