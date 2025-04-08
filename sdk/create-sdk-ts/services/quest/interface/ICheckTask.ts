@@ -5,7 +5,7 @@ import {ITask} from './ITask';
  */
 export interface ICheckTask extends ITask {
   /**
-   * @planned Check to complete the task.
+   * Check to complete the task.
    */
   check(): void;
 }

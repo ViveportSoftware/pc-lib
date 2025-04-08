@@ -7,27 +7,27 @@ import * as TaskTypes from '../enums/task';
  */
 export interface ITask {
   /**
-   * @planned The ID of the task.
+   * The ID of the task.
    */
   readonly id: number;
 
   /**
-   * @planned The description of the task.
+   * The description of the task.
    */
   readonly description: string;
 
   /**
-   * @planned The type of the task.
+   * The type of the task.
    */
   readonly type: TaskTypes.CompletionTypes;
 
   /**
-   * @planned The parent quest of the task.
+   * The parent quest of the task.
    */
   readonly quest: IQuest;
 
   /**
-   * @planned Whether the task is completed.
+   * Whether the task is completed.
    */
   readonly isCompleted: boolean;
 
@@ -61,7 +61,7 @@ export interface ITask {
 
 export interface ITaskEvents {
   /**
-   * @planned Triggered when the task is completed.
+   * Triggered when the task is completed.
    */
   complete: () => void;
 }
