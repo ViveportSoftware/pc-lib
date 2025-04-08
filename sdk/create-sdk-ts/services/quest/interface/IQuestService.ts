@@ -6,12 +6,12 @@ import {IQuest} from './IQuest';
  */
 export interface IQuestService extends EventHandlerMethods {
   /**
-   * @planned The information of all quests.
+   * The information of all quests.
    */
   readonly quests: Map<number, IQuest> | null;
 
   /**
-   * @planned Whether the system is ready.
+   * Whether the system is ready.
    * @example
    * // The quest system might not be ready when the script is loaded.
    * if(questService.isSystemReady){
@@ -25,7 +25,7 @@ export interface IQuestService extends EventHandlerMethods {
   readonly isSystemReady: boolean;
 
   /**
-   * @planned Add a new quest.
+   * Add a new quest.
    * @param {string} name - The name of the quest.
    * @param {Object} [options] - Optional parameters.
    * @param {string} [options.description] - The description of the quest.
@@ -52,19 +52,19 @@ export interface IQuestService extends EventHandlerMethods {
   ): IQuest;
 
   /**
-   * @planned Reset all quests.
+   * Reset all quests.
    */
   resetAllQuests(): void;
 
   /**
-   * @planned Get a quest by ID.
+   * Get a quest by ID.
    * @param {number} id - Quest ID.
    * @returns {IQuest | null} The quest object.
    */
   getQuestById(id: number): IQuest | null;
 
   /**
-   * @planned Get a quest by name. If there are multiple quests with the same name, the first one is returned.
+   * Get a quest by name. If there are multiple quests with the same name, the first one is returned.
    * @param {string} name - Quest name.
    * @returns {IQuest | null} The quest object.
    */
@@ -103,7 +103,7 @@ export interface IQuestService extends EventHandlerMethods {
 
 export interface IQuestServiceEvents {
   /**
-   * @planned Triggered when the quest system is ready.
+   * Triggered when the quest system is ready.
    * @example
    * // The quest system might not be ready when the script is loaded.
    * if(questService.isSystemReady){
@@ -117,24 +117,24 @@ export interface IQuestServiceEvents {
   'system:ready': (quests: Map<number, IQuest>) => void;
 
   /**
-   * @planned Triggered when all quests are completed.
+   * Triggered when all quests are completed.
    */
   allQuestsComplete: () => void;
 
   /**
-   * @planned Triggered when a quest is started.
+   * Triggered when a quest is started.
    * @param quest - The quest object.
    */
   'quest:start': (quest: IQuest) => void;
 
   /**
-   * @planned Triggered when a quest is updated.
+   * Triggered when a quest is updated.
    * @param quest - The quest object.
    */
   'quest:update': (quest: IQuest) => void;
 
   /**
-   * @planned Triggered when a quest is completed.
+   * Triggered when a quest is completed.
    * @param quest - The quest object.
    */
   'quest:complete': (quest: IQuest) => void;

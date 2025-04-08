@@ -6,17 +6,17 @@ import {ITask, ITaskEvents} from './ITask';
  */
 export interface IProgressBarTask extends ITask {
   /**
-   * @planned The current progress steps.
+   * The current progress step.
    */
   readonly currentProgress: number;
 
   /**
-   * @planned The total progress steps needed to complete the task.
+   * The total progress steps needed to complete the task.
    */
   readonly totalProgress: number;
 
   /**
-   * @planned Update the progress of the task.
+   * Update the progress of the task.
    * @param increment - Optional increment value. If not provided, the progress is incremented by 1.
    */
   addProgress(increment?: number): void;
@@ -55,7 +55,7 @@ export interface IProgressBarTask extends ITask {
 
 export interface IProgressBarTaskEvents extends ITaskEvents {
   /**
-   * @planned Triggered when the progress of the task is updated.
+   * Triggered when the progress of the task is updated.
    * @param currentProgress - The current progress of the task.
    * @param totalProgress - The total progress needed to complete the task.
    */

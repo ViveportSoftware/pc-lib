@@ -8,37 +8,37 @@ import {IProgressBarTask} from './IProgressBarTask';
  */
 export interface IQuest {
   /**
-   * @planned The ID of the quest.
+   * The ID of the quest.
    */
   readonly id: number;
 
   /**
-   * @planned The name of the quest.
+   * The name of the quest.
    */
   readonly name: string;
 
   /**
-   * @planned The description of the quest.
+   * The description of the quest.
    */
   readonly description: string;
 
   /**
-   * @planned Get the list of tasks in the quest.
+   * Get the list of tasks in the quest.
    */
   readonly tasks: Map<number, ITask> | null;
 
   /**
-   * @planned Whether the quest is completed.
+   * Whether the quest is completed.
    */
   readonly isCompleted: boolean;
 
   /**
-   * @planned Whether the quest is active.
+   * Whether the quest is active.
    */
   readonly isActive: boolean;
 
   /**
-   * @planned Add a new check task.
+   * Add a new check task.
    * @param {string} description - The description of the task.
    * @param {Object} [options] - Optional parameters.
    * @param {() => void} [options.onCompleted] - Callback function triggered when the task is completed.
@@ -52,7 +52,7 @@ export interface IQuest {
   ): ICheckTask;
 
   /**
-   * @planned Add a new progress bar task.
+   * Add a new progress bar task.
    * @param {string} description - The description of the task.
    * @param {Object} [options] - Optional parameters.
    * @param {() => void} [options.onCompleted] - Callback function triggered when the task is completed.
@@ -67,17 +67,17 @@ export interface IQuest {
   ): IProgressBarTask;
 
   /**
-   * @planned Start the quest.
+   * Start the quest.
    */
   start(): void;
 
   /**
-   * @planned Reset the quest.
+   * Reset the quest.
    */
   reset(): void;
 
   /**
-   * @planned Get a task by ID.
+   * Get a task by ID.
    * @param {number} id - Task ID.
    */
   getTaskById(id: number): ITask | null;
@@ -112,32 +112,32 @@ export interface IQuest {
 
 export interface IQuestEvents {
   /**
-   * @planned Triggered when the quest is started.
+   * Triggered when the quest is started.
    */
   start: () => void;
 
   /**
-   * @planned Triggered when the quest is completed.
+   * Triggered when the quest is completed.
    */
   complete: () => void;
 
   /**
-   * @planned Triggered when the quest is updated.
+   * Triggered when the quest is updated.
    */
   update: () => void;
 
   /**
-   * @planned Triggered when a task of the quest is completed.
+   * Triggered when a task of the quest is completed.
    */
   'task:complete': (task: ITask) => void;
 
   /**
-   * @planned Triggered when a {@link ICheckTask|CheckTask} of the quest is completed.
+   * Triggered when a {@link ICheckTask|CheckTask} of the quest is completed.
    */
   'task:check': (task: ICheckTask) => void;
 
   /**
-   * @planned Triggered when a {@link IProgressBarTask|ProgressBar} of the quest is updated.
+   * Triggered when a {@link IProgressBarTask|ProgressBar} of the quest is updated.
    */
   'task:progressUpdate': (task: IProgressBarTask) => void;
 }
