@@ -50,6 +50,7 @@ export {
   IXrServiceEvents,
   IXrController,
   IXrControllerEvents,
+  XrTypes,
 } from './services/xr';
 export {
   QuestService,

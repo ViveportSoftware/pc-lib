@@ -8,5 +8,5 @@ export {
   MoveTypes,
 } from './services/player';
 export {NetworkService} from './services/network';
-export {XrService} from './services/xr';
+export {XrService, XrTypes} from './services/xr';
 export {QuestService, TaskTypes} from './services/quest';
