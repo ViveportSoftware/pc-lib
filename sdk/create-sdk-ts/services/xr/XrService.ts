@@ -1,6 +1,7 @@
 import * as pc from 'playcanvas';
 import {IXrService, IXrServiceEvents} from './interface/IXrService';
 import {IXrController} from './interface/IXrController';
+import * as XrTypes from './enums/xr';
 
 class XrService implements IXrService {
   private static _instance?: XrService;
@@ -10,9 +11,17 @@ class XrService implements IXrService {
     XrService._instance = this;
   }
 
+  get isVrReady(): boolean {
+    return false;
+  }
+
   get controllers(): {left?: IXrController; right?: IXrController} {
     return {left: undefined, right: undefined};
   }
+
+  start(type: XrTypes.SessionTypes): void {}
+
+  end(): void {}
 
   on<T extends keyof IXrServiceEvents>(
     event: T,
