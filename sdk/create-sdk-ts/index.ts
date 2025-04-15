@@ -11,6 +11,7 @@ export const toTemplateLiteral = () => {
 
 export {version} from './metadata';
 export {CameraService, ICameraService, CameraTypes} from './services/camera';
+export {DeviceService, IDeviceService, DeviceTypes} from './services/device';
 export {
   EnvironmentService,
   IEnvironmentService,

@@ -1,5 +1,6 @@
 export {version} from './metadata';
 export {CameraService, CameraTypes} from './services/camera';
+export {DeviceService, DeviceTypes} from './services/device';
 export {EnvironmentService, EnvironmentTypes} from './services/environment';
 export {
   PlayerService,
