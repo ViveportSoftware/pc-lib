@@ -109,14 +109,7 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       name: 'initialTrianglePercent',
       type: 'number',
       default: 0.5,
-    },
-    {
-      name: 'layers',
-      type: 'number',
-      array: true,
-      default: [],
-      layersPicker: true,
-    },
+    }
   ],
 };
 
