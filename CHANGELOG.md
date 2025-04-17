@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.88.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.87.0...v1.88.0) (2025-04-17)
+
+
+### Features
+
+* remove layers in PS ([#298](https://github.com/ViveportSoftware/pc-lib/issues/298)) ([5e30c0c](https://github.com/ViveportSoftware/pc-lib/commit/5e30c0cc9c98e801b0c4ce23fca20a85698c007b))
+
 ## [1.87.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.86.0...v1.87.0) (2025-04-01)
 
 
