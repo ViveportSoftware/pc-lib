@@ -117,8 +117,5 @@ export const Desc = {
     initialTrianglePercent: {
       desc: 'Initial Triangle Percentage',
     },
-    layers: {
-      desc: 'layers to render',
-    },
   },
 };
