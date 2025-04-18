@@ -66,3 +66,7 @@ export {
   IProgressBarTaskEvents,
   TaskTypes,
 } from './services/quest';
+export {
+  WorldNavigationService,
+  IWorldNavigationService,
+} from './services/world-navigation';

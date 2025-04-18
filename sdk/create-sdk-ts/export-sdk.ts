@@ -11,3 +11,7 @@ export {
 export {NetworkService} from './services/network';
 export {XrService, XrTypes} from './services/xr';
 export {QuestService, TaskTypes} from './services/quest';
+export {
+  WorldNavigationService,
+  IWorldNavigationService,
+} from './services/world-navigation';
