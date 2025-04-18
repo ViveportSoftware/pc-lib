@@ -38,6 +38,7 @@ export interface ILocalPlayer extends IPlayer {
   respawnPosition: pc.Vec3 | null;
 
   /**
+   * @private
    * @planned Fall speed multiplier<br>
    * Use this parameter to enhance the feeling of gravity effect when falling.<br>
    * For example, when the character starts to fall after jumping, gravity will increase with this multiplier, causing the character to reach the ground faster.
@@ -45,21 +46,25 @@ export interface ILocalPlayer extends IPlayer {
   fallingGravityMultiplier: number;
 
   /**
+   * @private
    * @planned The gravity multiplier that affects both ascent and descent.
    */
   gravityMultiplier: number;
 
   /**
+   * @private
    * @planned Flight speed multiplier.
    */
   flySpeedMultiplier: number;
 
   /**
+   * @private
    * @planned Running speed multiplier.
    */
   runSpeedMultiplier: number;
 
   /**
+   * @private
    * @planned Walking speed multiplier.
    */
   walkSpeedMultiplier: number;
@@ -70,11 +75,13 @@ export interface ILocalPlayer extends IPlayer {
   jumpMultiplier: number;
 
   /**
+   * @private
    * @planned Whether the character can be seen by remote players.
    */
   isVisibleRemotely: boolean;
 
   /**
+   * @private
    * @planned Get the character's current speed.
    */
   readonly velocity?: pc.Vec3;
@@ -154,7 +161,7 @@ export interface ILocalPlayer extends IPlayer {
   turnToward(x: number | pc.Vec2, y?: number): void;
 
   /**
-   * @planned Scale the avatar model with the specified scale ratio.
+   * Scale the avatar model with the specified scale ratio.
    * @param {number} scale - Scale ratio
    * @param {Object} [options] - Optional parameters
    * @param {boolean} [options.sync=true] - Whether to sync scaling to other players over the network. Default is true.
@@ -208,12 +215,14 @@ export interface ILocalPlayerEvents extends IPlayerEvents {
   'jump:end': () => void;
 
   /**
+   * @private
    * @planned Triggered when the player's avatar lands in the scene, and returns the current coordinates.
    * @param position - Current coordinates.
    */
   landed: (position: pc.Vec3) => void;
 
   /**
+   * @private
    * @planned Triggered when the player's avatar is in an infinite fall state, typically used to check if the character is no longer in the scene.
    */
   infiniteFalling: () => void;

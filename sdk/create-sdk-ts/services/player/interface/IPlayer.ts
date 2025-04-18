@@ -10,17 +10,19 @@ import {IPlayerProfile} from './IPlayerProfile';
  */
 export interface IPlayer extends EventHandlerMethods {
   /**
+   * @private
    * @planned Whether the player is visible on the local client.
    */
   isVisible: boolean;
 
   /**
+   * @private
    * @planned Get the status that whether the Player has disconnected from the server.
    */
   readonly isDisposed: boolean;
 
   /**
-   * @planned Player's collision, default collision type is capsule.
+   * Player's collision, default collision type is capsule.
    */
   readonly collision: pc.CollisionComponent | null;
 

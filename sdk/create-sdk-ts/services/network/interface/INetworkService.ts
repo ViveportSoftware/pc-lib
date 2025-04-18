@@ -100,26 +100,31 @@ interface IBotService {
   _gameId: string;
 
   /**
+   * @private
    * @planned One player will be selected as the master.
    */
   readonly masterId: string;
 
   /**
+   * @private
    * @planned Provide the IDs of all players and sort them.
    */
   readonly playerIdMap: {[index: number]: string};
 
   /**
+   * @private
    * @planned Trigger game start, begin countdown.
    */
   sendGameStart(): void;
 
   /**
+   * @private
    * @planned Trigger game end early if conditions are met within the countdown.
    */
   sendGameEnd(): void;
 
   /**
+   * @private
    * @planned
    * @param event - Event name, can be customized as needed.
    * @param targetId  - Specified target ID, can be customized as needed.
@@ -164,6 +169,7 @@ interface IBotService {
 
 interface IBotGameEvents {
   /**
+   * @private
    * @planned
    * @param masterId - Notify which player is the master of the room.
    * @returns
@@ -171,6 +177,7 @@ interface IBotGameEvents {
   'game:masterNotify': (masterId: string) => void;
 
   /**
+   * @private
    * @planned Trigger when a player joins the game, notify all players to wait for others.
    * @param playerIdMap - Provide the IDs of all players and sort them.
    * @returns
@@ -178,6 +185,7 @@ interface IBotGameEvents {
   'game:waitForPlayer': (playerIdMap: {[index: number]: string}) => void;
 
   /**
+   * @private
    * @planned Once the player count condition is met, notify all players that the game can start.
    * @param playerIdMap - Provide the IDs of all players and sort them.
    * @returns
@@ -185,6 +193,7 @@ interface IBotGameEvents {
   'game:allPlayerReady': (playerIdMap: {[index: number]: string}) => void;
 
   /**
+   * @private
    * @planned Trigger game start, begin countdown (currently only sends once).
    * @param second - Game countdown time.
    * @returns
@@ -192,18 +201,21 @@ interface IBotGameEvents {
   'game:countdown': (second: number) => void;
 
   /**
+   * @private
    * @planned Game countdown during the game, sent at specified intervals.
    * @param second - Game duration.
    */
   'game:timer': (second: number) => void;
 
   /**
+   * @private
    * @planned Game ends when the game time is up.
    * @returns
    */
   'game:timeUp': () => void;
 
   /**
+   * @private
    * @planned Game ends when conditions are met.
    * @returns
    */
@@ -266,6 +278,7 @@ export interface IOwnerUpdateMessage {
 
 interface IBotOwnerEvents {
   /**
+   * @private
    * @planned Triggered when owner update is received.
    * @param {IOwnerUpdateMessage} updateMessage - Event parameters, including event name, target ID, successful player, etc.
    * @returns

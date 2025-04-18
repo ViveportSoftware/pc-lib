@@ -11,6 +11,7 @@ export interface ICameraService {
   readonly activeCamera: pc.Entity | null;
 
   /**
+   * @private
    * @planned Retrieve the activation status of the Camera that was uploaded by the user.
    */
   readonly isUsingExternalCamera: boolean;

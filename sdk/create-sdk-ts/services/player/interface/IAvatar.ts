@@ -8,21 +8,25 @@ import {IAvatarTransform} from './IAvatarTransform';
  */
 export interface IAvatar extends EventHandlerMethods {
   /**
+   * @private
    * @planned Player avatar's BoundingBox.
    */
   readonly boundingBox: pc.BoundingBox | null;
 
   /**
+   * @private
    * @planned Get player's avatar model link.
    */
   readonly avatarUrl: string;
 
   /**
+   * @private
    * @planned Get player's avatar gender, default: 0.
    */
   readonly gender: AvatarTypes.GenderTypes;
 
   /**
+   * @private
    * @planned Get player's avatar type.
    */
   readonly dataType: AvatarTypes.DataTypes;

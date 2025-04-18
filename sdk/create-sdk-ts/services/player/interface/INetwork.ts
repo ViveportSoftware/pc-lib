@@ -46,11 +46,13 @@ export interface INetwork extends EventHandlerMethods {
  */
 export interface INetworkEvents {
   /**
+   * @private
    * @planned Triggered when the player successfully connects and joins the session.
    */
   joined: () => void;
 
   /**
+   * @private
    * @planned Triggered when the player disconnects or leaves the session.
    */
   left: () => void;
