@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.89.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.88.0...v1.89.0) (2025-04-22)
+
+
+### Features
+
+* add xr start, end, vr ready ([465605a](https://github.com/ViveportSoftware/pc-lib/commit/465605aa494cf7e60ed4e1e894d31552cd78d39c))
+* **create-sdk:** add device service ([71ab9b5](https://github.com/ViveportSoftware/pc-lib/commit/71ab9b5f5118576868001041987720874b065a3a))
+
 ## [1.88.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.87.0...v1.88.0) (2025-04-17)
 
 
