@@ -187,6 +187,11 @@ export const Configs: ConfigsType = {
               default: 1,
             },
             {
+              name: 'taskDescription',
+              type: 'string',
+              description: 'description',
+            },
+            {
               name: 'taskIndex',
               type: 'number',
               description: 'selected task',
