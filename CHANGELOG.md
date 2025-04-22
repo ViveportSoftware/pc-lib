@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.90.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.89.0...v1.90.0) (2025-04-22)
+
+
+### Features
+
+* add task description to trigger config ([075f690](https://github.com/ViveportSoftware/pc-lib/commit/075f6905eaf8e34b034cd28764ece802bc735297))
+* add task description to trigger config ([21391e6](https://github.com/ViveportSoftware/pc-lib/commit/21391e6d746f53cd6471ed3ef70f2cbb0ec2c3e2))
+
 ## [1.89.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.88.0...v1.89.0) (2025-04-22)
 
 
