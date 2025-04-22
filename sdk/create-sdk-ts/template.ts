@@ -43,6 +43,48 @@ class CameraService {
     switchPov(pov) { }
 }
 
+var HardwareType;
+(function (HardwareType) {
+    HardwareType[HardwareType["Unknown"] = 0] = "Unknown";
+    HardwareType[HardwareType["Desktop"] = 1] = "Desktop";
+    HardwareType[HardwareType["Mobile"] = 2] = "Mobile";
+    HardwareType[HardwareType["Headset"] = 3] = "Headset";
+})(HardwareType || (HardwareType = {}));
+var OsType;
+(function (OsType) {
+    OsType[OsType["Unknown"] = 0] = "Unknown";
+    OsType[OsType["Ios"] = 1] = "Ios";
+    OsType[OsType["Android"] = 2] = "Android";
+    OsType[OsType["Macos"] = 3] = "Macos";
+    OsType[OsType["Windows"] = 4] = "Windows";
+    OsType[OsType["Linux"] = 5] = "Linux";
+})(OsType || (OsType = {}));
+var VrDeviceType;
+(function (VrDeviceType) {
+    VrDeviceType[VrDeviceType["Vive"] = 1] = "Vive";
+    VrDeviceType[VrDeviceType["Oculus"] = 2] = "Oculus";
+    VrDeviceType[VrDeviceType["VisionPro"] = 3] = "VisionPro";
+})(VrDeviceType || (VrDeviceType = {}));
+
+var device = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get HardwareType () { return HardwareType; },
+    get OsType () { return OsType; },
+    get VrDeviceType () { return VrDeviceType; }
+});
+
+class DeviceService {
+    static _instance;
+    hardware = HardwareType.Unknown;
+    os = OsType.Unknown;
+    vrDevice = null;
+    constructor() {
+        if (DeviceService._instance)
+            return DeviceService._instance;
+        DeviceService._instance = this;
+    }
+}
+
 var ImpostorModeTypes;
 (function (ImpostorModeTypes) {
     ImpostorModeTypes[ImpostorModeTypes["Auto"] = 0] = "Auto";
@@ -446,9 +488,14 @@ class XrService {
             return XrService._instance;
         XrService._instance = this;
     }
+    get isVrReady() {
+        return false;
+    }
     get controllers() {
         return { left: undefined, right: undefined };
     }
+    start(type) { }
+    end() { }
     on(event, listener) {
         return {};
     }
@@ -483,6 +530,21 @@ class XrController {
         return {};
     }
 }
+
+var SessionTypes;
+(function (SessionTypes) {
+    SessionTypes[SessionTypes["Vr"] = 0] = "Vr";
+    /**
+     * @internal
+     * @planned VIVERSE AR support is currently unavailable.
+     */
+    SessionTypes[SessionTypes["Ar"] = 1] = "Ar";
+})(SessionTypes || (SessionTypes = {}));
+
+var xr = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get SessionTypes () { return SessionTypes; }
+});
 
 class QuestService {
     static _instance;
@@ -634,7 +696,7 @@ class ProgressBarTask extends Task {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, camera as CameraTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, QuestService, task as TaskTypes, XrService, version };
+export { avatar as AvatarTypes, CameraService, camera as CameraTypes, DeviceService, device as DeviceTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, QuestService, task as TaskTypes, XrService, xr as XrTypes, version };
 `;
 
 export { content };
