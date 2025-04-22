@@ -25,29 +25,41 @@ class WorldNavigationService implements IWorldNavigationService {
     return '';
   }
 
-  getRoomConfig(roomId: string) {
-    return null;
+  getRoomConfig(roomId: string): Promise<{
+    roomId: string;
+    preload: boolean;
+    sceneList: {sceneId: string; sceneName: string}[];
+  } | null> {
+    return Promise.resolve(null);
   }
 
-  loadRoom(roomId: string, progressingCallback: () => {}) {}
+  loadRoom(roomId: string, onProgressing: () => {}): Promise<void> {
+    return Promise.resolve();
+  }
 
   switchScene(
-    sceneId: string,
-    options?: {switchChannel: boolean; callback: () => {}}
-  ) {}
+    sceneName: string,
+    roomId?: string,
+    options?: {switchChannel: boolean; onComplete: () => {}}
+  ): Promise<void> {
+    return Promise.resolve();
+  }
 
   createPortal(
-    sceneId: string,
+    sceneName: string,
+    roomId?: string,
     options?: {
       size?: {width: number; height: number};
       targetEntity?: pc.Entity;
       skipEffectEntities?: pc.Entity[];
     }
-  ) {
-    return null;
+  ): Promise<pc.Entity | null> {
+    return Promise.resolve(null);
   }
 
-  closePortal(sceneId: string) {}
+  closePortal(sceneName: string, roomId?: string): void {
+    return;
+  }
 }
 
 export default WorldNavigationService;
