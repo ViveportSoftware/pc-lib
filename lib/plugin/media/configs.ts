@@ -81,11 +81,6 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: 1,
     },
     {
-      name: 'useAlpha',
-      type: 'boolean',
-      default: true,
-    },
-    {
       name: 'castShadows',
       type: 'boolean',
       default: true,
@@ -101,15 +96,58 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: false,
     },
     {
-      name: 'environmentAssetId',
-      type: 'number',
-      default: 0,
+      name: 'useAlpha',
+      type: 'boolean',
+      default: true,
     },
     {
       name: 'initialTrianglePercent',
       type: 'number',
       default: 0.5,
-    }
+    },
+    {
+      name: 'playAnimationAutomatically',
+      type: 'boolean',
+      default: true
+    },
+    {
+      name: 'animation',
+      type: 'string',
+      default: ''
+    },
+    {
+      name: 'animationStateGraphId',
+      type: 'number',
+      default: 0
+    },
+    {
+      name: 'animationStateMappings',
+      type: 'json',
+      array: true,
+      default: [],
+      schema: [
+        {
+          name: 'state',
+          type: 'string',
+          default: ''
+        },
+        {
+          name: 'animation',
+          type: 'string',
+          default: ''
+        },
+        {
+          name: 'layer',
+          type: 'string',
+          default: ''
+        }
+      ]
+    },
+    {
+      name: 'environmentAssetId',
+      type: 'number',
+      default: 0,
+    },
   ],
 };
 

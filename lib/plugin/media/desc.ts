@@ -91,16 +91,10 @@ export const Desc = {
   [Type.PolygonStreaming]: {
     // streamableModel attributes
     url: {
-      desc: 'Polygon Streaming url',
+      desc: 'Polygon Streaming URL',
     },
-    priorityLevel: {
-      desc: 'Priority Level',
-    },
-    qualityPriority: {
-      desc: 'Quality Priority',
-    },
-    useAlpha: {
-      desc: 'Use Alpha',
+    initialTrianglePercent: {
+      desc: 'Initial Triangle Percentage',
     },
     castShadows: {
       desc: 'Cast Shadows',
@@ -111,11 +105,40 @@ export const Desc = {
     doubleSidedMaterials: {
       desc: 'Force Double Sided Materials',
     },
+    useAlpha: {
+      desc: 'Use Alpha',
+    },
+    playAnimationAutomatically: {
+      desc: 'Play Animation Automatically'
+    },
+    animation: {
+      desc: 'Animation To Play'
+    },
+    animationStateMappings: {
+      desc: 'Animation States',
+      children: {
+        state: {
+          desc: 'State'
+        },
+        animation: {
+          desc: 'Animation'
+        },
+        layer: {
+          desc: 'Layer'
+        }
+      }
+    },
+    animationStateGraphId: {
+      desc: 'Animation State Graph'
+    },
+    priorityLevel: {
+      desc: 'Priority Level',
+    },
+    qualityPriority: {
+      desc: 'Quality Priority',
+    },
     environmentAssetId: {
       desc: 'Environment Asset',
-    },
-    initialTrianglePercent: {
-      desc: 'Initial Triangle Percentage',
     },
   },
 };

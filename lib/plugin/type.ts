@@ -42,7 +42,7 @@ type SchemaTypes = {
   number: number | number[];
   string: string | string[];
   boolean: boolean | boolean[];
-  json: string; // use string temporarily
+  json: string | string[]; // use string temporarily
   vec3: [number, number, number];
   vec2: [number, number];
   unixEpochMs: string;
