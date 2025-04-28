@@ -7,8 +7,7 @@ import * as XrTypes from '../enums/xr';
  */
 export interface IXrService extends EventHandlerMethods {
   /**
-   * @private DONE
-   * @planned Whether VIVERSE VR system is ready.
+   * Whether VIVERSE VR system is ready.
    */
   readonly isVrReady: boolean;
 
@@ -18,8 +17,7 @@ export interface IXrService extends EventHandlerMethods {
   readonly controllers: {left?: IXrController; right?: IXrController};
 
   /**
-   * @private DONE
-   * @planned Start VIVERSE XR session. NOTE: WebXR requires a user action (key press, click, or touch) to enter and cannot start automatically.
+   * Start VIVERSE XR session. NOTE: WebXR requires a user action (key press, click, or touch) to enter and cannot start automatically.
    * @param {XrTypes.SessionTypes} type - XR session type
    * @example
    * // The VIVERSE VR system might not be ready when the script is loaded.
@@ -39,8 +37,7 @@ export interface IXrService extends EventHandlerMethods {
   start(type: XrTypes.SessionTypes): void;
 
   /**
-   * @private DONE
-   * @planned End VIVERSE XR session
+   * End VIVERSE XR session
    */
   end(): void;
 
