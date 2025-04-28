@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.91.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.90.0...v1.91.0) (2025-04-28)
+
+
+### Features
+
+* **create-sdk:** remove playerEntity parameter from `player:ready` event on the document ([a977ac6](https://github.com/ViveportSoftware/pc-lib/commit/a977ac605c587396cf97a9513592fcbb98c8a579))
+
 ## [1.90.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.89.0...v1.90.0) (2025-04-22)
 
 
