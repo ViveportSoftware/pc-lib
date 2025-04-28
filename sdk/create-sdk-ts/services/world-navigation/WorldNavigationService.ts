@@ -17,6 +17,10 @@ class WorldNavigationService implements IWorldNavigationService {
     return '';
   }
 
+  get currentSceneName(): string {
+    return '';
+  }
+
   get previousRoomId(): string {
     return '';
   }
@@ -25,29 +29,44 @@ class WorldNavigationService implements IWorldNavigationService {
     return '';
   }
 
-  getRoomConfig(roomId: string) {
-    return null;
+  get previousSceneName(): string {
+    return '';
   }
 
-  loadRoom(roomId: string, progressingCallback: () => {}) {}
+  getRoomConfig(roomId: string): Promise<{
+    roomId: string;
+    preload: boolean;
+    sceneList: {sceneId: string; sceneName: string}[];
+  } | null> {
+    return Promise.resolve(null);
+  }
+
+  loadRoom(roomId: string, onProgressing: () => {}): Promise<void> {
+    return Promise.resolve();
+  }
 
   switchScene(
-    sceneId: string,
-    options?: {switchChannel: boolean; callback: () => {}}
-  ) {}
+    sceneName: string,
+    options?: {switchChannel: boolean; roomId: string; onComplete: () => {}}
+  ): Promise<void> {
+    return Promise.resolve();
+  }
 
   createPortal(
-    sceneId: string,
+    sceneName: string,
     options?: {
+      roomId?: string;
       size?: {width: number; height: number};
       targetEntity?: pc.Entity;
       skipEffectEntities?: pc.Entity[];
     }
-  ) {
-    return null;
+  ): Promise<pc.Entity | null> {
+    return Promise.resolve(null);
   }
 
-  closePortal(sceneId: string) {}
+  closePortal(sceneName: string, roomId?: string): void {
+    return;
+  }
 }
 
 export default WorldNavigationService;
