@@ -200,9 +200,8 @@ export interface ILocalPlayer extends IPlayer {
 export interface ILocalPlayerEvents extends IPlayerEvents {
   /**
    * Triggered when the player's initialization is complete.
-   * @param entity - Player's entity
    */
-  'player:ready': (entity: pc.Entity) => void;
+  'player:ready': () => void;
 
   /**
    * Triggered when the player's avatar jumps.
