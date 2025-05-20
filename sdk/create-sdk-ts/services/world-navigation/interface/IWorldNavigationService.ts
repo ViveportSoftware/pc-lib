@@ -49,8 +49,9 @@ export interface IWorldNavigationService {
     roomId: string;
     preload: boolean;
     sceneList: {
-      sceneId: string;
-      sceneName: string;
+      id: string;
+      name: string;
+      url: string;
     }[];
   } | null>;
 
