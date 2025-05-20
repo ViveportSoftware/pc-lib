@@ -36,7 +36,7 @@ class WorldNavigationService implements IWorldNavigationService {
   getRoomConfig(roomId: string): Promise<{
     roomId: string;
     preload: boolean;
-    sceneList: {sceneId: string; sceneName: string}[];
+    sceneList: {id: string; name: string; url: string}[];
   } | null> {
     return Promise.resolve(null);
   }
