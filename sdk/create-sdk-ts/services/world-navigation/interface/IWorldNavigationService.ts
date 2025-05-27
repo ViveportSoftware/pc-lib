@@ -4,9 +4,9 @@
 export interface IWorldNavigationService {
   /**
    * @private
-   * @planned Current room id
+   * @planned Current world id
    */
-  readonly currentRoomId: string;
+  readonly currentWorldId: string;
 
   /**
    * @private
@@ -22,9 +22,9 @@ export interface IWorldNavigationService {
 
   /**
    * @private
-   * @planned Previous room id
+   * @planned Previous world id
    */
-  readonly previousRoomId: string;
+  readonly previousWorldId: string;
 
   /**
    * @private
@@ -41,28 +41,29 @@ export interface IWorldNavigationService {
   /**
    * @private
    * @planned
-   * @description Get the room configuration.
-   * @param {string} roomId - The id of the room.
-   * @returns {Promise<{roomId: string; preload: boolean; sceneList: { sceneId: string; sceneName: string;}[]} | null>} - The configuration of the room. If the room is not found, the promise will return null.
+   * @description Get the world configuration.
+   * @param {string} worldId - The id of the world.
+   * @returns {Promise<{worldId: string; preload: boolean; sceneList: { sceneId: string; sceneName: string;}[]} | null>} - The configuration of the world. If the world is not found, the promise will return null.
    */
-  getRoomConfig(roomId: string): Promise<{
-    roomId: string;
+  getWorldConfig(worldId: string): Promise<{
+    worldId: string;
     preload: boolean;
     sceneList: {
-      sceneId: string;
-      sceneName: string;
+      id: string;
+      name: string;
+      url: string;
     }[];
   } | null>;
 
   /**
    * @private
    * @planned
-   * @description Preload the room.
-   * @param {string} roomId - The id of the room.
-   * @param {function} onProgressing - Callback function triggered when the room is loading. Useful for displaying a loading progress.
+   * @description Preload the world.
+   * @param {string} worldId - The id of the world.
+   * @param {function} onProgressing - Callback function triggered when the world is loading. Useful for displaying a loading progress.
    * @returns {Promise<void>}
    */
-  loadRoom(roomId: string, onProgressing: () => {}): Promise<void>;
+  loadWorld(worldId: string, onProgressing: () => {}): Promise<void>;
 
   /**
    * @private
@@ -71,13 +72,13 @@ export interface IWorldNavigationService {
    * @param {string} sceneName - The name of the scene.
    * @param {object} [options] - Optional parameters.
    * @param {boolean} [options.switchChannel=true] - Whether to switch the channel. Default is true.
-   * @param {boolean} [options.roomId] - The id of the room. If not provided, the current room will be used.
+   * @param {boolean} [options.worldId] - The id of the world. If not provided, the current world will be used.
    * @param {function} [options.onComplete] - Callback function triggered when the scene is switched.
    * @returns {Promise<void>}
    */
   switchScene(
     sceneName: string,
-    options?: {switchChannel: boolean; roomId: string; onComplete: () => {}}
+    options?: {switchChannel: boolean; worldId: string; onComplete: () => {}}
   ): Promise<void>;
 
   /**
@@ -86,7 +87,7 @@ export interface IWorldNavigationService {
    * @description Create a portal to another scene.
    * @param {string} sceneName - The name of the scene.
    * @param {object} [options] - Optional parameters.
-   * @param {object} [options.roomId] - The id of the room. If not provided, the current room will be used.
+   * @param {object} [options.worldId] - The id of the world. If not provided, the current world will be used.
    * @param {object} [options.size] - Control the size of the default portal.
    * @param {number} [options.size.width] - The width of the portal.
    * @param {number} [options.size.height] - The height of the portal.
@@ -97,7 +98,7 @@ export interface IWorldNavigationService {
   createPortal(
     sceneName: string,
     options?: {
-      roomId?: string;
+      worldId?: string;
       size?: {width: number; height: number};
       targetEntity?: pc.Entity;
       skipEffectEntities?: pc.Entity[];
@@ -109,8 +110,8 @@ export interface IWorldNavigationService {
    * @planned
    * @description Close the portal and remove it from the scene.
    * @param {string} sceneName - The name of the scene.
-   * @param {string} [roomId] - The id of the room. If not provided, the current room will be used.
+   * @param {string} [worldId] - The id of the world. If not provided, the current world will be used.
    * @returns {void}
    */
-  closePortal(sceneName: string, roomId?: string): void;
+  closePortal(sceneName: string, worldId?: string): void;
 }
