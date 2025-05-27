@@ -9,7 +9,7 @@ class WorldNavigationService implements IWorldNavigationService {
     WorldNavigationService._instance = this;
   }
 
-  get currentRoomId(): string {
+  get currentWorldId(): string {
     return '';
   }
 
@@ -21,7 +21,7 @@ class WorldNavigationService implements IWorldNavigationService {
     return '';
   }
 
-  get previousRoomId(): string {
+  get previousWorldId(): string {
     return '';
   }
 
@@ -33,21 +33,21 @@ class WorldNavigationService implements IWorldNavigationService {
     return '';
   }
 
-  getRoomConfig(roomId: string): Promise<{
-    roomId: string;
+  getWorldConfig(worldId: string): Promise<{
+    worldId: string;
     preload: boolean;
     sceneList: {id: string; name: string; url: string}[];
   } | null> {
     return Promise.resolve(null);
   }
 
-  loadRoom(roomId: string, onProgressing: () => {}): Promise<void> {
+  loadWorld(worldId: string, onProgressing: () => {}): Promise<void> {
     return Promise.resolve();
   }
 
   switchScene(
     sceneName: string,
-    options?: {switchChannel: boolean; roomId: string; onComplete: () => {}}
+    options?: {switchChannel: boolean; worldId: string; onComplete: () => {}}
   ): Promise<void> {
     return Promise.resolve();
   }
@@ -55,7 +55,7 @@ class WorldNavigationService implements IWorldNavigationService {
   createPortal(
     sceneName: string,
     options?: {
-      roomId?: string;
+      worldId?: string;
       size?: {width: number; height: number};
       targetEntity?: pc.Entity;
       skipEffectEntities?: pc.Entity[];
@@ -64,7 +64,7 @@ class WorldNavigationService implements IWorldNavigationService {
     return Promise.resolve(null);
   }
 
-  closePortal(sceneName: string, roomId?: string): void {
+  closePortal(sceneName: string, worldId?: string): void {
     return;
   }
 }
