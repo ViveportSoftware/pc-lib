@@ -703,7 +703,7 @@ class WorldNavigationService {
             return WorldNavigationService._instance;
         WorldNavigationService._instance = this;
     }
-    get currentRoomId() {
+    get currentWorldId() {
         return '';
     }
     get currentSceneId() {
@@ -712,7 +712,7 @@ class WorldNavigationService {
     get currentSceneName() {
         return '';
     }
-    get previousRoomId() {
+    get previousWorldId() {
         return '';
     }
     get previousSceneId() {
@@ -721,10 +721,10 @@ class WorldNavigationService {
     get previousSceneName() {
         return '';
     }
-    getRoomConfig(roomId) {
+    getWorldConfig(worldId) {
         return Promise.resolve(null);
     }
-    loadRoom(roomId, onProgressing) {
+    loadWorld(worldId, onProgressing) {
         return Promise.resolve();
     }
     switchScene(sceneName, options) {
@@ -733,7 +733,7 @@ class WorldNavigationService {
     createPortal(sceneName, options) {
         return Promise.resolve(null);
     }
-    closePortal(sceneName, roomId) {
+    closePortal(sceneName, worldId) {
         return;
     }
 }
