@@ -696,7 +696,49 @@ class ProgressBarTask extends Task {
     }
 }
 
-export { avatar as AvatarTypes, CameraService, camera as CameraTypes, DeviceService, device as DeviceTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, QuestService, task as TaskTypes, XrService, xr as XrTypes, version };
+class WorldNavigationService {
+    static _instance;
+    constructor() {
+        if (WorldNavigationService._instance)
+            return WorldNavigationService._instance;
+        WorldNavigationService._instance = this;
+    }
+    get currentRoomId() {
+        return '';
+    }
+    get currentSceneId() {
+        return '';
+    }
+    get currentSceneName() {
+        return '';
+    }
+    get previousRoomId() {
+        return '';
+    }
+    get previousSceneId() {
+        return '';
+    }
+    get previousSceneName() {
+        return '';
+    }
+    getRoomConfig(roomId) {
+        return Promise.resolve(null);
+    }
+    loadRoom(roomId, onProgressing) {
+        return Promise.resolve();
+    }
+    switchScene(sceneName, options) {
+        return Promise.resolve();
+    }
+    createPortal(sceneName, options) {
+        return Promise.resolve(null);
+    }
+    closePortal(sceneName, roomId) {
+        return;
+    }
+}
+
+export { avatar as AvatarTypes, CameraService, camera as CameraTypes, DeviceService, device as DeviceTypes, EnvironmentService, environment as EnvironmentTypes, move as MoveTypes, nameTag as NameTagTypes, NetworkService, PlayerService, QuestService, task as TaskTypes, WorldNavigationService, XrService, xr as XrTypes, version };
 `;
 
 export { content };
