@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.92.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.91.0...v1.92.0) (2025-05-29)
+
+
+### Features
+
+* added Polygon Streaming animation attributes ([#312](https://github.com/ViveportSoftware/pc-lib/issues/312)) ([ce7096b](https://github.com/ViveportSoftware/pc-lib/commit/ce7096b59ad7f153241e76cf0d05eb96c66a2df5))
+
 ## [1.91.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.90.0...v1.91.0) (2025-04-28)
 
 
