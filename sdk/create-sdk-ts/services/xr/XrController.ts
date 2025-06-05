@@ -1,7 +1,10 @@
 import * as pc from 'playcanvas';
 import {IXrController, IXrControllerEvents} from './interface/IXrController';
+import * as XrTypes from './enums/xr';
 
 class XrController implements IXrController {
+  locomotionType = XrTypes.LocomotionTypes.Teleport;
+
   constructor() {}
 
   get modelEntity(): pc.Entity | null {

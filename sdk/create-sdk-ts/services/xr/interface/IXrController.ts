@@ -1,4 +1,5 @@
 import * as pc from 'playcanvas';
+import * as XrTypes from '../enums/xr';
 
 /**
  * Define the interface of XrController.
@@ -18,6 +19,12 @@ export interface IXrController {
    * The handedness of the controller. The value should be either 'left' or 'right'.
    */
   readonly handedness: typeof pc.XRHAND_LEFT | typeof pc.XRHAND_RIGHT;
+
+  /**
+   * @private
+   * The locomotion type of the controller.
+   */
+  locomotionType: XrTypes.LocomotionTypes;
 
   /**
    * Set the controller model asset.
