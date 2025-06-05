@@ -1,5 +1,6 @@
 import * as pc from 'playcanvas';
 import {IXrController, IXrControllerEvents} from './interface/IXrController';
+import * as XrTypes from './enums/xr';
 
 class XrController implements IXrController {
   constructor() {}
@@ -16,6 +17,10 @@ class XrController implements IXrController {
     return 'left';
   }
 
+  get locomotionType(): XrTypes.LocomotionTypes {
+    return XrTypes.LocomotionTypes.Teleport;
+  }
+
   setModelAsset(
     asset: pc.Asset,
     options?: {
@@ -26,6 +31,8 @@ class XrController implements IXrController {
   ): void {}
 
   resetModelAsset(): void {}
+
+  setLocomotionType(locomotionType: XrTypes.LocomotionTypes): void {}
 
   on<T extends keyof IXrControllerEvents>(
     event: T,

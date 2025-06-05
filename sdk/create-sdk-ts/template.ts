@@ -507,6 +507,28 @@ class XrService {
     }
 }
 
+var SessionTypes;
+(function (SessionTypes) {
+    SessionTypes[SessionTypes["Vr"] = 0] = "Vr";
+    /**
+     * @internal
+     * @planned VIVERSE AR support is currently unavailable.
+     */
+    SessionTypes[SessionTypes["Ar"] = 1] = "Ar";
+})(SessionTypes || (SessionTypes = {}));
+var LocomotionTypes;
+(function (LocomotionTypes) {
+    LocomotionTypes[LocomotionTypes["None"] = 0] = "None";
+    LocomotionTypes[LocomotionTypes["Teleport"] = 1] = "Teleport";
+    LocomotionTypes[LocomotionTypes["Smooth"] = 2] = "Smooth";
+})(LocomotionTypes || (LocomotionTypes = {}));
+
+var xr = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get LocomotionTypes () { return LocomotionTypes; },
+    get SessionTypes () { return SessionTypes; }
+});
+
 class XrController {
     constructor() { }
     get modelEntity() {
@@ -518,8 +540,12 @@ class XrController {
     get handedness() {
         return 'left';
     }
+    get locomotionType() {
+        return LocomotionTypes.Teleport;
+    }
     setModelAsset(asset, options) { }
     resetModelAsset() { }
+    setLocomotionType(locomotionType) { }
     on(event, listener) {
         return {};
     }
@@ -530,21 +556,6 @@ class XrController {
         return {};
     }
 }
-
-var SessionTypes;
-(function (SessionTypes) {
-    SessionTypes[SessionTypes["Vr"] = 0] = "Vr";
-    /**
-     * @internal
-     * @planned VIVERSE AR support is currently unavailable.
-     */
-    SessionTypes[SessionTypes["Ar"] = 1] = "Ar";
-})(SessionTypes || (SessionTypes = {}));
-
-var xr = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    get SessionTypes () { return SessionTypes; }
-});
 
 class QuestService {
     static _instance;
