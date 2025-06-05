@@ -1,4 +1,5 @@
 import * as pc from 'playcanvas';
+import * as XrTypes from '../enums/xr';
 
 /**
  * Define the interface of XrController.
@@ -18,6 +19,12 @@ export interface IXrController {
    * The handedness of the controller. The value should be either 'left' or 'right'.
    */
   readonly handedness: typeof pc.XRHAND_LEFT | typeof pc.XRHAND_RIGHT;
+
+  /**
+   * @private
+   * The locomotion type of the controller.
+   */
+  readonly locomotionType: XrTypes.LocomotionTypes;
 
   /**
    * Set the controller model asset.
@@ -40,6 +47,13 @@ export interface IXrController {
    * Revert to the default controller model in VIVERSE CREATE.
    */
   resetModelAsset(): void;
+
+  /**
+   * @private
+   * Set the controller locomotion type.
+   * @param {XrTypes.LocomotionTypes} locomotion type - The controller locomotion type.
+   */
+  setLocomotionType(locomotionType: XrTypes.LocomotionTypes): void;
 
   /**
    * Subscribe to a specific event.
