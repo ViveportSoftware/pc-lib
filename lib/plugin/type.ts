@@ -14,6 +14,7 @@ export enum Type {
   Physic,
   Minimap,
   PostEffect,
+  SOGSLoD,
 }
 
 export enum FunctionTypes {
