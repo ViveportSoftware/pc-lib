@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.93.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.92.0...v1.93.0) (2025-06-09)
+
+
+### Features
+
+* add plugin SOGS LoD ([67a5c01](https://github.com/ViveportSoftware/pc-lib/commit/67a5c01dbb613c548577638c8ba51405ac25519c))
+
 ## [1.92.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.91.0...v1.92.0) (2025-05-29)
 
 
