@@ -13,6 +13,7 @@ export * as Seat from './plugin/seat';
 export * as Physic from './plugin/physic';
 export * as Minimap from './plugin/minimap';
 export * as PostEffect from './plugin/post-effect';
+export * as SOGSLoD from './plugin/sogs-lod';
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
