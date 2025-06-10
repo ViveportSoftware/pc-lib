@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.94.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.93.0...v1.94.0) (2025-06-10)
+
+
+### Features
+
+* add attributes for SOGS LoD ([8c45423](https://github.com/ViveportSoftware/pc-lib/commit/8c45423e078b426c23c5c0a9bbd394722af6b29a))
+
 ## [1.93.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.92.0...v1.93.0) (2025-06-09)
 
 
