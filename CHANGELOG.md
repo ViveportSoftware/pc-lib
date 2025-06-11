@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.96.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.95.0...v1.96.0) (2025-06-11)
+
+
+### Features
+
+* update desc for SOGS LoD ([078238f](https://github.com/ViveportSoftware/pc-lib/commit/078238f953729a785f88db39856a5c16c8c843fa))
+
 ## [1.95.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.94.0...v1.95.0) (2025-06-10)
 
 
