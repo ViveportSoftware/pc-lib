@@ -9,10 +9,10 @@ export const Desc = {
       desc: 'GLB model source asset id',
     },
     minDistance:{
-      desc: 'Minimum distance to switch to the source model',
+      desc: 'Distance to show highest level',
     },
     distanceOffset:{
-      desc: 'Distance offset to switch to the source model',
+      desc: 'Distance offset to show per level',
     },
   },
 };
