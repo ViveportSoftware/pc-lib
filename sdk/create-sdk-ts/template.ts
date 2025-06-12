@@ -530,6 +530,7 @@ var xr = /*#__PURE__*/Object.freeze({
 });
 
 class XrController {
+    locomotionType = LocomotionTypes.Teleport;
     constructor() { }
     get modelEntity() {
         return null;
@@ -540,12 +541,8 @@ class XrController {
     get handedness() {
         return 'left';
     }
-    get locomotionType() {
-        return LocomotionTypes.Teleport;
-    }
     setModelAsset(asset, options) { }
     resetModelAsset() { }
-    setLocomotionType(locomotionType) { }
     on(event, listener) {
         return {};
     }

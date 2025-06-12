@@ -24,7 +24,7 @@ export interface IXrController {
    * @private
    * The locomotion type of the controller.
    */
-  readonly locomotionType: XrTypes.LocomotionTypes;
+  locomotionType: XrTypes.LocomotionTypes;
 
   /**
    * Set the controller model asset.
@@ -47,13 +47,6 @@ export interface IXrController {
    * Revert to the default controller model in VIVERSE CREATE.
    */
   resetModelAsset(): void;
-
-  /**
-   * @private
-   * Set the controller locomotion type.
-   * @param {XrTypes.LocomotionTypes} locomotion type - The controller locomotion type.
-   */
-  setLocomotionType(locomotionType: XrTypes.LocomotionTypes): void;
 
   /**
    * Subscribe to a specific event.
