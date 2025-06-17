@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.97.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.96.0...v1.97.0) (2025-06-17)
+
+
+### Features
+
+* **create-sdk:** add XrController.locomotionType ([#315](https://github.com/ViveportSoftware/pc-lib/issues/315)) ([2eccb92](https://github.com/ViveportSoftware/pc-lib/commit/2eccb92b4a1cd4f0c239d4248d2237feca14a1ac))
+
 ## [1.96.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.95.0...v1.96.0) (2025-06-11)
 
 
