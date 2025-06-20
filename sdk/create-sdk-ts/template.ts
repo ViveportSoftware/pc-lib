@@ -494,8 +494,8 @@ class XrService {
     get controllers() {
         return { left: undefined, right: undefined };
     }
-    start(type) { }
-    end() { }
+    start(type, options) { }
+    end(callback) { }
     on(event, listener) {
         return {};
     }
