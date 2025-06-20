@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.98.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.97.0...v1.98.0) (2025-06-20)
+
+
+### Features
+
+* support callback in XR start and end methods([#325](https://github.com/ViveportSoftware/pc-lib/issues/325)) ([6a2c4ca](https://github.com/ViveportSoftware/pc-lib/commit/6a2c4ca31e462018486ff316073c0b3d33a1679f))
+
 ## [1.97.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.96.0...v1.97.0) (2025-06-17)
 
 
