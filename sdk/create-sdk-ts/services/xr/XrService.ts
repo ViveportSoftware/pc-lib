@@ -19,9 +19,12 @@ class XrService implements IXrService {
     return {left: undefined, right: undefined};
   }
 
-  start(type: XrTypes.SessionTypes): void {}
+  start(
+    type: XrTypes.SessionTypes,
+    options?: {callback?: (err: Error | null) => void}
+  ): void {}
 
-  end(): void {}
+  end(callback?: (err: Error | null) => void): void {}
 
   on<T extends keyof IXrServiceEvents>(
     event: T,

@@ -19,6 +19,8 @@ export interface IXrService extends EventHandlerMethods {
   /**
    * Start VIVERSE XR session. NOTE: WebXR requires a user action (key press, click, or touch) to enter and cannot start automatically.
    * @param {XrTypes.SessionTypes} type - XR session type
+   * @param {Object} [options] - Optional parameters.
+   * @param {function} [options.callback] - Callback function to be invoked when the session starts. Note: This parameter is currently under development and may not be functional yet.
    * @example
    * // The VIVERSE VR system might not be ready when the script is loaded.
    * button.active = false;
@@ -34,12 +36,18 @@ export interface IXrService extends EventHandlerMethods {
    *   });
    * }
    */
-  start(type: XrTypes.SessionTypes): void;
+  start(
+    type: XrTypes.SessionTypes,
+    options?: {
+      callback?: (err: Error | null) => void;
+    }
+  ): void;
 
   /**
    * End VIVERSE XR session
+   *  @param {function} [callback] - Callback function to be invoked when the session ends. Note: This parameter is currently under development and may not be functional yet.
    */
-  end(): void;
+  end(callback?: (err: Error | null) => void): void;
 
   /**
    * Subscribe to a specific event.
