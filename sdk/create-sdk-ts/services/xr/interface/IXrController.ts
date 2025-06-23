@@ -21,7 +21,6 @@ export interface IXrController {
   readonly handedness: typeof pc.XRHAND_LEFT | typeof pc.XRHAND_RIGHT;
 
   /**
-   * @private
    * The locomotion type of the controller.
    */
   locomotionType: XrTypes.LocomotionTypes;
