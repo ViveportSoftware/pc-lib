@@ -1,3 +1,3 @@
 export enum Type {
-  Base = 0,
+  Camera = 0,
 }

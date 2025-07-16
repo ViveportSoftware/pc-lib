@@ -4,7 +4,7 @@ export const Configs: ConfigsType = {
   type: 'json',
   schema: [
     {
-      name: 'camera',
+      name: 'ecommerce',
       type: 'json',
       schema: [
         {

@@ -1,7 +1,7 @@
 import {Type} from './type';
 
 export const Desc = {
-  [Type.Base]: {
+  [Type.Camera]: {
     rotateY: {
       default: 180,
       desc: 'rotate Y +/- max degree',
