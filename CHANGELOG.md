@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.99.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.98.0...v1.99.0) (2025-07-17)
+
+
+### Features
+
+* **create-sdk:** add world navigation service ([#330](https://github.com/ViveportSoftware/pc-lib/issues/330)) ([354437b](https://github.com/ViveportSoftware/pc-lib/commit/354437bcfc22771620d564663822f3bd8199b7a6))
+
 ## [1.98.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.97.0...v1.98.0) (2025-06-20)
 
 
