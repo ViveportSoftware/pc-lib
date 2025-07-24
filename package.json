@@ -1,6 +1,6 @@
 {
   "name": "@viveportsoftware/pc-lib",
-  "version": "1.99.0",
+  "version": "1.100.0",
   "files": [
     "dist/lib",
     "dist/sdk"
