@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.100.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.99.0...v1.100.0) (2025-07-24)
+
+
+### Features
+
+* [3DEC] add e-commerce plugin setting ([5f7ffe6](https://github.com/ViveportSoftware/pc-lib/commit/5f7ffe6e001a415bb970774115c9ee0cd77fa491))
+* [3DEC] add e-commerce plugin setting ([18b717b](https://github.com/ViveportSoftware/pc-lib/commit/18b717b41ea1610be928ae139b1ecae0203f451e))
+
 ## [1.99.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.98.0...v1.99.0) (2025-07-17)
 
 
