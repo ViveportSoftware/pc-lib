@@ -15,6 +15,7 @@ export enum Type {
   Minimap,
   PostEffect,
   SOGSLoD,
+  ECommerce,
 }
 
 export enum FunctionTypes {
