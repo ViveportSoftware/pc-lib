@@ -14,6 +14,8 @@ export * as Physic from './plugin/physic';
 export * as Minimap from './plugin/minimap';
 export * as PostEffect from './plugin/post-effect';
 export * as SOGSLoD from './plugin/sogs-lod';
+export * as ECommerce from './plugin/e-commerce';
+
 export {
   Type as PluginType,
   Schemas as PluginSchemas,
