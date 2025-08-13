@@ -3,45 +3,37 @@
  */
 export interface IWorldNavigationService {
   /**
-   * @private
-   * @planned Current world id
+   * Current World id
    */
   readonly currentWorldId: string;
 
   /**
-   * @private
-   * @planned Current scene id
+   * Current scene id
    */
   readonly currentSceneId: string;
 
   /**
-   * @private
-   * @planned Current scene name
+   * Current scene name
    */
   readonly currentSceneName: string;
 
   /**
-   * @private
-   * @planned Previous world id
+   * Previous World id
    */
   readonly previousWorldId: string;
 
   /**
-   * @private
-   * @planned Previous scene id
+   * Previous scene id
    */
   readonly previousSceneId: string;
 
   /**
-   * @private
-   * @planned Previous scene name
+   * Previous scene name
    */
   readonly previousSceneName: string;
 
   /**
-   * @private
-   * @planned
-   * @description Get the world configuration.
+   * Get the World configuration.
    * @param {string} worldId - The id of the world.
    * @returns {Promise<{worldId: string; preload: boolean; sceneList: { sceneId: string; sceneName: string;}[]} | null>} - The configuration of the world. If the world is not found, the promise will return null.
    */
@@ -56,9 +48,7 @@ export interface IWorldNavigationService {
   } | null>;
 
   /**
-   * @private
-   * @planned
-   * @description Preload the world.
+   * Preload the World.
    * @param {string} worldId - The id of the world.
    * @param {function} onProgressing - Callback function triggered when the world is loading. Useful for displaying a loading progress.
    * @returns {Promise<void>}
@@ -66,9 +56,7 @@ export interface IWorldNavigationService {
   loadWorld(worldId: string, onProgressing: () => {}): Promise<void>;
 
   /**
-   * @private
-   * @planned
-   * @description Switch to a new scene.
+   * Switch to a new scene.
    * @param {string} sceneName - The name of the scene.
    * @param {object} [options] - Optional parameters.
    * @param {boolean} [options.switchChannel=true] - Whether to switch the channel. Default is true.
@@ -82,9 +70,8 @@ export interface IWorldNavigationService {
   ): Promise<void>;
 
   /**
-   * @private
-   * @planned
-   * @description Create a portal to another scene.
+   * @private 
+   * Create a portal to another scene.
    * @param {string} sceneName - The name of the scene.
    * @param {object} [options] - Optional parameters.
    * @param {object} [options.worldId] - The id of the world. If not provided, the current world will be used.
@@ -106,9 +93,8 @@ export interface IWorldNavigationService {
   ): Promise<pc.Entity | null>;
 
   /**
-   * @private
-   * @planned
-   * @description Close the portal and remove it from the scene.
+   * @private 
+   * Close the portal and remove it from the scene.
    * @param {string} sceneName - The name of the scene.
    * @param {string} [worldId] - The id of the world. If not provided, the current world will be used.
    * @returns {void}
