@@ -70,6 +70,7 @@ export interface IWorldNavigationService {
   ): Promise<void>;
 
   /**
+   * @private 
    * Create a portal to another scene.
    * @param {string} sceneName - The name of the scene.
    * @param {object} [options] - Optional parameters.
@@ -92,6 +93,7 @@ export interface IWorldNavigationService {
   ): Promise<pc.Entity | null>;
 
   /**
+   * @private 
    * Close the portal and remove it from the scene.
    * @param {string} sceneName - The name of the scene.
    * @param {string} [worldId] - The id of the world. If not provided, the current world will be used.
