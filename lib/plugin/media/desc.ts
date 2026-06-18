@@ -114,6 +114,9 @@ export const Desc = {
     animation: {
       desc: 'Animation To Play'
     },
+    animationStateGraph: {
+      desc: 'Animation State Graph'
+    },
     animationStateMappings: {
       desc: 'Animation States',
       children: {
@@ -128,8 +131,22 @@ export const Desc = {
         }
       }
     },
-    animationStateGraphId: {
-      desc: 'Animation State Graph'
+    vrmAnimations: {
+      desc: 'VRM Animations',
+      children: {
+        name: {
+          desc: 'Name'
+        },
+        asset: {
+          desc: 'VRMA Asset'
+        },
+        loop: {
+          desc: 'Loop'
+        },
+        default: {
+          desc: 'Default'
+        }
+      }
     },
     priorityLevel: {
       desc: 'Priority Level',
@@ -137,7 +154,7 @@ export const Desc = {
     qualityPriority: {
       desc: 'Quality Priority',
     },
-    environmentAssetId: {
+    environmentAsset: {
       desc: 'Environment Asset',
     },
   },

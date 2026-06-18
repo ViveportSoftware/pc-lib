@@ -48,13 +48,38 @@ type SchemaTypes = {
   vec3: [number, number, number];
   vec2: [number, number];
   unixEpochMs: string;
+  assetId: number;
 };
+
+// assetType: https://developer.playcanvas.com/en/typedocs/classes/Asset.html#type
+export type AssetType =
+  | 'animation'
+  | 'container'
+  | 'font'
+  | 'audio'
+  | 'html'
+  | 'script'
+  | 'template'
+  | 'text'
+  | 'json'
+  | 'binary'
+  | 'texture'
+  | 'cubemap'
+  | 'model'
+  | 'sprite'
+  | 'render'
+  | 'css'
+  | 'material'
+  | 'shader'
+  | 'textureatlas'
+  | 'animstategraph'
 
 type Schema<K extends keyof SchemaTypes> = {
   name: string;
   type: K;
   default?: SchemaTypes[K];
   enum?: (string | number)[] | Record<string, string | number>;
+  assetType?: AssetType | AssetType[];
 } & FunctionTypesMap;
 
 export type Schemas = (
@@ -65,6 +90,7 @@ export type Schemas = (
   | Schema<'vec3'>
   | Schema<'vec2'>
   | Schema<'unixEpochMs'>
+  | Schema<'assetId'>
 )[];
 
 export type ConfigsType = {

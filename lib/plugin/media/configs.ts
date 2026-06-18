@@ -116,8 +116,9 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: ''
     },
     {
-      name: 'animationStateGraphId',
-      type: 'number',
+      name: 'animationStateGraph',
+      type: 'assetId',
+      assetType: 'animstategraph',
       default: 0
     },
     {
@@ -144,8 +145,38 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       ]
     },
     {
-      name: 'environmentAssetId',
-      type: 'number',
+      name: 'vrmAnimations',
+      type: 'json',
+      array: true,
+      default: [],
+      schema: [
+        {
+          name: 'name',
+          type: 'string',
+          default: ''
+        },
+        {
+          name: 'asset',
+          type: 'assetId',
+          default: 0,
+          assetType: 'binary'
+        },
+        {
+          name: 'loop',
+          type: 'boolean',
+          default: true
+        },
+        {
+          name: 'default',
+          type: 'boolean',
+          default: false
+        }
+      ]
+    },
+    {
+      name: 'environmentAsset',
+      type: 'assetId',
+      assetType: ['cubemap', 'texture'],
       default: 0,
     },
   ],
