@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.101.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.100.0...v1.101.0) (2026-06-22)
+
+
+### Features
+
+* updated Polygon Streaming attributes to support Web SDK 2.9.0 ([#337](https://github.com/ViveportSoftware/pc-lib/issues/337)) ([98c09a3](https://github.com/ViveportSoftware/pc-lib/commit/98c09a35d6b716e9f63516fe483afedc7cd92325))
+
 ## [1.100.0](https://github.com/ViveportSoftware/pc-lib/compare/v1.99.0...v1.100.0) (2025-07-24)
 
 
