@@ -64,9 +64,9 @@ export const polygonStreamingConfigs: polygonStreamingSchemas = {
       default: 15000,
     },
     {
-      name: 'maximumQuality',
+      name: 'iosMemoryLimit',
       type: 'number',
-      default: 15000,
+      default: 0,
     },
   ],
   streamableModel: [
